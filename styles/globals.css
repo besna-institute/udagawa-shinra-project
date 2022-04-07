@@ -1,3 +1,25 @@
 @tailwind base;
+
+@layer base {
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+  h3 {
+    @apply text-lg;
+  }
+  a {
+    @apply text-xl font-medium underline px-1;
+  }
+  p {
+    @apply mt-4;
+  }
+  p:first-child {
+    @apply mt-0;
+  }
+}
+
 @tailwind components;
 @tailwind utilities;
