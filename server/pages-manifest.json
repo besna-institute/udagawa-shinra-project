@@ -1,0 +1,11 @@
+{
+  "/_app": "pages/_app.js",
+  "/data-download": "pages/data-download.html",
+  "/data-format": "pages/data-format.html",
+  "/evaluation-method": "pages/evaluation-method.html",
+  "/": "pages/index.html",
+  "/result-submission": "pages/result-submission.html",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/404": "pages/404.html"
+}
