@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "ms-vscode-remote.remote-containers",
+        "editorconfig.editorconfig",
+        "codezombiech.gitignore",
+        "andrejunges.handlebars",
+        "esbenp.prettier-vscode"
+    ]
+}
