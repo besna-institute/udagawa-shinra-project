@@ -15,7 +15,7 @@ const Home: NextPage = () => {
         <h1>プロジェクト紹介動画</h1>
         <iframe
           className="w-full aspect-video"
-          src="https://www.youtube.com/embed/aUsG9NCdtMQ"
+          src="https://www.youtube.com/embed/lCYj3x6pu1w"
           title="YouTube video player"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -99,7 +99,7 @@ const Home: NextPage = () => {
             <h2 className="text-xl px-1">システム制作実況チャンネル</h2>
             <iframe
               className="w-full aspect-video"
-              src="https://www.youtube.com/embed/aUsG9NCdtMQ"
+              src="https://www.youtube.com/embed/lCYj3x6pu1w"
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
