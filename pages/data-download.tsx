@@ -18,7 +18,7 @@ const DataDownload: NextPage = () => {
         }}
       >
         <CardContent>
-          <h1>データダウンロード</h1>
+          <h2>データダウンロード</h2>
           <p>概</p>
           <p>要</p>
         </CardContent>
@@ -30,7 +30,7 @@ const DataDownload: NextPage = () => {
         }}
       >
         <CardContent>
-          <h1>End-to-endタスクのデータダウンロード</h1>
+          <h2>End-to-endタスクのデータダウンロード</h2>
           <p>概</p>
           <p>要</p>
         </CardContent>
@@ -42,7 +42,7 @@ const DataDownload: NextPage = () => {
         }}
       >
         <CardContent>
-          <h1>分類タスクのデータダウンロード</h1>
+          <h2>分類タスクのデータダウンロード</h2>
           <p>概</p>
           <p>要</p>
         </CardContent>
@@ -54,7 +54,7 @@ const DataDownload: NextPage = () => {
         }}
       >
         <CardContent>
-          <h1>属性抽出タスクのデータダウンロード</h1>
+          <h2>属性抽出タスクのデータダウンロード</h2>
           <p>概</p>
           <p>要</p>
         </CardContent>
@@ -66,7 +66,7 @@ const DataDownload: NextPage = () => {
         }}
       >
         <CardContent>
-          <h1>リンクタスクのデータダウンロード</h1>
+          <h2>リンクタスクのデータダウンロード</h2>
           <p>概</p>
           <p>要</p>
         </CardContent>
@@ -78,7 +78,7 @@ const DataDownload: NextPage = () => {
         }}
       >
         <CardContent>
-          <h1>データダウンロードについてのFAQ</h1>
+          <h2>データダウンロードについてのFAQ</h2>
           <p>概</p>
           <p>要</p>
         </CardContent>

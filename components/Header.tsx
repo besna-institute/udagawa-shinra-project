@@ -25,12 +25,12 @@ const Header = () => {
                 alt="logo"
                 variant="square"
               />
-              <Typography variant="h1" color="inherit" component="div">
+              <Typography variant="h4" color="inherit" component="h1">
                 森羅プロジェクト
               </Typography>
             </Stack>
           </NextLink>
-          <Typography variant="h2" color="inherit" component="div">
+          <Typography variant="h5" color="inherit" component="div">
             拡張固有表現
           </Typography>
         </Stack>

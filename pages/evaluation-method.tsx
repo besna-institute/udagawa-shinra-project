@@ -17,7 +17,7 @@ const EvaluationMethod: NextPage = () => {
         }}
       >
         <CardContent>
-          <h1>評価方法</h1>
+          <h2>評価方法</h2>
           <p>概</p>
           <p>要</p>
         </CardContent>
@@ -29,7 +29,7 @@ const EvaluationMethod: NextPage = () => {
         }}
       >
         <CardContent>
-          <h1>End-to-endタスクの評価方法</h1>
+          <h2>End-to-endタスクの評価方法</h2>
           <p>概</p>
           <p>要</p>
         </CardContent>
@@ -41,7 +41,7 @@ const EvaluationMethod: NextPage = () => {
         }}
       >
         <CardContent>
-          <h1>分類タスクの評価方法</h1>
+          <h2>分類タスクの評価方法</h2>
           <p>概</p>
           <p>要</p>
         </CardContent>
@@ -53,7 +53,7 @@ const EvaluationMethod: NextPage = () => {
         }}
       >
         <CardContent>
-          <h1>属性抽出タスクの評価方法</h1>
+          <h2>属性抽出タスクの評価方法</h2>
           <p>概</p>
           <p>要</p>
         </CardContent>
@@ -65,7 +65,7 @@ const EvaluationMethod: NextPage = () => {
         }}
       >
         <CardContent>
-          <h1>リンクタスクの評価方法</h1>
+          <h2>リンクタスクの評価方法</h2>
           <p>概</p>
           <p>要</p>
         </CardContent>
@@ -77,7 +77,7 @@ const EvaluationMethod: NextPage = () => {
         }}
       >
         <CardContent>
-          <h1>評価方法についてのFAQ</h1>
+          <h2>評価方法についてのFAQ</h2>
           <p>概</p>
           <p>要</p>
         </CardContent>

@@ -19,7 +19,7 @@ const Home: NextPage = () => {
         }}
       >
         <CardContent>
-          <h1>森羅プロジェクトとは?</h1>
+          <h2>森羅プロジェクトとは?</h2>
           <p>概</p>
           <p>要</p>
         </CardContent>
@@ -31,7 +31,7 @@ const Home: NextPage = () => {
         }}
       >
         <CardContent>
-          <h1>プロジェクト紹介動画</h1>
+          <h2>プロジェクト紹介動画</h2>
         </CardContent>
         <CardMedia
           component="iframe"
@@ -47,7 +47,7 @@ const Home: NextPage = () => {
         }}
       >
         <CardContent>
-          <h1>スケジュール</h1>
+          <h2>スケジュール</h2>
           <p>概</p>
           <p>要</p>
         </CardContent>
@@ -59,7 +59,7 @@ const Home: NextPage = () => {
         }}
       >
         <CardContent>
-          <h1>新着情報</h1>
+          <h2>新着情報</h2>
           <p>概</p>
           <p>要</p>
         </CardContent>
@@ -71,7 +71,7 @@ const Home: NextPage = () => {
         }}
       >
         <CardContent>
-          <h1>リーダーボード</h1>
+          <h2>リーダーボード</h2>
           <p>概</p>
           <p>要</p>
         </CardContent>
@@ -120,7 +120,7 @@ const Home: NextPage = () => {
         }}
       >
         <CardContent>
-          <h1>森羅プロジェクト紹介</h1>
+          <h2>森羅プロジェクト紹介</h2>
           <p>概</p>
           <p>要</p>
         </CardContent>
@@ -132,7 +132,7 @@ const Home: NextPage = () => {
         }}
       >
         <CardContent>
-          <h1>実行委員会</h1>
+          <h2>実行委員会</h2>
           <p>概</p>
           <p>要</p>
         </CardContent>
@@ -144,7 +144,7 @@ const Home: NextPage = () => {
         }}
       >
         <CardContent>
-          <h1>コミュニティ／連絡先</h1>
+          <h2>コミュニティ／連絡先</h2>
           <p>概</p>
           <p>要</p>
         </CardContent>
@@ -156,7 +156,7 @@ const Home: NextPage = () => {
         }}
       >
         <CardContent>
-          <h1>タスク概要</h1>
+          <h2>タスク概要</h2>
           <p>概</p>
           <p>要</p>
         </CardContent>
@@ -168,7 +168,7 @@ const Home: NextPage = () => {
         }}
       >
         <CardContent>
-          <h1>タスク詳細</h1>
+          <h2>タスク詳細</h2>
           <p>概</p>
           <p>要</p>
         </CardContent>
@@ -180,7 +180,7 @@ const Home: NextPage = () => {
         }}
       >
         <CardContent>
-          <h1>システム制作の参考資料</h1>
+          <h2>システム制作の参考資料</h2>
           <Box
             sx={{
               display: "grid",
@@ -190,7 +190,7 @@ const Home: NextPage = () => {
           >
             <Card>
               <CardContent>
-                <h2>システム制作実況チャンネル</h2>
+                <h3>システム制作実況チャンネル</h3>
               </CardContent>
               <CardMedia
                 component="iframe"
@@ -201,7 +201,7 @@ const Home: NextPage = () => {
             </Card>
             <Card>
               <CardContent>
-                <h2>ベースラインシステム等参考システム</h2>
+                <h3>ベースラインシステム等参考システム</h3>
                 <p>概</p>
                 <p>要</p>
               </CardContent>
@@ -216,7 +216,7 @@ const Home: NextPage = () => {
         }}
       >
         <CardContent>
-          <h1>関連研究</h1>
+          <h2>関連研究</h2>
           <p>概</p>
           <p>要</p>
         </CardContent>
@@ -228,7 +228,7 @@ const Home: NextPage = () => {
         }}
       >
         <CardContent>
-          <h1>タスク参加についてのFAQ</h1>
+          <h2>タスク参加についてのFAQ</h2>
           <p>概</p>
           <p>要</p>
         </CardContent>
@@ -240,7 +240,7 @@ const Home: NextPage = () => {
         }}
       >
         <CardContent>
-          <h1>過去の共有タスク</h1>
+          <h2>過去の共有タスク</h2>
           <p>概</p>
           <p>要</p>
         </CardContent>

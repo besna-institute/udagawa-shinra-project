@@ -14,17 +14,38 @@ const theme = createTheme(
         "Arial",
         "sans-serif",
       ].join(","),
-      h1: {
-        fontSize: "2rem",
-      },
-      h2: {
-        fontSize: "1.5rem",
-      },
     },
   },
   jaJP
 );
-
+theme.components = {
+  ...theme.components,
+  MuiCssBaseline: {
+    styleOverrides: {
+      h1: {
+        ...theme.typography.h4,
+      },
+      h2: {
+        ...theme.typography.h5,
+      },
+      h3: {
+        ...theme.typography.h6,
+      },
+      h4: {
+        ...theme.typography.h6,
+      },
+      h5: {
+        ...theme.typography.h6,
+      },
+      h6: {
+        ...theme.typography.h6,
+      },
+      p: {
+        ...theme.typography.body1,
+      },
+    },
+  },
+};
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>

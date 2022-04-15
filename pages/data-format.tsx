@@ -18,7 +18,7 @@ const ResultSubmission: NextPage = () => {
         }}
       >
         <CardContent>
-          <h1>データ形式</h1>
+          <h2>データ形式</h2>
           <p>概</p>
           <p>要</p>
         </CardContent>
@@ -30,7 +30,7 @@ const ResultSubmission: NextPage = () => {
         }}
       >
         <CardContent>
-          <h1>End-to-endタスクのデータ形式について</h1>
+          <h2>End-to-endタスクのデータ形式について</h2>
           <p>概</p>
           <p>要</p>
         </CardContent>
@@ -42,7 +42,7 @@ const ResultSubmission: NextPage = () => {
         }}
       >
         <CardContent>
-          <h1>サンプルファイル（入力）</h1>
+          <h2>サンプルファイル（入力）</h2>
           <p>概</p>
           <p>要</p>
         </CardContent>
@@ -54,7 +54,7 @@ const ResultSubmission: NextPage = () => {
         }}
       >
         <CardContent>
-          <h1>サンプルファイル（出力）</h1>
+          <h2>サンプルファイル（出力）</h2>
           <p>概</p>
           <p>要</p>
         </CardContent>
@@ -66,7 +66,7 @@ const ResultSubmission: NextPage = () => {
         }}
       >
         <CardContent>
-          <h1>スキーマファイル（出力）</h1>
+          <h2>スキーマファイル（出力）</h2>
           <p>概</p>
           <p>要</p>
         </CardContent>
@@ -78,7 +78,7 @@ const ResultSubmission: NextPage = () => {
         }}
       >
         <CardContent>
-          <h1>分類タスクのデータ形式について</h1>
+          <h2>分類タスクのデータ形式について</h2>
           <p>概</p>
           <p>要</p>
         </CardContent>
@@ -90,7 +90,7 @@ const ResultSubmission: NextPage = () => {
         }}
       >
         <CardContent>
-          <h1>サンプルファイル（入力）</h1>
+          <h2>サンプルファイル（入力）</h2>
           <p>概</p>
           <p>要</p>
         </CardContent>
@@ -102,7 +102,7 @@ const ResultSubmission: NextPage = () => {
         }}
       >
         <CardContent>
-          <h1>サンプルファイル（出力）</h1>
+          <h2>サンプルファイル（出力）</h2>
           <p>概</p>
           <p>要</p>
         </CardContent>
@@ -114,7 +114,7 @@ const ResultSubmission: NextPage = () => {
         }}
       >
         <CardContent>
-          <h1>スキーマファイル（出力）</h1>
+          <h2>スキーマファイル（出力）</h2>
           <p>概</p>
           <p>要</p>
         </CardContent>
@@ -126,7 +126,7 @@ const ResultSubmission: NextPage = () => {
         }}
       >
         <CardContent>
-          <h1>属性抽出タスクのデータ形式について</h1>
+          <h2>属性抽出タスクのデータ形式について</h2>
           <p>概</p>
           <p>要</p>
         </CardContent>
@@ -138,7 +138,7 @@ const ResultSubmission: NextPage = () => {
         }}
       >
         <CardContent>
-          <h1>サンプルファイル（入力）</h1>
+          <h2>サンプルファイル（入力）</h2>
           <p>概</p>
           <p>要</p>
         </CardContent>
@@ -150,7 +150,7 @@ const ResultSubmission: NextPage = () => {
         }}
       >
         <CardContent>
-          <h1>サンプルファイル（出力）</h1>
+          <h2>サンプルファイル（出力）</h2>
           <p>概</p>
           <p>要</p>
         </CardContent>
@@ -162,7 +162,7 @@ const ResultSubmission: NextPage = () => {
         }}
       >
         <CardContent>
-          <h1>スキーマファイル（出力）</h1>
+          <h2>スキーマファイル（出力）</h2>
           <p>概</p>
           <p>要</p>
         </CardContent>
@@ -174,7 +174,7 @@ const ResultSubmission: NextPage = () => {
         }}
       >
         <CardContent>
-          <h1>リンクタスクのデータ形式について</h1>
+          <h2>リンクタスクのデータ形式について</h2>
           <p>概</p>
           <p>要</p>
         </CardContent>
@@ -186,7 +186,7 @@ const ResultSubmission: NextPage = () => {
         }}
       >
         <CardContent>
-          <h1>サンプルファイル（入力）</h1>
+          <h2>サンプルファイル（入力）</h2>
           <p>概</p>
           <p>要</p>
         </CardContent>
@@ -198,7 +198,7 @@ const ResultSubmission: NextPage = () => {
         }}
       >
         <CardContent>
-          <h1>サンプルファイル（出力）</h1>
+          <h2>サンプルファイル（出力）</h2>
           <p>概</p>
           <p>要</p>
         </CardContent>
@@ -210,7 +210,7 @@ const ResultSubmission: NextPage = () => {
         }}
       >
         <CardContent>
-          <h1>スキーマファイル（出力）</h1>
+          <h2>スキーマファイル（出力）</h2>
           <p>概</p>
           <p>要</p>
         </CardContent>
@@ -222,7 +222,7 @@ const ResultSubmission: NextPage = () => {
         }}
       >
         <CardContent>
-          <h1>フォーマットチェッカーについて</h1>
+          <h2>フォーマットチェッカーについて</h2>
           <p>概</p>
           <p>要</p>
         </CardContent>
@@ -234,7 +234,7 @@ const ResultSubmission: NextPage = () => {
         }}
       >
         <CardContent>
-          <h1>データ形式についてのFAQ</h1>
+          <h2>データ形式についてのFAQ</h2>
           <p>概</p>
           <p>要</p>
         </CardContent>
