@@ -1,15 +1,8 @@
 import * as React from "react";
-import {
-  AppBar,
-  Container,
-  Toolbar,
-  Typography,
-  Stack,
-  Avatar,
-} from "@mui/material";
+import { AppBar, Toolbar, Typography, Stack, Avatar } from "@mui/material";
 import NextLink from "next/link";
 
-const ResponsiveAppBar = () => {
+const Header = () => {
   return (
     <AppBar position="sticky">
       <Toolbar variant="dense" sx={{ px: 2 }}>
@@ -32,12 +25,12 @@ const ResponsiveAppBar = () => {
                 alt="logo"
                 variant="square"
               />
-              <Typography variant="h4" color="inherit" component="div">
+              <Typography variant="h1" color="inherit" component="div">
                 森羅プロジェクト
               </Typography>
             </Stack>
           </NextLink>
-          <Typography variant="h5" color="inherit" component="div">
+          <Typography variant="h2" color="inherit" component="div">
             拡張固有表現
           </Typography>
         </Stack>
@@ -45,4 +38,4 @@ const ResponsiveAppBar = () => {
     </AppBar>
   );
 };
-export default ResponsiveAppBar;
+export default Header;
