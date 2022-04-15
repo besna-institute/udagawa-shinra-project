@@ -1,5 +1,5 @@
 import "../styles/globals.css";
-import Layout from "../components/Layout";
+import { Layout } from "../components/Layout";
 import type { AppProps } from "next/app";
 import { createTheme, CssBaseline, ThemeProvider } from "@mui/material";
 import { jaJP } from "@mui/material/locale";
