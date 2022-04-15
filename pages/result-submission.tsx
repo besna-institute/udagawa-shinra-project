@@ -1,51 +1,89 @@
 import type { NextPage } from "next";
+import { Card, CardContent, Paper } from "@mui/material";
 
 const ResultSubmission: NextPage = () => {
   return (
-    <div className="grid grid-cols-1 gap-4">
-      <div className="col-span-1 row-span-1">
-        <h1>結果の提出</h1>
-        <div className="text-base border border-black box-border p-2">
+    <Paper
+      elevation={0}
+      sx={{
+        display: "grid",
+        gridTemplateColumns: "repeat(1, minmax(0, 1fr))",
+        gridGap: "1rem",
+      }}
+    >
+      <Card
+        sx={{
+          gridColumn: "span 1 / span 1",
+          gridRow: "span 1 / span 1",
+        }}
+      >
+        <CardContent>
+          <h2>結果の提出</h2>
           <p>概</p>
           <p>要</p>
-        </div>
-      </div>
-      <div className="col-span-1 row-span-1">
-        <h1>End-to-endタスクの結果の提出</h1>
-        <div className="text-base border border-black box-border p-2">
+        </CardContent>
+      </Card>
+      <Card
+        sx={{
+          gridColumn: "span 1 / span 1",
+          gridRow: "span 1 / span 1",
+        }}
+      >
+        <CardContent>
+          <h2>End-to-endタスクの結果の提出</h2>
           <p>概</p>
           <p>要</p>
-        </div>
-      </div>
-      <div className="col-span-1 row-span-1">
-        <h1>分類タスクの結果の提出</h1>
-        <div className="text-base border border-black box-border p-2">
+        </CardContent>
+      </Card>
+      <Card
+        sx={{
+          gridColumn: "span 1 / span 1",
+          gridRow: "span 1 / span 1",
+        }}
+      >
+        <CardContent>
+          <h2>分類タスクの結果の提出</h2>
           <p>概</p>
           <p>要</p>
-        </div>
-      </div>
-      <div className="col-span-1 row-span-1">
-        <h1>属性抽出タスクの結果の提出</h1>
-        <div className="text-base border border-black box-border p-2">
+        </CardContent>
+      </Card>
+      <Card
+        sx={{
+          gridColumn: "span 1 / span 1",
+          gridRow: "span 1 / span 1",
+        }}
+      >
+        <CardContent>
+          <h2>属性抽出タスクの結果の提出</h2>
           <p>概</p>
           <p>要</p>
-        </div>
-      </div>
-      <div className="col-span-1 row-span-1">
-        <h1>リンクタスクの結果の提出</h1>
-        <div className="text-base border border-black box-border p-2">
+        </CardContent>
+      </Card>
+      <Card
+        sx={{
+          gridColumn: "span 1 / span 1",
+          gridRow: "span 1 / span 1",
+        }}
+      >
+        <CardContent>
+          <h2>リンクタスクの結果の提出</h2>
           <p>概</p>
           <p>要</p>
-        </div>
-      </div>
-      <div className="col-span-1 row-span-1">
-        <h1>結果の提出についてのFAQ</h1>
-        <div className="text-base border border-black box-border p-2">
+        </CardContent>
+      </Card>
+      <Card
+        sx={{
+          gridColumn: "span 1 / span 1",
+          gridRow: "span 1 / span 1",
+        }}
+      >
+        <CardContent>
+          <h2>結果の提出についてのFAQ</h2>
           <p>概</p>
           <p>要</p>
-        </div>
-      </div>
-    </div>
+        </CardContent>
+      </Card>
+    </Paper>
   );
 };
 
