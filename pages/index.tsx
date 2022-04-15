@@ -181,6 +181,8 @@ const Home: NextPage = () => {
       >
         <CardContent>
           <h2>システム制作の参考資料</h2>
+        </CardContent>
+        <CardContent>
           <Box
             sx={{
               display: "grid",

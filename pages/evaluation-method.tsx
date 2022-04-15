@@ -4,6 +4,7 @@ import { Card, CardContent, Paper } from "@mui/material";
 const EvaluationMethod: NextPage = () => {
   return (
     <Paper
+      elevation={0}
       sx={{
         display: "grid",
         gridTemplateColumns: "repeat(1, minmax(0, 1fr))",
