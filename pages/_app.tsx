@@ -12,7 +12,7 @@ const theme = createTheme(
         h1, h2, p {
           margin: 1rem 0 0 0;
         }
-        h1:first-child, h2:first-child, p:first-child {
+        h1:first-of-type, h2:first-of-type, p:first-of-type {
           margin: 0;
         }
         h1 {
@@ -41,7 +41,10 @@ const theme = createTheme(
         "sans-serif",
       ].join(","),
       h1: {
-        fontSize: "33px",
+        fontSize: "2rem",
+      },
+      h2: {
+        fontSize: "1.5rem",
       },
     },
   },
