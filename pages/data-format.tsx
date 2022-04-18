@@ -258,7 +258,7 @@ const fetchCode = async (url: string) => {
   return res.text();
 };
 
-export async function getServerSideProps(): Promise<any> {
+export async function getStaticProps(): Promise<any> {
   return {
     props: {
       code: {
