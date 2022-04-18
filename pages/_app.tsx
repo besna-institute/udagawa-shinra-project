@@ -1,6 +1,5 @@
 import "../styles/globals.css";
-import "prismjs/themes/prism-tomorrow.min.css";
-
+import "prismjs/themes/prism-tomorrow.css";
 import { Layout } from "../components/Layout";
 import type { AppProps } from "next/app";
 import { createTheme, CssBaseline, ThemeProvider } from "@mui/material";
