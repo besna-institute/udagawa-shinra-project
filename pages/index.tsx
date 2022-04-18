@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
-import Link from "next/link";
-import { NewsList } from "../components/NewsList";
+import { NavigationLink, NewsList } from "../components";
 import { Box, Paper, CardContent, CardMedia, Card } from "@mui/material";
 
 const newsItems = [
@@ -140,12 +139,12 @@ const Home: NextPage = () => {
             padding: "1rem",
           }}
         >
-          <Link href="/data-format">
-            <a>データ形式について</a>
-          </Link>
-          <Link href="/evaluation-method">
-            <a>評価方法について</a>
-          </Link>
+          <NavigationLink href="/data-format">
+            データ形式について
+          </NavigationLink>
+          <NavigationLink href="/evaluation-method">
+            評価方法について
+          </NavigationLink>
         </Box>
       </Card>
       <Card
@@ -162,12 +161,12 @@ const Home: NextPage = () => {
             padding: "1rem",
           }}
         >
-          <Link href="/data-download">
-            <a>データダウンロードについて</a>
-          </Link>
-          <Link href="/result-submission">
-            <a>結果の提出について</a>
-          </Link>
+          <NavigationLink href="/data-download">
+            データダウンロードについて
+          </NavigationLink>
+          <NavigationLink href="/result-submission">
+            結果の提出について
+          </NavigationLink>
         </Box>
       </Card>
       <Card
