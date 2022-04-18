@@ -1,7 +1,18 @@
 import type { NextPage } from "next";
 import { Card, CardContent, Paper } from "@mui/material";
+import { CodeBlock } from "../components";
 
-const ResultSubmission: NextPage = () => {
+interface Props {
+  code: {
+    endToEnd: {
+      input: string;
+      output: string;
+      schema: string;
+    };
+  };
+}
+
+const ResultSubmission: NextPage<Props> = (props) => {
   return (
     <Paper
       elevation={0}
@@ -43,8 +54,7 @@ const ResultSubmission: NextPage = () => {
       >
         <CardContent>
           <h2>サンプルファイル（入力）</h2>
-          <p>概</p>
-          <p>要</p>
+          <CodeBlock language="json" code={props.code.endToEnd.input} />
         </CardContent>
       </Card>
       <Card
@@ -55,8 +65,7 @@ const ResultSubmission: NextPage = () => {
       >
         <CardContent>
           <h2>サンプルファイル（出力）</h2>
-          <p>概</p>
-          <p>要</p>
+          <CodeBlock language="json" code={props.code.endToEnd.output} />
         </CardContent>
       </Card>
       <Card
@@ -67,8 +76,7 @@ const ResultSubmission: NextPage = () => {
       >
         <CardContent>
           <h2>スキーマファイル（出力）</h2>
-          <p>概</p>
-          <p>要</p>
+          <CodeBlock language="json" code={props.code.endToEnd.schema} />
         </CardContent>
       </Card>
       <Card
@@ -244,3 +252,28 @@ const ResultSubmission: NextPage = () => {
 };
 
 export default ResultSubmission;
+
+const fetchCode = async (url: string) => {
+  const res = await fetch(url);
+  return res.text();
+};
+
+export async function getServerSideProps(): Promise<any> {
+  return {
+    props: {
+      code: {
+        endToEnd: {
+          input: await fetchCode(
+            "https://raw.githubusercontent.com/besna-institute/udagawa-shinra-project/main/tsconfig.json"
+          ),
+          output: await fetchCode(
+            "https://raw.githubusercontent.com/besna-institute/udagawa-shinra-project/main/tsconfig.json"
+          ),
+          schema: await fetchCode(
+            "https://raw.githubusercontent.com/besna-institute/udagawa-shinra-project/main/tsconfig.json"
+          ),
+        },
+      },
+    },
+  };
+}
