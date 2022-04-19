@@ -14,14 +14,28 @@ export const CodeBlock = (props: Props) => {
     Prism.highlightAll();
   }, []);
 
+  const handleClick = () => {
+    navigator.clipboard.writeText(props.code);
+  };
+
   return (
     <Box>
       <pre>
         <code className={`language-${props.language}`}>{props.code}</code>
       </pre>
       <BottomNavigation>
-        <BottomNavigationAction label="Copy" icon={<ContentCopy />} />
-        <BottomNavigationAction label="Link" icon={<Link />} />
+        <BottomNavigationAction
+          label="コピー"
+          onClick={handleClick}
+          icon={<ContentCopy />}
+          showLabel
+        />
+        <BottomNavigationAction
+          label="リンク"
+          icon={<Link />}
+          href={props.link}
+          showLabel
+        />
       </BottomNavigation>
     </Box>
   );
