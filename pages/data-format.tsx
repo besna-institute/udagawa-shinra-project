@@ -1,7 +1,33 @@
 import type { NextPage } from "next";
 import { Card, CardContent, Paper } from "@mui/material";
+import { CodeBlock, Code } from "../components";
 
-const ResultSubmission: NextPage = () => {
+interface Props {
+  code: {
+    endToEnd: {
+      input: Code;
+      output: Code;
+      schema: Code;
+    };
+    classification: {
+      input: Code;
+      output: Code;
+      schema: Code;
+    };
+    attributeExtraction: {
+      input: Code;
+      output: Code;
+      schema: Code;
+    };
+    link: {
+      input: Code;
+      output: Code;
+      schema: Code;
+    };
+  };
+}
+
+const ResultSubmission: NextPage<Props> = (props) => {
   return (
     <Paper
       elevation={0}
@@ -43,8 +69,7 @@ const ResultSubmission: NextPage = () => {
       >
         <CardContent>
           <h2>サンプルファイル（入力）</h2>
-          <p>概</p>
-          <p>要</p>
+          <CodeBlock {...props.code.endToEnd.input} />
         </CardContent>
       </Card>
       <Card
@@ -55,8 +80,7 @@ const ResultSubmission: NextPage = () => {
       >
         <CardContent>
           <h2>サンプルファイル（出力）</h2>
-          <p>概</p>
-          <p>要</p>
+          <CodeBlock {...props.code.endToEnd.output} />
         </CardContent>
       </Card>
       <Card
@@ -67,8 +91,7 @@ const ResultSubmission: NextPage = () => {
       >
         <CardContent>
           <h2>スキーマファイル（出力）</h2>
-          <p>概</p>
-          <p>要</p>
+          <CodeBlock {...props.code.endToEnd.schema} />
         </CardContent>
       </Card>
       <Card
@@ -91,8 +114,7 @@ const ResultSubmission: NextPage = () => {
       >
         <CardContent>
           <h2>サンプルファイル（入力）</h2>
-          <p>概</p>
-          <p>要</p>
+          <CodeBlock {...props.code.classification.input} />
         </CardContent>
       </Card>
       <Card
@@ -103,8 +125,7 @@ const ResultSubmission: NextPage = () => {
       >
         <CardContent>
           <h2>サンプルファイル（出力）</h2>
-          <p>概</p>
-          <p>要</p>
+          <CodeBlock {...props.code.classification.output} />
         </CardContent>
       </Card>
       <Card
@@ -115,8 +136,7 @@ const ResultSubmission: NextPage = () => {
       >
         <CardContent>
           <h2>スキーマファイル（出力）</h2>
-          <p>概</p>
-          <p>要</p>
+          <CodeBlock {...props.code.classification.schema} />
         </CardContent>
       </Card>
       <Card
@@ -139,8 +159,7 @@ const ResultSubmission: NextPage = () => {
       >
         <CardContent>
           <h2>サンプルファイル（入力）</h2>
-          <p>概</p>
-          <p>要</p>
+          <CodeBlock {...props.code.attributeExtraction.input} />
         </CardContent>
       </Card>
       <Card
@@ -151,8 +170,7 @@ const ResultSubmission: NextPage = () => {
       >
         <CardContent>
           <h2>サンプルファイル（出力）</h2>
-          <p>概</p>
-          <p>要</p>
+          <CodeBlock {...props.code.attributeExtraction.output} />
         </CardContent>
       </Card>
       <Card
@@ -163,8 +181,7 @@ const ResultSubmission: NextPage = () => {
       >
         <CardContent>
           <h2>スキーマファイル（出力）</h2>
-          <p>概</p>
-          <p>要</p>
+          <CodeBlock {...props.code.attributeExtraction.schema} />
         </CardContent>
       </Card>
       <Card
@@ -187,8 +204,7 @@ const ResultSubmission: NextPage = () => {
       >
         <CardContent>
           <h2>サンプルファイル（入力）</h2>
-          <p>概</p>
-          <p>要</p>
+          <CodeBlock {...props.code.link.input} />
         </CardContent>
       </Card>
       <Card
@@ -199,8 +215,7 @@ const ResultSubmission: NextPage = () => {
       >
         <CardContent>
           <h2>サンプルファイル（出力）</h2>
-          <p>概</p>
-          <p>要</p>
+          <CodeBlock {...props.code.link.output} />
         </CardContent>
       </Card>
       <Card
@@ -211,8 +226,7 @@ const ResultSubmission: NextPage = () => {
       >
         <CardContent>
           <h2>スキーマファイル（出力）</h2>
-          <p>概</p>
-          <p>要</p>
+          <CodeBlock {...props.code.link.schema} />
         </CardContent>
       </Card>
       <Card
@@ -244,3 +258,81 @@ const ResultSubmission: NextPage = () => {
 };
 
 export default ResultSubmission;
+
+const fetchCode = async (
+  srcUrl: string,
+  language: Code["language"],
+  link?: Code["link"]
+): Promise<Code> => {
+  const res = await fetch(srcUrl);
+  return {
+    code: await res.text(),
+    language,
+    link: typeof link === "undefined" ? srcUrl : link,
+  };
+};
+
+export async function getStaticProps(): Promise<any> {
+  return {
+    props: {
+      code: {
+        endToEnd: {
+          input: await fetchCode(
+            "https://raw.githubusercontent.com/besna-institute/udagawa-shinra-project/main/tsconfig.json",
+            "json"
+          ),
+          output: await fetchCode(
+            "https://raw.githubusercontent.com/besna-institute/udagawa-shinra-project/main/tsconfig.json",
+            "json"
+          ),
+          schema: await fetchCode(
+            "https://raw.githubusercontent.com/besna-institute/udagawa-shinra-project/main/tsconfig.json",
+            "json"
+          ),
+        },
+        classification: {
+          input: await fetchCode(
+            "https://raw.githubusercontent.com/besna-institute/udagawa-shinra-project/main/tsconfig.json",
+            "json"
+          ),
+          output: await fetchCode(
+            "https://raw.githubusercontent.com/besna-institute/udagawa-shinra-project/main/tsconfig.json",
+            "json"
+          ),
+          schema: await fetchCode(
+            "https://raw.githubusercontent.com/besna-institute/udagawa-shinra-project/main/tsconfig.json",
+            "json"
+          ),
+        },
+        attributeExtraction: {
+          input: await fetchCode(
+            "https://raw.githubusercontent.com/besna-institute/udagawa-shinra-project/main/tsconfig.json",
+            "json"
+          ),
+          output: await fetchCode(
+            "https://raw.githubusercontent.com/besna-institute/udagawa-shinra-project/main/tsconfig.json",
+            "json"
+          ),
+          schema: await fetchCode(
+            "https://raw.githubusercontent.com/besna-institute/udagawa-shinra-project/main/tsconfig.json",
+            "json"
+          ),
+        },
+        link: {
+          input: await fetchCode(
+            "https://raw.githubusercontent.com/besna-institute/udagawa-shinra-project/main/tsconfig.json",
+            "json"
+          ),
+          output: await fetchCode(
+            "https://raw.githubusercontent.com/besna-institute/udagawa-shinra-project/main/tsconfig.json",
+            "json"
+          ),
+          schema: await fetchCode(
+            "https://raw.githubusercontent.com/besna-institute/udagawa-shinra-project/main/tsconfig.json",
+            "json"
+          ),
+        },
+      },
+    },
+  };
+}

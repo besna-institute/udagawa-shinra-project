@@ -10,7 +10,7 @@ export const NewsList = ({ items }: Props) => {
       <ListItem key={index} disablePadding>
         <ListItemText primary={item} />
       </ListItem>
-      <Divider component="li" />
+      <Divider key={`${index}-divider`} component="li" />
     </>
   ));
   return <List>{newsItems}</List>;
