@@ -2,6 +2,7 @@
 import type { NextPage } from "next";
 import {
   CommitteeList,
+  JoinButton,
   NavigationLink,
   NewsList,
   ScheduleList,
@@ -270,25 +271,24 @@ const Home: NextPage = () => {
       >
         <CardContent>
           <h2 id="contact">コミュニティ／連絡先</h2>
-          <ul>
-            <li>
-              [メーリングリスト]　shinra2022-all　
-              <a href="https://groups.google.com/g/shinra2022-all">
-                参加リンク
-              </a>
-            </li>
-            <li>
-              [Slack]
-              森羅2022：Wikipedia構造化プロジェクト(shinra2022.slack.com)　
-              <a href="https://join.slack.com/t/shinra2022/shared_invite/zt-14qkpf21i-lQNKlT0aIOU5We7xlZBqfQ">
-                参加リンク
-              </a>
-            </li>
-            <li>
-              Email（実行委員宛）:
-              <em>shinra2022-info （at） googlegroups.com</em>　
-            </li>
-          </ul>
+          <h3>メーリングリスト</h3>
+          <p>
+            shinra2022-all
+            <JoinButton href="https://groups.google.com/g/shinra2022-all">
+              参加リンク
+            </JoinButton>
+          </p>
+          <h3>Slack</h3>
+          <p>
+            森羅2022：Wikipedia構造化プロジェクト(shinra2022.slack.com)
+            <JoinButton href="https://join.slack.com/t/shinra2022/shared_invite/zt-14qkpf21i-lQNKlT0aIOU5We7xlZBqfQ">
+              参加リンク
+            </JoinButton>
+          </p>
+          <h3>Email（実行委員宛）</h3>
+          <p>
+            <em>shinra2022-info （at） googlegroups.com</em>
+          </p>
         </CardContent>
       </Card>
       <Card
