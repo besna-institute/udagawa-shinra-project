@@ -74,28 +74,41 @@ const Home: NextPage = () => {
         display: "grid",
         gridTemplateColumns: "minmax(0, 2fr) minmax(0, 2fr) minmax(0, 3fr)",
         gridGap: "1rem",
+        gridTemplateAreas: `
+          "about            about            leader-board"
+          "shinra-video     schedule         leader-board"
+          "-                schedule         leader-board"
+          "whatsnew         whatsnew         leader-board"
+          "whatsnew         whatsnew         navigation"
+          "introduction     introduction     contact"
+          "introduction     introduction     committee"
+          "overview         overview         overview"
+          "task-detail      task-detail      task-detail"
+          "reference        reference        reference"
+          "related-research related-research related-research"
+          "faq              faq              faq"
+          "task-list        task-list        task-list"
+        `,
       }}
     >
       <Card
         sx={{
-          gridColumn: "1 / span 2",
-          gridRow: "1 / span 1",
+          gridArea: "about",
         }}
       >
         <CardContent>
-          <h2>森羅プロジェクトとは?</h2>
+          <h2 id="about">森羅プロジェクトとは?</h2>
           <p>概</p>
           <p>要</p>
         </CardContent>
       </Card>
       <Card
         sx={{
-          gridColumn: "1 / span 1",
-          gridRow: "2 / span 1",
+          gridArea: "shinra-video",
         }}
       >
         <CardContent>
-          <h2>プロジェクト紹介動画</h2>
+          <h2 id="shinra-video">プロジェクト紹介動画</h2>
         </CardContent>
         <CardMedia
           component="iframe"
@@ -106,8 +119,7 @@ const Home: NextPage = () => {
       </Card>
       <Card
         sx={{
-          gridColumn: "2 / span 1",
-          gridRow: "2 / span 1",
+          gridArea: "schedule",
         }}
       >
         <CardContent>
@@ -134,23 +146,21 @@ const Home: NextPage = () => {
       </Card>
       <Card
         sx={{
-          gridColumn: "1 / span 2",
-          gridRow: "3 / span 1",
+          gridArea: "whatsnew",
         }}
       >
         <CardContent>
-          <h2>新着情報</h2>
+          <h2 id="whatsnew">新着情報</h2>
           <NewsList items={newsItems} />
         </CardContent>
       </Card>
       <Card
         sx={{
-          gridColumn: "3 / span 1",
-          gridRow: "1 / span 2",
+          gridArea: "leader-board",
         }}
       >
         <CardContent>
-          <h2>リーダーボード</h2>
+          <h2 id="leader-board">リーダーボード</h2>
           <p>概</p>
           <p>要</p>
         </CardContent>
@@ -172,8 +182,7 @@ const Home: NextPage = () => {
       </Card>
       <Card
         sx={{
-          gridColumn: "3 / span 1",
-          gridRow: "3 / span 1",
+          gridArea: "navigation",
         }}
       >
         <Box
@@ -194,8 +203,7 @@ const Home: NextPage = () => {
       </Card>
       <Card
         sx={{
-          gridColumn: "1 / span 2",
-          gridRow: "4 / span 2",
+          gridArea: "introduction",
         }}
       >
         <CardContent>
@@ -237,8 +245,7 @@ const Home: NextPage = () => {
       </Card>
       <Card
         sx={{
-          gridColumn: "3 / span 1",
-          gridRow: "5 / span 1",
+          gridArea: "committee",
         }}
       >
         <CardContent>
@@ -265,8 +272,7 @@ const Home: NextPage = () => {
       </Card>
       <Card
         sx={{
-          gridColumn: "3 / span 1",
-          gridRow: "4 / span 1",
+          gridArea: "contact",
         }}
       >
         <CardContent>
@@ -293,8 +299,7 @@ const Home: NextPage = () => {
       </Card>
       <Card
         sx={{
-          gridColumn: "1 / span 3",
-          gridRow: "6 / span 1",
+          gridArea: "overview",
         }}
       >
         <CardContent>
@@ -379,8 +384,7 @@ const Home: NextPage = () => {
       </Card>
       <Card
         sx={{
-          gridColumn: "1 / span 3",
-          gridRow: "7 / span 1",
+          gridArea: "task-detail",
         }}
       >
         <CardContent>
@@ -487,12 +491,11 @@ const Home: NextPage = () => {
       </Card>
       <Card
         sx={{
-          gridColumn: "1 / span 3",
-          gridRow: "8 / span 1",
+          gridArea: "reference",
         }}
       >
         <CardContent>
-          <h2>システム制作の参考資料</h2>
+          <h2 id="reference">システム制作の参考資料</h2>
         </CardContent>
         <CardContent>
           <Box
@@ -525,8 +528,7 @@ const Home: NextPage = () => {
       </Card>
       <Card
         sx={{
-          gridColumn: "1 / span 3",
-          gridRow: "9 / span 1",
+          gridArea: "related-research",
         }}
       >
         <CardContent>
@@ -787,12 +789,11 @@ const Home: NextPage = () => {
       </Card>
       <Card
         sx={{
-          gridColumn: "1 / span 3",
-          gridRow: "10 / span 1",
+          gridArea: "faq",
         }}
       >
         <CardContent>
-          <h2>タスク参加についてのFAQ</h2>
+          <h2 id="faq">タスク参加についてのFAQ</h2>
           <p>
             本タスクに関しご不明な点がありましたら、
             <a href="#contact">連絡先</a>までお問い合わせください。
@@ -801,12 +802,11 @@ const Home: NextPage = () => {
       </Card>
       <Card
         sx={{
-          gridColumn: "1 / span 3",
-          gridRow: "11 / span 1",
+          gridArea: "task-list",
         }}
       >
         <CardContent>
-          <h2 id="task_list">過去の共有タスク</h2>
+          <h2 id="task-list">過去の共有タスク</h2>
           <ul>
             <li>
               <strong>
