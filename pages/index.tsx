@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import type { NextPage } from "next";
-import { NavigationLink, NewsList } from "../components";
+import { CommitteeList, NavigationLink, NewsList } from "../components";
 import { Box, Paper, CardContent, CardMedia, Card } from "@mui/material";
 
 const newsItems = [
@@ -230,12 +230,24 @@ const Home: NextPage = () => {
       >
         <CardContent>
           <h2 id="committee">実行委員</h2>
-          <span>【委員長】 関根 聡（理研AIP）</span>
-          <span>
-            【委員】野本昌子（理研AIP）中山功太（理研AIP/筑波大）隅田飛鳥（理研AIP）松田耕史（理研AIP/東北大）後藤美知子（理研AIP）宇佐美佑（Usami
-            LLC）安藤まや（フリー）山田育矢（Studio
-            Ousia/理研AIP）三浦明波（株式会社アティード）阪本浩太郎（株式会社BESNA研究所）渋木英潔（株式会社BESNA研究所）
-          </span>
+          <h3>委員長</h3>
+          <CommitteeList items={["関根 聡（理研AIP）"]} />
+          <h3>委員</h3>
+          <CommitteeList
+            items={[
+              "野本昌子（理研AIP）",
+              "中山功太（理研AIP/筑波大）",
+              "隅田飛鳥（理研AIP）",
+              "松田耕史（理研AIP/東北大）",
+              "後藤美知子（理研AIP）",
+              "宇佐美佑（Usami LLC）",
+              "安藤まや（フリー）",
+              "山田育矢（Studio Ousia/理研AIP）",
+              "三浦明波（株式会社アティード）",
+              "阪本浩太郎（株式会社BESNA研究所）",
+              "渋木英潔（株式会社BESNA研究所）",
+            ]}
+          />
         </CardContent>
       </Card>
       <Card
