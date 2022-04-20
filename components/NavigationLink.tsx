@@ -12,7 +12,7 @@ export const NavigationLink = ({
 }: PropsWithChildren<Props>) => {
   return (
     <Link href={href} passHref>
-      <Button variant="outlined" href={href}>
+      <Button variant="outlined" href={href} sx={{ marginInline: "0.5rem" }}>
         {children}
       </Button>
     </Link>
