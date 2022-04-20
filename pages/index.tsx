@@ -225,7 +225,7 @@ const Home: NextPage = () => {
       <Card
         sx={{
           gridColumn: "3 / span 1",
-          gridRow: "4 / span 1",
+          gridRow: "5 / span 1",
         }}
       >
         <CardContent>
@@ -241,7 +241,7 @@ const Home: NextPage = () => {
       <Card
         sx={{
           gridColumn: "3 / span 1",
-          gridRow: "5 / span 1",
+          gridRow: "4 / span 1",
         }}
       >
         <CardContent>
