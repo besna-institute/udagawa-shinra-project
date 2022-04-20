@@ -1,6 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 import type { NextPage } from "next";
-import { CommitteeList, NavigationLink, NewsList } from "../components";
+import {
+  CommitteeList,
+  NavigationLink,
+  NewsList,
+  ScheduleList,
+} from "../components";
 import { Box, Paper, CardContent, CardMedia, Card } from "@mui/material";
 
 const newsItems = [
@@ -106,17 +111,24 @@ const Home: NextPage = () => {
       >
         <CardContent>
           <h2 id="schedule">スケジュール</h2>
-          <p>
-            キックオフミーティング＆データ公開: 2022年4月下旬～5月中旬
-            <br />
-            リーダーボードオープン: 2022年5月中旬（予定）
-            <br />
-            実行結果の提出締切: 2022年10月末日（予定）
-            <br />
-            評価結果の返却: 2022年11月中旬
-            <br />
-            最終報告会: 2022年12月
-          </p>
+          <ScheduleList
+            items={[
+              {
+                title: "キックオフミーティング＆データ公開",
+                time: "2022年4月下旬～5月中旬",
+              },
+              {
+                title: "リーダーボードオープン",
+                time: "2022年5月中旬（予定）",
+              },
+              {
+                title: "実行結果の提出締切",
+                time: "2022年10月末日（予定）",
+              },
+              { title: "評価結果の返却", time: "2022年11月中旬" },
+              { title: "最終報告会", time: "2022年12月" },
+            ]}
+          />
         </CardContent>
       </Card>
       <Card
