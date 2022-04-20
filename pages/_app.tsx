@@ -33,13 +33,16 @@ theme.components = {
         ...theme.typography.h6,
       },
       h4: {
-        ...theme.typography.h6,
+        ...theme.typography.body1,
+        fontWeight: theme.typography.fontWeightMedium,
       },
       h5: {
-        ...theme.typography.h6,
+        ...theme.typography.body1,
+        fontWeight: theme.typography.fontWeightMedium,
       },
       h6: {
-        ...theme.typography.h6,
+        ...theme.typography.body1,
+        fontWeight: theme.typography.fontWeightMedium,
       },
       p: {
         ...theme.typography.body1,
