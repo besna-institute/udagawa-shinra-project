@@ -7,6 +7,11 @@ import { jaJP } from "@mui/material/locale";
 
 const theme = createTheme(
   {
+    palette: {
+      primary: {
+        main: "#0F831B",
+      },
+    },
     typography: {
       fontFamily: [
         "Noto Sans JP",
