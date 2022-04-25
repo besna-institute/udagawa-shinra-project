@@ -1,37 +1,74 @@
-import { AppBar, Toolbar, Typography, Stack, Avatar } from "@mui/material";
+import { AppBar, Toolbar, Typography, Avatar, Link, Box } from "@mui/material";
 import NextLink from "next/link";
 
 export const Header = () => (
   <AppBar position="sticky">
     <Toolbar variant="dense" sx={{ px: 2 }}>
-      <Stack
-        direction="row"
-        justifyContent="space-between"
-        alignItems="center"
-        spacing={2}
-        sx={{ width: "100%" }}
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          width: "100%",
+        }}
       >
         <NextLink href="/" passHref>
-          <Stack
-            direction="row"
-            spacing={2}
-            padding={3}
-            sx={{ cursor: "pointer" }}
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              flexDirection: "row",
+              padding: "1.5rem",
+              cursor: "pointer",
+              columnGap: "1rem",
+            }}
           >
             <Avatar
               src="/udagawa-shinra-project/logo.jpeg"
               alt="logo"
               variant="square"
+              sx={{
+                height: "4rem",
+                width: "4rem",
+              }}
             />
-            <Typography variant="h4" color="inherit" component="h1">
-              森羅プロジェクト
-            </Typography>
-          </Stack>
+            <Box>
+              <Typography variant="h4" color="inherit" component="h1">
+                森羅プロジェクト
+              </Typography>
+              <Typography variant="h6" color="inherit" component="h1">
+                Wikipedia構造化プロジェクト
+              </Typography>
+            </Box>
+          </div>
         </NextLink>
-        <Typography variant="h5" color="inherit" component="div">
-          拡張固有表現
-        </Typography>
-      </Stack>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            flexDirection: "row",
+            padding: "1.5rem",
+            columnGap: "1rem",
+          }}
+        >
+          {/* <Stack direction="row" spacing={2} padding={3}> */}
+          <NextLink href="http://ene-project.info/" passHref>
+            <Link variant="h6" color="inherit" target="_blank" rel="noopener">
+              拡張固有表現
+            </Link>
+          </NextLink>
+          <NextLink href="https://liat-aip.sakura.ne.jp/wp/" passHref>
+            <Link variant="h6" color="inherit" target="_blank" rel="noopener">
+              理研AIP 言語情報アクセス技術チーム
+            </Link>
+          </NextLink>
+          <NextLink href="http://shinra-project.info/" passHref>
+            <Link variant="h6" color="inherit" target="_blank" rel="noopener">
+              旧ウェブサイト
+            </Link>
+          </NextLink>
+        </div>
+      </div>
     </Toolbar>
   </AppBar>
 );
