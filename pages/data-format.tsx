@@ -45,8 +45,7 @@ const ResultSubmission: NextPage<Props> = (props) => {
       >
         <CardContent>
           <h2>データ形式</h2>
-          <p>概</p>
-          <p>要</p>
+          <p>TBA</p>
         </CardContent>
       </Card>
       <Card
@@ -57,8 +56,7 @@ const ResultSubmission: NextPage<Props> = (props) => {
       >
         <CardContent>
           <h2>End-to-endタスクのデータ形式について</h2>
-          <p>概</p>
-          <p>要</p>
+          <p>TBA</p>
         </CardContent>
       </Card>
       <Card
@@ -102,8 +100,7 @@ const ResultSubmission: NextPage<Props> = (props) => {
       >
         <CardContent>
           <h2>分類タスクのデータ形式について</h2>
-          <p>概</p>
-          <p>要</p>
+          <p>TBA</p>
         </CardContent>
       </Card>
       <Card
@@ -147,8 +144,7 @@ const ResultSubmission: NextPage<Props> = (props) => {
       >
         <CardContent>
           <h2>属性抽出タスクのデータ形式について</h2>
-          <p>概</p>
-          <p>要</p>
+          <p>TBA</p>
         </CardContent>
       </Card>
       <Card
@@ -192,8 +188,7 @@ const ResultSubmission: NextPage<Props> = (props) => {
       >
         <CardContent>
           <h2>リンクタスクのデータ形式について</h2>
-          <p>概</p>
-          <p>要</p>
+          <p>TBA</p>
         </CardContent>
       </Card>
       <Card
@@ -237,8 +232,7 @@ const ResultSubmission: NextPage<Props> = (props) => {
       >
         <CardContent>
           <h2>フォーマットチェッカーについて</h2>
-          <p>概</p>
-          <p>要</p>
+          <p>TBA</p>
         </CardContent>
       </Card>
       <Card
@@ -249,8 +243,7 @@ const ResultSubmission: NextPage<Props> = (props) => {
       >
         <CardContent>
           <h2>データ形式についてのFAQ</h2>
-          <p>概</p>
-          <p>要</p>
+          <p>TBA</p>
         </CardContent>
       </Card>
     </Paper>

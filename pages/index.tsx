@@ -93,8 +93,13 @@ const Home: NextPage = () => {
       >
         <CardContent>
           <h2 id="about">森羅プロジェクトとは?</h2>
-          <p>概</p>
-          <p>要</p>
+          <p>
+            森羅プロジェクトは、
+            Wikipediaに書かれている世界知識を計算機が扱えるような形に変換することを目的として、Wikipediaを構造化するプロジェクトです。私達は、名前のオントロジーである「拡張固有表現（ENE）」にWikipediaの記事を分類し、拡張固有表現に定義されている属性情報を、分類されたWikipedia記事にアノテーションすることで、計算機利用可能な構造化を目指しています。
+            森羅プロジェクトは、属性情報のWikipedia記事へのアノテーションについて、様々なアプローチによる多数のシステムを評価型ワークショップを開催することで募り、それらを統合することで構造化データを構築する、協働によるリソース構築
+            : 「Resource by Collaborative
+            Contribution（RbCC）」の考えに基づくプロジェクトとなっています。
+          </p>
         </CardContent>
       </Card>
       <Card
@@ -484,8 +489,7 @@ const Home: NextPage = () => {
       >
         <CardContent>
           <h2 id="leader-board">リーダーボード</h2>
-          <p>概</p>
-          <p>要</p>
+          <p>TBA</p>
         </CardContent>
         <Box
           sx={{
@@ -787,11 +791,13 @@ const Home: NextPage = () => {
         }}
       >
         <CardContent>
-          <h2 id="faq">タスク参加についてのFAQ</h2>
-          <p>
-            本タスクに関しご不明な点がありましたら、
-            <a href="#contact">連絡先</a>までお問い合わせください。
-          </p>
+          <h2 id="faq">タスク参加の流れ</h2>
+          <ul>
+            <li>森羅のSlackとMLに参加（イベントなどの随時アナウンス）</li>
+            <li>データ公開ページからデータを入手</li>
+            <li>実行結果の提出（10月末日予定）</li>
+            <li>最終報告会で報告（12月）</li>
+          </ul>
         </CardContent>
       </Card>
       <Card
