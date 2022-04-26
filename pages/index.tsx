@@ -216,6 +216,7 @@ const Home: NextPage = () => {
         <Card
           sx={{
             gridArea: "related-research",
+            maxHeight: 1000,
           }}
         >
           <CardContent>
