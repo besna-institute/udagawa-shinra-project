@@ -86,6 +86,7 @@ const Home: NextPage = () => {
       }}
     >
       <Card
+        elevation={0}
         sx={{
           gridArea: "about",
         }}
@@ -117,6 +118,7 @@ const Home: NextPage = () => {
         }}
       >
         <Card
+          elevation={0}
           sx={{
             gridArea: "whatsnew",
             overflow: "auto",
@@ -136,7 +138,7 @@ const Home: NextPage = () => {
           rowGap: "1rem",
         }}
       >
-        <Card>
+        <Card elevation={0}>
           <CardContent>
             <h2 id="schedule">スケジュール</h2>
             <ScheduleList
@@ -160,6 +162,7 @@ const Home: NextPage = () => {
           </CardContent>
         </Card>
         <Card
+          elevation={0}
           sx={{
             gridArea: "faq",
           }}
@@ -175,6 +178,7 @@ const Home: NextPage = () => {
           </CardContent>
         </Card>
         <Card
+          elevation={0}
           sx={{
             gridArea: "contact",
           }}
@@ -202,6 +206,7 @@ const Home: NextPage = () => {
           </CardContent>
         </Card>
         <Card
+          elevation={0}
           sx={{
             gridArea: "committee",
           }}
@@ -229,6 +234,7 @@ const Home: NextPage = () => {
           </CardContent>
         </Card>
         <Card
+          elevation={0}
           sx={{
             gridArea: "related-research",
             maxHeight: 1000,
@@ -496,6 +502,7 @@ const Home: NextPage = () => {
         </Card>
       </Box>
       <Card
+        elevation={0}
         sx={{
           gridArea: "leader-board",
         }}
@@ -534,7 +541,7 @@ const Home: NextPage = () => {
           rowGap: "1rem",
         }}
       >
-        <Card>
+        <Card elevation={0}>
           <CardContent>
             <h2 id="introduction">森羅プロジェクト紹介</h2>
             <p>
@@ -572,7 +579,7 @@ const Home: NextPage = () => {
             </p>
           </CardContent>
         </Card>
-        <Card>
+        <Card elevation={0}>
           <CardContent>
             <h2 id="overview">タスク概要</h2>
             <img
@@ -655,6 +662,7 @@ const Home: NextPage = () => {
         </Card>
       </Box>
       <Card
+        elevation={0}
         sx={{
           gridArea: "task-detail",
         }}
