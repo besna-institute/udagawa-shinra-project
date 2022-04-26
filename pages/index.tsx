@@ -75,10 +75,10 @@ const Home: NextPage = () => {
         gridTemplateColumns: "minmax(0, 4fr) minmax(0, 3fr)",
         gridGap: "1rem",
         gridTemplateAreas: `
-          "about                  schedule"
-          "shinra-video           schedule"
+          "about                  whatsnew"
+          "shinra-video           whatsnew"
           "leader-board           leader-board"
-          "introduction--overview whatsnew--contact--committee--related-research"
+          "introduction--overview schedule--contact--committee--related-research"
           "task-detail            task-detail"
           "reference              reference"
           "faq                    faq"
@@ -114,7 +114,26 @@ const Home: NextPage = () => {
       </Card>
       <Box
         sx={{
-          gridArea: "schedule",
+          gridArea: "whatsnew",
+        }}
+      >
+        <Card
+          sx={{
+            gridArea: "whatsnew",
+          }}
+        >
+          <CardContent>
+            <h2 id="whatsnew">新着情報</h2>
+            <NewsList items={newsItems} />
+          </CardContent>
+        </Card>
+      </Box>
+      <Box
+        sx={{
+          gridArea: "schedule--contact--committee--related-research",
+          display: "flex",
+          flexDirection: "column",
+          rowGap: "1rem",
         }}
       >
         <Card>
@@ -138,25 +157,6 @@ const Home: NextPage = () => {
                 { title: "最終報告会", time: "2022年12月" },
               ]}
             />
-          </CardContent>
-        </Card>
-      </Box>
-      <Box
-        sx={{
-          gridArea: "whatsnew--contact--committee--related-research",
-          display: "flex",
-          flexDirection: "column",
-          rowGap: "1rem",
-        }}
-      >
-        <Card
-          sx={{
-            gridArea: "whatsnew",
-          }}
-        >
-          <CardContent>
-            <h2 id="whatsnew">新着情報</h2>
-            <NewsList items={newsItems} />
           </CardContent>
         </Card>
         <Card
