@@ -18,7 +18,7 @@ export const Header = () => (
               display: "flex",
               alignItems: "center",
               flexDirection: "row",
-              padding: "0.875rem",
+              padding: "0.5rem 0",
               cursor: "pointer",
               columnGap: "1rem",
             }}
@@ -32,14 +32,18 @@ export const Header = () => (
                 width: "3rem",
               }}
             />
-            <Box>
+            <div>
               <Typography variant="h5" color="inherit" component="h1">
                 森羅 2022
               </Typography>
-              <Typography color="body2" component="h1">
+              <Typography
+                component="h1"
+                color="inherit"
+                sx={{ fontSize: "0.8rem" }}
+              >
                 Wikipedia構造化プロジェクト
               </Typography>
-            </Box>
+            </div>
           </div>
         </NextLink>
         <div
@@ -47,7 +51,7 @@ export const Header = () => (
             display: "flex",
             alignItems: "center",
             flexDirection: "row",
-            padding: "1.5rem",
+            margin: "auto 0 0.5rem 0",
             columnGap: "1rem",
           }}
         >
