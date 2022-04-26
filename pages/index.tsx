@@ -7,14 +7,7 @@ import {
   NewsList,
   ScheduleList,
 } from "../components";
-import {
-  Box,
-  Paper,
-  CardContent,
-  CardMedia,
-  Card,
-  Divider,
-} from "@mui/material";
+import { Box, Paper, CardMedia, Divider } from "@mui/material";
 
 const newsItems = [
   <>
@@ -84,24 +77,24 @@ const Home: NextPage = () => {
         gridTemplateAreas: `
           "about            whatsnew"
           "shinra-video     whatsnew"
-          "divider-vl       divider-vl"
+          "divider1         divider1"
           "leader-board     leader-board"
-          "divider-lm       divider-lm"
+          "divider2         divider2"
           "mid-content-left mid-content-right"
-          "divider-mt       divider-mt"
+          "divider3         divider3"
           "task-detail      task-detail"
-          "divider-tr       divider-tr"
+          "divider4         divider4"
           "reference        reference"
-          "divider-rt       divider-rt"
+          "divider5         divider5"
           "task-list        task-list"
         `,
       }}
     >
-      <Divider sx={{ gridArea: "divider-vl" }} />
-      <Divider sx={{ gridArea: "divider-lm" }} />
-      <Divider sx={{ gridArea: "divider-mt" }} />
-      <Divider sx={{ gridArea: "divider-tr" }} />
-      <Divider sx={{ gridArea: "divider-rt" }} />
+      <Divider sx={{ gridArea: "divider1" }} />
+      <Divider sx={{ gridArea: "divider2" }} />
+      <Divider sx={{ gridArea: "divider3" }} />
+      <Divider sx={{ gridArea: "divider4" }} />
+      <Divider sx={{ gridArea: "divider5" }} />
       <Box
         sx={{
           gridArea: "about",
