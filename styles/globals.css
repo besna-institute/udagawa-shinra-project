@@ -20,7 +20,7 @@ iframe {
   border: none;
   width: 100%;
 }
-.MuiCardContent-root img {
+main img {
   display: block;
   background-size: cover;
   background-repeat: no-repeat;
