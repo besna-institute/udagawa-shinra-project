@@ -81,7 +81,6 @@ const Home: NextPage = () => {
           "introduction--overview schedule--contact--committee--related-research"
           "task-detail            task-detail"
           "reference              reference"
-          "faq                    faq"
           "task-list              task-list"
         `,
       }}
@@ -157,6 +156,21 @@ const Home: NextPage = () => {
                 { title: "最終報告会", time: "2022年12月" },
               ]}
             />
+          </CardContent>
+        </Card>
+        <Card
+          sx={{
+            gridArea: "faq",
+          }}
+        >
+          <CardContent>
+            <h2 id="faq">タスク参加の流れ</h2>
+            <ul>
+              <li>森羅のSlackとMLに参加（イベントなどの随時アナウンス）</li>
+              <li>データ公開ページからデータを入手</li>
+              <li>実行結果の提出（10月末日予定）</li>
+              <li>最終報告会で報告（12月）</li>
+            </ul>
           </CardContent>
         </Card>
         <Card
@@ -781,21 +795,6 @@ const Home: NextPage = () => {
               </CardContent>
             </Card>
           </Box>
-        </CardContent>
-      </Card>
-      <Card
-        sx={{
-          gridArea: "faq",
-        }}
-      >
-        <CardContent>
-          <h2 id="faq">タスク参加の流れ</h2>
-          <ul>
-            <li>森羅のSlackとMLに参加（イベントなどの随時アナウンス）</li>
-            <li>データ公開ページからデータを入手</li>
-            <li>実行結果の提出（10月末日予定）</li>
-            <li>最終報告会で報告（12月）</li>
-          </ul>
         </CardContent>
       </Card>
       <Card
