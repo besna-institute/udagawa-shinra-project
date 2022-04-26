@@ -34,7 +34,7 @@ export const Header = () => (
             />
             <Box>
               <Typography variant="h5" color="inherit" component="h1">
-                森羅 SHINRA
+                森羅 2022
               </Typography>
               <Typography color="body2" component="h1">
                 Wikipedia構造化プロジェクト
@@ -78,7 +78,7 @@ export const Header = () => (
               target="_blank"
               rel="noopener"
             >
-              旧ウェブサイト
+              森羅トップページ
             </Link>
           </NextLink>
         </div>
