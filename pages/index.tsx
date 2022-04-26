@@ -119,6 +119,7 @@ const Home: NextPage = () => {
         <Card
           sx={{
             gridArea: "whatsnew",
+            overflow: "auto",
           }}
         >
           <CardContent>
@@ -790,8 +791,7 @@ const Home: NextPage = () => {
             <Card>
               <CardContent>
                 <h3>ベースラインシステム等参考システム</h3>
-                <p>概</p>
-                <p>要</p>
+                <p>TBA</p>
               </CardContent>
             </Card>
           </Box>
