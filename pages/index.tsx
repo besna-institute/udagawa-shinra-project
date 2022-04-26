@@ -8,6 +8,7 @@ import {
   NewsList,
   ScheduleList,
 } from "../components";
+import { useRef, useEffect, useState } from "react";
 import { Paper, Divider } from "@mui/material";
 
 const newsItems = [
@@ -68,6 +69,17 @@ const newsItems = [
 ];
 
 const Home: NextPage = () => {
+  const leftRef = useRef<HTMLDivElement>(null);
+  const [maxHeight, setMaxHeight] = useState<number>(1200);
+
+  useEffect(() => {
+    if (leftRef.current) {
+      const left = leftRef.current.getBoundingClientRect();
+      if (left.height > maxHeight) {
+        setMaxHeight(left.height);
+      }
+    }
+  }, []);
   return (
     <Paper
       elevation={0}
@@ -75,27 +87,21 @@ const Home: NextPage = () => {
         display: "grid",
         gridTemplateColumns: "minmax(0, 4fr) minmax(0, 3fr)",
         gridGap: "3rem",
-        gridTemplateAreas: `
+        gridTemplate: `
           "about            whatsnew"
           "shinra-video     whatsnew"
-          "divider1         divider1"
           "leader-board     leader-board"
-          "divider2         divider2"
-          "mid-content-left mid-content-right"
-          "divider3         divider3"
+          "mid-content-left mid-content-right" minmax(min-content, 1000px)
+          "divider1         divider1"
           "task-detail      task-detail"
-          "divider4         divider4"
+          "divider2         divider2"
           "reference        reference"
-          "divider5         divider5"
           "task-list        task-list"
         `,
       }}
     >
       <Divider sx={{ gridArea: "divider1" }} />
       <Divider sx={{ gridArea: "divider2" }} />
-      <Divider sx={{ gridArea: "divider3" }} />
-      <Divider sx={{ gridArea: "divider4" }} />
-      <Divider sx={{ gridArea: "divider5" }} />
       <ContentBox
         style={{
           gridArea: "about",
@@ -138,12 +144,24 @@ const Home: NextPage = () => {
       <div
         style={{
           gridArea: "mid-content-right",
-          display: "flex",
-          flexDirection: "column",
+          display: "grid",
           rowGap: "2rem",
+          gridTemplate: `
+            "schedule" max-content
+            "flow" max-content
+            "contact" max-content
+            "committee" max-content
+            "related-research" auto
+          `,
+          maxHeight: `${maxHeight}px`,
         }}
       >
-        <ContentBox theme="green">
+        <ContentBox
+          style={{
+            gridArea: "schedule",
+          }}
+          theme="green"
+        >
           <h2 id="schedule">スケジュール</h2>
           <ScheduleList
             items={[
@@ -164,7 +182,6 @@ const Home: NextPage = () => {
             ]}
           />
         </ContentBox>
-        <Divider />
         <ContentBox
           style={{
             gridArea: "flow",
@@ -179,7 +196,6 @@ const Home: NextPage = () => {
             <li>最終報告会で報告（12月）</li>
           </ul>
         </ContentBox>
-        <Divider />
         <ContentBox
           style={{
             gridArea: "contact",
@@ -206,7 +222,6 @@ const Home: NextPage = () => {
             <em>shinra2022-info （at） googlegroups.com</em>
           </p>
         </ContentBox>
-        <Divider />
         <ContentBox
           style={{
             gridArea: "committee",
@@ -233,11 +248,9 @@ const Home: NextPage = () => {
             ]}
           />
         </ContentBox>
-        <Divider />
         <ContentBox
           style={{
             gridArea: "related-research",
-            maxHeight: 1000,
             overflow: "auto",
           }}
           theme="gray"
@@ -528,14 +541,25 @@ const Home: NextPage = () => {
         </div>
       </ContentBox>
       <div
+        ref={leftRef}
+        id="mid-content-left"
         style={{
           gridArea: "mid-content-left",
-          display: "flex",
-          flexDirection: "column",
-          rowGap: "3rem",
+          display: "grid",
+          rowGap: "2rem",
+          gridTemplate: `
+            "introduction" max-content
+            "divider1" max-content
+            "overview" max-content
+          `,
         }}
       >
-        <ContentBox theme="white">
+        <ContentBox
+          style={{
+            gridArea: "introduction",
+          }}
+          theme="white"
+        >
           <h2 id="introduction">森羅プロジェクト紹介</h2>
           <p>
             森羅プロジェクトは、
@@ -571,7 +595,17 @@ const Home: NextPage = () => {
             Contribution（協働による知識構築）」の考えに基づくプロジェクトです。
           </p>
         </ContentBox>
-        <ContentBox theme="white">
+        <Divider
+          style={{
+            gridArea: "divider1",
+          }}
+        />
+        <ContentBox
+          style={{
+            gridArea: "overview",
+          }}
+          theme="white"
+        >
           <h2 id="overview">タスク概要</h2>
           <img
             src="/udagawa-shinra-project/shinra2022-fig1.png"

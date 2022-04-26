@@ -12,10 +12,12 @@ const defaultStyle: Record<Theme, CSSProperties> = {
   },
   green: {
     backgroundColor: "#0e832612",
+    borderRadius: "4px",
     padding: "0.75rem",
   },
   gray: {
     backgroundColor: "#f8f8f8",
+    borderRadius: "4px",
     padding: "0.75rem",
   },
 };
