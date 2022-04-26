@@ -114,7 +114,9 @@ const Home: NextPage = () => {
       </ContentBox>
       <div
         style={{
+          aspectRatio: "16/9",
           gridArea: "shinra-video",
+          width: "100%",
         }}
       >
         <iframe
@@ -147,7 +149,9 @@ const Home: NextPage = () => {
         </ContentBox>
         <div
           style={{
+            aspectRatio: "16/9",
             gridArea: "video1",
+            width: "100%",
           }}
         >
           <iframe
@@ -158,7 +162,9 @@ const Home: NextPage = () => {
         </div>
         <div
           style={{
+            aspectRatio: "16/9",
             gridArea: "video2",
+            width: "100%",
           }}
         >
           <iframe
