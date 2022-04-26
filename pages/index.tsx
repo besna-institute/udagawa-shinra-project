@@ -75,13 +75,13 @@ const Home: NextPage = () => {
         gridTemplateColumns: "minmax(0, 4fr) minmax(0, 3fr)",
         gridGap: "1rem",
         gridTemplateAreas: `
-          "about                  whatsnew"
-          "shinra-video           whatsnew"
-          "leader-board           leader-board"
-          "introduction--overview schedule--contact--committee--related-research"
-          "task-detail            task-detail"
-          "reference              reference"
-          "task-list              task-list"
+          "about            whatsnew"
+          "shinra-video     whatsnew"
+          "leader-board     leader-board"
+          "mid-content-left mid-content-right"
+          "task-detail      task-detail"
+          "reference        reference"
+          "task-list        task-list"
         `,
       }}
     >
@@ -129,7 +129,7 @@ const Home: NextPage = () => {
       </Box>
       <Box
         sx={{
-          gridArea: "schedule--contact--committee--related-research",
+          gridArea: "mid-content-right",
           display: "flex",
           flexDirection: "column",
           rowGap: "1rem",
@@ -527,7 +527,7 @@ const Home: NextPage = () => {
       </Card>
       <Box
         sx={{
-          gridArea: "introduction--overview",
+          gridArea: "mid-content-left",
           display: "flex",
           flexDirection: "column",
           rowGap: "1rem",
