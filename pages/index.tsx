@@ -7,7 +7,7 @@ import {
   NewsList,
   ScheduleList,
 } from "../components";
-import { Box, Paper, CardMedia, Divider } from "@mui/material";
+import { Paper, Divider } from "@mui/material";
 
 const newsItems = [
   <>
@@ -95,8 +95,8 @@ const Home: NextPage = () => {
       <Divider sx={{ gridArea: "divider3" }} />
       <Divider sx={{ gridArea: "divider4" }} />
       <Divider sx={{ gridArea: "divider5" }} />
-      <Box
-        sx={{
+      <div
+        style={{
           gridArea: "about",
         }}
       >
@@ -104,44 +104,43 @@ const Home: NextPage = () => {
         <p>
           協働による知識の構造化を目指し、Wikipediaの分類、属性値抽出、リンキングタスクを実施するプロジェクトです。
         </p>
-      </Box>
-      <Box
-        sx={{
+      </div>
+      <div
+        style={{
           gridArea: "shinra-video",
           borderRadius: 0,
         }}
       >
-        <CardMedia
-          component="iframe"
+        <iframe
           src="https://www.youtube.com/embed/lCYj3x6pu1w"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         />
-      </Box>
-      <Box
-        sx={{
+      </div>
+      <div
+        style={{
           gridArea: "whatsnew",
         }}
       >
-        <Box
-          sx={{
+        <div
+          style={{
             gridArea: "whatsnew",
             overflow: "auto",
           }}
         >
           <h2 id="whatsnew">新着情報</h2>
           <NewsList items={newsItems} />
-        </Box>
-      </Box>
-      <Box
-        sx={{
+        </div>
+      </div>
+      <div
+        style={{
           gridArea: "mid-content-right",
           display: "flex",
           flexDirection: "column",
           rowGap: "2rem",
         }}
       >
-        <Box>
+        <div>
           <h2 id="schedule">スケジュール</h2>
           <ScheduleList
             items={[
@@ -161,10 +160,10 @@ const Home: NextPage = () => {
               { title: "最終報告会", time: "2022年12月" },
             ]}
           />
-        </Box>
+        </div>
         <Divider />
-        <Box
-          sx={{
+        <div
+          style={{
             gridArea: "flow",
           }}
         >
@@ -175,10 +174,10 @@ const Home: NextPage = () => {
             <li>実行結果の提出（10月末日予定）</li>
             <li>最終報告会で報告（12月）</li>
           </ul>
-        </Box>
+        </div>
         <Divider />
-        <Box
-          sx={{
+        <div
+          style={{
             gridArea: "contact",
           }}
         >
@@ -201,10 +200,10 @@ const Home: NextPage = () => {
           <p>
             <em>shinra2022-info （at） googlegroups.com</em>
           </p>
-        </Box>
+        </div>
         <Divider />
-        <Box
-          sx={{
+        <div
+          style={{
             gridArea: "committee",
           }}
         >
@@ -227,10 +226,10 @@ const Home: NextPage = () => {
               "渋木英潔（株式会社BESNA研究所）",
             ]}
           />
-        </Box>
+        </div>
         <Divider />
-        <Box
-          sx={{
+        <div
+          style={{
             gridArea: "related-research",
             maxHeight: 1000,
             overflow: "auto",
@@ -489,17 +488,17 @@ const Home: NextPage = () => {
               linguistics (COLING’96), vol.1, pp.466-471, 1996.
             </li>
           </ul>
-        </Box>
-      </Box>
-      <Box
-        sx={{
+        </div>
+      </div>
+      <div
+        style={{
           gridArea: "leader-board",
         }}
       >
         <h2 id="leader-board">リーダーボード</h2>
         <p>TBA</p>
-        <Box
-          sx={{
+        <div
+          style={{
             display: "flex",
             flexFlow: "wrap",
             justifyContent: "space-evenly",
@@ -518,17 +517,17 @@ const Home: NextPage = () => {
           <NavigationLink href="/result-submission">
             結果の提出について
           </NavigationLink>
-        </Box>
-      </Box>
-      <Box
-        sx={{
+        </div>
+      </div>
+      <div
+        style={{
           gridArea: "mid-content-left",
           display: "flex",
           flexDirection: "column",
           rowGap: "3rem",
         }}
       >
-        <Box>
+        <div>
           <h2 id="introduction">森羅プロジェクト紹介</h2>
           <p>
             森羅プロジェクトは、
@@ -563,8 +562,8 @@ const Home: NextPage = () => {
             by Collaborative
             Contribution（協働による知識構築）」の考えに基づくプロジェクトです。
           </p>
-        </Box>
-        <Box>
+        </div>
+        <div>
           <h2 id="overview">タスク概要</h2>
           <img
             src="/udagawa-shinra-project/shinra2022-fig1.png"
@@ -642,10 +641,10 @@ const Home: NextPage = () => {
             <li>リンクタスク</li>
           </ul>
           <p>多くの方のご参加をお待ちしています。</p>
-        </Box>
-      </Box>
-      <Box
-        sx={{
+        </div>
+      </div>
+      <div
+        style={{
           gridArea: "task-detail",
         }}
       >
@@ -748,37 +747,36 @@ const Home: NextPage = () => {
           <li>81カテゴリー（森羅2018,2019,2020-JPの評価データ）</li>
           <li>90カテゴリー（新規）</li>
         </ul>
-      </Box>
-      <Box
-        sx={{
+      </div>
+      <div
+        style={{
           gridArea: "reference",
         }}
       >
         <h2 id="reference">システム制作の参考資料</h2>
-        <Box
-          sx={{
+        <div
+          style={{
             display: "grid",
             gridTemplateColumns: "minmax(0, 1fr) minmax(0, 1fr)",
             gridGap: "2rem",
           }}
         >
-          <Box>
+          <div>
             <h3>システム制作実況チャンネル</h3>
-            <CardMedia
-              component="iframe"
+            <iframe
               src="https://www.youtube.com/embed/lCYj3x6pu1w"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             />
-          </Box>
-          <Box>
+          </div>
+          <div>
             <h3>ベースラインシステム等参考システム</h3>
             <p>TBA</p>
-          </Box>
-        </Box>
-      </Box>
-      <Box
-        sx={{
+          </div>
+        </div>
+      </div>
+      <div
+        style={{
           gridArea: "task-list",
         }}
       >
@@ -857,7 +855,7 @@ const Home: NextPage = () => {
             </ul>
           </li>
         </ul>
-      </Box>
+      </div>
     </Paper>
   );
 };
