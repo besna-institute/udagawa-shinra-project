@@ -2,6 +2,7 @@
 import type { NextPage } from "next";
 import {
   CommitteeList,
+  ContentBox,
   JoinButton,
   NavigationLink,
   NewsList,
@@ -95,16 +96,17 @@ const Home: NextPage = () => {
       <Divider sx={{ gridArea: "divider3" }} />
       <Divider sx={{ gridArea: "divider4" }} />
       <Divider sx={{ gridArea: "divider5" }} />
-      <div
+      <ContentBox
         style={{
           gridArea: "about",
         }}
+        theme="white"
       >
         <h2 id="about">森羅プロジェクトとは?</h2>
         <p>
           協働による知識の構造化を目指し、Wikipediaの分類、属性値抽出、リンキングタスクを実施するプロジェクトです。
         </p>
-      </div>
+      </ContentBox>
       <div
         style={{
           gridArea: "shinra-video",
@@ -122,15 +124,16 @@ const Home: NextPage = () => {
           gridArea: "whatsnew",
         }}
       >
-        <div
+        <ContentBox
           style={{
             gridArea: "whatsnew",
             overflow: "auto",
           }}
+          theme="green"
         >
           <h2 id="whatsnew">新着情報</h2>
           <NewsList items={newsItems} />
-        </div>
+        </ContentBox>
       </div>
       <div
         style={{
@@ -140,7 +143,7 @@ const Home: NextPage = () => {
           rowGap: "2rem",
         }}
       >
-        <div>
+        <ContentBox theme="green">
           <h2 id="schedule">スケジュール</h2>
           <ScheduleList
             items={[
@@ -160,12 +163,13 @@ const Home: NextPage = () => {
               { title: "最終報告会", time: "2022年12月" },
             ]}
           />
-        </div>
+        </ContentBox>
         <Divider />
-        <div
+        <ContentBox
           style={{
             gridArea: "flow",
           }}
+          theme="green"
         >
           <h2 id="flow">タスク参加の流れ</h2>
           <ul>
@@ -174,12 +178,13 @@ const Home: NextPage = () => {
             <li>実行結果の提出（10月末日予定）</li>
             <li>最終報告会で報告（12月）</li>
           </ul>
-        </div>
+        </ContentBox>
         <Divider />
-        <div
+        <ContentBox
           style={{
             gridArea: "contact",
           }}
+          theme="green"
         >
           <h2 id="contact">コミュニティ／連絡先</h2>
           <h3>メーリングリスト</h3>
@@ -200,12 +205,13 @@ const Home: NextPage = () => {
           <p>
             <em>shinra2022-info （at） googlegroups.com</em>
           </p>
-        </div>
+        </ContentBox>
         <Divider />
-        <div
+        <ContentBox
           style={{
             gridArea: "committee",
           }}
+          theme="green"
         >
           <h2 id="committee">実行委員</h2>
           <h3>委員長</h3>
@@ -226,14 +232,15 @@ const Home: NextPage = () => {
               "渋木英潔（株式会社BESNA研究所）",
             ]}
           />
-        </div>
+        </ContentBox>
         <Divider />
-        <div
+        <ContentBox
           style={{
             gridArea: "related-research",
             maxHeight: 1000,
             overflow: "auto",
           }}
+          theme="gray"
         >
           <h2 id="related-research">関連研究</h2>
           <h3>森羅プロジェクトに関する研究</h3>
@@ -488,12 +495,13 @@ const Home: NextPage = () => {
               linguistics (COLING’96), vol.1, pp.466-471, 1996.
             </li>
           </ul>
-        </div>
+        </ContentBox>
       </div>
-      <div
+      <ContentBox
         style={{
           gridArea: "leader-board",
         }}
+        theme="gray"
       >
         <h2 id="leader-board">リーダーボード</h2>
         <p>TBA</p>
@@ -518,7 +526,7 @@ const Home: NextPage = () => {
             結果の提出について
           </NavigationLink>
         </div>
-      </div>
+      </ContentBox>
       <div
         style={{
           gridArea: "mid-content-left",
@@ -527,7 +535,7 @@ const Home: NextPage = () => {
           rowGap: "3rem",
         }}
       >
-        <div>
+        <ContentBox theme="white">
           <h2 id="introduction">森羅プロジェクト紹介</h2>
           <p>
             森羅プロジェクトは、
@@ -562,8 +570,8 @@ const Home: NextPage = () => {
             by Collaborative
             Contribution（協働による知識構築）」の考えに基づくプロジェクトです。
           </p>
-        </div>
-        <div>
+        </ContentBox>
+        <ContentBox theme="white">
           <h2 id="overview">タスク概要</h2>
           <img
             src="/udagawa-shinra-project/shinra2022-fig1.png"
@@ -641,12 +649,13 @@ const Home: NextPage = () => {
             <li>リンクタスク</li>
           </ul>
           <p>多くの方のご参加をお待ちしています。</p>
-        </div>
+        </ContentBox>
       </div>
-      <div
+      <ContentBox
         style={{
           gridArea: "task-detail",
         }}
+        theme="white"
       >
         <h2 id="task-detail">タスク詳細</h2>
         <h3 id="end-to-end-task">End-to-Endタスク</h3>
@@ -747,11 +756,12 @@ const Home: NextPage = () => {
           <li>81カテゴリー（森羅2018,2019,2020-JPの評価データ）</li>
           <li>90カテゴリー（新規）</li>
         </ul>
-      </div>
-      <div
+      </ContentBox>
+      <ContentBox
         style={{
           gridArea: "reference",
         }}
+        theme="gray"
       >
         <h2 id="reference">システム制作の参考資料</h2>
         <div
@@ -774,11 +784,12 @@ const Home: NextPage = () => {
             <p>TBA</p>
           </div>
         </div>
-      </div>
-      <div
+      </ContentBox>
+      <ContentBox
         style={{
           gridArea: "task-list",
         }}
+        theme="gray"
       >
         <h2 id="task-list">過去の共有タスク</h2>
         <ul>
@@ -855,7 +866,7 @@ const Home: NextPage = () => {
             </ul>
           </li>
         </ul>
-      </div>
+      </ContentBox>
     </Paper>
   );
 };

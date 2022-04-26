@@ -29,3 +29,6 @@ main img {
   object-fit: cover;
   margin: 1rem auto;
 }
+main a {
+  color: #0077de;
+}
