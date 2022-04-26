@@ -116,7 +116,6 @@ const Home: NextPage = () => {
       <div
         style={{
           gridArea: "shinra-video",
-          borderRadius: 0,
         }}
       >
         <iframe
@@ -127,19 +126,48 @@ const Home: NextPage = () => {
       </div>
       <div
         style={{
+          display: "grid",
           gridArea: "whatsnew",
+          gridTemplate: `
+            "whatsnew whatsnew"
+            "video1 video2" / 1fr 1fr
+          `,
+          gridGap: "1rem",
         }}
       >
         <ContentBox
           style={{
             gridArea: "whatsnew",
             overflow: "auto",
+            maxHeight: "16rem",
           }}
           theme="green"
         >
           <h2 id="whatsnew">新着情報</h2>
           <NewsList items={newsItems} />
         </ContentBox>
+        <div
+          style={{
+            gridArea: "video1",
+          }}
+        >
+          <iframe
+            src="https://www.youtube.com/embed/lCYj3x6pu1w"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </div>
+        <div
+          style={{
+            gridArea: "video2",
+          }}
+        >
+          <iframe
+            src="https://www.youtube.com/embed/lCYj3x6pu1w"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </div>
       </div>
       <div
         style={{

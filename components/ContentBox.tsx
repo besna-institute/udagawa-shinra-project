@@ -29,7 +29,6 @@ export const ContentBox = ({
 }: PropsWithChildren<Props>) => {
   return (
     <div
-      className="text-content"
       style={{
         ...defaultStyle[theme],
         ...style,
