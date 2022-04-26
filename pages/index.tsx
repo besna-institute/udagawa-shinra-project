@@ -79,24 +79,23 @@ const Home: NextPage = () => {
         setMaxHeight(left.height);
       }
     }
-  }, []);
+  }, [maxHeight]);
   return (
     <Paper
       elevation={0}
       sx={{
         display: "grid",
-        gridTemplateColumns: "minmax(0, 4fr) minmax(0, 3fr)",
         gridGap: "3rem",
         gridTemplate: `
           "about            whatsnew"
           "shinra-video     whatsnew"
           "leader-board     leader-board"
-          "mid-content-left mid-content-right" minmax(min-content, 1000px)
+          "mid-content-left mid-content-right"
           "divider1         divider1"
           "task-detail      task-detail"
           "divider2         divider2"
           "reference        reference"
-          "task-list        task-list"
+          "task-list        task-list" / minmax(0, 4fr) minmax(0, 3fr)
         `,
       }}
     >
