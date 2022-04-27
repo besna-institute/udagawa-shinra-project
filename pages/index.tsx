@@ -93,14 +93,12 @@ const Home: NextPage = () => {
           "mid-content-left mid-content-right"
           "divider1         divider1"
           "task-detail      task-detail"
-          "divider2         divider2"
           "reference        reference"
           "task-list        task-list" / minmax(0, 4fr) minmax(0, 3fr)
         `,
       }}
     >
       <Divider sx={{ gridArea: "divider1" }} />
-      <Divider sx={{ gridArea: "divider2" }} />
       <ContentBox
         style={{
           gridArea: "about",
@@ -154,6 +152,7 @@ const Home: NextPage = () => {
             width: "100%",
           }}
         >
+          <h3>インタビュー</h3>
           <iframe
             src="https://www.youtube.com/embed/lCYj3x6pu1w"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -167,6 +166,7 @@ const Home: NextPage = () => {
             width: "100%",
           }}
         >
+          <h3>システム制作実況</h3>
           <iframe
             src="https://www.youtube.com/embed/lCYj3x6pu1w"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -660,10 +660,7 @@ const Home: NextPage = () => {
           <p>
             End-to-Endタスクでは、以下の3つのステップを一気に実施することで、分類、属性抽出、リンクの複合タスクを実現し、相乗効果／End-to-Endで精度向上の可能性を探ります。
           </p>
-          <img
-            src="/shinra2022-fig3.png"
-            alt="shinra2022-fig3"
-          />
+          <img src="/shinra2022-fig3.png" alt="shinra2022-fig3" />
           <p>
             End-to-Endタスクの各ステップは過去の森羅プロジェクトと以下の関係にあります。
           </p>
