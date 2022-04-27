@@ -29,6 +29,7 @@ export const ContentBox = ({
 }: PropsWithChildren<Props>) => {
   return (
     <div
+      className={`content-box ${theme}`}
       style={{
         ...defaultStyle[theme],
         ...style,
