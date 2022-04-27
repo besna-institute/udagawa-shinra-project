@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { Card, CardContent, Paper } from "@mui/material";
+import { Divider, Paper } from "@mui/material";
 import { CodeBlock, Code } from "../components";
 
 interface Props {
@@ -33,226 +33,209 @@ const ResultSubmission: NextPage<Props> = (props) => {
       elevation={0}
       sx={{
         display: "grid",
-        gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
-        gridGap: "1rem",
+        gridTemplateColumns: "minmax(0, 1fr) minmax(0, 1fr)",
+        gridGap: "2rem",
+        gridTemplateAreas: `
+          "data-format               data-format"
+          "divider1                  divider1"
+          "end-to-end-task           end-to-end-task-input"
+          "end-to-end-task           divider1-1"
+          "end-to-end-task           end-to-end-task-output"
+          "end-to-end-task           divider1-2"
+          "end-to-end-task           end-to-end-task-schema"
+          "divider2                  divider2"
+          "classification-task       classification-task-input"
+          "classification-task       divider2-1"
+          "classification-task       classification-task-output"
+          "classification-task       divider2-2"
+          "classification-task       classification-task-schema"
+          "divider3                  divider3"
+          "attribute-extraction-task attribute-extraction-task-input"
+          "attribute-extraction-task divider3-1"
+          "attribute-extraction-task attribute-extraction-task-output"
+          "attribute-extraction-task divider3-2"
+          "attribute-extraction-task attribute-extraction-task-schema"
+          "divider4                  divider4"
+          "link-task                 link-task-input"
+          "link-task                 divider4-1"
+          "link-task                 link-task-output"
+          "link-task                 divider4-2"
+          "link-task                 link-task-schema"
+          "divider5                  divider5"
+          "format-checker            format-checker"
+          "divider6                  divider6"
+          "faq                       faq"
+        `,
       }}
     >
-      <Card
-        sx={{
-          gridColumn: "1 / span 2",
-          gridRow: "1 / span 1",
+      <Divider sx={{ gridArea: "divider1" }} />
+      <Divider sx={{ gridArea: "divider1-1" }} />
+      <Divider sx={{ gridArea: "divider1-2" }} />
+      <Divider sx={{ gridArea: "divider2" }} />
+      <Divider sx={{ gridArea: "divider2-1" }} />
+      <Divider sx={{ gridArea: "divider2-2" }} />
+      <Divider sx={{ gridArea: "divider3" }} />
+      <Divider sx={{ gridArea: "divider3-1" }} />
+      <Divider sx={{ gridArea: "divider3-2" }} />
+      <Divider sx={{ gridArea: "divider4" }} />
+      <Divider sx={{ gridArea: "divider4-1" }} />
+      <Divider sx={{ gridArea: "divider4-2" }} />
+      <Divider sx={{ gridArea: "divider5" }} />
+      <Divider sx={{ gridArea: "divider6" }} />
+      <div
+        style={{
+          gridArea: "data-format",
         }}
       >
-        <CardContent>
-          <h2>データ形式</h2>
-          <p>概</p>
-          <p>要</p>
-        </CardContent>
-      </Card>
-      <Card
-        sx={{
-          gridColumn: "1 / span 1",
-          gridRow: "2 / span 3",
+        <h2 id="data-format">データ形式</h2>
+        <p>TBA</p>
+      </div>
+      <div
+        style={{
+          gridArea: "end-to-end-task",
         }}
       >
-        <CardContent>
-          <h2>End-to-endタスクのデータ形式について</h2>
-          <p>概</p>
-          <p>要</p>
-        </CardContent>
-      </Card>
-      <Card
-        sx={{
-          gridColumn: "2 / span 1",
-          gridRow: "2 / span 1",
+        <h2 id="end-to-end-task">End-to-endタスクのデータ形式について</h2>
+        <p>TBA</p>
+      </div>
+      <div
+        style={{
+          gridArea: "end-to-end-task-input",
         }}
       >
-        <CardContent>
-          <h2>サンプルファイル（入力）</h2>
-          <CodeBlock {...props.code.endToEnd.input} />
-        </CardContent>
-      </Card>
-      <Card
-        sx={{
-          gridColumn: "2 / span 1",
-          gridRow: "3 / span 1",
+        <h2>サンプルファイル（入力）</h2>
+        <CodeBlock {...props.code.endToEnd.input} />
+      </div>
+      <div
+        style={{
+          gridArea: "end-to-end-task-output",
         }}
       >
-        <CardContent>
-          <h2>サンプルファイル（出力）</h2>
-          <CodeBlock {...props.code.endToEnd.output} />
-        </CardContent>
-      </Card>
-      <Card
-        sx={{
-          gridColumn: "2 / span 1",
-          gridRow: "4 / span 1",
+        <h2>サンプルファイル（出力）</h2>
+        <CodeBlock {...props.code.endToEnd.output} />
+      </div>
+      <div
+        style={{
+          gridArea: "end-to-end-task-schema",
         }}
       >
-        <CardContent>
-          <h2>スキーマファイル（出力）</h2>
-          <CodeBlock {...props.code.endToEnd.schema} />
-        </CardContent>
-      </Card>
-      <Card
-        sx={{
-          gridColumn: "1 / span 1",
-          gridRow: "5 / span 3",
+        <h2>スキーマファイル（出力）</h2>
+        <CodeBlock {...props.code.endToEnd.schema} />
+      </div>
+      <div
+        style={{
+          gridArea: "classification-task",
         }}
       >
-        <CardContent>
-          <h2>分類タスクのデータ形式について</h2>
-          <p>概</p>
-          <p>要</p>
-        </CardContent>
-      </Card>
-      <Card
-        sx={{
-          gridColumn: "2 / span 1",
-          gridRow: "5 / span 1",
+        <h2 id="classification-task">分類タスクのデータ形式について</h2>
+        <p>TBA</p>
+      </div>
+      <div
+        style={{
+          gridArea: "classification-task-input",
         }}
       >
-        <CardContent>
-          <h2>サンプルファイル（入力）</h2>
-          <CodeBlock {...props.code.classification.input} />
-        </CardContent>
-      </Card>
-      <Card
-        sx={{
-          gridColumn: "2 / span 1",
-          gridRow: "6 / span 1",
+        <h2>サンプルファイル（入力）</h2>
+        <CodeBlock {...props.code.classification.input} />
+      </div>
+      <div
+        style={{
+          gridArea: "classification-task-output",
         }}
       >
-        <CardContent>
-          <h2>サンプルファイル（出力）</h2>
-          <CodeBlock {...props.code.classification.output} />
-        </CardContent>
-      </Card>
-      <Card
-        sx={{
-          gridColumn: "2 / span 1",
-          gridRow: "7 / span 1",
+        <h2>サンプルファイル（出力）</h2>
+        <CodeBlock {...props.code.classification.output} />
+      </div>
+      <div
+        style={{
+          gridArea: "classification-task-schema",
         }}
       >
-        <CardContent>
-          <h2>スキーマファイル（出力）</h2>
-          <CodeBlock {...props.code.classification.schema} />
-        </CardContent>
-      </Card>
-      <Card
-        sx={{
-          gridColumn: "1 / span 1",
-          gridRow: "8 / span 3",
+        <h2>スキーマファイル（出力）</h2>
+        <CodeBlock {...props.code.classification.schema} />
+      </div>
+      <div
+        style={{
+          gridArea: "attribute-extraction-task",
         }}
       >
-        <CardContent>
-          <h2>属性抽出タスクのデータ形式について</h2>
-          <p>概</p>
-          <p>要</p>
-        </CardContent>
-      </Card>
-      <Card
-        sx={{
-          gridColumn: "2 / span 1",
-          gridRow: "8 / span 1",
+        <h2 id="attribute-extraction-task">
+          属性抽出タスクのデータ形式について
+        </h2>
+        <p>TBA</p>
+      </div>
+      <div
+        style={{
+          gridArea: "attribute-extraction-task-input",
         }}
       >
-        <CardContent>
-          <h2>サンプルファイル（入力）</h2>
-          <CodeBlock {...props.code.attributeExtraction.input} />
-        </CardContent>
-      </Card>
-      <Card
-        sx={{
-          gridColumn: "2 / span 1",
-          gridRow: "9 / span 1",
+        <h2>サンプルファイル（入力）</h2>
+        <CodeBlock {...props.code.attributeExtraction.input} />
+      </div>
+      <div
+        style={{
+          gridArea: "attribute-extraction-task-output",
         }}
       >
-        <CardContent>
-          <h2>サンプルファイル（出力）</h2>
-          <CodeBlock {...props.code.attributeExtraction.output} />
-        </CardContent>
-      </Card>
-      <Card
-        sx={{
-          gridColumn: "2 / span 1",
-          gridRow: "10 / span 1",
+        <h2>サンプルファイル（出力）</h2>
+        <CodeBlock {...props.code.attributeExtraction.output} />
+      </div>
+      <div
+        style={{
+          gridArea: "attribute-extraction-task-schema",
         }}
       >
-        <CardContent>
-          <h2>スキーマファイル（出力）</h2>
-          <CodeBlock {...props.code.attributeExtraction.schema} />
-        </CardContent>
-      </Card>
-      <Card
-        sx={{
-          gridColumn: "1 / span 1",
-          gridRow: "11 / span 3",
+        <h2>スキーマファイル（出力）</h2>
+        <CodeBlock {...props.code.attributeExtraction.schema} />
+      </div>
+      <div
+        style={{
+          gridArea: "link-task",
         }}
       >
-        <CardContent>
-          <h2>リンクタスクのデータ形式について</h2>
-          <p>概</p>
-          <p>要</p>
-        </CardContent>
-      </Card>
-      <Card
-        sx={{
-          gridColumn: "2 / span 1",
-          gridRow: "11 / span 1",
+        <h2 id="link-task">リンクタスクのデータ形式について</h2>
+        <p>TBA</p>
+      </div>
+      <div
+        style={{
+          gridArea: "link-task-input",
         }}
       >
-        <CardContent>
-          <h2>サンプルファイル（入力）</h2>
-          <CodeBlock {...props.code.link.input} />
-        </CardContent>
-      </Card>
-      <Card
-        sx={{
-          gridColumn: "2 / span 1",
-          gridRow: "12 / span 1",
+        <h2>サンプルファイル（入力）</h2>
+        <CodeBlock {...props.code.link.input} />
+      </div>
+      <div
+        style={{
+          gridArea: "link-task-output",
         }}
       >
-        <CardContent>
-          <h2>サンプルファイル（出力）</h2>
-          <CodeBlock {...props.code.link.output} />
-        </CardContent>
-      </Card>
-      <Card
-        sx={{
-          gridColumn: "2 / span 1",
-          gridRow: "13 / span 1",
+        <h2>サンプルファイル（出力）</h2>
+        <CodeBlock {...props.code.link.output} />
+      </div>
+      <div
+        style={{
+          gridArea: "link-task-schema",
         }}
       >
-        <CardContent>
-          <h2>スキーマファイル（出力）</h2>
-          <CodeBlock {...props.code.link.schema} />
-        </CardContent>
-      </Card>
-      <Card
-        sx={{
-          gridColumn: "1 / span 2",
-          gridRow: "14 / span 1",
+        <h2>スキーマファイル（出力）</h2>
+        <CodeBlock {...props.code.link.schema} />
+      </div>
+      <div
+        style={{
+          gridArea: "format-checker",
         }}
       >
-        <CardContent>
-          <h2>フォーマットチェッカーについて</h2>
-          <p>概</p>
-          <p>要</p>
-        </CardContent>
-      </Card>
-      <Card
-        sx={{
-          gridColumn: "1 / span 2",
-          gridRow: "15 / span 1",
+        <h2 id="format-checker">フォーマットチェッカーについて</h2>
+        <p>TBA</p>
+      </div>
+      <div
+        style={{
+          gridArea: "faq",
         }}
       >
-        <CardContent>
-          <h2>データ形式についてのFAQ</h2>
-          <p>概</p>
-          <p>要</p>
-        </CardContent>
-      </Card>
+        <h2 id="faq">データ形式についてのFAQ</h2>
+        <p>TBA</p>
+      </div>
     </Paper>
   );
 };

@@ -2,12 +2,14 @@
 import type { NextPage } from "next";
 import {
   CommitteeList,
+  ContentBox,
   JoinButton,
   NavigationLink,
   NewsList,
   ScheduleList,
 } from "../components";
-import { Box, Paper, CardContent, CardMedia, Card } from "@mui/material";
+import { useRef, useEffect, useState } from "react";
+import { Paper, Divider } from "@mui/material";
 
 const newsItems = [
   <>
@@ -67,463 +69,248 @@ const newsItems = [
 ];
 
 const Home: NextPage = () => {
+  const leftRef = useRef<HTMLDivElement>(null);
+  const [maxHeight, setMaxHeight] = useState<number>(1200);
+
+  useEffect(() => {
+    if (leftRef.current) {
+      const left = leftRef.current.getBoundingClientRect();
+      if (left.height > maxHeight) {
+        setMaxHeight(left.height);
+      }
+    }
+  }, [maxHeight]);
   return (
     <Paper
       elevation={0}
       sx={{
         display: "grid",
-        gridTemplateColumns: "minmax(0, 4fr) minmax(0, 3fr)",
         gridGap: "1rem",
-        gridTemplateAreas: `
-          "about                  schedule"
-          "shinra-video           schedule"
-          "leader-board           leader-board"
-          "introduction--overview whatsnew--contact--committee"
-          "task-detail            task-detail"
-          "reference              reference"
-          "related-research       related-research"
-          "faq                    faq"
-          "task-list              task-list"
+        gridTemplate: `
+          "about            whatsnew"
+          "shinra-video     whatsnew"
+          "leader-board     leader-board"
+          "mid-content-left mid-content-right"
+          "divider1         divider1"
+          "task-detail      task-detail"
+          "reference        reference"
+          "task-list        task-list" / minmax(0, 4fr) minmax(0, 3fr)
         `,
       }}
     >
-      <Card
+      <Divider
         sx={{
+          borderColor: "#afafaf",
+          gridArea: "divider1",
+        }}
+      />
+      <ContentBox
+        style={{
           gridArea: "about",
         }}
+        theme="white"
       >
-        <CardContent>
-          <h2 id="about">森羅プロジェクトとは?</h2>
-          <p>概</p>
-          <p>要</p>
-        </CardContent>
-      </Card>
-      <Card
-        elevation={0}
-        sx={{
+        <h2 id="about">2022年度の森羅プロジェクトは？</h2>
+        <p>
+          2022年度の森羅プロジェクト（森羅2022）では、協働による知識の構造化を目指し、Wikipediaの分類、属性値抽出、リンキングタスクを実施します。
+        </p>
+      </ContentBox>
+      <div
+        style={{
+          aspectRatio: "16/9",
           gridArea: "shinra-video",
-          borderRadius: 0,
+          width: "100%",
         }}
       >
-        <CardMedia
-          component="iframe"
+        <iframe
           src="https://www.youtube.com/embed/lCYj3x6pu1w"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         />
-      </Card>
-      <Box
-        sx={{
-          gridArea: "schedule",
+      </div>
+      <div
+        style={{
+          display: "grid",
+          gridArea: "whatsnew",
+          gridTemplate: `
+            "whatsnew"
+            "ch"
+          `,
+          gridGap: "1rem",
         }}
       >
-        <Card>
-          <CardContent>
-            <h2 id="schedule">スケジュール</h2>
-            <ScheduleList
-              items={[
-                {
-                  title: "キックオフミーティング＆データ公開",
-                  time: "2022年4月下旬～5月中旬",
-                },
-                {
-                  title: "リーダーボードオープン",
-                  time: "2022年5月中旬（予定）",
-                },
-                {
-                  title: "実行結果の提出締切",
-                  time: "2022年10月末日（予定）",
-                },
-                { title: "評価結果の返却", time: "2022年11月中旬" },
-                { title: "最終報告会", time: "2022年12月" },
-              ]}
-            />
-          </CardContent>
-        </Card>
-      </Box>
-      <Box
-        sx={{
-          gridArea: "whatsnew--contact--committee",
-          display: "flex",
-          flexDirection: "column",
-          rowGap: "1rem",
-        }}
-      >
-        <Card
-          sx={{
+        <ContentBox
+          style={{
             gridArea: "whatsnew",
+            overflow: "auto",
+            maxHeight: "14rem",
           }}
+          theme="green"
         >
-          <CardContent>
-            <h2 id="whatsnew">新着情報</h2>
-            <NewsList items={newsItems} />
-          </CardContent>
-        </Card>
-        <Card
-          sx={{
-            gridArea: "contact",
+          <h2 id="whatsnew">新着情報</h2>
+          <NewsList items={newsItems} />
+        </ContentBox>
+        <ContentBox
+          style={{
+            display: "grid",
+            gridArea: "ch",
+            gridGap: "1rem",
+            gridTemplate: `
+              "intro intro"
+              "video1 video2"
+            `,
           }}
+          theme="gray"
         >
-          <CardContent>
-            <h2 id="contact">コミュニティ／連絡先</h2>
-            <h3>メーリングリスト</h3>
-            <p>
-              shinra2022-all
-              <JoinButton href="https://groups.google.com/g/shinra2022-all">
-                参加リンク
-              </JoinButton>
-            </p>
-            <h3>Slack</h3>
-            <p>
-              森羅2022：Wikipedia構造化プロジェクト(shinra2022.slack.com)
-              <JoinButton href="https://join.slack.com/t/shinra2022/shared_invite/zt-14qkpf21i-lQNKlT0aIOU5We7xlZBqfQ">
-                参加リンク
-              </JoinButton>
-            </p>
-            <h3>Email（実行委員宛）</h3>
-            <p>
-              <em>shinra2022-info （at） googlegroups.com</em>
-            </p>
-          </CardContent>
-        </Card>
-        <Card
-          sx={{
-            gridArea: "committee",
-          }}
-        >
-          <CardContent>
-            <h2 id="committee">実行委員</h2>
-            <h3>委員長</h3>
-            <CommitteeList items={["関根 聡（理研AIP）"]} />
-            <h3>委員</h3>
-            <CommitteeList
-              items={[
-                "野本昌子（理研AIP）",
-                "中山功太（理研AIP/筑波大）",
-                "隅田飛鳥（理研AIP）",
-                "松田耕史（理研AIP/東北大）",
-                "後藤美知子（理研AIP）",
-                "宇佐美佑（Usami LLC）",
-                "安藤まや（フリー）",
-                "山田育矢（Studio Ousia/理研AIP）",
-                "三浦明波（株式会社アティード）",
-                "阪本浩太郎（株式会社BESNA研究所）",
-                "渋木英潔（株式会社BESNA研究所）",
-              ]}
-            />
-          </CardContent>
-        </Card>
-      </Box>
-      <Card
-        sx={{
-          gridArea: "leader-board",
-        }}
-      >
-        <CardContent>
-          <h2 id="leader-board">リーダーボード</h2>
-          <p>概</p>
-          <p>要</p>
-        </CardContent>
-        <Box
-          sx={{
-            display: "flex",
-            flexFlow: "wrap",
-            justifyContent: "space-evenly",
-            padding: "1rem",
-          }}
-        >
-          <NavigationLink href="/data-format">
-            データ形式について
-          </NavigationLink>
-          <NavigationLink href="/evaluation-method">
-            評価方法について
-          </NavigationLink>
-          <NavigationLink href="/data-download">
-            データダウンロードについて
-          </NavigationLink>
-          <NavigationLink href="/result-submission">
-            結果の提出について
-          </NavigationLink>
-        </Box>
-      </Card>
-      <Box
-        sx={{
-          gridArea: "introduction--overview",
-          display: "flex",
-          flexDirection: "column",
-          rowGap: "1rem",
-        }}
-      >
-        <Card>
-          <CardContent>
-            <h2 id="introduction">森羅プロジェクト紹介</h2>
-            <p>
-              森羅プロジェクトは、
-              Wikipediaに書かれている世界知識を計算機が扱えるような形に変換することを目的として、Wikipediaを構造化するプロジェクトです。私達は、名前のオントロジーである「
-              <a href="http://ene-project.info/">拡張固有表現（ENE）</a>
-              」にWikipediaの記事を分類し、拡張固有表現に定義されている属性情報をWikipedia記事にアノテーションし、対象Wikipediaページにリンクすることで、計算機利用可能な知識の構造化を目指しています。
-            </p>
-            <p>構造化は３段階のステップにわけられます。</p>
-            <ol>
-              <li>
-                <strong>Wikipedia項目のENEへの分類</strong>
-                <br />
-                <em>（例：「島崎藤村」ページを「人名」に分類）</em>
-              </li>
-              <li>
-                <strong>ENEで定義された属性に対応する属性値を抽出</strong>
-                <br />
-                <em>
-                  （例：「人名」の「作品」という属性に対応する「嵐」を属性値として抽出）
-                </em>
-              </li>
-              <li>
-                <strong>属性値を、それに対応するWikipediaページに紐づけ</strong>
-                <br />
-                <em>
-                  （例：属性値「嵐」をWikipediaページの「嵐（小説）」に紐づけ）
-                </em>
-              </li>
-            </ol>
-            <p>
-              森羅プロジェクトは、様々なアプローチによる多数のシステムを評価型ワークショップを開催することで募り、それらを統合することで構造化データを構築する「Resource
-              by Collaborative
-              Contribution（協働による知識構築）」の考えに基づくプロジェクトです。
-            </p>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardContent>
-            <h2 id="overview">タスク概要</h2>
-            <img
-              src="/udagawa-shinra-project/shinra2022-fig1.png"
-              alt="shinra2022-fig1"
-            />
-            <p>
-              <a href="http://shinra-project.info/?lang=ja">森羅プロジェクト</a>
-              は2017年にスタートしたリソース構築プロジェクトで、人が読むことを想定して書かれたWikipediaの知識を計算機が扱える形に
-              <a href="#structuring_wikipedia">構造化</a>
-              することを目指し、「協働によるリソース構築（Resource by
-              Collaborative
-              Contribution（RbCC））」という枠組みで、評価型タスクとリソース構築を同時に進めています。
-            </p>
-            <img
-              src="/udagawa-shinra-project/shinra2022-fig2.png"
-              alt="shinra2022-fig2"
-            />
-            <p>
-              日本語構造化タスクは森羅プロジェクトで2018年から実施している日本語Wikipediaを対象とした情報抽出タスクで、今回が4回目となります。
-            </p>
-            <p>
-              森羅2022ではこれまでの森羅プロジェクトのタスクを統合したEnd-to-Endタスクと、その構成要素となる3つのサブタスクを開催し、参加者を募集します。
-            </p>
-            <p>
-              End-to-Endタスクでは、以下の3つのステップを一気に実施することで、分類、属性抽出、リンクの複合タスクを実現し、相乗効果／End-to-Endで精度向上の可能性を探ります。
-            </p>
-            <img
-              src="/udagawa-shinra-project/shinra2022-fig3.png"
-              alt="shinra2022-fig3"
-            />
-            <p>
-              End-to-Endタスクの各ステップは過去の森羅プロジェクトと以下の関係にあります。
-            </p>
-            <ul>
-              <li>
-                <strong>ステップ1（分類）</strong>
-                <ul>
-                  <li>
-                    日本語の分類システム（今回は30言語の分類は実施しません）
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <strong>ステップ2（属性値抽出）</strong>
-                <ul>
-                  <li>日本語の属性値抽出：森羅2018、2019、2020-JP</li>
-                  <li>
-                    全てのカテゴリーを実施（過去の森羅プロジェクトでは81カテゴリーのみ）
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <strong>ステップ3（リンクの紐づけ）</strong>
-                <ul>
-                  <li>日本語の属性値に対してリンクを実施：森羅2021-LinkJP</li>
-                  <li>7つのカテゴリーに対して</li>
-                </ul>
-              </li>
-            </ul>
-            <p>
-              これらの、過去の「森羅データ」を教師として利用することで、以下のように(半)自動的に知識を更新し続ける仕組みが実現できると考えています。
-            </p>
-            <ul>
-              <li>森羅2019を教師としてW2021を(半)自動で構造化</li>
-              <li>森羅2021を教師としてW2023を(半)自動で構造化</li>
-              <li>森羅2023を教師としてW2025を(半)自動で構造化</li>
-              <li>…</li>
-            </ul>
-            <p>
-              一方で、End-to-Endタスクの各ステップに焦点を当てたタスクとして以下の３つのサブタスクも開催し、サブタスクのみの参加も歓迎いたします。
-            </p>
-            <ul>
-              <li>分類タスク</li>
-              <li>属性値抽出タスク</li>
-              <li>リンクタスク</li>
-            </ul>
-            <p>多くの方のご参加をお待ちしています。</p>
-          </CardContent>
-        </Card>
-      </Box>
-      <Card
-        sx={{
-          gridArea: "task-detail",
-        }}
-      >
-        <CardContent>
-          <h2 id="task-detail">タスク詳細</h2>
-          <h3 id="end-to-end-task">End-to-Endタスク</h3>
-          <h4>教師データ</h4>
-          <p>Wikipedia2019の分類データ</p>
-          <h4>入力データ</h4>
-          <p>Wikipedia2021</p>
-          <h4>評価データ</h4>
-          <p>Wikipedia2021の属性値抽出データに対するリンク</p>
-          <ul>
-            <li>81カテゴリー（森羅2018,2019,2020-JPの評価データ）</li>
-            <li>90カテゴリー（新規）</li>
-          </ul>
-          <h3 id="classification-task">分類タスク</h3>
-          <h4>教師データ</h4>
-          <ul>
-            <li>Wikipedia2019の分類データ</li>
-            <li>
-              Wikipedia2019の属性値抽出データ
-              <ul>
-                <li>81カテゴリー（森羅2018,2019,2020-JPの教師データ）</li>
-                <li>90カテゴリー（新規）</li>
-              </ul>
-            </li>
-            <li>
-              Wikipedia2019のリンクデータ
-              <ul>
-                <li>
-                  7カテゴリー x
-                  200ページ（森羅2021-LinkJPのサンプルデータ（7カテゴリーx50ページ）を含む）
-                </li>
-                <li>164カテゴリー x 2ページ（新規）</li>
-              </ul>
-            </li>
-          </ul>
-          <h4>入力データ</h4>
-          <p>Wikipedia2021</p>
-          <h4>評価データ</h4>
-          <p>Wikipedia2021の分類済みデータ</p>
-          <h3 id="attribute-extraction-task">属性値抽出タスク</h3>
-          <h4>教師データ</h4>
-          <p>Wikipedia2019の属性値抽出データ</p>
-          <ul>
-            <li>81カテゴリー（森羅2018,2019,2020-JPの教師データ）</li>
-            <li>90カテゴリー（新規）</li>
-          </ul>
-
-          <h4>入力データ</h4>
-          <p>Wikipedia2021 ／ 分類システム出力データ(baseline)</p>
-          <ul>
-            <li data-stringify-indent="1" data-stringify-border="0">
-              分類システム：TypedKB (
-              <a
-                target="_blank"
-                href="https://github.com/singletongue/TypedKB"
-                rel="noopener noreferrer"
-                tabIndex={-1}
-              >
-                https://github.com/singletongue/TypedKB
-              </a>
-              )
-            </li>
-          </ul>
-          <h4>評価データ</h4>
-          <p>Wikipedia2021の属性値抽出データ</p>
-          <ul>
-            <li>81カテゴリー（森羅2018,2019,2020-JPの評価データ）</li>
-            <li>90カテゴリー（新規）</li>
-          </ul>
-          <h3 id="link-task">リンクタスク</h3>
-          <h4>サンプルデータ</h4>
-          <p>Wikipedia2019のリンクデータ</p>
-          <ul>
-            <li>
-              7カテゴリー x
-              200ページ（森羅2021-LinkJPのサンプルデータ（7カテゴリーx50ページ）を含む）
-            </li>
-            <li>164カテゴリー x 2ページ（新規）</li>
-          </ul>
-          <h4>入力データ</h4>
-          <p>Wikipedia2021 ／ 属性値抽出システム出力データ(baseline)</p>
-          <ul>
-            <li data-stringify-indent="1" data-stringify-border="0">
-              属性値抽出システム：Shinra JP BERT (
-              <a
-                target="_blank"
-                href="https://github.com/aiishii/shinra_jp_bert/tree/master"
-                rel="noopener noreferrer"
-              >
-                https://github.com/aiishii/shinra_jp_bert/tree/master
-              </a>
-              )
-            </li>
-          </ul>
-          <h4>評価データ</h4>
-          <p>Wikipedia2021の属性値抽出データに対するリンク</p>
-          <ul>
-            <li>81カテゴリー（森羅2018,2019,2020-JPの評価データ）</li>
-            <li>90カテゴリー（新規）</li>
-          </ul>
-        </CardContent>
-      </Card>
-      <Card
-        sx={{
-          gridArea: "reference",
-        }}
-      >
-        <CardContent>
-          <h2 id="reference">システム制作の参考資料</h2>
-        </CardContent>
-        <CardContent>
-          <Box
-            sx={{
-              display: "grid",
-              gridTemplateColumns: "minmax(0, 1fr) minmax(0, 1fr)",
-              gridGap: "2rem",
+          <div style={{ gridArea: "intro" }}>
+            <h2>森羅チャンネル</h2>
+            <p>今後も動画を公開していきます。チャンネル登録お願いします。</p>
+          </div>
+          <div
+            style={{
+              aspectRatio: "16/9",
+              gridArea: "video1",
+              width: "100%",
             }}
           >
-            <Card>
-              <CardContent>
-                <h3>システム制作実況チャンネル</h3>
-              </CardContent>
-              <CardMedia
-                component="iframe"
-                src="https://www.youtube.com/embed/lCYj3x6pu1w"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </Card>
-            <Card>
-              <CardContent>
-                <h3>ベースラインシステム等参考システム</h3>
-                <p>概</p>
-                <p>要</p>
-              </CardContent>
-            </Card>
-          </Box>
-        </CardContent>
-      </Card>
-      <Card
-        sx={{
-          gridArea: "related-research",
+            <h3>インタビュー</h3>
+            <iframe
+              src="https://www.youtube.com/embed/lCYj3x6pu1w"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+          <div
+            style={{
+              aspectRatio: "16/9",
+              gridArea: "video2",
+              width: "100%",
+            }}
+          >
+            <h3>システム制作実況</h3>
+            <iframe
+              src="https://www.youtube.com/embed/lCYj3x6pu1w"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        </ContentBox>
+      </div>
+      <div
+        style={{
+          gridArea: "mid-content-right",
+          display: "grid",
+          rowGap: "1rem",
+          gridTemplate: `
+            "schedule" max-content
+            "flow" max-content
+            "contact" max-content
+            "related-research" auto
+            "committee" max-content
+          `,
+          maxHeight: `${maxHeight}px`,
         }}
       >
-        <CardContent>
+        <ContentBox
+          style={{
+            gridArea: "schedule",
+          }}
+          theme="green"
+        >
+          <h2 id="schedule">スケジュール</h2>
+          <ScheduleList
+            items={[
+              {
+                title: "キックオフミーティング＆データ公開",
+                time: "2022年4月下旬～5月中旬",
+              },
+              {
+                title: "リーダーボードオープン",
+                time: "2022年5月中旬（予定）",
+              },
+              {
+                title: "実行結果の提出締切",
+                time: "2022年10月末日（予定）",
+              },
+              { title: "評価結果の返却", time: "2022年11月中旬" },
+              { title: "最終報告会", time: "2022年12月" },
+            ]}
+          />
+        </ContentBox>
+        <ContentBox
+          style={{
+            gridArea: "flow",
+          }}
+          theme="green"
+        >
+          <h2 id="flow">タスク参加の流れ</h2>
+          <ul>
+            <li>森羅のSlackとMLに参加（イベントなどの随時アナウンス）</li>
+            <li>データ公開ページからデータを入手</li>
+            <li>実行結果の提出（10月末日予定）</li>
+            <li>最終報告会で報告（12月）</li>
+          </ul>
+        </ContentBox>
+        <ContentBox
+          style={{
+            gridArea: "contact",
+          }}
+          theme="green"
+        >
+          <h2 id="contact">コミュニティ／連絡先</h2>
+          <h3>メーリングリスト</h3>
+          <p>
+            shinra2022-all
+            <JoinButton href="https://groups.google.com/g/shinra2022-all">
+              参加リンク
+            </JoinButton>
+          </p>
+          <h3>Slack</h3>
+          <p>
+            森羅2022：Wikipedia構造化プロジェクト(shinra2022.slack.com)
+            <JoinButton href="https://join.slack.com/t/shinra2022/shared_invite/zt-14qkpf21i-lQNKlT0aIOU5We7xlZBqfQ">
+              参加リンク
+            </JoinButton>
+          </p>
+          <h3>Email（実行委員宛）</h3>
+          <p>
+            <em>shinra2022-info （at） googlegroups.com</em>
+          </p>
+        </ContentBox>
+        <ContentBox
+          style={{
+            gridArea: "committee",
+          }}
+          theme="green"
+        >
+          <h2 id="committee">実行委員</h2>
+          <h3>委員長</h3>
+          <CommitteeList items={["関根 聡（理研AIP）"]} />
+          <h3>委員</h3>
+          <CommitteeList
+            items={[
+              "野本昌子（理研AIP）",
+              "中山功太（理研AIP/筑波大）",
+              "隅田飛鳥（理研AIP）",
+              "松田耕史（理研AIP/東北大）",
+              "後藤美知子（理研AIP）",
+              "宇佐美佑（Usami LLC）",
+              "安藤まや（フリー）",
+              "山田育矢（Studio Ousia/理研AIP）",
+              "三浦明波（株式会社アティード）",
+              "門脇一真（株式会社日本総合研究所）",
+              "阪本浩太郎（株式会社BESNA研究所）",
+              "渋木英潔（株式会社BESNA研究所）",
+            ]}
+          />
+        </ContentBox>
+        <ContentBox
+          style={{
+            gridArea: "related-research",
+            overflow: "auto",
+          }}
+          theme="gray"
+        >
           <h2 id="related-research">関連研究</h2>
           <h3>森羅プロジェクトに関する研究</h3>
           <ul>
@@ -777,104 +564,391 @@ const Home: NextPage = () => {
               linguistics (COLING’96), vol.1, pp.466-471, 1996.
             </li>
           </ul>
-        </CardContent>
-      </Card>
-      <Card
-        sx={{
-          gridArea: "faq",
+        </ContentBox>
+      </div>
+      <ContentBox
+        style={{
+          gridArea: "leader-board",
+        }}
+        theme="gray"
+      >
+        <h2 id="leader-board">リーダーボード</h2>
+        <p>TBA</p>
+        <div
+          style={{
+            display: "flex",
+            flexFlow: "wrap",
+            justifyContent: "space-evenly",
+            padding: "1rem",
+          }}
+        >
+          <NavigationLink href="/data-format">
+            データ形式について
+          </NavigationLink>
+          <NavigationLink href="/evaluation-method">
+            評価方法について
+          </NavigationLink>
+          <NavigationLink href="/data-download">
+            データダウンロードについて
+          </NavigationLink>
+          <NavigationLink href="/result-submission">
+            結果の提出について
+          </NavigationLink>
+        </div>
+      </ContentBox>
+      <div
+        ref={leftRef}
+        id="mid-content-left"
+        style={{
+          gridArea: "mid-content-left",
+          display: "grid",
+          rowGap: "2rem",
+          gridTemplate: `
+            "introduction" max-content
+            "divider1" max-content
+            "overview" max-content
+          `,
         }}
       >
-        <CardContent>
-          <h2 id="faq">タスク参加についてのFAQ</h2>
+        <ContentBox
+          style={{
+            gridArea: "introduction",
+          }}
+          theme="white"
+        >
+          <h2 id="introduction">森羅プロジェクト紹介</h2>
           <p>
-            本タスクに関しご不明な点がありましたら、
-            <a href="#contact">連絡先</a>までお問い合わせください。
+            森羅プロジェクトは、
+            Wikipediaに書かれている世界知識を計算機が扱えるような形に変換することを目的として、Wikipediaを構造化するプロジェクトです。私達は、名前のオントロジーである「
+            <a href="http://ene-project.info/">拡張固有表現（ENE）</a>
+            」にWikipediaの記事を分類し、拡張固有表現に定義されている属性情報をWikipedia記事にアノテーションし、対象Wikipediaページにリンクすることで、計算機利用可能な知識の構造化を目指しています。
           </p>
-        </CardContent>
-      </Card>
-      <Card
-        sx={{
-          gridArea: "task-list",
-        }}
-      >
-        <CardContent>
-          <h2 id="task-list">過去の共有タスク</h2>
+          <p>構造化は３段階のステップにわけられます。</p>
+          <ol>
+            <li>
+              <strong>Wikipedia項目のENEへの分類</strong>
+              <br />
+              <em>（例：「島崎藤村」ページを「人名」に分類）</em>
+            </li>
+            <li>
+              <strong>ENEで定義された属性に対応する属性値を抽出</strong>
+              <br />
+              <em>
+                （例：「人名」の「作品」という属性に対応する「嵐」を属性値として抽出）
+              </em>
+            </li>
+            <li>
+              <strong>属性値を、それに対応するWikipediaページに紐づけ</strong>
+              <br />
+              <em>
+                （例：属性値「嵐」をWikipediaページの「嵐（小説）」に紐づけ）
+              </em>
+            </li>
+          </ol>
+          <p>
+            森羅プロジェクトは、様々なアプローチによる多数のシステムを評価型ワークショップを開催することで募り、それらを統合することで構造化データを構築する「Resource
+            by Collaborative
+            Contribution（協働による知識構築）」の考えに基づくプロジェクトです。
+          </p>
+        </ContentBox>
+        <Divider
+          style={{
+            borderColor: "#afafaf",
+            gridArea: "divider1",
+          }}
+        />
+        <ContentBox
+          style={{
+            gridArea: "overview",
+          }}
+          theme="white"
+        >
+          <h2 id="overview">タスク概要</h2>
+          <img src="/shinra2022-fig1.png" alt="shinra2022-fig1" />
+          <p>
+            <a href="http://shinra-project.info/?lang=ja">森羅プロジェクト</a>
+            は2017年にスタートしたリソース構築プロジェクトで、人が読むことを想定して書かれたWikipediaの知識を計算機が扱える形に
+            <a href="#structuring_wikipedia">構造化</a>
+            することを目指し、「協働によるリソース構築（Resource by
+            Collaborative
+            Contribution（RbCC））」という枠組みで、評価型タスクとリソース構築を同時に進めています。
+          </p>
+          <img src="/shinra2022-fig2.png" alt="shinra2022-fig2" />
+          <p>
+            日本語構造化タスクは森羅プロジェクトで2018年から実施している日本語Wikipediaを対象とした情報抽出タスクで、今回が4回目となります。
+          </p>
+          <p>
+            森羅2022ではこれまでの森羅プロジェクトのタスクを統合したEnd-to-Endタスクと、その構成要素となる3つのサブタスクを開催し、参加者を募集します。
+          </p>
+          <p>
+            End-to-Endタスクでは、以下の3つのステップを一気に実施することで、分類、属性抽出、リンクの複合タスクを実現し、相乗効果／End-to-Endで精度向上の可能性を探ります。
+          </p>
+          <img src="/shinra2022-fig3.png" alt="shinra2022-fig3" />
+          <p>
+            End-to-Endタスクの各ステップは過去の森羅プロジェクトと以下の関係にあります。
+          </p>
           <ul>
             <li>
-              <strong>
-                <a href="http://shinra-project.info/shinra2021ml/?lang=en">
-                  SHINRA2021-MLタスク
-                </a>
-              </strong>
+              <strong>ステップ1（分類）</strong>
               <ul>
                 <li>
-                  30言語のWikipediaページを拡張固有表現に分類するタスクです。SHINRA2020-MLの継続で、さらなる精度向上を目指します。
+                  日本語の分類システム（今回は30言語の分類は実施しません）
                 </li>
               </ul>
             </li>
             <li>
-              <strong>
-                <a href="http://shinra-project.info/shinra2021linkjp/?lang=ja">
-                  SHINRA2021-LinkJPタスク
-                </a>
-              </strong>
+              <strong>ステップ2（属性値抽出）</strong>
               <ul>
+                <li>日本語の属性値抽出：森羅2018、2019、2020-JP</li>
                 <li>
-                  森羅2021-LinkJPはエンティティーの属性値を該当するWikipediaページに紐づけるタスクです。
+                  全てのカテゴリーを実施（過去の森羅プロジェクトでは81カテゴリーのみ）
                 </li>
               </ul>
             </li>
             <li>
-              <strong>
-                <a href="http://shinra-project.info/shinra2020ml/?lang=ja">
-                  SHINRA2020-MLタスク
-                </a>
-              </strong>
+              <strong>ステップ3（リンクの紐づけ）</strong>
               <ul>
-                <li>
-                  30言語のWikipediaを拡張固有表現に分類するタスクです。トレーニングデータは分類された日本語Wikipediaの項目と日本語から各言語への言語間リンクを利用して作成します。日本語からの言語間リンクがないWikipediaページを分類するタスクです。
-                </li>
-              </ul>
-            </li>
-            <li>
-              <strong>
-                <a href="http://shinra-project.info/shinra2020jp/?lang=ja">
-                  森羅2020-JPタスク
-                </a>
-              </strong>
-              <ul>
-                <li>
-                  森羅2019に対し新たに施設名、イベント名の47種類の拡張固有表現カテゴリーを加えた82種類のカテゴリーについて、Wikipedia記事中の対応する記述部分にアノテーションを行うタスクです。
-                </li>
-              </ul>
-            </li>
-            <li>
-              <strong>
-                <a href="http://shinra-project.info/shinra2019/?lang=ja">
-                  森羅2019-JPタスク
-                </a>
-              </strong>
-              <ul>
-                <li>
-                  森羅2018に対し新たに組織名、地形名の30種類の拡張固有表現カテゴリーを加えた35種類のカテゴリーについて、Wikipedia記事中の対応する記述部分にアノテーションを行うタスクです。
-                </li>
-              </ul>
-            </li>
-            <li>
-              <strong>
-                <a href="http://shinra-project.info/shinra2018/?lang=ja">
-                  森羅2018-JPタスク
-                </a>
-              </strong>
-              <ul>
-                <li>
-                  5種類の拡張固有表現カテゴリーについて、それぞれのカテゴリーに分類されたWikipedia記事の文書中から、属性値を抽出する抽出タスクです。
-                </li>
+                <li>日本語の属性値に対してリンクを実施：森羅2021-LinkJP</li>
+                <li>7つのカテゴリーに対して</li>
               </ul>
             </li>
           </ul>
-        </CardContent>
-      </Card>
+          <p>
+            これらの、過去の「森羅データ」を教師として利用することで、以下のように(半)自動的に知識を更新し続ける仕組みが実現できると考えています。
+          </p>
+          <ul>
+            <li>森羅2019を教師としてW2021を(半)自動で構造化</li>
+            <li>森羅2021を教師としてW2023を(半)自動で構造化</li>
+            <li>森羅2023を教師としてW2025を(半)自動で構造化</li>
+            <li>…</li>
+          </ul>
+          <p>
+            一方で、End-to-Endタスクの各ステップに焦点を当てたタスクとして以下の３つのサブタスクも開催し、サブタスクのみの参加も歓迎いたします。
+          </p>
+          <ul>
+            <li>分類タスク</li>
+            <li>属性値抽出タスク</li>
+            <li>リンクタスク</li>
+          </ul>
+          <p>多くの方のご参加をお待ちしています。</p>
+        </ContentBox>
+      </div>
+      <ContentBox
+        style={{
+          gridArea: "task-detail",
+        }}
+        theme="white"
+      >
+        <h2 id="task-detail">タスク詳細</h2>
+        <h3 id="end-to-end-task">End-to-Endタスク</h3>
+        <h4>教師データ</h4>
+        <p>Wikipedia2019の分類データ</p>
+        <h4>入力データ</h4>
+        <p>Wikipedia2021</p>
+        <h4>評価データ</h4>
+        <p>Wikipedia2021の属性値抽出データに対するリンク</p>
+        <ul>
+          <li>81カテゴリー（森羅2018,2019,2020-JPの評価データ）</li>
+          <li>90カテゴリー（新規）</li>
+        </ul>
+        <h3 id="classification-task">分類タスク</h3>
+        <h4>教師データ</h4>
+        <ul>
+          <li>Wikipedia2019の分類データ</li>
+          <li>
+            Wikipedia2019の属性値抽出データ
+            <ul>
+              <li>81カテゴリー（森羅2018,2019,2020-JPの教師データ）</li>
+              <li>90カテゴリー（新規）</li>
+            </ul>
+          </li>
+          <li>
+            Wikipedia2019のリンクデータ
+            <ul>
+              <li>
+                7カテゴリー x
+                200ページ（森羅2021-LinkJPのサンプルデータ（7カテゴリーx50ページ）を含む）
+              </li>
+              <li>164カテゴリー x 2ページ（新規）</li>
+            </ul>
+          </li>
+        </ul>
+        <h4>入力データ</h4>
+        <p>Wikipedia2021</p>
+        <h4>評価データ</h4>
+        <p>Wikipedia2021の分類済みデータ</p>
+        <h3 id="attribute-extraction-task">属性値抽出タスク</h3>
+        <h4>教師データ</h4>
+        <p>Wikipedia2019の属性値抽出データ</p>
+        <ul>
+          <li>81カテゴリー（森羅2018,2019,2020-JPの教師データ）</li>
+          <li>90カテゴリー（新規）</li>
+        </ul>
+
+        <h4>入力データ</h4>
+        <p>Wikipedia2021 ／ 分類システム出力データ(baseline)</p>
+        <ul>
+          <li data-stringify-indent="1" data-stringify-border="0">
+            分類システム：TypedKB (
+            <a
+              target="_blank"
+              href="https://github.com/singletongue/TypedKB"
+              rel="noopener noreferrer"
+              tabIndex={-1}
+            >
+              https://github.com/singletongue/TypedKB
+            </a>
+            )
+          </li>
+        </ul>
+        <h4>評価データ</h4>
+        <p>Wikipedia2021の属性値抽出データ</p>
+        <ul>
+          <li>81カテゴリー（森羅2018,2019,2020-JPの評価データ）</li>
+          <li>90カテゴリー（新規）</li>
+        </ul>
+        <h3 id="link-task">リンクタスク</h3>
+        <h4>サンプルデータ</h4>
+        <p>Wikipedia2019のリンクデータ</p>
+        <ul>
+          <li>
+            7カテゴリー x
+            200ページ（森羅2021-LinkJPのサンプルデータ（7カテゴリーx50ページ）を含む）
+          </li>
+          <li>164カテゴリー x 2ページ（新規）</li>
+        </ul>
+        <h4>入力データ</h4>
+        <p>Wikipedia2021 ／ 属性値抽出システム出力データ(baseline)</p>
+        <ul>
+          <li data-stringify-indent="1" data-stringify-border="0">
+            属性値抽出システム：Shinra JP BERT (
+            <a
+              target="_blank"
+              href="https://github.com/aiishii/shinra_jp_bert/tree/master"
+              rel="noopener noreferrer"
+            >
+              https://github.com/aiishii/shinra_jp_bert/tree/master
+            </a>
+            )
+          </li>
+        </ul>
+        <h4>評価データ</h4>
+        <p>Wikipedia2021の属性値抽出データに対するリンク</p>
+        <ul>
+          <li>81カテゴリー（森羅2018,2019,2020-JPの評価データ）</li>
+          <li>90カテゴリー（新規）</li>
+        </ul>
+      </ContentBox>
+      <ContentBox
+        style={{
+          gridArea: "reference",
+        }}
+        theme="gray"
+      >
+        <h2 id="reference">システム制作の参考資料</h2>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "minmax(0, 1fr) minmax(0, 1fr)",
+            gridGap: "2rem",
+          }}
+        >
+          <div>
+            <h3>システム制作実況チャンネル</h3>
+            <iframe
+              src="https://www.youtube.com/embed/lCYj3x6pu1w"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+          <div>
+            <h3>ベースラインシステム等参考システム</h3>
+            <p>TBA</p>
+          </div>
+        </div>
+      </ContentBox>
+      <ContentBox
+        style={{
+          gridArea: "task-list",
+        }}
+        theme="gray"
+      >
+        <h2 id="task-list">過去の共有タスク</h2>
+        <ul>
+          <li>
+            <strong>
+              <a href="http://shinra-project.info/shinra2021ml/?lang=en">
+                SHINRA2021-MLタスク
+              </a>
+            </strong>
+            <ul>
+              <li>
+                30言語のWikipediaページを拡張固有表現に分類するタスクです。SHINRA2020-MLの継続で、さらなる精度向上を目指します。
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>
+              <a href="http://shinra-project.info/shinra2021linkjp/?lang=ja">
+                SHINRA2021-LinkJPタスク
+              </a>
+            </strong>
+            <ul>
+              <li>
+                森羅2021-LinkJPはエンティティーの属性値を該当するWikipediaページに紐づけるタスクです。
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>
+              <a href="http://shinra-project.info/shinra2020ml/?lang=ja">
+                SHINRA2020-MLタスク
+              </a>
+            </strong>
+            <ul>
+              <li>
+                30言語のWikipediaを拡張固有表現に分類するタスクです。トレーニングデータは分類された日本語Wikipediaの項目と日本語から各言語への言語間リンクを利用して作成します。日本語からの言語間リンクがないWikipediaページを分類するタスクです。
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>
+              <a href="http://shinra-project.info/shinra2020jp/?lang=ja">
+                森羅2020-JPタスク
+              </a>
+            </strong>
+            <ul>
+              <li>
+                森羅2019に対し新たに施設名、イベント名の47種類の拡張固有表現カテゴリーを加えた82種類のカテゴリーについて、Wikipedia記事中の対応する記述部分にアノテーションを行うタスクです。
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>
+              <a href="http://shinra-project.info/shinra2019/?lang=ja">
+                森羅2019-JPタスク
+              </a>
+            </strong>
+            <ul>
+              <li>
+                森羅2018に対し新たに組織名、地形名の30種類の拡張固有表現カテゴリーを加えた35種類のカテゴリーについて、Wikipedia記事中の対応する記述部分にアノテーションを行うタスクです。
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>
+              <a href="http://shinra-project.info/shinra2018/?lang=ja">
+                森羅2018-JPタスク
+              </a>
+            </strong>
+            <ul>
+              <li>
+                5種類の拡張固有表現カテゴリーについて、それぞれのカテゴリーに分類されたWikipedia記事の文書中から、属性値を抽出する抽出タスクです。
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </ContentBox>
     </Paper>
   );
 };

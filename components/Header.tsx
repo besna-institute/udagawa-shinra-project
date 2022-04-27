@@ -18,28 +18,32 @@ export const Header = () => (
               display: "flex",
               alignItems: "center",
               flexDirection: "row",
-              padding: "1.5rem",
+              padding: "0.5rem 0",
               cursor: "pointer",
               columnGap: "1rem",
             }}
           >
             <Avatar
-              src="/udagawa-shinra-project/logo.jpeg"
+              src="/logo.jpeg"
               alt="logo"
               variant="square"
               sx={{
-                height: "4rem",
-                width: "4rem",
+                height: "3rem",
+                width: "3rem",
               }}
             />
-            <Box>
-              <Typography variant="h4" color="inherit" component="h1">
-                森羅プロジェクト
+            <div>
+              <Typography variant="h5" color="inherit" component="h1">
+                森羅 2022
               </Typography>
-              <Typography variant="h6" color="inherit" component="h1">
+              <Typography
+                component="h1"
+                color="inherit"
+                sx={{ fontSize: "0.8rem" }}
+              >
                 Wikipedia構造化プロジェクト
               </Typography>
-            </Box>
+            </div>
           </div>
         </NextLink>
         <div
@@ -47,24 +51,38 @@ export const Header = () => (
             display: "flex",
             alignItems: "center",
             flexDirection: "row",
-            padding: "1.5rem",
+            margin: "auto 0 0.5rem 0",
             columnGap: "1rem",
           }}
         >
-          {/* <Stack direction="row" spacing={2} padding={3}> */}
           <NextLink href="http://ene-project.info/" passHref>
-            <Link variant="h6" color="inherit" target="_blank" rel="noopener">
+            <Link
+              variant="body2"
+              color="inherit"
+              target="_blank"
+              rel="noopener"
+            >
               拡張固有表現
             </Link>
           </NextLink>
           <NextLink href="https://liat-aip.sakura.ne.jp/wp/" passHref>
-            <Link variant="h6" color="inherit" target="_blank" rel="noopener">
+            <Link
+              variant="body2"
+              color="inherit"
+              target="_blank"
+              rel="noopener"
+            >
               理研AIP 言語情報アクセス技術チーム
             </Link>
           </NextLink>
           <NextLink href="http://shinra-project.info/" passHref>
-            <Link variant="h6" color="inherit" target="_blank" rel="noopener">
-              旧ウェブサイト
+            <Link
+              variant="body2"
+              color="inherit"
+              target="_blank"
+              rel="noopener"
+            >
+              森羅トップページ
             </Link>
           </NextLink>
         </div>

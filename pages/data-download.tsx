@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { Card, CardContent, Paper } from "@mui/material";
+import { Divider, Paper } from "@mui/material";
 
 const DataDownload: NextPage = () => {
   return (
@@ -8,81 +8,77 @@ const DataDownload: NextPage = () => {
       sx={{
         display: "grid",
         gridTemplateColumns: "repeat(1, minmax(0, 1fr))",
-        gridGap: "1rem",
+        gridGap: "3rem",
+        gridTemplateAreas: `
+          "data-download"
+          "divider1"
+          "end-to-end-task"
+          "divider2"
+          "classification-task"
+          "divider3"
+          "attribute-extraction-task"
+          "divider4"
+          "link-task"
+          "divider5"
+          "faq"
+        `,
       }}
     >
-      <Card
-        sx={{
-          gridColumn: "span 1 / span 1",
-          gridRow: "span 1 / span 1",
+      <Divider sx={{ gridArea: "divider1" }} />
+      <Divider sx={{ gridArea: "divider2" }} />
+      <Divider sx={{ gridArea: "divider3" }} />
+      <Divider sx={{ gridArea: "divider4" }} />
+      <Divider sx={{ gridArea: "divider5" }} />
+      <div
+        style={{
+          gridArea: "data-download",
         }}
       >
-        <CardContent>
-          <h2>データダウンロード</h2>
-          <p>概</p>
-          <p>要</p>
-        </CardContent>
-      </Card>
-      <Card
-        sx={{
-          gridColumn: "span 1 / span 1",
-          gridRow: "span 1 / span 1",
+        <h2 id="data-download">データダウンロード</h2>
+        <p>TBA</p>
+      </div>
+      <div
+        style={{
+          gridArea: "end-to-end-task",
         }}
       >
-        <CardContent>
-          <h2>End-to-endタスクのデータダウンロード</h2>
-          <p>概</p>
-          <p>要</p>
-        </CardContent>
-      </Card>
-      <Card
-        sx={{
-          gridColumn: "span 1 / span 1",
-          gridRow: "span 1 / span 1",
+        <h2 id="end-to-end-task">End-to-endタスクのデータダウンロード</h2>
+        <p>TBA</p>
+      </div>
+      <div
+        style={{
+          gridArea: "classification-task",
         }}
       >
-        <CardContent>
-          <h2>分類タスクのデータダウンロード</h2>
-          <p>概</p>
-          <p>要</p>
-        </CardContent>
-      </Card>
-      <Card
-        sx={{
-          gridColumn: "span 1 / span 1",
-          gridRow: "span 1 / span 1",
+        <h2 id="classification-task">分類タスクのデータダウンロード</h2>
+        <p>TBA</p>
+      </div>
+      <div
+        style={{
+          gridArea: "attribute-extraction-task",
         }}
       >
-        <CardContent>
-          <h2>属性抽出タスクのデータダウンロード</h2>
-          <p>概</p>
-          <p>要</p>
-        </CardContent>
-      </Card>
-      <Card
-        sx={{
-          gridColumn: "span 1 / span 1",
-          gridRow: "span 1 / span 1",
+        <h2 id="attribute-extraction-task">
+          属性抽出タスクのデータダウンロード
+        </h2>
+        <p>TBA</p>
+      </div>
+      <div
+        style={{
+          gridArea: "link-task",
         }}
       >
-        <CardContent>
-          <h2>リンクタスクのデータダウンロード</h2>
-          <p>概</p>
-          <p>要</p>
-        </CardContent>
-      </Card>
-      <Card
-        sx={{
-          gridColumn: "span 1 / span 1",
-          gridRow: "span 1 / span 1",
+        <h2 id="link-task">リンクタスクのデータダウンロード</h2>
+        <p>TBA</p>
+      </div>
+      <div
+        style={{
+          gridArea: "faq",
         }}
       >
-        <CardContent>
-          <h2>データダウンロードについてのFAQ</h2>
-          <p>概</p>
-          <p>要</p>
-        </CardContent>
-      </Card>
+        <h2 id="faq">データダウンロードについてのFAQ</h2>
+        <p>TBA</p>
+      </div>
     </Paper>
   );
 };
