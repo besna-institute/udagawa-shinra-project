@@ -85,7 +85,7 @@ const Home: NextPage = () => {
       elevation={0}
       sx={{
         display: "grid",
-        gridGap: "3rem",
+        gridGap: "1rem",
         gridTemplate: `
           "about            whatsnew"
           "shinra-video     whatsnew"
@@ -98,16 +98,21 @@ const Home: NextPage = () => {
         `,
       }}
     >
-      <Divider sx={{ gridArea: "divider1" }} />
+      <Divider
+        sx={{
+          borderColor: "#afafaf",
+          gridArea: "divider1",
+        }}
+      />
       <ContentBox
         style={{
           gridArea: "about",
         }}
         theme="white"
       >
-        <h2 id="about">森羅2022とは？</h2>
+        <h2 id="about">2022年度の森羅プロジェクトは？</h2>
         <p>
-          協働による知識の構造化を目指し、Wikipediaの分類、属性値抽出、リンキングタスクを実施するプロジェクトです。
+          2022年度の森羅プロジェクト（森羅2022）では、協働による知識の構造化を目指し、Wikipediaの分類、属性値抽出、リンキングタスクを実施します。
         </p>
       </ContentBox>
       <div
@@ -128,8 +133,8 @@ const Home: NextPage = () => {
           display: "grid",
           gridArea: "whatsnew",
           gridTemplate: `
-            "whatsnew whatsnew"
-            "video1 video2" / 1fr 1fr
+            "whatsnew"
+            "ch"
           `,
           gridGap: "1rem",
         }}
@@ -138,47 +143,66 @@ const Home: NextPage = () => {
           style={{
             gridArea: "whatsnew",
             overflow: "auto",
-            maxHeight: "16rem",
+            maxHeight: "14rem",
           }}
           theme="green"
         >
           <h2 id="whatsnew">新着情報</h2>
           <NewsList items={newsItems} />
         </ContentBox>
-        <div
+        <ContentBox
           style={{
-            aspectRatio: "16/9",
-            gridArea: "video1",
-            width: "100%",
+            display: "grid",
+            gridArea: "ch",
+            gridGap: "1rem",
+            gridTemplate: `
+              "intro intro"
+              "video1 video2"
+            `,
           }}
+          theme="gray"
         >
-          <h3>インタビュー</h3>
-          <iframe
-            src="https://www.youtube.com/embed/lCYj3x6pu1w"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
-        </div>
-        <div
-          style={{
-            aspectRatio: "16/9",
-            gridArea: "video2",
-            width: "100%",
-          }}
-        >
-          <h3>システム制作実況</h3>
-          <iframe
-            src="https://www.youtube.com/embed/lCYj3x6pu1w"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
-        </div>
+          <div style={{ gridArea: "intro" }}>
+            <h2>森羅チャンネル</h2>
+            <p>
+              今後も動画を公開していきますので、チャンネル登録お願いします。
+            </p>
+          </div>
+          <div
+            style={{
+              aspectRatio: "16/9",
+              gridArea: "video1",
+              width: "100%",
+            }}
+          >
+            <h3>インタビュー</h3>
+            <iframe
+              src="https://www.youtube.com/embed/lCYj3x6pu1w"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+          <div
+            style={{
+              aspectRatio: "16/9",
+              gridArea: "video2",
+              width: "100%",
+            }}
+          >
+            <h3>システム制作実況</h3>
+            <iframe
+              src="https://www.youtube.com/embed/lCYj3x6pu1w"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        </ContentBox>
       </div>
       <div
         style={{
           gridArea: "mid-content-right",
           display: "grid",
-          rowGap: "2rem",
+          rowGap: "1rem",
           gridTemplate: `
             "schedule" max-content
             "flow" max-content
@@ -631,6 +655,7 @@ const Home: NextPage = () => {
         </ContentBox>
         <Divider
           style={{
+            borderColor: "#afafaf",
             gridArea: "divider1",
           }}
         />
