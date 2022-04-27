@@ -107,7 +107,7 @@ const Home: NextPage = () => {
         }}
         theme="white"
       >
-        <h2 id="about">森羅プロジェクトとは?</h2>
+        <h2 id="about">森羅2022とは？</h2>
         <p>
           協働による知識の構造化を目指し、Wikipediaの分類、属性値抽出、リンキングタスクを実施するプロジェクトです。
         </p>
@@ -183,8 +183,8 @@ const Home: NextPage = () => {
             "schedule" max-content
             "flow" max-content
             "contact" max-content
-            "committee" max-content
             "related-research" auto
+            "committee" max-content
           `,
           maxHeight: `${maxHeight}px`,
         }}
@@ -276,6 +276,7 @@ const Home: NextPage = () => {
               "安藤まや（フリー）",
               "山田育矢（Studio Ousia/理研AIP）",
               "三浦明波（株式会社アティード）",
+              "門脇一真（株式会社日本総合研究所）",
               "阪本浩太郎（株式会社BESNA研究所）",
               "渋木英潔（株式会社BESNA研究所）",
             ]}
