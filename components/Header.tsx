@@ -24,7 +24,7 @@ export const Header = () => (
             }}
           >
             <Avatar
-              src="/udagawa-shinra-project/logo.jpeg"
+              src="/logo.jpeg"
               alt="logo"
               variant="square"
               sx={{

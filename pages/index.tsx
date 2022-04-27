@@ -641,10 +641,7 @@ const Home: NextPage = () => {
           theme="white"
         >
           <h2 id="overview">タスク概要</h2>
-          <img
-            src="/udagawa-shinra-project/shinra2022-fig1.png"
-            alt="shinra2022-fig1"
-          />
+          <img src="/shinra2022-fig1.png" alt="shinra2022-fig1" />
           <p>
             <a href="http://shinra-project.info/?lang=ja">森羅プロジェクト</a>
             は2017年にスタートしたリソース構築プロジェクトで、人が読むことを想定して書かれたWikipediaの知識を計算機が扱える形に
@@ -653,10 +650,7 @@ const Home: NextPage = () => {
             Collaborative
             Contribution（RbCC））」という枠組みで、評価型タスクとリソース構築を同時に進めています。
           </p>
-          <img
-            src="/udagawa-shinra-project/shinra2022-fig2.png"
-            alt="shinra2022-fig2"
-          />
+          <img src="/shinra2022-fig2.png" alt="shinra2022-fig2" />
           <p>
             日本語構造化タスクは森羅プロジェクトで2018年から実施している日本語Wikipediaを対象とした情報抽出タスクで、今回が4回目となります。
           </p>
@@ -667,7 +661,7 @@ const Home: NextPage = () => {
             End-to-Endタスクでは、以下の3つのステップを一気に実施することで、分類、属性抽出、リンクの複合タスクを実現し、相乗効果／End-to-Endで精度向上の可能性を探ります。
           </p>
           <img
-            src="/udagawa-shinra-project/shinra2022-fig3.png"
+            src="/shinra2022-fig3.png"
             alt="shinra2022-fig3"
           />
           <p>
