@@ -888,11 +888,13 @@ const Home: NextPage = () => {
         >
           <div>
             <h3>システム制作実況チャンネル</h3>
-            <iframe
-              src="https://www.youtube.com/embed/lCYj3x6pu1w"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
+            <MediaBox width={16} height={9} isYouTube>
+              <iframe
+                src="https://www.youtube.com/embed/lCYj3x6pu1w"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </MediaBox>
           </div>
           <div>
             <h3>ベースラインシステム等参考システム</h3>
