@@ -132,7 +132,7 @@ const Home: NextPage = () => {
           height={9}
           style={{
             gridArea: "shinra-video",
-            gridGap: "1rem",
+            margin: "1.5rem 0",
           }}
         >
           <iframe
@@ -157,7 +157,7 @@ const Home: NextPage = () => {
           style={{
             gridArea: "whatsnew",
             overflow: "auto",
-            maxHeight: "12rem",
+            maxHeight: "14rem",
           }}
           theme="green"
         >
