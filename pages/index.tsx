@@ -112,7 +112,8 @@ const Home: NextPage = () => {
           gridGap: "1rem",
           gridTemplate: `
             "about" max-content
-            "shinra-video" auto
+            "shinra-video" max-content
+            "." auto
           `,
         }}
       >
@@ -129,7 +130,7 @@ const Home: NextPage = () => {
         </ContentBox>
         <MediaBox
           width={16}
-          height={9}
+          height={9.2}
           style={{
             gridArea: "shinra-video",
             margin: "1.5rem 0 0.75rem 0",
@@ -210,7 +211,7 @@ const Home: NextPage = () => {
             }}
           >
             <h3>システム制作実況</h3>
-            <MediaBox width={16} height={9}>
+            <MediaBox width={16} height={9.2}>
               <iframe
                 src="https://www.youtube.com/embed/lCYj3x6pu1w"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
