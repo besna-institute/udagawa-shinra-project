@@ -250,6 +250,149 @@ const Home: NextPage = () => {
         </div>
       </ContentBox>
       <div
+        ref={leftRef}
+        id="mid-content-left"
+        style={{
+          gridArea: "mid-content-left",
+          display: "grid",
+          rowGap: "2rem",
+          gridTemplate: `
+            "introduction" max-content
+            "divider1" max-content
+            "overview" max-content
+          `,
+        }}
+      >
+        <ContentBox
+          style={{
+            gridArea: "introduction",
+          }}
+          theme="white"
+        >
+          <h2 id="introduction">森羅プロジェクト紹介</h2>
+          <p>
+            森羅プロジェクトは、
+            Wikipediaに書かれている世界知識を計算機が扱えるような形に変換することを目的として、Wikipediaを構造化するプロジェクトです。私達は、名前のオントロジーである「
+            <a href="http://ene-project.info/">拡張固有表現（ENE）</a>
+            」にWikipediaの記事を分類し、拡張固有表現に定義されている属性情報をWikipedia記事にアノテーションし、対象Wikipediaページにリンクすることで、計算機利用可能な知識の構造化を目指しています。
+          </p>
+          <p>構造化は３段階のステップにわけられます。</p>
+          <ol>
+            <li>
+              <strong>Wikipedia項目のENEへの分類</strong>
+              <br />
+              <em>（例：「島崎藤村」ページを「人名」に分類）</em>
+            </li>
+            <li>
+              <strong>ENEで定義された属性に対応する属性値を抽出</strong>
+              <br />
+              <em>
+                （例：「人名」の「作品」という属性に対応する「嵐」を属性値として抽出）
+              </em>
+            </li>
+            <li>
+              <strong>属性値を、それに対応するWikipediaページに紐づけ</strong>
+              <br />
+              <em>
+                （例：属性値「嵐」をWikipediaページの「嵐（小説）」に紐づけ）
+              </em>
+            </li>
+          </ol>
+          <p>
+            森羅プロジェクトは、様々なアプローチによる多数のシステムを評価型ワークショップを開催することで募り、それらを統合することで構造化データを構築する「Resource
+            by Collaborative
+            Contribution（協働による知識構築）」の考えに基づくプロジェクトです。
+          </p>
+        </ContentBox>
+        <Divider
+          style={{
+            borderColor: "#afafaf",
+            gridArea: "divider1",
+          }}
+        />
+        <ContentBox
+          style={{
+            gridArea: "overview",
+          }}
+          theme="white"
+        >
+          <h2 id="overview">タスク概要</h2>
+          <MediaBox width={921} height={436}>
+            <img src="/shinra2022-fig1.png" alt="shinra2022-fig1" />
+          </MediaBox>
+          <p>
+            <a href="http://shinra-project.info/?lang=ja">森羅プロジェクト</a>
+            は2017年にスタートしたリソース構築プロジェクトで、人が読むことを想定して書かれたWikipediaの知識を計算機が扱える形に
+            <a href="#structuring_wikipedia">構造化</a>
+            することを目指し、「協働によるリソース構築（Resource by
+            Collaborative
+            Contribution（RbCC））」という枠組みで、評価型タスクとリソース構築を同時に進めています。
+          </p>
+          <MediaBox width={846} height={429}>
+            <img src="/shinra2022-fig2.png" alt="shinra2022-fig2" />
+          </MediaBox>
+          <p>
+            日本語構造化タスクは森羅プロジェクトで2018年から実施している日本語Wikipediaを対象とした情報抽出タスクで、今回が4回目となります。
+          </p>
+          <p>
+            森羅2022ではこれまでの森羅プロジェクトのタスクを統合したEnd-to-Endタスクと、その構成要素となる3つのサブタスクを開催し、参加者を募集します。
+          </p>
+          <p>
+            End-to-Endタスクでは、以下の3つのステップを一気に実施することで、分類、属性抽出、リンクの複合タスクを実現し、相乗効果／End-to-Endで精度向上の可能性を探ります。
+          </p>
+          <MediaBox width={893} height={460}>
+            <img src="/shinra2022-fig3.png" alt="shinra2022-fig3" />
+          </MediaBox>
+          <p>
+            End-to-Endタスクの各ステップは過去の森羅プロジェクトと以下の関係にあります。
+          </p>
+          <ul>
+            <li>
+              <strong>ステップ1（分類）</strong>
+              <ul>
+                <li>
+                  日本語の分類システム（今回は30言語の分類は実施しません）
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>ステップ2（属性値抽出）</strong>
+              <ul>
+                <li>日本語の属性値抽出：森羅2018、2019、2020-JP</li>
+                <li>
+                  全てのカテゴリーを実施（過去の森羅プロジェクトでは81カテゴリーのみ）
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>ステップ3（リンクの紐づけ）</strong>
+              <ul>
+                <li>日本語の属性値に対してリンクを実施：森羅2021-LinkJP</li>
+                <li>7つのカテゴリーに対して</li>
+              </ul>
+            </li>
+          </ul>
+          <p>
+            これらの、過去の「森羅データ」を教師として利用することで、以下のように(半)自動的に知識を更新し続ける仕組みが実現できると考えています。
+          </p>
+          <ul>
+            <li>森羅2019を教師としてW2021を(半)自動で構造化</li>
+            <li>森羅2021を教師としてW2023を(半)自動で構造化</li>
+            <li>森羅2023を教師としてW2025を(半)自動で構造化</li>
+            <li>…</li>
+          </ul>
+          <p>
+            一方で、End-to-Endタスクの各ステップに焦点を当てたタスクとして以下の３つのサブタスクも開催し、サブタスクのみの参加も歓迎いたします。
+          </p>
+          <ul>
+            <li>分類タスク</li>
+            <li>属性値抽出タスク</li>
+            <li>リンクタスク</li>
+          </ul>
+          <p>多くの方のご参加をお待ちしています。</p>
+        </ContentBox>
+      </div>
+      <div
         style={{
           gridArea: "mid-content-right",
           display: "grid",
@@ -617,149 +760,6 @@ const Home: NextPage = () => {
               linguistics (COLING’96), vol.1, pp.466-471, 1996.
             </li>
           </ul>
-        </ContentBox>
-      </div>
-      <div
-        ref={leftRef}
-        id="mid-content-left"
-        style={{
-          gridArea: "mid-content-left",
-          display: "grid",
-          rowGap: "2rem",
-          gridTemplate: `
-            "introduction" max-content
-            "divider1" max-content
-            "overview" max-content
-          `,
-        }}
-      >
-        <ContentBox
-          style={{
-            gridArea: "introduction",
-          }}
-          theme="white"
-        >
-          <h2 id="introduction">森羅プロジェクト紹介</h2>
-          <p>
-            森羅プロジェクトは、
-            Wikipediaに書かれている世界知識を計算機が扱えるような形に変換することを目的として、Wikipediaを構造化するプロジェクトです。私達は、名前のオントロジーである「
-            <a href="http://ene-project.info/">拡張固有表現（ENE）</a>
-            」にWikipediaの記事を分類し、拡張固有表現に定義されている属性情報をWikipedia記事にアノテーションし、対象Wikipediaページにリンクすることで、計算機利用可能な知識の構造化を目指しています。
-          </p>
-          <p>構造化は３段階のステップにわけられます。</p>
-          <ol>
-            <li>
-              <strong>Wikipedia項目のENEへの分類</strong>
-              <br />
-              <em>（例：「島崎藤村」ページを「人名」に分類）</em>
-            </li>
-            <li>
-              <strong>ENEで定義された属性に対応する属性値を抽出</strong>
-              <br />
-              <em>
-                （例：「人名」の「作品」という属性に対応する「嵐」を属性値として抽出）
-              </em>
-            </li>
-            <li>
-              <strong>属性値を、それに対応するWikipediaページに紐づけ</strong>
-              <br />
-              <em>
-                （例：属性値「嵐」をWikipediaページの「嵐（小説）」に紐づけ）
-              </em>
-            </li>
-          </ol>
-          <p>
-            森羅プロジェクトは、様々なアプローチによる多数のシステムを評価型ワークショップを開催することで募り、それらを統合することで構造化データを構築する「Resource
-            by Collaborative
-            Contribution（協働による知識構築）」の考えに基づくプロジェクトです。
-          </p>
-        </ContentBox>
-        <Divider
-          style={{
-            borderColor: "#afafaf",
-            gridArea: "divider1",
-          }}
-        />
-        <ContentBox
-          style={{
-            gridArea: "overview",
-          }}
-          theme="white"
-        >
-          <h2 id="overview">タスク概要</h2>
-          <MediaBox width={921} height={436}>
-            <img src="/shinra2022-fig1.png" alt="shinra2022-fig1" />
-          </MediaBox>
-          <p>
-            <a href="http://shinra-project.info/?lang=ja">森羅プロジェクト</a>
-            は2017年にスタートしたリソース構築プロジェクトで、人が読むことを想定して書かれたWikipediaの知識を計算機が扱える形に
-            <a href="#structuring_wikipedia">構造化</a>
-            することを目指し、「協働によるリソース構築（Resource by
-            Collaborative
-            Contribution（RbCC））」という枠組みで、評価型タスクとリソース構築を同時に進めています。
-          </p>
-          <MediaBox width={846} height={429}>
-            <img src="/shinra2022-fig2.png" alt="shinra2022-fig2" />
-          </MediaBox>
-          <p>
-            日本語構造化タスクは森羅プロジェクトで2018年から実施している日本語Wikipediaを対象とした情報抽出タスクで、今回が4回目となります。
-          </p>
-          <p>
-            森羅2022ではこれまでの森羅プロジェクトのタスクを統合したEnd-to-Endタスクと、その構成要素となる3つのサブタスクを開催し、参加者を募集します。
-          </p>
-          <p>
-            End-to-Endタスクでは、以下の3つのステップを一気に実施することで、分類、属性抽出、リンクの複合タスクを実現し、相乗効果／End-to-Endで精度向上の可能性を探ります。
-          </p>
-          <MediaBox width={893} height={460}>
-            <img src="/shinra2022-fig3.png" alt="shinra2022-fig3" />
-          </MediaBox>
-          <p>
-            End-to-Endタスクの各ステップは過去の森羅プロジェクトと以下の関係にあります。
-          </p>
-          <ul>
-            <li>
-              <strong>ステップ1（分類）</strong>
-              <ul>
-                <li>
-                  日本語の分類システム（今回は30言語の分類は実施しません）
-                </li>
-              </ul>
-            </li>
-            <li>
-              <strong>ステップ2（属性値抽出）</strong>
-              <ul>
-                <li>日本語の属性値抽出：森羅2018、2019、2020-JP</li>
-                <li>
-                  全てのカテゴリーを実施（過去の森羅プロジェクトでは81カテゴリーのみ）
-                </li>
-              </ul>
-            </li>
-            <li>
-              <strong>ステップ3（リンクの紐づけ）</strong>
-              <ul>
-                <li>日本語の属性値に対してリンクを実施：森羅2021-LinkJP</li>
-                <li>7つのカテゴリーに対して</li>
-              </ul>
-            </li>
-          </ul>
-          <p>
-            これらの、過去の「森羅データ」を教師として利用することで、以下のように(半)自動的に知識を更新し続ける仕組みが実現できると考えています。
-          </p>
-          <ul>
-            <li>森羅2019を教師としてW2021を(半)自動で構造化</li>
-            <li>森羅2021を教師としてW2023を(半)自動で構造化</li>
-            <li>森羅2023を教師としてW2025を(半)自動で構造化</li>
-            <li>…</li>
-          </ul>
-          <p>
-            一方で、End-to-Endタスクの各ステップに焦点を当てたタスクとして以下の３つのサブタスクも開催し、サブタスクのみの参加も歓迎いたします。
-          </p>
-          <ul>
-            <li>分類タスク</li>
-            <li>属性値抽出タスク</li>
-            <li>リンクタスク</li>
-          </ul>
-          <p>多くの方のご参加をお待ちしています。</p>
         </ContentBox>
       </div>
       <ContentBox
