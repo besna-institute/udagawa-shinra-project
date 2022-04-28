@@ -1,5 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
 import type { NextPage } from "next";
+import Image from "next/image";
 import {
   CommitteeList,
   ContentBox,
@@ -11,6 +11,10 @@ import {
 } from "../components";
 import { useRef, useEffect, useState } from "react";
 import { Paper, Divider } from "@mui/material";
+import shinra2022Fig1 from "../public/shinra2022-fig1.png";
+import shinra2022Fig2 from "../public/shinra2022-fig2.png";
+import shinra2022Fig3 from "../public/shinra2022-fig3.png";
+import thumbnailInterview from "../public/thumbnail-interview.png";
 
 const newsItems = [
   <>
@@ -196,13 +200,7 @@ const Home: NextPage = () => {
               rel="noopener noreferrer"
             >
               <MediaBox width={1300} height={731}>
-                <img
-                  alt="thumbnail-interview"
-                  src="/thumbnail-interview.png"
-                  style={{
-                    margin: 0,
-                  }}
-                />
+                <Image alt="thumbnail-interview" src={thumbnailInterview} />
               </MediaBox>
             </a>
           </div>
@@ -322,7 +320,7 @@ const Home: NextPage = () => {
         >
           <h2 id="overview">タスク概要</h2>
           <MediaBox width={921} height={436}>
-            <img src="/shinra2022-fig1.png" alt="shinra2022-fig1" />
+            <Image src={shinra2022Fig1} alt="shinra2022-fig1" />
           </MediaBox>
           <p>
             <a href="http://shinra-project.info/?lang=ja">森羅プロジェクト</a>
@@ -333,7 +331,7 @@ const Home: NextPage = () => {
             Contribution（RbCC））」という枠組みで、評価型タスクとリソース構築を同時に進めています。
           </p>
           <MediaBox width={846} height={429}>
-            <img src="/shinra2022-fig2.png" alt="shinra2022-fig2" />
+            <Image src={shinra2022Fig2} alt="shinra2022-fig2" />
           </MediaBox>
           <p>
             日本語構造化タスクは森羅プロジェクトで2018年から実施している日本語Wikipediaを対象とした情報抽出タスクで、今回が4回目となります。
@@ -345,7 +343,7 @@ const Home: NextPage = () => {
             End-to-Endタスクでは、以下の3つのステップを一気に実施することで、分類、属性抽出、リンクの複合タスクを実現し、相乗効果／End-to-Endで精度向上の可能性を探ります。
           </p>
           <MediaBox width={893} height={460}>
-            <img src="/shinra2022-fig3.png" alt="shinra2022-fig3" />
+            <Image src={shinra2022Fig3} alt="shinra2022-fig3" />
           </MediaBox>
           <p>
             End-to-Endタスクの各ステップは過去の森羅プロジェクトと以下の関係にあります。
