@@ -17,7 +17,8 @@ export const MediaBox = ({
   return (
     <div
       style={{
-        aspectRatio: `${width}/${isYouTube ? height + 0.2 : height}`,
+        // YouTubeを埋め込んだ時に下に 5px の余白がなぜか挿入されるので対処
+        aspectRatio: `${width}/${isYouTube ? height + 0.5 : height}`,
         width: "100%",
         ...style,
       }}
