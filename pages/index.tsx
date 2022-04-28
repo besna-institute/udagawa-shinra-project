@@ -147,8 +147,8 @@ const Home: NextPage = () => {
           display: "grid",
           gridArea: "top-right",
           gridTemplate: `
-            "whatsnew" max-content
-            "ch" auto
+            "whatsnew" auto
+            "ch" max-content
           `,
           gridGap: "1rem",
         }}
@@ -157,7 +157,7 @@ const Home: NextPage = () => {
           style={{
             gridArea: "whatsnew",
             overflow: "auto",
-            maxHeight: "14rem",
+            maxHeight: "12rem",
           }}
           theme="green"
         >
