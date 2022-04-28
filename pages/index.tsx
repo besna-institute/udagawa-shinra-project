@@ -132,7 +132,7 @@ const Home: NextPage = () => {
           height={9}
           style={{
             gridArea: "shinra-video",
-            margin: "1.5rem 0",
+            margin: "1.5rem 0 0.75rem 0",
           }}
         >
           <iframe
