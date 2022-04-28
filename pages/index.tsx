@@ -173,15 +173,21 @@ const Home: NextPage = () => {
             }}
           >
             <h3>インタビュー</h3>
-            <MediaBox width={1300} height={731}>
-              <img
-                alt="thumbnail-interview"
-                src="/thumbnail-interview.png"
-                style={{
-                  margin: 0,
-                }}
-              />
-            </MediaBox>
+            <a
+              target="_blank"
+              href="https://www.youtube.com/playlist?list=PLtIaKdagvnZBkflzf048KoYGydIy6yhMd"
+              rel="noopener noreferrer"
+            >
+              <MediaBox width={1300} height={731}>
+                <img
+                  alt="thumbnail-interview"
+                  src="/thumbnail-interview.png"
+                  style={{
+                    margin: 0,
+                  }}
+                />
+              </MediaBox>
+            </a>
           </div>
           <div
             style={{
