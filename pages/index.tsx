@@ -84,7 +84,7 @@ const Home: NextPage = () => {
   return (
     <Paper
       elevation={0}
-      sx={{
+      style={{
         display: "grid",
         gridGap: "1rem",
         gridTemplate: `
