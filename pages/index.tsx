@@ -70,7 +70,7 @@ const newsItems = [
 
 const Home: NextPage = () => {
   const leftRef = useRef<HTMLDivElement>(null);
-  const [maxHeight, setMaxHeight] = useState<number>(1200);
+  const [maxHeight, setMaxHeight] = useState<number>(2500);
 
   useEffect(() => {
     if (leftRef.current) {
