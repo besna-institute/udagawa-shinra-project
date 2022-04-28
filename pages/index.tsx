@@ -591,6 +591,7 @@ const Home: NextPage = () => {
       <ContentBox
         style={{
           gridArea: "leader-board",
+          gridColumn: "span 2",
         }}
         theme="gray"
       >
