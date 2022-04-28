@@ -130,11 +130,12 @@ const Home: NextPage = () => {
         </ContentBox>
         <MediaBox
           width={16}
-          height={9.2}
+          height={9}
           style={{
             gridArea: "shinra-video",
             margin: "1.5rem 0 0.75rem 0",
           }}
+          isYouTube
         >
           <iframe
             width={649}
@@ -211,7 +212,7 @@ const Home: NextPage = () => {
             }}
           >
             <h3>システム制作実況</h3>
-            <MediaBox width={16} height={9.2}>
+            <MediaBox width={16} height={9} isYouTube>
               <iframe
                 src="https://www.youtube.com/embed/lCYj3x6pu1w"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

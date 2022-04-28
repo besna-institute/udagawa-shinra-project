@@ -4,6 +4,7 @@ interface Props {
   width: number;
   height: number;
   style?: CSSProperties;
+  isYouTube?: boolean;
 }
 
 export const MediaBox = ({
@@ -11,11 +12,12 @@ export const MediaBox = ({
   width,
   height,
   style,
+  isYouTube,
 }: PropsWithChildren<Props>) => {
   return (
     <div
       style={{
-        aspectRatio: `${width}/${height}`,
+        aspectRatio: `${width}/${isYouTube ? height + 0.2 : height}`,
         width: "100%",
         ...style,
       }}
