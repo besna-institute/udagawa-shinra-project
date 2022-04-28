@@ -85,7 +85,6 @@ const Home: NextPage = () => {
     <Paper
       elevation={0}
       style={{
-        display: "grid",
         gridGap: "1rem",
         gridTemplate: `
           "top-left         top-right"
@@ -96,6 +95,7 @@ const Home: NextPage = () => {
           "reference        reference"
           "task-list        task-list" / minmax(0, 4fr) minmax(0, 3fr)
         `,
+        display: "grid",
       }}
     >
       <Divider
