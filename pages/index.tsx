@@ -136,6 +136,8 @@ const Home: NextPage = () => {
           }}
         >
           <iframe
+            width={649}
+            height={365}
             src="https://www.youtube.com/embed/lCYj3x6pu1w"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
