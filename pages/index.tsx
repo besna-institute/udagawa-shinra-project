@@ -218,6 +218,37 @@ const Home: NextPage = () => {
           </div>
         </ContentBox>
       </div>
+      <ContentBox
+        style={{
+          gridArea: "leader-board",
+          gridColumn: "span 2",
+        }}
+        theme="gray"
+      >
+        <h2 id="leader-board">リーダーボード</h2>
+        <p>TBA</p>
+        <div
+          style={{
+            display: "flex",
+            flexFlow: "wrap",
+            justifyContent: "space-evenly",
+            padding: "1rem",
+          }}
+        >
+          <NavigationLink href="/data-format">
+            データ形式について
+          </NavigationLink>
+          <NavigationLink href="/evaluation-method">
+            評価方法について
+          </NavigationLink>
+          <NavigationLink href="/data-download">
+            データダウンロードについて
+          </NavigationLink>
+          <NavigationLink href="/result-submission">
+            結果の提出について
+          </NavigationLink>
+        </div>
+      </ContentBox>
       <div
         style={{
           gridArea: "mid-content-right",
@@ -588,37 +619,6 @@ const Home: NextPage = () => {
           </ul>
         </ContentBox>
       </div>
-      <ContentBox
-        style={{
-          gridArea: "leader-board",
-          gridColumn: "span 2",
-        }}
-        theme="gray"
-      >
-        <h2 id="leader-board">リーダーボード</h2>
-        <p>TBA</p>
-        <div
-          style={{
-            display: "flex",
-            flexFlow: "wrap",
-            justifyContent: "space-evenly",
-            padding: "1rem",
-          }}
-        >
-          <NavigationLink href="/data-format">
-            データ形式について
-          </NavigationLink>
-          <NavigationLink href="/evaluation-method">
-            評価方法について
-          </NavigationLink>
-          <NavigationLink href="/data-download">
-            データダウンロードについて
-          </NavigationLink>
-          <NavigationLink href="/result-submission">
-            結果の提出について
-          </NavigationLink>
-        </div>
-      </ContentBox>
       <div
         ref={leftRef}
         id="mid-content-left"
