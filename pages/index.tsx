@@ -3,6 +3,7 @@ import type { NextPage } from "next";
 import {
   CommitteeList,
   ContentBox,
+  MediaBox,
   JoinButton,
   NavigationLink,
   NewsList,
@@ -115,11 +116,11 @@ const Home: NextPage = () => {
           2022年度の森羅プロジェクト（森羅2022）では、協働による知識の構造化を目指し、Wikipediaの分類、属性値抽出、リンキングタスクを実施します。
         </p>
       </ContentBox>
-      <div
+      <MediaBox
+        width={16}
+        height={9}
         style={{
-          aspectRatio: "16/9",
           gridArea: "shinra-video",
-          width: "100%",
         }}
       >
         <iframe
@@ -127,7 +128,7 @@ const Home: NextPage = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         />
-      </div>
+      </MediaBox>
       <div
         style={{
           display: "grid",
@@ -168,31 +169,33 @@ const Home: NextPage = () => {
           </div>
           <div
             style={{
-              aspectRatio: "16/9",
               gridArea: "video1",
-              width: "100%",
             }}
           >
             <h3>インタビュー</h3>
-            <iframe
-              src="https://www.youtube.com/embed/lCYj3x6pu1w"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
+            <MediaBox width={1300} height={731}>
+              <img
+                alt="thumbnail-interview"
+                src="/thumbnail-interview.png"
+                style={{
+                  margin: 0,
+                }}
+              />
+            </MediaBox>
           </div>
           <div
             style={{
-              aspectRatio: "16/9",
               gridArea: "video2",
-              width: "100%",
             }}
           >
             <h3>システム制作実況</h3>
-            <iframe
-              src="https://www.youtube.com/embed/lCYj3x6pu1w"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
+            <MediaBox width={16} height={9}>
+              <iframe
+                src="https://www.youtube.com/embed/lCYj3x6pu1w"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </MediaBox>
           </div>
         </ContentBox>
       </div>
@@ -664,7 +667,9 @@ const Home: NextPage = () => {
           theme="white"
         >
           <h2 id="overview">タスク概要</h2>
-          <img src="/shinra2022-fig1.png" alt="shinra2022-fig1" />
+          <MediaBox width={921} height={436}>
+            <img src="/shinra2022-fig1.png" alt="shinra2022-fig1" />
+          </MediaBox>
           <p>
             <a href="http://shinra-project.info/?lang=ja">森羅プロジェクト</a>
             は2017年にスタートしたリソース構築プロジェクトで、人が読むことを想定して書かれたWikipediaの知識を計算機が扱える形に
@@ -673,7 +678,9 @@ const Home: NextPage = () => {
             Collaborative
             Contribution（RbCC））」という枠組みで、評価型タスクとリソース構築を同時に進めています。
           </p>
-          <img src="/shinra2022-fig2.png" alt="shinra2022-fig2" />
+          <MediaBox width={846} height={429}>
+            <img src="/shinra2022-fig2.png" alt="shinra2022-fig2" />
+          </MediaBox>
           <p>
             日本語構造化タスクは森羅プロジェクトで2018年から実施している日本語Wikipediaを対象とした情報抽出タスクで、今回が4回目となります。
           </p>
@@ -683,7 +690,9 @@ const Home: NextPage = () => {
           <p>
             End-to-Endタスクでは、以下の3つのステップを一気に実施することで、分類、属性抽出、リンクの複合タスクを実現し、相乗効果／End-to-Endで精度向上の可能性を探ります。
           </p>
-          <img src="/shinra2022-fig3.png" alt="shinra2022-fig3" />
+          <MediaBox width={893} height={460}>
+            <img src="/shinra2022-fig3.png" alt="shinra2022-fig3" />
+          </MediaBox>
           <p>
             End-to-Endタスクの各ステップは過去の森羅プロジェクトと以下の関係にあります。
           </p>
