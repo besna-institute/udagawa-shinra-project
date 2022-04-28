@@ -88,8 +88,7 @@ const Home: NextPage = () => {
         display: "grid",
         gridGap: "1rem",
         gridTemplate: `
-          "about            top"
-          "shinra-video     top"
+          "top-left         top-right"
           "leader-board     leader-board"
           "mid-content-left mid-content-right"
           "divider1         divider1"
@@ -105,34 +104,48 @@ const Home: NextPage = () => {
           gridArea: "divider1",
         }}
       />
-      <ContentBox
-        style={{
-          gridArea: "about",
-        }}
-        theme="white"
-      >
-        <h2 id="about">2022年度の森羅プロジェクトは？</h2>
-        <p>
-          2022年度の森羅プロジェクト（森羅2022）では、協働による知識の構造化を目指し、Wikipediaの分類、属性値抽出、リンキングタスクを実施します。
-        </p>
-      </ContentBox>
-      <MediaBox
-        width={16}
-        height={9}
-        style={{
-          gridArea: "shinra-video",
-        }}
-      >
-        <iframe
-          src="https://www.youtube.com/embed/lCYj3x6pu1w"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        />
-      </MediaBox>
       <div
         style={{
           display: "grid",
-          gridArea: "top",
+          gridArea: "top-left",
+          gridGap: "1rem",
+          gridTemplate: `
+            "about" max-content
+            "shinra-video" auto
+          `,
+        }}
+      >
+        <ContentBox
+          style={{
+            gridArea: "about",
+          }}
+          theme="white"
+        >
+          <h2 id="about">2022年度の森羅プロジェクトは？</h2>
+          <p>
+            2022年度の森羅プロジェクト（森羅2022）では、協働による知識の構造化を目指し、Wikipediaの分類、属性値抽出、リンキングタスクを実施します。
+          </p>
+        </ContentBox>
+        <MediaBox
+          width={16}
+          height={9}
+          style={{
+            gridArea: "shinra-video",
+            gridGap: "1rem",
+            margin: "auto 0",
+          }}
+        >
+          <iframe
+            src="https://www.youtube.com/embed/lCYj3x6pu1w"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </MediaBox>
+      </div>
+      <div
+        style={{
+          display: "grid",
+          gridArea: "top-right",
           gridTemplate: `
             "whatsnew"
             "ch"
