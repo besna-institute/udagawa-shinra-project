@@ -88,8 +88,8 @@ const Home: NextPage = () => {
         display: "grid",
         gridGap: "1rem",
         gridTemplate: `
-          "about            whatsnew"
-          "shinra-video     whatsnew"
+          "about            top"
+          "shinra-video     top"
           "leader-board     leader-board"
           "mid-content-left mid-content-right"
           "divider1         divider1"
@@ -132,7 +132,7 @@ const Home: NextPage = () => {
       <div
         style={{
           display: "grid",
-          gridArea: "whatsnew",
+          gridArea: "top",
           gridTemplate: `
             "whatsnew"
             "ch"
