@@ -158,7 +158,7 @@ const Home: NextPage = () => {
             gridGap: "1rem",
             gridTemplate: `
               "intro intro"
-              "video1 video2"
+              "video1 video2" / 1fr 1fr
             `,
           }}
           theme="gray"
