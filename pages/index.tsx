@@ -176,7 +176,7 @@ const Home: NextPage = () => {
           }}
           theme="gray"
         >
-          <div style={{ gridArea: "intro" }}>
+          <div style={{ gridArea: "intro", gridColumn: "span 2" }}>
             <h2>森羅チャンネル</h2>
             <p>今後も動画を公開していきます。チャンネル登録お願いします。</p>
           </div>
