@@ -147,8 +147,8 @@ const Home: NextPage = () => {
           display: "grid",
           gridArea: "top-right",
           gridTemplate: `
-            "whatsnew"
-            "ch"
+            "whatsnew" max-content
+            "ch" auto
           `,
           gridGap: "1rem",
         }}
