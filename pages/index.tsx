@@ -106,6 +106,7 @@ const Home: NextPage = () => {
       />
       <div
         style={{
+          alignItems: "center",
           display: "grid",
           gridArea: "top-left",
           gridGap: "1rem",
@@ -132,7 +133,6 @@ const Home: NextPage = () => {
           style={{
             gridArea: "shinra-video",
             gridGap: "1rem",
-            margin: "auto 0",
           }}
         >
           <iframe
