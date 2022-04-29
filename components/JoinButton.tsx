@@ -13,7 +13,7 @@ export const JoinButton = ({ href, children }: PropsWithChildren<Props>) => {
       <Button
         variant="outlined"
         href={href}
-        sx={{ marginInline: "0.5rem" }}
+        sx={{ marginInline: "0.5rem", background: "white" }}
         size="small"
         startIcon={<Groups />}
       >

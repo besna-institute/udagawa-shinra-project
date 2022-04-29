@@ -2,7 +2,7 @@ import { AppBar, Toolbar, Typography, Avatar, Link, Box } from "@mui/material";
 import NextLink from "next/link";
 
 export const Header = () => (
-  <AppBar position="sticky">
+  <AppBar sx={{ boxShadow: "none" }} position="sticky">
     <Toolbar variant="dense" sx={{ px: 2 }}>
       <div
         style={{
