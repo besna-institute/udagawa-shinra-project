@@ -232,7 +232,7 @@ const Home: NextPage = () => {
       >
         <Script src="https://leaderboard2022.shinra-project.info/leaderboard/js/chunk-vendors.latest.js" />
         <Script src="https://leaderboard2022.shinra-project.info/leaderboard/js/app.latest.js" />
-        <div id="app" />
+        <div id="leaderboard" />
         <div
           style={{
             display: "flex",
