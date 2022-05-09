@@ -901,7 +901,7 @@ const Home: NextPage = () => {
           <li>90カテゴリー（新規）</li>
         </ul>
       </ContentBox>
-      <ContentBox
+      {/* <ContentBox
         style={{
           gridArea: "reference",
         }}
@@ -930,7 +930,7 @@ const Home: NextPage = () => {
             <p>TBA</p>
           </div>
         </div>
-      </ContentBox>
+      </ContentBox> */}
       <ContentBox
         style={{
           gridArea: "task-list",
