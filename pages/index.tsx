@@ -11,6 +11,7 @@ import {
 } from "../components";
 import { useRef, useEffect, useState } from "react";
 import { Paper, Divider } from "@mui/material";
+import Script from "next/script";
 
 const newsItems = [
   <>
@@ -229,8 +230,10 @@ const Home: NextPage = () => {
         }}
         theme="gray"
       >
+        <Script src="https://leaderboard2022.shinra-project.info/leaderboard/js/chunk-vendors.latest.js" />
+        <Script src="https://leaderboard2022.shinra-project.info/leaderboard/js/app.latest.js" />
         <h2 id="leader-board">リーダーボード</h2>
-        <div id="app"></div>
+        <div id="app" />
         <div
           style={{
             display: "flex",
