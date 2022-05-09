@@ -6,7 +6,7 @@ import {
   MediaBox,
   JoinButton,
   NavigationLink,
-  NewsList,
+  SingleLineList,
   ScheduleList,
 } from "../components";
 import { useRef, useEffect, useState } from "react";
@@ -435,7 +435,7 @@ const Home: NextPage = () => {
           theme="green"
         >
           <h2 id="whatsnew">新着情報</h2>
-          <NewsList items={newsItems} />
+          <SingleLineList items={newsItems} />
         </ContentBox>
         <ContentBox
           style={{
@@ -788,17 +788,9 @@ const Home: NextPage = () => {
         >
           <h2 id="related-research">関連研究</h2>
           <h3>森羅プロジェクトに関する研究</h3>
-          <ul>
-            {mainRelatedResearch.map((elem, index) => (
-              <li key={index}>{elem}</li>
-            ))}
-          </ul>
+          <SingleLineList items={mainRelatedResearch} />
           <h3>その他の関連研究</h3>
-          <ul>
-            {otherRelatedResearch.map((elem, index) => (
-              <li key={index}>{elem}</li>
-            ))}
-          </ul>
+          <SingleLineList items={otherRelatedResearch} />
         </ContentBox>
       </div>
       <ContentBox
