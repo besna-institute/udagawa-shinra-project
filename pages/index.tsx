@@ -230,7 +230,9 @@ const Home: NextPage = () => {
         theme="gray"
       >
         <h2 id="leader-board">リーダーボード</h2>
-        <p>TBA</p>
+        <div id="app"></div>
+        <script src="https://leaderboard2022.shinra-project.info/leaderboard/js/chunk-vendors.latest.js" />
+        <script src="https://leaderboard2022.shinra-project.info/leaderboard/js/app.latest.js" />
         <div
           style={{
             display: "flex",
