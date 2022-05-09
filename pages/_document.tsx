@@ -16,18 +16,6 @@ export default function Document() {
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap"
         />
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css"
-        />
-        <link
-          href="https://leaderboard2022.shinra-project.info/leaderboard/css/app.latest.css"
-          rel="stylesheet"
-        />
-        <link
-          href="https://leaderboard2022.shinra-project.info/leaderboard/css/chunk-vendors.latest.css"
-          rel="stylesheet"
-        />
       </Head>
       <body>
         <Main />
