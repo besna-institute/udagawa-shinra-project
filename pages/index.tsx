@@ -443,19 +443,25 @@ const Home: NextPage = () => {
             gridArea: "ch",
             gridGap: "1rem",
             gridTemplate: `
-              "intro intro"
-              "video1 video2" / 1fr 1fr
+              "intro"
+              "video1"
             `,
+            // gridTemplate: `
+            //   "intro intro"
+            //   "video1 video2" / 1fr 1fr
+            // `,
           }}
           theme="gray"
         >
-          <div style={{ gridArea: "intro", gridColumn: "span 2" }}>
+          <div style={{ gridArea: "intro", gridColumn: "span 3" }}>
             <h2>森羅チャンネル</h2>
             <p>今後も動画を公開していきます。チャンネル登録お願いします。</p>
           </div>
           <div
             style={{
               gridArea: "video1",
+              width: "50%",
+              margin: "0 auto",
             }}
           >
             <h3>インタビュー</h3>
@@ -475,7 +481,7 @@ const Home: NextPage = () => {
               </MediaBox>
             </a>
           </div>
-          <div
+          {/* <div
             style={{
               gridArea: "video2",
             }}
@@ -488,7 +494,7 @@ const Home: NextPage = () => {
                 allowFullScreen
               />
             </MediaBox>
-          </div>
+          </div> */}
         </ContentBox>
       </div>
       <ContentBox
