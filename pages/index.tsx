@@ -68,6 +68,275 @@ const newsItems = [
     ])。（2021/6/30）
   </>,
 ];
+const mainRelatedResearch = [
+  <>
+    [<span id="sekine2022">Sekine2022</span>] 関根聡, 中山功太, 野本昌子,
+    安藤まや, 隅田飛鳥, 松田耕史,
+    <br />
+    拡張固有表現に分類された31言語のWikipedia知識ベース,
+    言語処理学会第28回年次大会発表論文集, 2022. [
+    <a href="https://www.anlp.jp/proceedings/annual_meeting/2022/pdf_dir/E1-1.pdf">
+      paper
+    </a>
+    ] [
+    <a href="https://drive.google.com/file/d/1fHXpMsTc1AMu19aDGzIHz6GLKJbRJMae/view?usp=sharing">
+      slide
+    </a>
+    ]
+  </>,
+  <>
+    [<span id="nomoto2022">Nomoto2022</span>] 野本昌子, 宇佐美佑, 安藤まや,
+    中山功太, 関根聡,
+    <br />
+    森羅2021-LinkJP結果の分析:BERTとルールベースの比較,
+    言語処理学会第28回年次大会発表論文集, 2022. [
+    <a href="https://www.anlp.jp/proceedings/annual_meeting/2022/pdf_dir/E2-4.pdf">
+      paper
+    </a>
+    ] [
+    <a href="https://drive.google.com/file/d/1cVonFj5PZ8H-1C2aX2WX3C4BWYzYiMH8/view?usp=sharing">
+      slide
+    </a>
+    ]
+  </>,
+  <>
+    [<span id="sekine2021b">Sekine2021b</span>] Satoshi Sekine, Kouta Nakayama,
+    Maya Ando, Yu Usami, Masako Nomoto and Koji Matsuda,
+    <br />
+    <a href="https://www.akbc.ws/2021/assets/pdfs/6xhX4nnBhbJ.pdf">
+      SHINRA2020-ML: Categorizing 30-language Wikipedia into fine-grained NE
+      based on “Resource by Collaborative Contribution” scheme
+    </a>
+    , In Proceedings of the 3rd conference on the Automated Knowledge Base
+    Construction (AKBC 2021), 2021.
+  </>,
+  <>
+    [<span id="nakayama2021a">Nakayama2021a</span>] 中山功太, 栗田修平,
+    馬場雪乃, 関根聡, <br />
+    能動的サンプリングを用いたリソース構築共有タスクにおける予測対象データ削減,
+    言語処理学会第27回年次大会発表論文集, pp.1187-1192, 2021. [
+    <a href="https://www.anlp.jp/proceedings/annual_meeting/2021/pdf_dir/P6-15.pdf">
+      paper
+    </a>
+    ] [
+    <a href="https://drive.google.com/file/d/1uUlWjDIM-q_3OL9ZIiYb-3fes0eScRTJ/view?usp=sharing">
+      poster
+    </a>
+    ]
+  </>,
+  <>
+    [<span id="sekine2021a">Sekine2021a</span>] 関根聡, 野本昌子, 中山功太,
+    隅田飛鳥, 松田耕史, 安藤まや,
+    <br />
+    SHINRA2020-ML:30 言語の Wikipedia ページの分類,
+    言語処理学会第27回年次大会発表論文集, pp.563-568, 2021. [
+    <a href="https://www.anlp.jp/proceedings/annual_meeting/2021/pdf_dir/P3-11.pdf">
+      paper
+    </a>
+    ][
+    <a href="https://drive.google.com/file/d/1jz3uX0et7fkt7QDLt2bNR6J7dqyC_aea/view?usp=sharing">
+      poster
+    </a>
+    ]
+  </>,
+  <>
+    [<span id="sekine2020b">Sekine2020b</span>] Satoshi Sekine, Masako Nomoto,
+    Kouta Nakayama, Asuka Sumida, Koji Matsuda, and Maya Ando,
+    <br />
+    <a href="http://research.nii.ac.jp/ntcir/workshop/OnlineProceedings15/pdf/ntcir/01-NTCIR15-OV-SHINRA-SekineS.pdf">
+      Overview of SHINRA2020-ML Task
+    </a>
+    , In Proceedings of the NTCIR-15 Conference.[
+    <a href="https://drive.google.com/file/d/1VAHieaVKUOsHsuNEebk7zKD3DuYhck8z/view?usp=sharing">
+      slide
+    </a>
+    ], [
+    <a href="https://drive.google.com/file/d/1VVuCV-hfnxzM3NE2NAT0JwHT0RYj2gnp/view?usp=sharing">
+      poster
+    </a>
+    ]
+  </>,
+  <>
+    [<span id="bui2020">Bui2020</span>] The Viet Bui and Phuong Le-Hong, <br />
+    <a href="http://research.nii.ac.jp/ntcir/workshop/OnlineProceedings15/pdf/ntcir/02-NTCIR15-SHINRA-BuiT.pdf">
+      Cross-lingual Extended Named Entity Classification of Wikipedia Articles
+    </a>
+    , In Proceedings of the NTCIR-15 Conference.
+  </>,
+  <>
+    [<span id="cardoso2020">Cardoso2020</span>] Rúben Cardoso, Afonso Mendes and
+    Andre Lamurias, <br />
+    <a href="http://research.nii.ac.jp/ntcir/workshop/OnlineProceedings15/pdf/ntcir/03-NTCIR15-SHINRA-CardosoR.pdf">
+      Priberam Labs at the NTCIR-15 SHINRA2020-ML: Classification Task
+    </a>
+    , In Proceedings of the NTCIR-15 Conference.
+  </>,
+  <>
+    [<span id="abhishek2020">Abhishek2020</span>] Tushar Abhishek, Ayush
+    Agarwal, Anubhav Sharma, Vasudeva Varma and Manish Gupta, <br />
+    <a href="http://research.nii.ac.jp/ntcir/workshop/OnlineProceedings15/pdf/ntcir/04-NTCIR15-SHINRA-AbhishekT.pdf">
+      Rehoboam at the NTCIR-15 SHINRA2020-ML Task
+    </a>
+    , In Proceedings of the NTCIR-15 Conference.
+  </>,
+  <>
+    [<span id="yoshikawa2020">Yoshikawa2020</span>] Hiyori Yoshikawa, Chunpeng
+    Ma, Aili Shen, Qian Sun, Chenbang Huang, Guillaume Pelat, Akiva Miura,
+    Daniel Beck, Timothy Baldwin and Tomoya Iwakura, <br />
+    <a href="http://research.nii.ac.jp/ntcir/workshop/OnlineProceedings15/pdf/ntcir/05-NTCIR15-SHINRA-YoshikawaH.pdf">
+      UOM-FJ at the NTCIR-15 SHINRA2020-ML Task
+    </a>
+    , In Proceedings of the NTCIR-15 Conference.
+  </>,
+  <>
+    [<span id="nakayama2020b">Nakayama2020b</span>] Kouta Nakayama and Satoshi
+    Sekine, <br />
+    <a href="http://research.nii.ac.jp/ntcir/workshop/OnlineProceedings15/pdf/ntcir/06-NTCIR15-SHINRA-NakayamaK.pdf">
+      LIAT Team’s Wikipedia Classifier at NTCIR-15 SHINRA2020-ML: Classification
+      Task
+    </a>
+    , In Proceedings of the NTCIR-15 Conference.
+  </>,
+  <>
+    [<span id="yoshioka2020">Yoshioka2020</span>] Masaharu Yoshioka and Yoshiaki
+    Koitabashi, <br />
+    <a href="http://research.nii.ac.jp/ntcir/workshop/OnlineProceedings15/pdf/ntcir/07-NTCIR15-SHINRA-YoshiokaM.pdf">
+      HUKB at SHINRA2020-ML task
+    </a>
+    , In Proceedings of the NTCIR-15 Conference.
+  </>,
+  <>
+    [<span id="nishikawa2020">Nishikawa2020</span>] Sosuke Nishikawa and Ikuya
+    Yamada, <br />
+    <a href="http://research.nii.ac.jp/ntcir/workshop/OnlineProceedings15/pdf/ntcir/08-NTCIR15-SHINRA-NishikawaS.pdf">
+      Studio Ousia at the NTCIR-15 SHINRA2020-ML Task
+    </a>
+    , In Proceedings of the NTCIR-15 Conference.
+  </>,
+  <>
+    [<span id="nakayama2020a">Nakayama2020a</span>] 中山功太, 栗田修平,
+    小林暁雄, 関根聡,
+    <br />
+    <a href="https://www.anlp.jp/proceedings/annual_meeting/2020/pdf_dir/F1-4.pdf">
+      Pre-Distillation Ensemble:リソース構築タスクのためのアンサンブル手法
+    </a>
+    , 言語処理学会第26回年次大会発表論文集, pp.375-378, 2020.
+  </>,
+  <>
+    [<span id="kobayashi2020">Kobayashi2020</span>] 小林暁雄, 中山功太,
+    安藤まや, 関根聡,
+    <br />
+    <a href="https://www.anlp.jp/proceedings/annual_meeting/2020/pdf_dir/F4-2.pdf">
+      Wikipedia構造化プロジェクト「森羅2019-JP」
+    </a>
+    , 言語処理学会第26回年次大会発表論文集, pp.1029-1032, 2020.
+  </>,
+  <>
+    [<span id="sekine2020a">Sekine2020a</span>] 関根聡, 安藤まや, 小林暁雄,
+    隅田飛鳥,
+    <br />
+    <a href="https://www.anlp.jp/proceedings/annual_meeting/2020/pdf_dir/P5-13.pdf">
+      拡張固有表現定義の更新と日本語Wikipedia分類データ2019
+    </a>
+    , 言語処理学会第26回年次大会発表論文集, pp.1221-1224, 2020.
+  </>,
+  <>
+    [<span id="sekine2019b">Sekine2019b</span>] Satoshi Sekine, Akio Kobayashi,
+    Kouta Nakayama,
+    <br />
+    <a href="https://openreview.net/pdf?id=HygfXWqTpm">
+      SHINRA: Structuring Wikipedia by Collaborative Contribution
+    </a>
+    , In Proceedings of the 1st conference on the Automated Knowledge Base
+    Construction (AKBC 2019), 2019.
+  </>,
+  <>
+    [<span id="sekine2019a">Sekine2019a</span>] 関根聡, 小林暁雄, 安藤まや,
+    <br />
+    <a href="https://www.anlp.jp/proceedings/annual_meeting/2019/pdf_dir/E1-2.pdf">
+      Wikipedia構造化プロジェクト「森羅2018」
+    </a>
+    ,言語処理学会第25回年次大会発表論文集, pp.69-72, 2019.
+  </>,
+  <>
+    [<span id="kobayashi2019">Kobayashi2019</span>] 小林暁雄, 中山功太, 関根聡,
+    <br />
+    <a href="https://www.anlp.jp/proceedings/annual_meeting/2019/pdf_dir/P3-7.pdf">
+      森羅:Wikipedia構造化プロジェクト2018結果の分析と考察
+    </a>
+    , 言語処理学会第25回年次大会発表論文集, pp.538-541, 2019.
+  </>,
+  <>
+    [<span id="hentona2019">Hentona2019</span>] 邊土名朝飛, 野中尋史, 小林暁雄,
+    関根聡,
+    <br />
+    <a href="https://www.anlp.jp/proceedings/annual_meeting/2019/pdf_dir/B4-8.pdf">
+      外部知識源を使用したWikipediaからの化合物情報抽出
+    </a>
+    , 言語処理学会第25回年次大会発表論文集, pp.791-794, 2019.
+  </>,
+  <>
+    [<span id="nakayama2019">Nakayama2019</span>] 中山功太, 小林暁雄, 関根聡,
+    <br />
+    <a href="https://www.anlp.jp/proceedings/annual_meeting/2019/pdf_dir/E6-5.pdf">
+      共有タスクにおけるGA重み付け加重投票を用いた属性値アンサンブル
+    </a>
+    , 言語処理学会第25回年次大会発表論文集, pp.1547-1550, 2019.
+  </>,
+];
+const otherRelatedResearch = [
+  <>
+    [<span id="suzuki2018">Suzuki2018</span>] Masatoshi SUZUKI, Koji MATSUDA,
+    Satoshi SEKINE, Naoaki OKAZAKI and Kentaro INUI, <br />
+    <a href="https://www.jstage.jst.go.jp/article/transinf/E101.D/1/E101.D_2017SWP0005/_article">
+      A Joint Neural Model for Fine-Grained Named Entity Classification of
+      Wikipedia Articles
+    </a>
+    ‘, IEICE Transactions on Information and Systems, E101.D-1, pp.73-81, 2018.
+  </>,
+  <>
+    [<span id="sekine2018">Sekine2018</span>] 関根聡, 安藤まや, 小林暁雄,
+    松田耕史, 鈴木正敏, Duc Nguyen, 乾健太郎,
+    <br />
+    <a href="https://anlp.jp/proceedings/annual_meeting/2018/pdf_dir/P4-5.pdf">
+      「拡張固有表現＋Wikipedia」データ（2015 年 11 月版
+      Wikipedia分類作業完成版）
+    </a>
+    , 言語処理学会第24回年次大会発表論文集, pp.504-507, 2018.
+  </>,
+  <>
+    [<span id="sekine2002">Sekine2002</span>] Satoshi Sekine, Kiyoshi Sudo, and
+    Chikashi Nobata,
+    <br />
+    <a href="http://www.lrec-conf.org/proceedings/lrec2002/pdf/120.pdf">
+      Extended Named Entity Hierarchy
+    </a>
+    . In Proceedings of the Third International Conference on Language Resources
+    and Evaluation (LREC’02), 2002.
+  </>,
+  <>
+    [<span id="sekine2000">Sekine2000</span>] Satoshi Sekine and Yoshio
+    Eriguchi,
+    <br />
+    <a href="https://www.aclweb.org/anthology/C00-2167.pdf">
+      Japanese Named Entity Extraction Evaluation – Analysis of Results –
+    </a>
+    , In Proceedings of the 18th International Conference on Computational
+    Linguistics (COLING’00), vol.2, pp.1106-110,
+    <br />
+    2000.
+  </>,
+  <>
+    [<span id="grishman1996">Grishman1996</span>] Ralph Grishman and Beth
+    Sundheim,
+    <br />
+    <a href="https://www.aclweb.org/anthology/C96-1079.pdf">
+      Message Understanding Conference – 6: A Brief History
+    </a>
+    , In Proceedings of the 16th conference on Computational linguistics
+    (COLING’96), vol.1, pp.466-471, 1996.
+  </>,
+];
 
 const Home: NextPage = () => {
   const leftRef = useRef<HTMLDivElement>(null);
@@ -514,255 +783,15 @@ const Home: NextPage = () => {
           <h2 id="related-research">関連研究</h2>
           <h3>森羅プロジェクトに関する研究</h3>
           <ul>
-            <li>
-              [<span id="sekine2021b">Sekine2021b</span>] Satoshi Sekine, Kouta
-              Nakayama, Maya Ando, Yu Usami, Masako Nomoto and Koji Matsuda,
-              <br />
-              <a href="https://www.akbc.ws/2021/assets/pdfs/6xhX4nnBhbJ.pdf">
-                SHINRA2020-ML: Categorizing 30-language Wikipedia into
-                fine-grained NE based on “Resource by Collaborative
-                Contribution” scheme
-              </a>
-              , In Proceedings of the 3rd conference on the Automated Knowledge
-              Base Construction (AKBC 2021), 2021.
-            </li>
-            <li>
-              [<span id="nakayama2021a">Nakayama2021a</span>] 中山功太,
-              栗田修平, 馬場雪乃, 関根聡, <br />
-              能動的サンプリングを用いたリソース構築共有タスクにおける予測対象データ削減,
-              言語処理学会第27回年次大会発表論文集, pp.1187-1192, 2021. [
-              <a href="https://www.anlp.jp/proceedings/annual_meeting/2021/pdf_dir/P6-15.pdf">
-                paper
-              </a>
-              ] [
-              <a href="https://drive.google.com/file/d/1uUlWjDIM-q_3OL9ZIiYb-3fes0eScRTJ/view?usp=sharing">
-                poster
-              </a>
-              ]
-            </li>
-            <li>
-              [<span id="sekine2021a">Sekine2021a</span>] 関根聡, 野本昌子,
-              中山功太, 隅田飛鳥, 松田耕史, 安藤まや,
-              <br />
-              SHINRA2020-ML:30 言語の Wikipedia ページの分類,
-              言語処理学会第27回年次大会発表論文集, pp.563-568, 2021. [
-              <a href="https://www.anlp.jp/proceedings/annual_meeting/2021/pdf_dir/P3-11.pdf">
-                paper
-              </a>
-              ][
-              <a href="https://drive.google.com/file/d/1jz3uX0et7fkt7QDLt2bNR6J7dqyC_aea/view?usp=sharing">
-                poster
-              </a>
-              ]
-            </li>
-            <li>
-              [<span id="sekine2020b">Sekine2020b</span>] Satoshi Sekine, Masako
-              Nomoto, Kouta Nakayama, Asuka Sumida, Koji Matsuda, and Maya Ando,
-              <br />
-              <a href="http://research.nii.ac.jp/ntcir/workshop/OnlineProceedings15/pdf/ntcir/01-NTCIR15-OV-SHINRA-SekineS.pdf">
-                Overview of SHINRA2020-ML Task
-              </a>
-              , In Proceedings of the NTCIR-15 Conference.[
-              <a href="https://drive.google.com/file/d/1VAHieaVKUOsHsuNEebk7zKD3DuYhck8z/view?usp=sharing">
-                slide
-              </a>
-              ], [
-              <a href="https://drive.google.com/file/d/1VVuCV-hfnxzM3NE2NAT0JwHT0RYj2gnp/view?usp=sharing">
-                poster
-              </a>
-              ]
-            </li>
-            <li>
-              [<span id="bui2020">Bui2020</span>] The Viet Bui and Phuong
-              Le-Hong, <br />
-              <a href="http://research.nii.ac.jp/ntcir/workshop/OnlineProceedings15/pdf/ntcir/02-NTCIR15-SHINRA-BuiT.pdf">
-                Cross-lingual Extended Named Entity Classification of Wikipedia
-                Articles
-              </a>
-              , In Proceedings of the NTCIR-15 Conference.
-            </li>
-            <li>
-              [<span id="cardoso2020">Cardoso2020</span>] Rúben Cardoso, Afonso
-              Mendes and Andre Lamurias, <br />
-              <a href="http://research.nii.ac.jp/ntcir/workshop/OnlineProceedings15/pdf/ntcir/03-NTCIR15-SHINRA-CardosoR.pdf">
-                Priberam Labs at the NTCIR-15 SHINRA2020-ML: Classification Task
-              </a>
-              , In Proceedings of the NTCIR-15 Conference.
-            </li>
-            <li>
-              [<span id="abhishek2020">Abhishek2020</span>] Tushar Abhishek,
-              Ayush Agarwal, Anubhav Sharma, Vasudeva Varma and Manish Gupta,{" "}
-              <br />
-              <a href="http://research.nii.ac.jp/ntcir/workshop/OnlineProceedings15/pdf/ntcir/04-NTCIR15-SHINRA-AbhishekT.pdf">
-                Rehoboam at the NTCIR-15 SHINRA2020-ML Task
-              </a>
-              , In Proceedings of the NTCIR-15 Conference.
-            </li>
-            <li>
-              [<span id="yoshikawa2020">Yoshikawa2020</span>] Hiyori Yoshikawa,
-              Chunpeng Ma, Aili Shen, Qian Sun, Chenbang Huang, Guillaume Pelat,
-              Akiva Miura, Daniel Beck, Timothy Baldwin and Tomoya Iwakura,{" "}
-              <br />
-              <a href="http://research.nii.ac.jp/ntcir/workshop/OnlineProceedings15/pdf/ntcir/05-NTCIR15-SHINRA-YoshikawaH.pdf">
-                UOM-FJ at the NTCIR-15 SHINRA2020-ML Task
-              </a>
-              , In Proceedings of the NTCIR-15 Conference.
-            </li>
-            <li>
-              [<span id="nakayama2020b">Nakayama2020b</span>] Kouta Nakayama and
-              Satoshi Sekine, <br />
-              <a href="http://research.nii.ac.jp/ntcir/workshop/OnlineProceedings15/pdf/ntcir/06-NTCIR15-SHINRA-NakayamaK.pdf">
-                LIAT Team’s Wikipedia Classifier at NTCIR-15 SHINRA2020-ML:
-                Classification Task
-              </a>
-              , In Proceedings of the NTCIR-15 Conference.
-            </li>
-            <li>
-              [<span id="yoshioka2020">Yoshioka2020</span>] Masaharu Yoshioka
-              and Yoshiaki Koitabashi, <br />
-              <a href="http://research.nii.ac.jp/ntcir/workshop/OnlineProceedings15/pdf/ntcir/07-NTCIR15-SHINRA-YoshiokaM.pdf">
-                HUKB at SHINRA2020-ML task
-              </a>
-              , In Proceedings of the NTCIR-15 Conference.
-            </li>
-            <li>
-              [<span id="nishikawa2020">Nishikawa2020</span>] Sosuke Nishikawa
-              and Ikuya Yamada, <br />
-              <a href="http://research.nii.ac.jp/ntcir/workshop/OnlineProceedings15/pdf/ntcir/08-NTCIR15-SHINRA-NishikawaS.pdf">
-                Studio Ousia at the NTCIR-15 SHINRA2020-ML Task
-              </a>
-              , In Proceedings of the NTCIR-15 Conference.
-            </li>
-            <li>
-              [<span id="nakayama2020a">Nakayama2020a</span>] 中山功太,
-              栗田修平, 小林暁雄, 関根聡,
-              <br />
-              <a href="https://www.anlp.jp/proceedings/annual_meeting/2020/pdf_dir/F1-4.pdf">
-                Pre-Distillation
-                Ensemble:リソース構築タスクのためのアンサンブル手法
-              </a>
-              , 言語処理学会第26回年次大会発表論文集, pp.375-378, 2020.
-            </li>
-            <li>
-              [<span id="kobayashi2020">Kobayashi2020</span>] 小林暁雄,
-              中山功太, 安藤まや, 関根聡,
-              <br />
-              <a href="https://www.anlp.jp/proceedings/annual_meeting/2020/pdf_dir/F4-2.pdf">
-                Wikipedia構造化プロジェクト「森羅2019-JP」
-              </a>
-              , 言語処理学会第26回年次大会発表論文集, pp.1029-1032, 2020.
-            </li>
-            <li>
-              [<span id="sekine2020a">Sekine2020a</span>] 関根聡, 安藤まや,
-              小林暁雄, 隅田飛鳥,
-              <br />
-              <a href="https://www.anlp.jp/proceedings/annual_meeting/2020/pdf_dir/P5-13.pdf">
-                拡張固有表現定義の更新と日本語Wikipedia分類データ2019
-              </a>
-              , 言語処理学会第26回年次大会発表論文集, pp.1221-1224, 2020.
-            </li>
-            <li>
-              [<span id="sekine2019b">Sekine2019b</span>] Satoshi Sekine, Akio
-              Kobayashi, Kouta Nakayama,
-              <br />
-              <a href="https://openreview.net/pdf?id=HygfXWqTpm">
-                SHINRA: Structuring Wikipedia by Collaborative Contribution
-              </a>
-              , In Proceedings of the 1st conference on the Automated Knowledge
-              Base Construction (AKBC 2019), 2019.
-            </li>
-            <li>
-              [<span id="sekine2019a">Sekine2019a</span>] 関根聡, 小林暁雄,
-              安藤まや,
-              <br />
-              <a href="https://www.anlp.jp/proceedings/annual_meeting/2019/pdf_dir/E1-2.pdf">
-                Wikipedia構造化プロジェクト「森羅2018」
-              </a>
-              ,言語処理学会第25回年次大会発表論文集, pp.69-72, 2019.
-            </li>
-            <li>
-              [<span id="kobayashi2019">Kobayashi2019</span>] 小林暁雄,
-              中山功太, 関根聡,
-              <br />
-              <a href="https://www.anlp.jp/proceedings/annual_meeting/2019/pdf_dir/P3-7.pdf">
-                森羅:Wikipedia構造化プロジェクト2018結果の分析と考察
-              </a>
-              , 言語処理学会第25回年次大会発表論文集, pp.538-541, 2019.
-            </li>
-            <li>
-              [<span id="hentona2019">Hentona2019</span>] 邊土名朝飛, 野中尋史,
-              小林暁雄, 関根聡,
-              <br />
-              <a href="https://www.anlp.jp/proceedings/annual_meeting/2019/pdf_dir/B4-8.pdf">
-                外部知識源を使用したWikipediaからの化合物情報抽出
-              </a>
-              , 言語処理学会第25回年次大会発表論文集, pp.791-794, 2019.
-            </li>
-            <li>
-              [<span id="nakayama2019">Nakayama2019</span>] 中山功太, 小林暁雄,
-              関根聡,
-              <br />
-              <a href="https://www.anlp.jp/proceedings/annual_meeting/2019/pdf_dir/E6-5.pdf">
-                共有タスクにおけるGA重み付け加重投票を用いた属性値アンサンブル
-              </a>
-              , 言語処理学会第25回年次大会発表論文集, pp.1547-1550, 2019.
-            </li>
+            {mainRelatedResearch.map((elem, index) => (
+              <li key={index}>{elem}</li>
+            ))}
           </ul>
           <h3>その他の関連研究</h3>
           <ul>
-            <li>
-              [<span id="suzuki2018">Suzuki2018</span>] Masatoshi SUZUKI, Koji
-              MATSUDA, Satoshi SEKINE, Naoaki OKAZAKI and Kentaro INUI, <br />
-              <a href="https://www.jstage.jst.go.jp/article/transinf/E101.D/1/E101.D_2017SWP0005/_article">
-                A Joint Neural Model for Fine-Grained Named Entity
-                Classification of Wikipedia Articles
-              </a>
-              ‘, IEICE Transactions on Information and Systems, E101.D-1,
-              pp.73-81, 2018.
-            </li>
-            <li>
-              [<span id="sekine2018">Sekine2018</span>] 関根聡, 安藤まや,
-              小林暁雄, 松田耕史, 鈴木正敏, Duc Nguyen, 乾健太郎,
-              <br />
-              <a href="https://anlp.jp/proceedings/annual_meeting/2018/pdf_dir/P4-5.pdf">
-                「拡張固有表現＋Wikipedia」データ（2015 年 11 月版
-                Wikipedia分類作業完成版）
-              </a>
-              , 言語処理学会第24回年次大会発表論文集, pp.504-507, 2018.
-            </li>
-            <li>
-              [<span id="sekine2002">Sekine2002</span>] Satoshi Sekine, Kiyoshi
-              Sudo, and Chikashi Nobata,
-              <br />
-              <a href="http://www.lrec-conf.org/proceedings/lrec2002/pdf/120.pdf">
-                Extended Named Entity Hierarchy
-              </a>
-              . In Proceedings of the Third International Conference on Language
-              Resources and Evaluation (LREC’02), 2002.
-            </li>
-            <li>
-              [<span id="sekine2000">Sekine2000</span>] Satoshi Sekine and
-              Yoshio Eriguchi,
-              <br />
-              <a href="https://www.aclweb.org/anthology/C00-2167.pdf">
-                Japanese Named Entity Extraction Evaluation – Analysis of
-                Results –
-              </a>
-              , In Proceedings of the 18th International Conference on
-              Computational Linguistics (COLING’00), vol.2, pp.1106-110,
-              <br />
-              2000.
-            </li>
-            <li>
-              [<span id="grishman1996">Grishman1996</span>] Ralph Grishman and
-              Beth Sundheim,
-              <br />
-              <a href="https://www.aclweb.org/anthology/C96-1079.pdf">
-                Message Understanding Conference – 6: A Brief History
-              </a>
-              , In Proceedings of the 16th conference on Computational
-              linguistics (COLING’96), vol.1, pp.466-471, 1996.
-            </li>
+            {otherRelatedResearch.map((elem, index) => (
+              <li key={index}>{elem}</li>
+            ))}
           </ul>
         </ContentBox>
       </div>
