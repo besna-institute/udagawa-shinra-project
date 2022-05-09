@@ -30,14 +30,6 @@ export default function Document() {
           href="https://leaderboard2022.shinra-project.info/leaderboard/css/chunk-vendors.latest.css"
           rel="stylesheet"
         />
-        <script
-          defer
-          src="https://leaderboard2022.shinra-project.info/leaderboard/js/chunk-vendors.latest.js"
-        />
-        <script
-          defer
-          src="https://leaderboard2022.shinra-project.info/leaderboard/js/app.latest.js"
-        />
       </Head>
       <body>
         <Main />
