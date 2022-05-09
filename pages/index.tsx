@@ -70,6 +70,36 @@ const newsItems = [
 ];
 const mainRelatedResearch = [
   <>
+    [<span id="sekine2022">Sekine2022</span>] 関根聡, 中山功太, 野本昌子,
+    安藤まや, 隅田飛鳥, 松田耕史,
+    <br />
+    拡張固有表現に分類された31言語のWikipedia知識ベース,
+    言語処理学会第28回年次大会発表論文集, 2022. [
+    <a href="https://www.anlp.jp/proceedings/annual_meeting/2022/pdf_dir/E1-1.pdf">
+      paper
+    </a>
+    ] [
+    <a href="https://drive.google.com/file/d/1fHXpMsTc1AMu19aDGzIHz6GLKJbRJMae/view?usp=sharing">
+      slide
+    </a>
+    ]
+  </>,
+  <>
+    [<span id="nomoto2022">Nomoto2022</span>] 野本昌子, 宇佐美佑, 安藤まや,
+    中山功太, 関根聡,
+    <br />
+    森羅2021-LinkJP結果の分析:BERTとルールベースの比較,
+    言語処理学会第28回年次大会発表論文集, 2022. [
+    <a href="https://www.anlp.jp/proceedings/annual_meeting/2022/pdf_dir/E2-4.pdf">
+      paper
+    </a>
+    ] [
+    <a href="https://drive.google.com/file/d/1cVonFj5PZ8H-1C2aX2WX3C4BWYzYiMH8/view?usp=sharing">
+      slide
+    </a>
+    ]
+  </>,
+  <>
     [<span id="sekine2021b">Sekine2021b</span>] Satoshi Sekine, Kouta Nakayama,
     Maya Ando, Yu Usami, Masako Nomoto and Koji Matsuda,
     <br />
