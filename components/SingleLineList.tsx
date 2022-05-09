@@ -5,7 +5,7 @@ interface Props {
   items: JSX.Element[];
 }
 
-export const NewsList = ({ items }: Props) => {
+export const SingleLineList = ({ items }: Props) => {
   const newsItems = items.map((item, index) => (
     <Fragment key={index}>
       <ListItem key={index} disablePadding>
