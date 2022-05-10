@@ -12,6 +12,7 @@ const subtaskCommonItems = [
   <>
     <h3>Wikipedia2019</h3>
     <SingleLineList
+      disablePadding
       items={[
         <>
           <a href="">CirrusSearchDump</a>
@@ -35,6 +36,7 @@ const subtaskCommonItems = [
   <>
     <h3>Wikipedia2021</h3>
     <SingleLineList
+      disablePadding
       items={[
         <>
           <a href="">CirrusSearchDump</a>
