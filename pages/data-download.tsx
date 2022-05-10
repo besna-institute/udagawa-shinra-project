@@ -1,8 +1,55 @@
 import type { NextPage } from "next";
-import { Divider, Paper } from "@mui/material";
+import { Paper } from "@mui/material";
 import { BasicTabs, ContentBox, SingleLineList, TabItem } from "../components";
 
-const subtaskCommonItems = [<>Wikipedia2019</>, <>Wikipedia2021</>];
+const subtaskCommonItems = [
+  <>
+    <h3>Wikipedia2019</h3>
+    <SingleLineList
+      items={[
+        <>
+          <a href="">CirrusSearchDump</a>
+          （主に分類学習用）
+        </>,
+        <>
+          <a href="">WikiDump</a>
+          （主に分類学習用）
+        </>,
+        <>
+          <a href="">HTML</a>
+          （主に属性値、リンキング学習用）
+        </>,
+        <>
+          <a href="">Text</a>
+          （主に属性値、リンキング学習用）
+        </>,
+      ]}
+    />
+  </>,
+  <>
+    <h3>Wikipedia2021</h3>
+    <SingleLineList
+      items={[
+        <>
+          <a href="">CirrusSearchDump</a>
+          （主に分類学習用）
+        </>,
+        <>
+          <a href="">WikiDump</a>
+          （主に分類学習用）
+        </>,
+        <>
+          <a href="">HTML</a>
+          （主に属性値、リンキング学習用）
+        </>,
+        <>
+          <a href="">Text</a>
+          （主に属性値、リンキング学習用）
+        </>,
+      ]}
+    />
+  </>,
+];
 const subtaskUniqueItems: TabItem[] = [
   {
     label: "分類",
@@ -57,7 +104,7 @@ const DataDownload: NextPage = () => {
         theme="green"
       >
         <h2 id="subtask-common">サブタスク共通データ（Wikipedia）</h2>
-        <SingleLineList items={subtaskCommonItems} />
+        <SingleLineList items={subtaskCommonItems} divider />
       </ContentBox>
       <ContentBox
         style={{
