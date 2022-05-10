@@ -435,7 +435,7 @@ const Home: NextPage = () => {
           theme="green"
         >
           <h2 id="whatsnew">新着情報</h2>
-          <SingleLineList items={newsItems} divider />
+          <SingleLineList items={newsItems} divider disablePadding />
         </ContentBox>
         <ContentBox
           style={{
@@ -788,9 +788,9 @@ const Home: NextPage = () => {
         >
           <h2 id="related-research">関連研究</h2>
           <h3>森羅プロジェクトに関する研究</h3>
-          <SingleLineList items={mainRelatedResearch} divider />
+          <SingleLineList items={mainRelatedResearch} divider disablePadding />
           <h3>その他の関連研究</h3>
-          <SingleLineList items={otherRelatedResearch} divider />
+          <SingleLineList items={otherRelatedResearch} divider disablePadding />
         </ContentBox>
       </div>
       <ContentBox
