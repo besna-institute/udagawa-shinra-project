@@ -679,7 +679,6 @@ const Home: NextPage = () => {
           rowGap: "1rem",
           gridTemplate: `
             "schedule" max-content
-            "flow" max-content
             "contact" max-content
             "related-research" auto
             "committee" max-content
@@ -715,20 +714,6 @@ const Home: NextPage = () => {
           <p>
             <Link href="/join">タスク参加の流れはこちら</Link>
           </p>
-        </ContentBox>
-        <ContentBox
-          style={{
-            gridArea: "flow",
-          }}
-          theme="green"
-        >
-          <h2 id="flow">タスク参加の流れ</h2>
-          <ul>
-            <li>森羅のSlackとMLに参加（イベントなどの随時アナウンス）</li>
-            <li>データ公開ページからデータを入手</li>
-            <li>実行結果の提出（10月末日予定）</li>
-            <li>最終報告会で報告（12月）</li>
-          </ul>
         </ContentBox>
         <ContentBox
           style={{
