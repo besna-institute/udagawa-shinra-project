@@ -1,3 +1,5 @@
+export { BasicTabs } from "./BasicTabs";
+export type { TabItem } from "./BasicTabs";
 export { CodeBlock } from "./CodeBlock";
 export { ContentBox } from "./ContentBox";
 export { CommitteeList } from "./CommitteeList";
