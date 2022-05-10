@@ -1,6 +1,12 @@
 import type { NextPage } from "next";
 import { Paper } from "@mui/material";
-import { BasicTabs, ContentBox, SingleLineList, TabItem } from "../components";
+import {
+  BasicTabs,
+  ContentBox,
+  InlineList,
+  SingleLineList,
+  TabItem,
+} from "../components";
 
 const subtaskCommonItems = [
   <>
@@ -56,10 +62,50 @@ const subtaskUniqueItems: TabItem[] = [
     panel: (
       <>
         <SingleLineList
+          divider
           items={[
-            <>教師データ</>,
-            <>本評価の入力データ</>,
-            <>リーダーボードの入力データ</>,
+            <>
+              教師データ
+              <InlineList
+                items={[
+                  <a key="JSONL" href="">
+                    JSONL
+                  </a>,
+                  <a key="CirrusSearchDump" href="">
+                    CirrusSearchDump(2019)
+                  </a>,
+                  <a key="WikiDump" href="">
+                    WikiDump(2019)
+                  </a>,
+                ]}
+              />
+            </>,
+            <>
+              本評価の入力データ
+              <InlineList
+                items={[
+                  <a key="JSONL" href="">
+                    JSONL
+                  </a>,
+                  <a key="CirrusSearchDump" href="">
+                    CirrusSearchDump(2021)
+                  </a>,
+                  <a key="WikiDump" href="">
+                    WikiDump(2021)
+                  </a>,
+                ]}
+              />
+            </>,
+            <>
+              リーダーボードの入力データ
+              <InlineList
+                items={[
+                  <a key="JSONL" href="">
+                    JSONL
+                  </a>,
+                ]}
+              />
+            </>,
           ]}
         />
       </>
@@ -69,7 +115,43 @@ const subtaskUniqueItems: TabItem[] = [
     label: "属性値抽出",
     panel: (
       <>
-        <SingleLineList items={[<>教師データ</>, <>本評価の入力データ</>]} />
+        <SingleLineList
+          divider
+          items={[
+            <>
+              教師データ
+              <InlineList
+                items={[
+                  <a key="JSONL" href="">
+                    JSONL
+                  </a>,
+                  <a key="CirrusSearchDump" href="">
+                    CirrusSearchDump(2019)
+                  </a>,
+                  <a key="WikiDump" href="">
+                    WikiDump(2019)
+                  </a>,
+                ]}
+              />
+            </>,
+            <>
+              本評価の入力データ
+              <InlineList
+                items={[
+                  <a key="JSONL" href="">
+                    JSONL
+                  </a>,
+                  <a key="CirrusSearchDump" href="">
+                    CirrusSearchDump(2019)
+                  </a>,
+                  <a key="WikiDump" href="">
+                    WikiDump(2019)
+                  </a>,
+                ]}
+              />
+            </>,
+          ]}
+        />
       </>
     ),
   },
@@ -77,7 +159,27 @@ const subtaskUniqueItems: TabItem[] = [
     label: "リンキング",
     panel: (
       <>
-        <SingleLineList items={[<>教師データ</>]} />
+        <SingleLineList
+          divider
+          items={[
+            <>
+              教師データ
+              <InlineList
+                items={[
+                  <a key="JSONL" href="">
+                    JSONL
+                  </a>,
+                  <a key="CirrusSearchDump" href="">
+                    CirrusSearchDump(2019)
+                  </a>,
+                  <a key="WikiDump" href="">
+                    WikiDump(2019)
+                  </a>,
+                ]}
+              />
+            </>,
+          ]}
+        />
       </>
     ),
   },
