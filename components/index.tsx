@@ -6,6 +6,7 @@ export { CommitteeList } from "./CommitteeList";
 export { MediaBox } from "./MediaBox";
 export { JoinButton } from "./JoinButton";
 export { ScheduleList } from "./ScheduleList";
+export { InlineList } from "./InlineList";
 export type { Props as Code } from "./CodeBlock";
 export { SingleLineList } from "./SingleLineList";
 export { NavigationLink } from "./NavigationLink";
