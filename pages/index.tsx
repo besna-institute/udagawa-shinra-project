@@ -11,6 +11,7 @@ import {
 } from "../components";
 import { useRef, useEffect, useState } from "react";
 import { Paper, Divider } from "@mui/material";
+import Link from "next/link";
 
 const newsItems = [
   <>
@@ -711,6 +712,9 @@ const Home: NextPage = () => {
               { title: "最終報告会", time: "2022年12月" },
             ]}
           />
+          <p>
+            <Link href="/join">タスク参加の流れはこちら</Link>
+          </p>
         </ContentBox>
         <ContentBox
           style={{
