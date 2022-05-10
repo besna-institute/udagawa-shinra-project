@@ -39,3 +39,9 @@ main a {
   font-weight: bold;
   font-size: 1.5rem;
 }
+.MuiListItem-divider {
+  border-color: #afafaf;
+}
+.MuiList-root .MuiList-padding {
+  padding-left: 1rem;
+}

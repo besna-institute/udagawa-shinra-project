@@ -1,5 +1,191 @@
 import type { NextPage } from "next";
-import { Divider, Paper } from "@mui/material";
+import { Paper } from "@mui/material";
+import {
+  BasicTabs,
+  ContentBox,
+  InlineList,
+  SingleLineList,
+  TabItem,
+} from "../components";
+
+const subtaskCommonItems = [
+  <>
+    <h3>Wikipedia2019</h3>
+    <SingleLineList
+      disablePadding
+      items={[
+        <>
+          <a href="">CirrusSearchDump</a>
+          （主に分類学習用）
+        </>,
+        <>
+          <a href="">WikiDump</a>
+          （主に分類学習用）
+        </>,
+        <>
+          <a href="">HTML</a>
+          （主に属性値、リンキング学習用）
+        </>,
+        <>
+          <a href="">Text</a>
+          （主に属性値、リンキング学習用）
+        </>,
+      ]}
+    />
+  </>,
+  <>
+    <h3>Wikipedia2021</h3>
+    <SingleLineList
+      disablePadding
+      items={[
+        <>
+          <a href="">CirrusSearchDump</a>
+          （主に分類学習用）
+        </>,
+        <>
+          <a href="">WikiDump</a>
+          （主に分類学習用）
+        </>,
+        <>
+          <a href="">HTML</a>
+          （主に属性値、リンキング学習用）
+        </>,
+        <>
+          <a href="">Text</a>
+          （主に属性値、リンキング学習用）
+        </>,
+      ]}
+    />
+  </>,
+];
+const subtaskUniqueItems: TabItem[] = [
+  {
+    label: "分類",
+    panel: (
+      <>
+        <SingleLineList
+          divider
+          items={[
+            <>
+              教師データ
+              <InlineList
+                items={[
+                  <a key="JSONL" href="">
+                    JSONL
+                  </a>,
+                  <a key="CirrusSearchDump" href="">
+                    CirrusSearchDump(2019)
+                  </a>,
+                  <a key="WikiDump" href="">
+                    WikiDump(2019)
+                  </a>,
+                ]}
+              />
+            </>,
+            <>
+              本評価の入力データ
+              <InlineList
+                items={[
+                  <a key="JSONL" href="">
+                    JSONL
+                  </a>,
+                  <a key="CirrusSearchDump" href="">
+                    CirrusSearchDump(2021)
+                  </a>,
+                  <a key="WikiDump" href="">
+                    WikiDump(2021)
+                  </a>,
+                ]}
+              />
+            </>,
+            <>
+              リーダーボードの入力データ
+              <InlineList
+                items={[
+                  <a key="JSONL" href="">
+                    JSONL
+                  </a>,
+                ]}
+              />
+            </>,
+          ]}
+        />
+      </>
+    ),
+  },
+  {
+    label: "属性値抽出",
+    panel: (
+      <>
+        <SingleLineList
+          divider
+          items={[
+            <>
+              教師データ
+              <InlineList
+                items={[
+                  <a key="JSONL" href="">
+                    JSONL
+                  </a>,
+                  <a key="CirrusSearchDump" href="">
+                    CirrusSearchDump(2019)
+                  </a>,
+                  <a key="WikiDump" href="">
+                    WikiDump(2019)
+                  </a>,
+                ]}
+              />
+            </>,
+            <>
+              本評価の入力データ
+              <InlineList
+                items={[
+                  <a key="JSONL" href="">
+                    JSONL
+                  </a>,
+                  <a key="CirrusSearchDump" href="">
+                    CirrusSearchDump(2019)
+                  </a>,
+                  <a key="WikiDump" href="">
+                    WikiDump(2019)
+                  </a>,
+                ]}
+              />
+            </>,
+          ]}
+        />
+      </>
+    ),
+  },
+  {
+    label: "リンキング",
+    panel: (
+      <>
+        <SingleLineList
+          divider
+          items={[
+            <>
+              教師データ
+              <InlineList
+                items={[
+                  <a key="JSONL" href="">
+                    JSONL
+                  </a>,
+                  <a key="CirrusSearchDump" href="">
+                    CirrusSearchDump(2019)
+                  </a>,
+                  <a key="WikiDump" href="">
+                    WikiDump(2019)
+                  </a>,
+                ]}
+              />
+            </>,
+          ]}
+        />
+      </>
+    ),
+  },
+];
 
 const DataDownload: NextPage = () => {
   return (
@@ -10,75 +196,32 @@ const DataDownload: NextPage = () => {
         gridTemplateColumns: "repeat(1, minmax(0, 1fr))",
         gridGap: "3rem",
         gridTemplateAreas: `
-          "data-download"
-          "divider1"
-          "end-to-end-task"
-          "divider2"
-          "classification-task"
-          "divider3"
-          "attribute-extraction-task"
-          "divider4"
-          "link-task"
-          "divider5"
-          "faq"
+          "subtask-common"
+          "subtask-unique"
         `,
       }}
     >
-      <Divider sx={{ gridArea: "divider1" }} />
-      <Divider sx={{ gridArea: "divider2" }} />
-      <Divider sx={{ gridArea: "divider3" }} />
-      <Divider sx={{ gridArea: "divider4" }} />
-      <Divider sx={{ gridArea: "divider5" }} />
-      <div
+      <ContentBox
         style={{
-          gridArea: "data-download",
+          gridArea: "subtask-common",
         }}
+        theme="green"
       >
-        <h2 id="data-download">データダウンロード</h2>
-        <p>TBA</p>
-      </div>
-      <div
+        <h2 id="subtask-common">サブタスク共通データ（Wikipedia）</h2>
+        <SingleLineList items={subtaskCommonItems} divider />
+      </ContentBox>
+      <ContentBox
         style={{
-          gridArea: "end-to-end-task",
+          gridArea: "subtask-unique",
         }}
+        theme="gray"
       >
-        <h2 id="end-to-end-task">End-to-endタスクのデータダウンロード</h2>
-        <p>TBA</p>
-      </div>
-      <div
-        style={{
-          gridArea: "classification-task",
-        }}
-      >
-        <h2 id="classification-task">分類タスクのデータダウンロード</h2>
-        <p>TBA</p>
-      </div>
-      <div
-        style={{
-          gridArea: "attribute-extraction-task",
-        }}
-      >
-        <h2 id="attribute-extraction-task">
-          属性抽出タスクのデータダウンロード
-        </h2>
-        <p>TBA</p>
-      </div>
-      <div
-        style={{
-          gridArea: "link-task",
-        }}
-      >
-        <h2 id="link-task">リンクタスクのデータダウンロード</h2>
-        <p>TBA</p>
-      </div>
-      <div
-        style={{
-          gridArea: "faq",
-        }}
-      >
-        <h2 id="faq">データダウンロードについてのFAQ</h2>
-        <p>TBA</p>
-      </div>
+        <h2 id="subtask-unique">サブタスク固有データ</h2>
+        <BasicTabs
+          ariaLabel="subtask unique data tabs"
+          tabs={subtaskUniqueItems}
+        />
+      </ContentBox>
     </Paper>
   );
 };
