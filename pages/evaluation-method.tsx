@@ -1,6 +1,45 @@
 import type { NextPage } from "next";
 import { Divider, Paper } from "@mui/material";
+import { BasicTabs, ContentBox, TabItem } from "../components";
+import Link from "next/link";
 
+const evaluationMethodItems: TabItem[] = [
+  {
+    label: "分類",
+    panel: (
+      <>
+        <p>マイクロ平均F1スコアで評価します。</p>
+        <p>image</p>
+        <p>
+          自動評価のプログラムは
+          <a href="">こちら</a>
+          から入手できます。
+        </p>
+        <p>
+          結果は
+          <Link href="/result-submission">こちら</Link>
+          からご提出ください。
+        </p>
+      </>
+    ),
+  },
+  {
+    label: "属性値抽出",
+    panel: (
+      <>
+        <p>TBA</p>
+      </>
+    ),
+  },
+  {
+    label: "リンキング",
+    panel: (
+      <>
+        <p>TBA</p>
+      </>
+    ),
+  },
+];
 const EvaluationMethod: NextPage = () => {
   return (
     <Paper
@@ -11,72 +50,21 @@ const EvaluationMethod: NextPage = () => {
         gridGap: "3rem",
         gridTemplateAreas: `
           "evaluation-method"
-          "divider1"
-          "end-to-end-task"
-          "divider2"
-          "classification-task"
-          "divider3"
-          "attribute-extraction-task"
-          "divider4"
-          "link-task"
-          "divider5"
-          "faq"
         `,
       }}
     >
-      <Divider sx={{ gridArea: "divider1" }} />
-      <Divider sx={{ gridArea: "divider2" }} />
-      <Divider sx={{ gridArea: "divider3" }} />
-      <Divider sx={{ gridArea: "divider4" }} />
-      <Divider sx={{ gridArea: "divider5" }} />
-      <div
+      <ContentBox
         style={{
           gridArea: "evaluation-method",
         }}
+        theme="white"
       >
-        <h2 id="evaluation-method">評価方法</h2>
-        <p>TBA</p>
-      </div>
-      <div
-        style={{
-          gridArea: "end-to-end-task",
-        }}
-      >
-        <h2 id="end-to-end-task">End-to-endタスクの評価方法</h2>
-        <p>TBA</p>
-      </div>
-      <div
-        style={{
-          gridArea: "classification-task",
-        }}
-      >
-        <h2 id="classification-task">分類タスクの評価方法</h2>
-        <p>TBA</p>
-      </div>
-      <div
-        style={{
-          gridArea: "attribute-extraction-task",
-        }}
-      >
-        <h2 id="attribute-extraction-task">属性抽出タスクの評価方法</h2>
-        <p>TBA</p>
-      </div>
-      <div
-        style={{
-          gridArea: "link-task",
-        }}
-      >
-        <h2 id="link-task">リンクタスクの評価方法</h2>
-        <p>TBA</p>
-      </div>
-      <div
-        style={{
-          gridArea: "faq",
-        }}
-      >
-        <h2 id="faq">評価方法についてのFAQ</h2>
-        <p>TBA</p>
-      </div>
+        <h2 id="evaluation-method">結果の評価方法</h2>
+        <BasicTabs
+          ariaLabel="evaluation method tabs"
+          tabs={evaluationMethodItems}
+        />
+      </ContentBox>
     </Paper>
   );
 };
