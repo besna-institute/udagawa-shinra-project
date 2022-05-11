@@ -1,6 +1,6 @@
 import Prism, { Language } from "./Prism";
 import { useEffect } from "react";
-import { Box, BottomNavigation, BottomNavigationAction } from "@mui/material";
+import { BottomNavigation, BottomNavigationAction } from "@mui/material";
 import { ContentCopy, Link } from "@mui/icons-material";
 
 export interface Props {
@@ -19,7 +19,7 @@ export const CodeBlock = (props: Props) => {
   };
 
   return (
-    <Box>
+    <div>
       <pre>
         <code className={`language-${props.language}`}>{props.code}</code>
       </pre>
@@ -30,13 +30,13 @@ export const CodeBlock = (props: Props) => {
           icon={<ContentCopy />}
           showLabel
         />
-        <BottomNavigationAction
+        {/* <BottomNavigationAction
           label="リンク"
           icon={<Link />}
           href={props.link}
           showLabel
-        />
+        /> */}
       </BottomNavigation>
-    </Box>
+    </div>
   );
 };
