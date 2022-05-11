@@ -1,11 +1,11 @@
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
 import { Alert, Paper } from "@mui/material";
-import { ContentBox, JoinButton, TextStepper } from "../components";
+import { ContentBox, JoinButton, Step, TextStepper } from "../components";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-const getSteps = (regist: boolean) => [
+const getSteps = (regist: boolean): Step[] => [
   {
     label: "1. メーリングリストへ参加する",
     description: (
@@ -79,14 +79,14 @@ const getSteps = (regist: boolean) => [
 const Join: NextPage = () => {
   const router = useRouter();
   const [isRegist, setIsRegist] = useState(false);
-  const query = router.query;
-  const regist = query.regist === "true";
 
   useEffect(() => {
     if (router.isReady) {
+      const query = router.query;
+      const regist = query.regist === "true";
       setIsRegist(regist);
     }
-  }, [isRegist, router.isReady, regist]);
+  }, [router.isReady, router.query]);
 
   return (
     <Paper
