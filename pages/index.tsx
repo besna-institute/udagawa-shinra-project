@@ -15,7 +15,17 @@ import Link from "next/link";
 
 const newsItems = [
   <>
-    森羅2022<a href="http://shinra-project.info/shinra2022-kickoff-meeting/" target="_blank" rel="noreferrer">キックオフミーティング</a>を開催しました。タスク参加は<a href="http://2022.shinra-project.info/join">こちら</a>からどうぞ。(2022/5/12)
+    森羅2022
+    <a
+      href="http://shinra-project.info/shinra2022-kickoff-meeting/"
+      target="_blank"
+      rel="noreferrer"
+    >
+      キックオフミーティング
+    </a>
+    を開催しました。タスク参加は
+    <a href="http://2022.shinra-project.info/join">こちら</a>
+    からどうぞ。(2022/5/12)
   </>,
   <>
     言語処理学会第28回年次大会(NLP2022)で森羅プロジェクトの
@@ -400,6 +410,9 @@ const Home: NextPage = () => {
           <p>
             2022年度の森羅プロジェクト（森羅2022）では、協働による知識の構造化を目指し、Wikipediaの分類、属性値抽出、リンキングタスクを実施します。
           </p>
+          <h1 style={{ textAlign: "center" }}>
+            タスク参加は<a href="join">こちら</a>&#xFF01;
+          </h1>
         </ContentBox>
         <MediaBox
           width={16}
