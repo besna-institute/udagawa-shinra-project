@@ -375,7 +375,7 @@ const Home: NextPage = () => {
           "mid-content-left mid-content-right"
           "divider1         divider1"
           "task-detail      task-detail"
-          "reference        reference"
+          "faq              faq"
           "task-list        task-list" / minmax(0, 4fr) minmax(0, 3fr)
         `,
         display: "grid",
@@ -943,6 +943,34 @@ const Home: NextPage = () => {
           </div>
         </div>
       </ContentBox> */}
+      <ContentBox
+        style={{
+          gridArea: "faq",
+        }}
+        theme="gray"
+      >
+        <h2 id="faq">FAQ</h2>
+        <p>
+          Q. 企業からの参加ですが、必ず発表しなければならないでしょうか？
+          <br />
+          A. 発表の義務はありません。
+        </p>
+        <p>
+          Q.
+          Wikipedia全件を対象にするとのことですが、計算機リソースに不安があります。
+          <br />
+          A. 計算機リソースなどについては相談に乗ります。Slack(
+          <a href="https://join.slack.com/t/shinra2022/shared_invite/zt-14qkpf21i-lQNKlT0aIOU5We7xlZBqfQ">
+            招待リンク
+          </a>
+          )などでお気軽にご相談ください。
+        </p>
+        <p>
+          Q. リーダーボードへの参加は義務ですか？
+          <br />
+          A. 義務ではありませんが、ぜひご参加ください。
+        </p>
+      </ContentBox>
       <ContentBox
         style={{
           gridArea: "task-list",
