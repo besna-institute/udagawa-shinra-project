@@ -272,9 +272,14 @@ const subtaskUniqueItems: TabItem[] = [
             <>
               <SingleLineList
                 items={[
-                  <>
-                    ベースラインデータ（属性値抽出タスクのみの参加者用）（JSONL）（TBA）
-                  </>,
+                  <a
+                    key="JSONL"
+                    href="https://drive.google.com/file/d/1OGveXeubPZ2FtY8VsGV8caP5vyYZ6tjE/view?usp=sharing"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    ベースラインデータ（属性値抽出タスクのみの参加者用）（JSONL）
+                  </a>,
                   <>
                     <SingleLineList
                       items={[
@@ -308,7 +313,14 @@ const subtaskUniqueItems: TabItem[] = [
             <>
               <SingleLineList
                 items={[
-                  <>リーダーボードの入力データ（JSONL）（TBA）</>,
+                  <a
+                    key="JSONL"
+                    href="https://drive.google.com/file/d/1MXtT_5g46h7n12DQgWrVfUniMXfzEcjV/view?usp=sharing"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    リーダーボードの入力データ（JSONL）
+                  </a>,
                   <>
                     <SingleLineList
                       items={[
