@@ -814,104 +814,48 @@ const Home: NextPage = () => {
         theme="white"
       >
         <h2 id="task-detail">タスク詳細</h2>
-        <h3 id="end-to-end-task">End-to-Endタスク</h3>
-        <h4>教師データ</h4>
-        <p>Wikipedia2019の分類データ</p>
-        <h4>入力データ</h4>
-        <p>Wikipedia2021</p>
-        <h4>評価データ</h4>
-        <p>Wikipedia2021の属性値抽出データに対するリンク</p>
-        <ul>
-          <li>81カテゴリー（森羅2018,2019,2020-JPの評価データ）</li>
-          <li>90カテゴリー（新規）</li>
-        </ul>
-        <h3 id="classification-task">分類タスク</h3>
-        <h4>教師データ</h4>
-        <ul>
-          <li>Wikipedia2019の分類データ</li>
-          <li>
-            Wikipedia2019の属性値抽出データ
-            <ul>
-              <li>81カテゴリー（森羅2018,2019,2020-JPの教師データ）</li>
-              <li>90カテゴリー（新規）</li>
-            </ul>
-          </li>
-          <li>
-            Wikipedia2019のリンクデータ
-            <ul>
-              <li>
-                7カテゴリー x
-                200ページ（森羅2021-LinkJPのサンプルデータ（7カテゴリーx50ページ）を含む）
-              </li>
-              <li>164カテゴリー x 2ページ（新規）</li>
-            </ul>
-          </li>
-        </ul>
-        <h4>入力データ</h4>
-        <p>Wikipedia2021</p>
-        <h4>評価データ</h4>
-        <p>Wikipedia2021の分類済みデータ</p>
-        <h3 id="attribute-extraction-task">属性値抽出タスク</h3>
-        <h4>教師データ</h4>
-        <p>Wikipedia2019の属性値抽出データ</p>
-        <ul>
-          <li>81カテゴリー（森羅2018,2019,2020-JPの教師データ）</li>
-          <li>90カテゴリー（新規）</li>
-        </ul>
-
-        <h4>入力データ</h4>
-        <p>Wikipedia2021 ／ 分類システム出力データ(baseline)</p>
-        <ul>
-          <li data-stringify-indent="1" data-stringify-border="0">
-            分類システム：TypedKB (
-            <a
-              target="_blank"
-              href="https://github.com/singletongue/TypedKB"
-              rel="noopener noreferrer"
-              tabIndex={-1}
-            >
-              https://github.com/singletongue/TypedKB
-            </a>
-            )
-          </li>
-        </ul>
-        <h4>評価データ</h4>
-        <p>Wikipedia2021の属性値抽出データ</p>
-        <ul>
-          <li>81カテゴリー（森羅2018,2019,2020-JPの評価データ）</li>
-          <li>90カテゴリー（新規）</li>
-        </ul>
-        <h3 id="link-task">リンクタスク</h3>
-        <h4>サンプルデータ</h4>
-        <p>Wikipedia2019のリンクデータ</p>
-        <ul>
-          <li>
-            7カテゴリー x
-            200ページ（森羅2021-LinkJPのサンプルデータ（7カテゴリーx50ページ）を含む）
-          </li>
-          <li>164カテゴリー x 2ページ（新規）</li>
-        </ul>
-        <h4>入力データ</h4>
-        <p>Wikipedia2021 ／ 属性値抽出システム出力データ(baseline)</p>
-        <ul>
-          <li data-stringify-indent="1" data-stringify-border="0">
-            属性値抽出システム：Shinra JP BERT (
-            <a
-              target="_blank"
-              href="https://github.com/aiishii/shinra_jp_bert/tree/master"
-              rel="noopener noreferrer"
-            >
-              https://github.com/aiishii/shinra_jp_bert/tree/master
-            </a>
-            )
-          </li>
-        </ul>
-        <h4>評価データ</h4>
-        <p>Wikipedia2021の属性値抽出データに対するリンク</p>
-        <ul>
-          <li>81カテゴリー（森羅2018,2019,2020-JPの評価データ）</li>
-          <li>90カテゴリー（新規）</li>
-        </ul>
+        <img
+          alt="Categorization1"
+          src="/Categorization1.png"
+          style={{
+            margin: 0,
+          }}
+        />
+        <img
+          alt="Categorization2"
+          src="/Categorization2.png"
+          style={{
+            margin: 0,
+          }}
+        />
+        <img
+          alt="AttributeExtraction1"
+          src="/AttributeExtraction1.png"
+          style={{
+            margin: 0,
+          }}
+        />
+        <img
+          alt="AttributeExtraction2"
+          src="/AttributeExtraction2.png"
+          style={{
+            margin: 0,
+          }}
+        />
+        <img
+          alt="Linking1"
+          src="/Linking1.png"
+          style={{
+            margin: 0,
+          }}
+        />
+        <img
+          alt="Linking2"
+          src="/Linking2.png"
+          style={{
+            margin: 0,
+          }}
+        />
       </ContentBox>
       {/* <ContentBox
         style={{
