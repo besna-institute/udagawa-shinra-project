@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import { Paper } from "@mui/material";
-import { BasicTabs, ContentBox, TabItem } from "../components";
+import { BasicTabs, ContentBox, MediaBox, TabItem } from "../components";
 import Link from "next/link";
 
 const evaluationMethodItems: TabItem[] = [
@@ -9,7 +9,15 @@ const evaluationMethodItems: TabItem[] = [
     panel: (
       <>
         <p>マイクロ平均F1スコアで評価します。</p>
-        <p>image</p>
+        <MediaBox height={564} width={688} style={{ width: "50%" }}>
+          <img
+            alt="formula classification"
+            src="/formula-classification.png"
+            style={{
+              margin: 0,
+            }}
+          />
+        </MediaBox>
         <p>
           結果は
           <Link href="/result-submission">こちら</Link>
@@ -22,7 +30,21 @@ const evaluationMethodItems: TabItem[] = [
     label: "属性値抽出",
     panel: (
       <>
-        <p>TBA</p>
+        <p>属性ごとのマイクロ平均F1スコアのマクロ平均</p>
+        <MediaBox height={607} width={829} style={{ width: "50%" }}>
+          <img
+            alt="formula classification"
+            src="/formula-attribution-extraction.png"
+            style={{
+              margin: 0,
+            }}
+          />
+        </MediaBox>
+        <p>
+          結果は
+          <Link href="/result-submission">こちら</Link>
+          からご提出ください。
+        </p>
       </>
     ),
   },
