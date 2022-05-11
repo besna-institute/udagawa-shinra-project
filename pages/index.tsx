@@ -505,8 +505,10 @@ const Home: NextPage = () => {
         }}
         theme="gray"
       >
-        <h2 id="leader-board">リーダーボード</h2>
-        <p>TBA</p>
+        <iframe
+          id="leaderboard"
+          src="https://leaderboard2022.shinra-project.info/leaderboard-dev/"
+        />
         <div
           style={{
             display: "flex",

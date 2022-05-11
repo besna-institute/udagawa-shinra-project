@@ -118,13 +118,20 @@ const Join: NextPage = () => {
       >
         <TextStepper steps={getSteps(isRegist)} />
       </div>
-      <div
-        style={{
-          gridArea: "leaderboard",
-        }}
-      >
-        <h2>リーダーボード</h2>
-      </div>
+      {isRegist ? (
+        <div
+          style={{
+            gridArea: "leaderboard",
+          }}
+        >
+          <iframe
+            id="leaderboard"
+            src="https://leaderboard2022.shinra-project.info/leaderboard-dev/"
+          />
+        </div>
+      ) : (
+        ""
+      )}
     </Paper>
   );
 };

@@ -47,3 +47,9 @@ main a {
 .MuiList-root .MuiList-padding {
   padding-left: 1rem;
 }
+#leaderboard {
+  max-height: 318px;
+}
+#leaderboard .v-main__wrap {
+  background-color: #f8f8f8;
+}
