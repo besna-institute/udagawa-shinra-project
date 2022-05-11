@@ -1,7 +1,13 @@
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
 import { Alert, Paper } from "@mui/material";
-import { ContentBox, JoinButton, Step, TextStepper } from "../components";
+import {
+  ContentBox,
+  JoinButton,
+  MediaBox,
+  Step,
+  TextStepper,
+} from "../components";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -11,7 +17,10 @@ const getSteps = (regist: boolean): Step[] => [
     description: (
       <>
         <p>
-          下記のリーダーボードの左側のメニューから「ログイン・参加登録」を選択し、「ログイン」タブから登録時に記録したアクセストークンを用いてログインしてください。
+          メールにてイベントなどの随時アナウンスします。
+          <JoinButton href="https://groups.google.com/g/shinra2022-all">
+            参加リンク
+          </JoinButton>
         </p>
       </>
     ),
@@ -33,10 +42,30 @@ const getSteps = (regist: boolean): Step[] => [
     label: "3. #shinra2022というSlackチャンネルから参加する",
     description: (
       <>
-        <p>
-          #shinra2022チャンネル上部の「参加登録」ボタンを押してください。
-          参加登録を押すと、別途で次の手順へ進むようになります。
-        </p>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+          }}
+        >
+          <p>
+            #shinra2022チャンネル上部の「参加登録」ボタンを押してください。
+            参加登録を押すと、別途で次の手順へ進むようになります。
+          </p>
+          <MediaBox
+            height={445}
+            width={854}
+            style={{ margin: "0 auto", width: "75%" }}
+          >
+            <img
+              alt="register"
+              src="/register.png"
+              style={{
+                margin: 0,
+              }}
+            />
+          </MediaBox>
+        </div>
       </>
     ),
   },
