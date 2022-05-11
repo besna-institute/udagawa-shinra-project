@@ -108,7 +108,7 @@ const Join: NextPage = () => {
         }}
         theme="white"
       >
-        <h2 id="result-submission-flow">結果提出の流れ</h2>
+        <h2 id="result-submission-flow">タスク参加の流れ</h2>
         <p>以下の手順に従ってコミュニティへ参加してください。</p>
       </ContentBox>
       <div
