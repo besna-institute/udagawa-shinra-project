@@ -132,7 +132,7 @@ const attributeExtractionRows: DataFormatTableRow[] = [
   {
     label: <>text_offset</>,
     description: <>PlainText版でのオフセット情報</>,
-    note: <>ちらか一方のみでOK</>,
+    note: <>どちらか一方のみでOK</>,
     slot: "推測対象",
   },
   {
