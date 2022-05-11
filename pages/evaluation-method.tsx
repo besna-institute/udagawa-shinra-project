@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { Divider, Paper } from "@mui/material";
+import { Paper } from "@mui/material";
 import { BasicTabs, ContentBox, TabItem } from "../components";
 import Link from "next/link";
 
