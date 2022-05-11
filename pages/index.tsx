@@ -375,7 +375,7 @@ const Home: NextPage = () => {
           "mid-content-left mid-content-right"
           "divider1         divider1"
           "task-detail      task-detail"
-          "reference        reference"
+          "faq              faq"
           "task-list        task-list" / minmax(0, 4fr) minmax(0, 3fr)
         `,
         display: "grid",
@@ -943,6 +943,16 @@ const Home: NextPage = () => {
           </div>
         </div>
       </ContentBox> */}
+      <ContentBox
+        style={{
+          gridArea: "faq",
+        }}
+        theme="gray"
+      >
+        <h2 id="faq">FAQ</h2>
+        <p>Q. リーダーボードへの参加は義務ですか？</p>
+        <p>A. 義務ではありませんが、ぜひご参加ください。</p>
+      </ContentBox>
       <ContentBox
         style={{
           gridArea: "task-list",
