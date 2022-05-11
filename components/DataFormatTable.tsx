@@ -41,7 +41,7 @@ const theme: Record<Slot, CSSProperties> = {
 export const DataFormatTable = ({ rows }: Props) => {
   return (
     <TableContainer component={Paper}>
-      <Table aria-label="data format table">
+      <Table aria-label="data format table" sx={{ tableLayout: "fixed" }}>
         <TableHead>
           <TableRow>
             <TableCell align="center">{head.label}</TableCell>
