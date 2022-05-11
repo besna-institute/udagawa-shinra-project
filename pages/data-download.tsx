@@ -107,7 +107,7 @@ const subtaskUniqueItems: TabItem[] = [
                     target="_blank"
                     rel="noreferrer"
                   >
-                    教師データ (JSONL)
+                    教師データ（JSONL）
                   </a>,
                   <>
                     <SingleLineList
@@ -148,7 +148,7 @@ const subtaskUniqueItems: TabItem[] = [
                     target="_blank"
                     rel="noreferrer"
                   >
-                    本評価の入力データ (JSONL)
+                    本評価の入力データ（JSONL）
                   </a>,
                   <>
                     <SingleLineList
@@ -189,7 +189,7 @@ const subtaskUniqueItems: TabItem[] = [
                     target="_blank"
                     rel="noreferrer"
                   >
-                    リーダボード入力データ (JSONL)
+                    リーダボード入力データ（JSONL）
                   </a>,
                   <>
                     <SingleLineList
@@ -272,9 +272,9 @@ const subtaskUniqueItems: TabItem[] = [
             <>
               <SingleLineList
                 items={[
-                  <a key="JSONL" href="" target="_blank" rel="noreferrer">
-                    ベースラインデータ（属性値抽出タスクのみの参加者用）（TBA）
-                  </a>,
+                  <>
+                    ベースラインデータ（属性値抽出タスクのみの参加者用）（JSONL）（TBA）
+                  </>,
                   <>
                     <SingleLineList
                       items={[
@@ -308,9 +308,7 @@ const subtaskUniqueItems: TabItem[] = [
             <>
               <SingleLineList
                 items={[
-                  <a key="JSONL" href="" target="_blank" rel="noreferrer">
-                    リーダーボードの入力データ（TBA）
-                  </a>,
+                  <>リーダーボードの入力データ（JSONL）（TBA）</>,
                   <>
                     <SingleLineList
                       items={[
@@ -391,9 +389,9 @@ const subtaskUniqueItems: TabItem[] = [
             <>
               <SingleLineList
                 items={[
-                  <a key="JSONL" href="" target="_blank" rel="noreferrer">
-                    ベースラインデータ（属性値抽出タスクのみの参加者用）（TBA）
-                  </a>,
+                  <>
+                    ベースラインデータ（属性値抽出タスクのみの参加者用）（JSONL）（TBA）
+                  </>,
                   <>
                     <SingleLineList
                       items={[
@@ -427,9 +425,7 @@ const subtaskUniqueItems: TabItem[] = [
             <>
               <SingleLineList
                 items={[
-                  <a key="JSONL" href="" target="_blank" rel="noreferrer">
-                    リーダーボードの入力データ（TBA）
-                  </a>,
+                  <>リーダーボードの入力データ（JSONL）（TBA）</>,
                   <>
                     <SingleLineList
                       items={[
