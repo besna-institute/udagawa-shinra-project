@@ -86,7 +86,7 @@ const ResultSubmission: NextPage = () => {
       >
         <iframe
           id="leaderboard"
-          src="https://leaderboard2022.shinra-project.info/leaderboard-dev/"
+          src="https://leaderboard2022.shinra-project.info/leaderboard/"
         />
       </div>
     </Paper>

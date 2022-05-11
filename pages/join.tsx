@@ -127,7 +127,7 @@ const Join: NextPage = () => {
           <iframe
             style={{ maxHeight: "913px", height: "913px" }}
             id="leaderboard"
-            src="https://leaderboard2022.shinra-project.info/leaderboard-dev/?regist=true"
+            src="https://leaderboard2022.shinra-project.info/leaderboard/?regist=true"
           />
         </div>
       ) : (
