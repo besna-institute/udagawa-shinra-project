@@ -59,7 +59,7 @@ export const TextStepper = ({ steps }: Props) => {
   return (
     <div>
       <h3 style={{ padding: "1.5rem" }}>{steps[activeStep].label}</h3>
-      <ContentBox theme="gray" style={{ minHeight: "9rem" }}>
+      <ContentBox theme="gray" style={{ minHeight: "10.5rem" }}>
         {steps[activeStep].description}
       </ContentBox>
       <MobileStepper
