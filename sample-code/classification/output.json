@@ -1,0 +1,12 @@
+{
+  "page_id": "8881",
+  "title": "漢方医学",
+  "ENEs": {
+    "AUTO.{your_system}.{yyyyMM}": [
+      {
+        "prob": 0.94,
+        "ENE": "1.7.19.13"
+      }
+    ]
+  }
+}
