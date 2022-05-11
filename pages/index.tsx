@@ -713,9 +713,16 @@ const Home: NextPage = () => {
               { title: "最終報告会", time: "2022年12月" },
             ]}
           />
-          <p>
-            <Link href="/join">タスク参加の流れはこちら</Link>
-          </p>
+          <div
+            style={{
+              display: "flex",
+              flexFlow: "wrap",
+              justifyContent: "space-evenly",
+              padding: "0 1rem",
+            }}
+          >
+            <NavigationLink href="/join">タスク参加の流れ</NavigationLink>
+          </div>
         </ContentBox>
         <ContentBox
           style={{
