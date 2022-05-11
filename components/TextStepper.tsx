@@ -23,7 +23,8 @@ export const TextStepper = ({ steps }: Props) => {
   useEffect(() => {
     if (router.isReady && queryLoaded) {
       const query = router.query;
-      const step = Number(query.slide) - 1;
+      const slide = Number(query.slide);
+      const step = Number.isNaN(slide) ? 0 : slide - 1;
       if (step != activeStep) {
         const pathname = router.pathname;
         router.push({
@@ -39,7 +40,8 @@ export const TextStepper = ({ steps }: Props) => {
   useEffect(() => {
     if (router.isReady && !queryLoaded) {
       const query = router.query;
-      const step = Number(query.slide) - 1;
+      const slide = Number(query.slide);
+      const step = Number.isNaN(slide) ? 0 : slide - 1;
       setActiveStep(step);
       setQueryLoaded(true);
     }
@@ -52,6 +54,8 @@ export const TextStepper = ({ steps }: Props) => {
   const handleBack = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
+
+  console.log(steps, activeStep);
 
   return (
     <div>
