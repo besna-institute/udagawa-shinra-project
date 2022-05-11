@@ -327,7 +327,7 @@ const DataFormat: NextPage<Props> = (props) => {
         }}
         theme="white"
       >
-        <h2 id="data-format">結果の評価方法</h2>
+        <h2 id="data-format">データ形式について</h2>
         <BasicTabs
           ariaLabel="data format tabs"
           tabs={getDataFormatItems(props.code)}
