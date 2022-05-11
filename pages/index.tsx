@@ -447,7 +447,7 @@ const Home: NextPage = () => {
           style={{
             gridArea: "whatsnew",
             overflow: "auto",
-            maxHeight: "14rem",
+            maxHeight: "20rem",
           }}
           theme="green"
         >
@@ -519,7 +519,7 @@ const Home: NextPage = () => {
           gridArea: "leader-board",
           gridColumn: "span 2",
         }}
-        theme="gray"
+        theme="white"
       >
         <iframe
           id="leaderboard"
