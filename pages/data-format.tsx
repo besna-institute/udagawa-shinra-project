@@ -48,7 +48,7 @@ const classificationRows: DataFormatTableRow[] = [
   {
     label: <>ENEs</>,
     description: <>予測(正解)カテゴリ</>,
-    note: <>推測対象</>,
+    note: <></>,
   },
   {
     label: <>HAND.AIP.202204</>,
@@ -67,11 +67,13 @@ const classificationRows: DataFormatTableRow[] = [
         {"{"}YOUR_SYSTEM{"}"}に参加者のシステム名を入れる
       </>
     ),
+    slot: "演繹推論",
   },
   {
     label: <>prob</>,
     description: <>確率スコア</>,
     note: <>推測対象</>,
+    slot: "推測対象",
   },
   {
     label: <>ENE</>,
@@ -91,6 +93,7 @@ const classificationRows: DataFormatTableRow[] = [
         </a>
       </>
     ),
+    slot: "推測対象",
   },
 ];
 const attributeExtractionRows: DataFormatTableRow[] = [
