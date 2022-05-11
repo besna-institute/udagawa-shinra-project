@@ -137,17 +137,21 @@ const subtaskUniqueItems: TabItem[] = [
               />
             </>,
             <>
-              本評価の入力データ
+              ベースラインデータ
               <InlineList
                 items={[
                   <a key="JSONL" href="">
                     JSONL
                   </a>,
-                  <a key="CirrusSearchDump" href="">
-                    CirrusSearchDump(2019)
-                  </a>,
-                  <a key="WikiDump" href="">
-                    WikiDump(2019)
+                ]}
+              />
+            </>,
+            <>
+              リーダボード入力データ
+              <InlineList
+                items={[
+                  <a key="JSONL" href="">
+                    JSONL
                   </a>,
                 ]}
               />
@@ -165,7 +169,7 @@ const subtaskUniqueItems: TabItem[] = [
           divider
           items={[
             <>
-              教師データ
+              サンプルデータ
               <InlineList
                 items={[
                   <a key="JSONL" href="">
@@ -176,6 +180,26 @@ const subtaskUniqueItems: TabItem[] = [
                   </a>,
                   <a key="WikiDump" href="">
                     WikiDump(2019)
+                  </a>,
+                ]}
+              />
+            </>,
+            <>
+              ベースラインデータ
+              <InlineList
+                items={[
+                  <a key="JSONL" href="">
+                    JSONL
+                  </a>,
+                ]}
+              />
+            </>,
+            <>
+              リーダボード入力データ
+              <InlineList
+                items={[
+                  <a key="JSONL" href="">
+                    JSONL
                   </a>,
                 ]}
               />
@@ -207,7 +231,7 @@ const DataDownload: NextPage = () => {
         }}
         theme="green"
       >
-        <h2 id="subtask-common">サブタスク共通データ（Wikipedia）</h2>
+        <h2 id="subtask-common">サブタスク共通データ</h2>
         <SingleLineList items={subtaskCommonItems} divider />
       </ContentBox>
       <ContentBox
