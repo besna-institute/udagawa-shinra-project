@@ -52,7 +52,7 @@ const evaluationMethodItems: TabItem[] = [
     label: "リンキング",
     panel: (
       <>
-        <p>TBA</p>
+        <p>TBA（基本的にはRecallとPrecisionによる評価を考えています）</p>
       </>
     ),
   },
