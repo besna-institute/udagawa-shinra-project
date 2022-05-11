@@ -16,30 +16,34 @@ interface Props {
 export const TextStepper = ({ steps }: Props) => {
   const theme = useTheme();
   const router = useRouter();
-  const query = router.query;
-  const pathname = router.pathname;
-  const step = Number(query.slide) - 1;
   const [activeStep, setActiveStep] = useState(0);
   const [queryLoaded, setQueryLoaded] = useState(false);
   const maxSteps = steps.length;
 
   useEffect(() => {
     if (router.isReady && queryLoaded) {
-      router.push({
-        pathname,
-        query: {
-          ...router.query,
-          slide: activeStep + 1,
-        },
-      });
+      const query = router.query;
+      const step = Number(query.slide) - 1;
+      if (step != activeStep) {
+        const pathname = router.pathname;
+        router.push({
+          pathname,
+          query: {
+            ...router.query,
+            slide: activeStep + 1,
+          },
+        });
+      }
     }
-  }, [activeStep, queryLoaded]);
+  }, [activeStep, queryLoaded, router.query]);
   useEffect(() => {
     if (router.isReady && !queryLoaded) {
+      const query = router.query;
+      const step = Number(query.slide) - 1;
       setActiveStep(step);
       setQueryLoaded(true);
     }
-  }, [step, queryLoaded]);
+  }, [queryLoaded, router.isReady, router.query]);
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
