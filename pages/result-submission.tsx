@@ -84,7 +84,10 @@ const ResultSubmission: NextPage = () => {
           gridArea: "leaderboard",
         }}
       >
-        <h2>リーダーボード</h2>
+        <iframe
+          id="leaderboard"
+          src="https://leaderboard2022.shinra-project.info/leaderboard/"
+        />
       </div>
     </Paper>
   );
