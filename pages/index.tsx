@@ -447,7 +447,7 @@ const Home: NextPage = () => {
           style={{
             gridArea: "whatsnew",
             overflow: "auto",
-            maxHeight: "14rem",
+            maxHeight: "20rem",
           }}
           theme="green"
         >
