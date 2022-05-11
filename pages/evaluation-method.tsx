@@ -11,11 +11,6 @@ const evaluationMethodItems: TabItem[] = [
         <p>マイクロ平均F1スコアで評価します。</p>
         <p>image</p>
         <p>
-          自動評価のプログラムは
-          <a href="">こちら</a>
-          から入手できます。
-        </p>
-        <p>
           結果は
           <Link href="/result-submission">こちら</Link>
           からご提出ください。
