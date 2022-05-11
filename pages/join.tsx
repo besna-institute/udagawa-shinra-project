@@ -11,7 +11,10 @@ const getSteps = (regist: boolean): Step[] => [
     description: (
       <>
         <p>
-          下記のリーダーボードの左側のメニューから「ログイン・参加登録」を選択し、「ログイン」タブから登録時に記録したアクセストークンを用いてログインしてください。
+          メールにてイベントなどの随時アナウンスします。
+          <JoinButton href="https://groups.google.com/g/shinra2022-all">
+            参加リンク
+          </JoinButton>
         </p>
       </>
     ),
