@@ -519,7 +519,7 @@ const Home: NextPage = () => {
           gridArea: "leader-board",
           gridColumn: "span 2",
         }}
-        theme="gray"
+        theme="white"
       >
         <iframe
           id="leaderboard"
