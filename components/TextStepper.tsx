@@ -21,30 +21,31 @@ export const TextStepper = ({ steps }: Props) => {
   const maxSteps = steps.length;
 
   useEffect(() => {
-    if (router.isReady && queryLoaded) {
-      const query = router.query;
-      const slide = Number(query.slide);
-      const step = Number.isNaN(slide) ? 0 : slide - 1;
-      if (step != activeStep) {
-        const pathname = router.pathname;
-        router.push({
-          pathname,
-          query: {
-            ...router.query,
-            slide: activeStep + 1,
-          },
-        });
-      }
+    if (!router.isReady || !queryLoaded) {
+      return;
     }
-  }, [activeStep, queryLoaded, router.query]);
+    const query = router.query;
+    const slide = Number(query.slide);
+    const step = Number.isNaN(slide) ? 0 : slide - 1;
+    if (step != activeStep) {
+      router.push({
+        pathname: router.pathname,
+        query: {
+          ...router.query,
+          slide: activeStep + 1,
+        },
+      });
+    }
+  }, [activeStep, queryLoaded, router, router.query]);
   useEffect(() => {
-    if (router.isReady && !queryLoaded) {
-      const query = router.query;
-      const slide = Number(query.slide);
-      const step = Number.isNaN(slide) ? 0 : slide - 1;
-      setActiveStep(step);
-      setQueryLoaded(true);
+    if (!router.isReady || queryLoaded) {
+      return;
     }
+    const query = router.query;
+    const slide = Number(query.slide);
+    const step = Number.isNaN(slide) ? 0 : slide - 1;
+    setActiveStep(step);
+    setQueryLoaded(true);
   }, [queryLoaded, router.isReady, router.query]);
 
   const handleNext = () => {
@@ -54,8 +55,6 @@ export const TextStepper = ({ steps }: Props) => {
   const handleBack = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
-
-  console.log(steps, activeStep);
 
   return (
     <div>
