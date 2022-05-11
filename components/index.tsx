@@ -10,3 +10,5 @@ export { InlineList } from "./InlineList";
 export type { Props as Code } from "./CodeBlock";
 export { SingleLineList } from "./SingleLineList";
 export { NavigationLink } from "./NavigationLink";
+export { TextStepper } from "./TextStepper";
+export type { Step } from "./TextStepper";
