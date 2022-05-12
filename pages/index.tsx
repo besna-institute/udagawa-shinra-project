@@ -426,6 +426,7 @@ const Home: NextPage = () => {
           <iframe
             width={649}
             height={365}
+            loading="lazy"
             src="https://www.youtube.com/embed/lCYj3x6pu1w"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
@@ -489,6 +490,7 @@ const Home: NextPage = () => {
             >
               <MediaBox width={1300} height={731}>
                 <img
+                  loading="lazy"
                   alt="thumbnail-interview"
                   src="/thumbnail-interview.png"
                   style={{
@@ -522,6 +524,7 @@ const Home: NextPage = () => {
         theme="white"
       >
         <iframe
+          loading="lazy"
           id="leaderboard"
           src="https://leaderboard2022.shinra-project.info/leaderboard/"
         />
@@ -616,7 +619,11 @@ const Home: NextPage = () => {
         >
           <h2 id="overview">タスク概要</h2>
           <MediaBox width={921} height={436}>
-            <img src="/shinra2022-fig1.png" alt="shinra2022-fig1" />
+            <img
+              loading="lazy"
+              src="/shinra2022-fig1.png"
+              alt="shinra2022-fig1"
+            />
           </MediaBox>
           <p>
             <a href="http://shinra-project.info/?lang=ja">森羅プロジェクト</a>
@@ -627,7 +634,11 @@ const Home: NextPage = () => {
             Contribution（RbCC））」という枠組みで、評価型タスクとリソース構築を同時に進めています。
           </p>
           <MediaBox width={846} height={429}>
-            <img src="/shinra2022-fig2.png" alt="shinra2022-fig2" />
+            <img
+              loading="lazy"
+              src="/shinra2022-fig2.png"
+              alt="shinra2022-fig2"
+            />
           </MediaBox>
           <p>
             日本語構造化タスクは森羅プロジェクトで2018年から実施している日本語Wikipediaを対象とした情報抽出タスクで、今回が4回目となります。
@@ -639,7 +650,11 @@ const Home: NextPage = () => {
             End-to-Endタスクでは、以下の3つのステップを一気に実施することで、分類、属性抽出、リンクの複合タスクを実現し、相乗効果／End-to-Endで精度向上の可能性を探ります。
           </p>
           <MediaBox width={893} height={460}>
-            <img src="/shinra2022-fig3.png" alt="shinra2022-fig3" />
+            <img
+              loading="lazy"
+              src="/shinra2022-fig3.png"
+              alt="shinra2022-fig3"
+            />
           </MediaBox>
           <p>
             End-to-Endタスクの各ステップは過去の森羅プロジェクトと以下の関係にあります。
@@ -816,6 +831,7 @@ const Home: NextPage = () => {
         <h2 id="task-detail">タスク詳細</h2>
         <img
           alt="Categorization1"
+          loading="lazy"
           src="/Categorization1.png"
           style={{
             margin: 0,
@@ -823,6 +839,7 @@ const Home: NextPage = () => {
         />
         <img
           alt="Categorization2"
+          loading="lazy"
           src="/Categorization2.png"
           style={{
             margin: 0,
@@ -830,6 +847,7 @@ const Home: NextPage = () => {
         />
         <img
           alt="AttributeExtraction1"
+          loading="lazy"
           src="/AttributeExtraction1.png"
           style={{
             margin: 0,
@@ -837,6 +855,7 @@ const Home: NextPage = () => {
         />
         <img
           alt="AttributeExtraction2"
+          loading="lazy"
           src="/AttributeExtraction2.png"
           style={{
             margin: 0,
@@ -844,6 +863,7 @@ const Home: NextPage = () => {
         />
         <img
           alt="Linking1"
+          loading="lazy"
           src="/Linking1.png"
           style={{
             margin: 0,
@@ -851,6 +871,7 @@ const Home: NextPage = () => {
         />
         <img
           alt="Linking2"
+          loading="lazy"
           src="/Linking2.png"
           style={{
             margin: 0,

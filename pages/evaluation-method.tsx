@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import type { NextPage } from "next";
 import { Paper } from "@mui/material";
 import { BasicTabs, ContentBox, MediaBox, TabItem } from "../components";
@@ -12,6 +13,7 @@ const evaluationMethodItems: TabItem[] = [
         <MediaBox height={564} width={688} style={{ width: "50%" }}>
           <img
             alt="formula classification"
+            loading="lazy"
             src="/formula-classification.png"
             style={{
               margin: 0,
@@ -34,6 +36,7 @@ const evaluationMethodItems: TabItem[] = [
         <MediaBox height={607} width={829} style={{ width: "50%" }}>
           <img
             alt="formula classification"
+            loading="lazy"
             src="/formula-attribution-extraction.png"
             style={{
               margin: 0,

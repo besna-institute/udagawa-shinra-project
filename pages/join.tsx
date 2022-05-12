@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
 import { Alert, Paper } from "@mui/material";
@@ -59,6 +60,7 @@ const getSteps = (regist: boolean): Step[] => [
           >
             <img
               alt="register"
+              loading="lazy"
               src="/register.png"
               style={{
                 margin: 0,
