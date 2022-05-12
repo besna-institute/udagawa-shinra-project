@@ -650,7 +650,11 @@ const Home: NextPage = () => {
             End-to-Endタスクでは、以下の3つのステップを一気に実施することで、分類、属性抽出、リンクの複合タスクを実現し、相乗効果／End-to-Endで精度向上の可能性を探ります。
           </p>
           <MediaBox width={893} height={460}>
-            <img src="/shinra2022-fig3.png" alt="shinra2022-fig3" />
+            <img
+              loading="lazy"
+              src="/shinra2022-fig3.png"
+              alt="shinra2022-fig3"
+            />
           </MediaBox>
           <p>
             End-to-Endタスクの各ステップは過去の森羅プロジェクトと以下の関係にあります。
