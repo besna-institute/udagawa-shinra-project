@@ -5,6 +5,7 @@ export { ContentBox } from "./ContentBox";
 export { CommitteeList } from "./CommitteeList";
 export { DataFormatTable } from "./DataFormatTable";
 export type { DataFormatTableRow } from "./DataFormatTable";
+export { ExternalLink } from "./ExternalLink";
 export { MediaBox } from "./MediaBox";
 export { JoinButton } from "./JoinButton";
 export { ScheduleList } from "./ScheduleList";
