@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
-import { Divider, Paper } from "@mui/material";
-import { ContentBox, JoinButton, Step, TextStepper } from "../components";
+import { Paper } from "@mui/material";
+import { ContentBox, LeaderBoard, Step, TextStepper } from "../components";
 import Link from "next/link";
 
 const steps: Step[] = [
@@ -84,10 +84,7 @@ const ResultSubmission: NextPage = () => {
           gridArea: "leaderboard",
         }}
       >
-        <iframe
-          id="leaderboard"
-          src="https://leaderboard2022.shinra-project.info/leaderboard/"
-        />
+        <LeaderBoard />
       </div>
     </Paper>
   );

@@ -5,6 +5,7 @@ import { Alert, Paper } from "@mui/material";
 import {
   ContentBox,
   JoinButton,
+  LeaderBoard,
   MediaBox,
   Step,
   TextStepper,
@@ -155,11 +156,7 @@ const Join: NextPage = () => {
             gridArea: "leaderboard",
           }}
         >
-          <iframe
-            style={{ maxHeight: "913px", height: "913px" }}
-            id="leaderboard"
-            src="https://leaderboard2022.shinra-project.info/leaderboard/?regist=true"
-          />
+          <LeaderBoard regist style={{ maxHeight: "913px", height: "913px" }} />
         </div>
       ) : (
         ""

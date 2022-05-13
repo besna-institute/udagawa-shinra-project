@@ -3,6 +3,7 @@ import type { NextPage } from "next";
 import {
   CommitteeList,
   ContentBox,
+  LeaderBoard,
   MediaBox,
   JoinButton,
   NavigationLink,
@@ -11,7 +12,6 @@ import {
 } from "../components";
 import { useRef, useEffect, useState } from "react";
 import { Paper, Divider } from "@mui/material";
-import Link from "next/link";
 
 const newsItems = [
   <>
@@ -364,6 +364,7 @@ const Home: NextPage = () => {
       }
     }
   }, [maxHeight]);
+
   return (
     <Paper
       elevation={0}
@@ -523,11 +524,7 @@ const Home: NextPage = () => {
         }}
         theme="white"
       >
-        <iframe
-          loading="lazy"
-          id="leaderboard"
-          src="https://leaderboard2022.shinra-project.info/leaderboard/"
-        />
+        <LeaderBoard />
         <div
           style={{
             display: "flex",
