@@ -356,6 +356,10 @@ const Home: NextPage = () => {
   const leftRef = useRef<HTMLDivElement>(null);
   const leaderboardRef = useRef<HTMLIFrameElement>(null);
   const [maxHeight, setMaxHeight] = useState<number>(2500);
+  const [leaderboardStyle, setLeaderboardStyle] = useRef<HTMLIFrameElement>({
+    maxHeight: "318px",
+    height: "318px",
+  });
 
   useEffect(() => {
     if (leftRef.current) {
@@ -371,7 +375,10 @@ const Home: NextPage = () => {
       window.addEventListener("message", (event) => {
         if (event.origin !== "https://leaderboard2022.shinra-project.info")
           return;
-        elem.style.maxHeight = event.data.height;
+        setLeaderboardStyle({
+          height: event.data.height,
+          maxHeight: event.data.height,
+        });
         elem.height = event.data.height;
       });
     }
@@ -538,6 +545,7 @@ const Home: NextPage = () => {
       >
         <iframe
           ref={leaderboardRef}
+          style={leaderboardStyle}
           loading="lazy"
           id="leaderboard"
           src="https://leaderboard2022.shinra-project.info/leaderboard/"
