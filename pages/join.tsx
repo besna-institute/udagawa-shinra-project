@@ -5,12 +5,13 @@ import { Alert, Paper } from "@mui/material";
 import {
   ContentBox,
   JoinButton,
+  LeaderBoard,
   MediaBox,
   Step,
   TextStepper,
 } from "../components";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 const getSteps = (regist: boolean): Step[] => [
   {
@@ -110,7 +111,6 @@ const getSteps = (regist: boolean): Step[] => [
 const Join: NextPage = () => {
   const router = useRouter();
   const [isRegist, setIsRegist] = useState(false);
-  const leaderboardRef = useRef<HTMLIFrameElement>(null);
 
   useEffect(() => {
     if (router.isReady) {
@@ -119,17 +119,6 @@ const Join: NextPage = () => {
       setIsRegist(regist);
     }
   }, [router.isReady, router.query]);
-  useEffect(() => {
-    const elem = leaderboardRef.current;
-    if (elem) {
-      window.addEventListener("message", (event) => {
-        if (event.origin !== "https://leaderboard2022.shinra-project.info")
-          return;
-        elem.style.maxHeight = event.data.height;
-        elem.height = event.data.height;
-      });
-    }
-  });
 
   return (
     <Paper
@@ -167,12 +156,7 @@ const Join: NextPage = () => {
             gridArea: "leaderboard",
           }}
         >
-          <iframe
-            ref={leaderboardRef}
-            style={{ maxHeight: "913px", height: "913px" }}
-            id="leaderboard"
-            src="https://leaderboard2022.shinra-project.info/leaderboard/?regist=true"
-          />
+          <LeaderBoard style={{ maxHeight: "913px", height: "913px" }} />
         </div>
       ) : (
         ""

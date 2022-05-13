@@ -1,8 +1,7 @@
 import type { NextPage } from "next";
 import { Paper } from "@mui/material";
-import { ContentBox, Step, TextStepper } from "../components";
+import { ContentBox, LeaderBoard, Step, TextStepper } from "../components";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
 
 const steps: Step[] = [
   {
@@ -46,19 +45,6 @@ const steps: Step[] = [
 ];
 
 const ResultSubmission: NextPage = () => {
-  const leaderboardRef = useRef<HTMLIFrameElement>(null);
-
-  useEffect(() => {
-    const elem = leaderboardRef.current;
-    if (elem) {
-      window.addEventListener("message", (event) => {
-        if (event.origin !== "https://leaderboard2022.shinra-project.info")
-          return;
-        elem.style.maxHeight = event.data.height;
-        elem.height = event.data.height;
-      });
-    }
-  });
   return (
     <Paper
       elevation={0}
@@ -98,11 +84,7 @@ const ResultSubmission: NextPage = () => {
           gridArea: "leaderboard",
         }}
       >
-        <iframe
-          ref={leaderboardRef}
-          id="leaderboard"
-          src="https://leaderboard2022.shinra-project.info/leaderboard/"
-        />
+        <LeaderBoard />
       </div>
     </Paper>
   );

@@ -3,15 +3,15 @@ import type { NextPage } from "next";
 import {
   CommitteeList,
   ContentBox,
+  LeaderBoard,
   MediaBox,
   JoinButton,
   NavigationLink,
   SingleLineList,
   ScheduleList,
 } from "../components";
-import { useRef, useEffect, useState, CSSProperties } from "react";
+import { useRef, useEffect, useState } from "react";
 import { Paper, Divider } from "@mui/material";
-import Link from "next/link";
 
 const newsItems = [
   <>
@@ -354,12 +354,7 @@ const otherRelatedResearch = [
 
 const Home: NextPage = () => {
   const leftRef = useRef<HTMLDivElement>(null);
-  const leaderboardRef = useRef<HTMLIFrameElement>(null);
   const [maxHeight, setMaxHeight] = useState<number>(2500);
-  const [leaderboardStyle, setLeaderboardStyle] = useState<CSSProperties>({
-    maxHeight: "318px",
-    height: "318px",
-  });
 
   useEffect(() => {
     if (leftRef.current) {
@@ -369,20 +364,6 @@ const Home: NextPage = () => {
       }
     }
   }, [maxHeight]);
-  useEffect(() => {
-    const elem = leaderboardRef.current;
-    if (elem) {
-      window.addEventListener("message", (event) => {
-        if (event.origin !== "https://leaderboard2022.shinra-project.info")
-          return;
-        setLeaderboardStyle({
-          height: event.data.height,
-          maxHeight: event.data.height,
-        });
-        elem.height = event.data.height;
-      });
-    }
-  });
 
   return (
     <Paper
@@ -543,13 +524,7 @@ const Home: NextPage = () => {
         }}
         theme="white"
       >
-        <iframe
-          ref={leaderboardRef}
-          style={leaderboardStyle}
-          loading="lazy"
-          id="leaderboard"
-          src="https://leaderboard2022.shinra-project.info/leaderboard/"
-        />
+        <LeaderBoard />
         <div
           style={{
             display: "flex",
