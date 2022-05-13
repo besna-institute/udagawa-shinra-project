@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
-import { Divider, Paper } from "@mui/material";
-import { ContentBox, JoinButton, Step, TextStepper } from "../components";
+import { Paper } from "@mui/material";
+import { ContentBox, Step, TextStepper } from "../components";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 

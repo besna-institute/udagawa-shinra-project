@@ -10,7 +10,7 @@ import {
   TextStepper,
 } from "../components";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const getSteps = (regist: boolean): Step[] => [
   {
