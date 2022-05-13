@@ -156,7 +156,7 @@ const Join: NextPage = () => {
             gridArea: "leaderboard",
           }}
         >
-          <LeaderBoard style={{ maxHeight: "913px", height: "913px" }} />
+          <LeaderBoard regist style={{ maxHeight: "913px", height: "913px" }} />
         </div>
       ) : (
         ""
