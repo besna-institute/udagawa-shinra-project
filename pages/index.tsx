@@ -9,7 +9,7 @@ import {
   SingleLineList,
   ScheduleList,
 } from "../components";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState, CSSProperties } from "react";
 import { Paper, Divider } from "@mui/material";
 import Link from "next/link";
 
@@ -356,7 +356,7 @@ const Home: NextPage = () => {
   const leftRef = useRef<HTMLDivElement>(null);
   const leaderboardRef = useRef<HTMLIFrameElement>(null);
   const [maxHeight, setMaxHeight] = useState<number>(2500);
-  const [leaderboardStyle, setLeaderboardStyle] = useRef<HTMLIFrameElement>({
+  const [leaderboardStyle, setLeaderboardStyle] = useState<CSSProperties>({
     maxHeight: "318px",
     height: "318px",
   });
