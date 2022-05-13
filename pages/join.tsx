@@ -110,6 +110,7 @@ const getSteps = (regist: boolean): Step[] => [
 const Join: NextPage = () => {
   const router = useRouter();
   const [isRegist, setIsRegist] = useState(false);
+  const leaderboardRef = useRef<HTMLIFrameElement>(null);
 
   useEffect(() => {
     if (router.isReady) {
@@ -118,6 +119,17 @@ const Join: NextPage = () => {
       setIsRegist(regist);
     }
   }, [router.isReady, router.query]);
+  useEffect(() => {
+    const elem = leaderboardRef.current;
+    if (elem) {
+      window.addEventListener("message", (event) => {
+        if (event.origin !== "https://leaderboard2022.shinra-project.info")
+          return;
+        elem.style.maxHeight = event.data.height;
+        elem.height = event.data.height;
+      });
+    }
+  });
 
   return (
     <Paper
@@ -156,6 +168,7 @@ const Join: NextPage = () => {
           }}
         >
           <iframe
+            ref={leaderboardRef}
             style={{ maxHeight: "913px", height: "913px" }}
             id="leaderboard"
             src="https://leaderboard2022.shinra-project.info/leaderboard/?regist=true"

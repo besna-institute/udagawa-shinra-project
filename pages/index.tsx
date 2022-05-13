@@ -354,6 +354,7 @@ const otherRelatedResearch = [
 
 const Home: NextPage = () => {
   const leftRef = useRef<HTMLDivElement>(null);
+  const leaderboardRef = useRef<HTMLIFrameElement>(null);
   const [maxHeight, setMaxHeight] = useState<number>(2500);
 
   useEffect(() => {
@@ -364,6 +365,18 @@ const Home: NextPage = () => {
       }
     }
   }, [maxHeight]);
+  useEffect(() => {
+    const elem = leaderboardRef.current;
+    if (elem) {
+      window.addEventListener("message", (event) => {
+        if (event.origin !== "https://leaderboard2022.shinra-project.info")
+          return;
+        elem.style.maxHeight = event.data.height;
+        elem.height = event.data.height;
+      });
+    }
+  });
+
   return (
     <Paper
       elevation={0}
@@ -524,6 +537,7 @@ const Home: NextPage = () => {
         theme="white"
       >
         <iframe
+          ref={leaderboardRef}
           loading="lazy"
           id="leaderboard"
           src="https://leaderboard2022.shinra-project.info/leaderboard/"
