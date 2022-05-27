@@ -1019,80 +1019,101 @@ const Home: NextPage = () => {
         theme="gray"
       >
         <h2 id="task-list">過去の共有タスク</h2>
-        <ul>
-          <li>
-            <strong>
-              <ExternalLink href="http://shinra-project.info/shinra2021ml/?lang=en">
-                SHINRA2021-MLタスク
-              </ExternalLink>
-            </strong>
-            <ul>
-              <li>
-                30言語のWikipediaページを拡張固有表現に分類するタスクです。SHINRA2020-MLの継続で、さらなる精度向上を目指します。
-              </li>
-            </ul>
-          </li>
-          <li>
-            <strong>
-              <ExternalLink href="http://shinra-project.info/shinra2021linkjp/?lang=ja">
-                SHINRA2021-LinkJPタスク
-              </ExternalLink>
-            </strong>
-            <ul>
-              <li>
-                森羅2021-LinkJPはエンティティーの属性値を該当するWikipediaページに紐づけるタスクです。
-              </li>
-            </ul>
-          </li>
-          <li>
-            <strong>
-              <ExternalLink href="http://shinra-project.info/shinra2020ml/?lang=ja">
-                SHINRA2020-MLタスク
-              </ExternalLink>
-            </strong>
-            <ul>
-              <li>
-                30言語のWikipediaを拡張固有表現に分類するタスクです。トレーニングデータは分類された日本語Wikipediaの項目と日本語から各言語への言語間リンクを利用して作成します。日本語からの言語間リンクがないWikipediaページを分類するタスクです。
-              </li>
-            </ul>
-          </li>
-          <li>
-            <strong>
-              <ExternalLink href="http://shinra-project.info/shinra2020jp/?lang=ja">
-                森羅2020-JPタスク
-              </ExternalLink>
-            </strong>
-            <ul>
-              <li>
-                森羅2019に対し新たに施設名、イベント名の47種類の拡張固有表現カテゴリーを加えた82種類のカテゴリーについて、Wikipedia記事中の対応する記述部分にアノテーションを行うタスクです。
-              </li>
-            </ul>
-          </li>
-          <li>
-            <strong>
-              <ExternalLink href="http://shinra-project.info/shinra2019/?lang=ja">
-                森羅2019-JPタスク
-              </ExternalLink>
-            </strong>
-            <ul>
-              <li>
-                森羅2018に対し新たに組織名、地形名の30種類の拡張固有表現カテゴリーを加えた35種類のカテゴリーについて、Wikipedia記事中の対応する記述部分にアノテーションを行うタスクです。
-              </li>
-            </ul>
-          </li>
-          <li>
-            <strong>
-              <ExternalLink href="http://shinra-project.info/shinra2018/?lang=ja">
-                森羅2018-JPタスク
-              </ExternalLink>
-            </strong>
-            <ul>
-              <li>
-                5種類の拡張固有表現カテゴリーについて、それぞれのカテゴリーに分類されたWikipedia記事の文書中から、属性値を抽出する抽出タスクです。
-              </li>
-            </ul>
-          </li>
-        </ul>
+        <SingleLineList
+          divider
+          items={[
+            <>
+              <strong>
+                <ExternalLink href="http://shinra-project.info/shinra2021ml/?lang=en">
+                  SHINRA2021-MLタスク
+                </ExternalLink>
+              </strong>
+              <SingleLineList
+                disablePadding
+                items={[
+                  <>
+                    30言語のWikipediaページを拡張固有表現に分類するタスクです。SHINRA2020-MLの継続で、さらなる精度向上を目指します。
+                  </>,
+                ]}
+              />
+            </>,
+            <>
+              <strong>
+                <ExternalLink href="http://shinra-project.info/shinra2021linkjp/?lang=ja">
+                  SHINRA2021-LinkJPタスク
+                </ExternalLink>
+              </strong>
+              <SingleLineList
+                disablePadding
+                items={[
+                  <>
+                    森羅2021-LinkJPはエンティティーの属性値を該当するWikipediaページに紐づけるタスクです。
+                  </>,
+                ]}
+              />
+            </>,
+            <>
+              <strong>
+                <ExternalLink href="http://shinra-project.info/shinra2020ml/?lang=ja">
+                  SHINRA2020-MLタスク
+                </ExternalLink>
+              </strong>
+              <SingleLineList
+                disablePadding
+                items={[
+                  <>
+                    30言語のWikipediaを拡張固有表現に分類するタスクです。トレーニングデータは分類された日本語Wikipediaの項目と日本語から各言語への言語間リンクを利用して作成します。日本語からの言語間リンクがないWikipediaページを分類するタスクです。
+                  </>,
+                ]}
+              />
+            </>,
+            <>
+              <strong>
+                <ExternalLink href="http://shinra-project.info/shinra2020jp/?lang=ja">
+                  森羅2020-JPタスク
+                </ExternalLink>
+              </strong>
+              <SingleLineList
+                disablePadding
+                items={[
+                  <>
+                    森羅2019に対し新たに施設名、イベント名の47種類の拡張固有表現カテゴリーを加えた82種類のカテゴリーについて、Wikipedia記事中の対応する記述部分にアノテーションを行うタスクです。
+                  </>,
+                ]}
+              />
+            </>,
+            <>
+              <strong>
+                <ExternalLink href="http://shinra-project.info/shinra2019/?lang=ja">
+                  森羅2019-JPタスク
+                </ExternalLink>
+              </strong>
+              <SingleLineList
+                disablePadding
+                items={[
+                  <>
+                    森羅2018に対し新たに組織名、地形名の30種類の拡張固有表現カテゴリーを加えた35種類のカテゴリーについて、Wikipedia記事中の対応する記述部分にアノテーションを行うタスクです。
+                  </>,
+                ]}
+              />
+            </>,
+            <>
+              <strong>
+                <ExternalLink href="http://shinra-project.info/shinra2018/?lang=ja">
+                  森羅2018-JPタスク
+                </ExternalLink>
+              </strong>
+              <SingleLineList
+                disablePadding
+                items={[
+                  <>
+                    5種類の拡張固有表現カテゴリーについて、それぞれのカテゴリーに分類されたWikipedia記事の文書中から、属性値を抽出する抽出タスクです。
+                  </>,
+                ]}
+              />
+            </>,
+          ]}
+        />
       </ContentBox>
     </Paper>
   );
