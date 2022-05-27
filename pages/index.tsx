@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import type { NextPage } from "next";
 import {
+  Answer,
   CommitteeList,
   ContentBox,
   ExternalLink,
@@ -11,6 +12,7 @@ import {
   NavigationLink,
   SingleLineList,
   ScheduleList,
+  Question,
 } from "../components";
 import { useRef, useEffect, useState } from "react";
 import { Paper, Divider } from "@mui/material";
@@ -911,106 +913,108 @@ const Home: NextPage = () => {
         theme="gray"
       >
         <h2 id="faq">FAQ</h2>
-        <h3 id="faq_community">
-          コミュニティ(slack, メーリングリスト)について：
-        </h3>
-        <p>
-          Q. プロジェクトのslackはタスク参加者限定ですか？
-          <br />
-          A.
-          森羅のslackはタスク参加の有無に関わらず、どなたでもご参加いただけます。
-          データセット、タスク等に関するアナウンスや議論を行い、ご質問も受け付けております。
-          プロジェクトにご興味のある方は、ぜひご参加ください。
-        </p>
-        <h3 id="faq_join">プロジェクト/タスクへの参加について：</h3>
-        <p>
-          Q.
-          タスクに参加するかどうか迷っています。いつまでに申し込めば良いですか？
-          <br />
-          A.
-          タスク参加について事前の申し込みは不要です。タスクの〆切までに実行結果を提出していただければ、参加とみなします。
-          プロジェクトのタスク関連のアナウンスはslackとメーリングリストで行いますので、タスク参加が未定の場合もご参加ください。
-          タスク参加の流れについては
-          <InternalLink href="/join">こちら</InternalLink>
-          をご覧ください。
-        </p>
-        <p>
-          Q. プロジェクト参加には契約が必要ですか？（副業に該当しますか？）
-          <br />
-          A.
-          基本的にはプロジェクトへの参加による報酬はありません（学生の方のアルバイト等を除く）。
-          副業等には該当せず、特に契約は必要ありません。
-        </p>
-        <p>
-          Q. タスクには賞金がありますか？
-          <br />
-          A. 賞金については予定しておりません。
-        </p>
-        <p>
-          Q. 個人でタスクに参加することは可能ですか？
-          <br />
-          A.
-          企業にお勤めの方が個人として参加を希望される場合、当プロジェクトとしては特に問題ありません。勤務先でご確認ください。
-        </p>
-        <p>
-          Q. タスクに参加した場合、参加システムは公開する必要がありますか？
-          <br />
-          A.
-          公開は必須ではありませんが、もし可能でしたらご検討いただけるとありがたいです。
-        </p>
-        <h3 id="faq_data">公開データについて：</h3>
-        <p>
-          Q. 公開データを利用するには契約が必要ですか？
-          <br />
-          A.
-          プロジェクトとの契約は特に必要ありません。ただし、公開データはWikipediaの二次的著作物であり、クリエイティブ・コモンズ
-          表示・継承ライセンス(
-          <ExternalLink href="https://creativecommons.org/licenses/by-sa/3.0/legalcode">
-            CC BY-SA 3.0
-          </ExternalLink>
-          )を継承することにご注意ください。
-          <br />
-          参考：
-          <ExternalLink href="https://ja.wikipedia.org/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%82%92%E4%BA%8C%E6%AC%A1%E5%88%A9%E7%94%A8%E3%81%99%E3%82%8B#%E8%A1%A8%E7%A4%BA%E4%BE%8B">
-            Wikipedia:Wikipediaを二次利用する
-          </ExternalLink>
-          データ利用による研究成果については森羅2022実行委員までお知らせいただけますよう、お願いいたします。
-          <br />
-          実行委員宛メール：shinra2022-info@googlegroups.com
-        </p>
-        <p>
-          Q. 公開データを利用するにはタスク参加が必要ですか？
-          <br />
-          A.
-          タスクに参加されない場合も公開データの利用は可能です。タスク以外の研究等への利用もぜひご検討ください。
-          <br />
-          データの利用については「公開データを利用するには契約が必要ですか？」のQAもご確認ください。
-          <br />
-          データセット、タスク等に関するアナウンスや議論は森羅のslackで行います。ご質問も受け付けておりますので、ぜひご参加ください。
-        </p>
-        <p>
-          Q. 企業からの参加ですが、必ず発表しなければならないでしょうか？
-          <br />
-          A. 発表の義務はありません。
-        </p>
-        <p>
-          Q.
-          Wikipedia全件を対象にするとのことですが、計算機リソースに不安があります。
-          <br />
-          A. 計算機リソースなどについては相談に乗ります。Slack(
-          <ExternalLink href="https://join.slack.com/t/shinra2022/shared_invite/zt-14qkpf21i-lQNKlT0aIOU5We7xlZBqfQ">
-            招待リンク
-          </ExternalLink>
-          )などでお気軽にご相談ください。
-        </p>
-        <p>
-          Q. リーダーボードへの参加は義務ですか？
-          <br />
-          A. 義務ではありませんが、ぜひご参加ください。
-        </p>
-        Q. リーダーボードへの参加は義務ですか？
-        <br />
-        A. 義務ではありませんが、ぜひご参加ください。
+        <SingleLineList
+          divider
+          items={[
+            <>
+              <h3 id="faq_community">
+                コミュニティ(Slack, メーリングリスト)について
+              </h3>
+              <dl>
+                <Question>
+                  プロジェクトのSlackはタスク参加者限定ですか？
+                </Question>
+                <Answer>
+                  森羅のSlackはタスク参加の有無に関わらず、どなたでもご参加いただけます。
+                  データセット、タスク等に関するアナウンスや議論を行い、ご質問も受け付けております。
+                  プロジェクトにご興味のある方は、ぜひご参加ください。
+                </Answer>
+              </dl>
+            </>,
+            <>
+              <h3 id="faq_join">プロジェクト/タスクへの参加について</h3>
+              <dl>
+                <Question>
+                  タスクに参加するかどうか迷っています。いつまでに申し込めば良いですか？
+                </Question>
+                <Answer>
+                  タスク参加について事前の申し込みは不要です。タスクの〆切までに実行結果を提出していただければ、参加とみなします。
+                  プロジェクトのタスク関連のアナウンスはslackとメーリングリストで行いますので、タスク参加が未定の場合もご参加ください。
+                  タスク参加の流れについては
+                  <InternalLink href="/join">こちら</InternalLink>
+                  をご覧ください。
+                </Answer>
+                <Question>
+                  プロジェクト参加には契約が必要ですか？（副業に該当しますか？）
+                </Question>
+                <Answer>
+                  基本的にはプロジェクトへの参加による報酬はありません（学生の方のアルバイト等を除く）。
+                  副業等には該当せず、特に契約は必要ありません。
+                </Answer>
+                <Question>タスクには賞金がありますか？</Question>
+                <Answer>賞金については予定しておりません。</Answer>
+                <Question>個人でタスクに参加することは可能ですか？</Question>
+                <Answer>
+                  企業にお勤めの方が個人として参加を希望される場合、当プロジェクトとしては特に問題ありません。勤務先でご確認ください。
+                </Answer>
+                <Question>
+                  タスクに参加した場合、参加システムは公開する必要がありますか？
+                </Question>
+                <Answer>
+                  公開は必須ではありませんが、もし可能でしたらご検討いただけるとありがたいです。
+                </Answer>
+              </dl>
+            </>,
+            <>
+              <h3 id="faq_data">公開データについて</h3>
+              <dl>
+                <Question>公開データを利用するには契約が必要ですか？</Question>
+                <Answer>
+                  プロジェクトとの契約は特に必要ありません。ただし、公開データはWikipediaの二次的著作物であり、クリエイティブ・コモンズ
+                  表示・継承ライセンス(
+                  <ExternalLink href="https://creativecommons.org/licenses/by-sa/3.0/legalcode">
+                    CC BY-SA 3.0
+                  </ExternalLink>
+                  )を継承することにご注意ください。
+                  <br />
+                  参考：
+                  <ExternalLink href="https://ja.wikipedia.org/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%82%92%E4%BA%8C%E6%AC%A1%E5%88%A9%E7%94%A8%E3%81%99%E3%82%8B#%E8%A1%A8%E7%A4%BA%E4%BE%8B">
+                    Wikipedia:Wikipediaを二次利用する
+                  </ExternalLink>
+                  データ利用による研究成果については森羅2022実行委員までお知らせいただけますよう、お願いいたします。
+                  <br />
+                  実行委員宛メール：shinra2022-info@googlegroups.com
+                </Answer>
+                <Question>
+                  公開データを利用するにはタスク参加が必要ですか？
+                </Question>
+                <Answer>
+                  タスクに参加されない場合も公開データの利用は可能です。タスク以外の研究等への利用もぜひご検討ください。
+                  <br />
+                  データの利用については「公開データを利用するには契約が必要ですか？」のQAもご確認ください。
+                  <br />
+                  データセット、タスク等に関するアナウンスや議論は森羅のslackで行います。ご質問も受け付けておりますので、ぜひご参加ください。
+                </Answer>
+                <Question>
+                  企業からの参加ですが、必ず発表しなければならないでしょうか？
+                </Question>
+                <Answer>発表の義務はありません。</Answer>
+                <Question>
+                  Wikipedia全件を対象にするとのことですが、計算機リソースに不安があります。
+                </Question>
+                <Answer>
+                  計算機リソースなどについては相談に乗ります。Slack(
+                  <ExternalLink href="https://join.slack.com/t/shinra2022/shared_invite/zt-14qkpf21i-lQNKlT0aIOU5We7xlZBqfQ">
+                    招待リンク
+                  </ExternalLink>
+                  )などでお気軽にご相談ください。
+                </Answer>
+                <Question>リーダーボードへの参加は義務ですか？</Question>
+                <Answer>義務ではありませんが、ぜひご参加ください。</Answer>
+              </dl>
+            </>,
+          ]}
+        />
       </ContentBox>
       <ContentBox
         style={{
