@@ -3,6 +3,8 @@ import type { NextPage } from "next";
 import {
   CommitteeList,
   ContentBox,
+  ExternalLink,
+  InternalLink,
   LeaderBoard,
   MediaBox,
   JoinButton,
@@ -16,49 +18,43 @@ import { Paper, Divider } from "@mui/material";
 const newsItems = [
   <>
     森羅2022
-    <a
-      href="http://shinra-project.info/shinra2022-kickoff-meeting/"
-      target="_blank"
-      rel="noreferrer"
-    >
+    <ExternalLink href="http://shinra-project.info/shinra2022-kickoff-meeting/">
       キックオフミーティング
-    </a>
+    </ExternalLink>
     を開催しました。タスク参加は
-    <a href="http://2022.shinra-project.info/join">こちら</a>
+    <InternalLink href="/join">こちら</InternalLink>
     からどうぞ。(2022/5/12)
   </>,
   <>
     言語処理学会第28回年次大会(NLP2022)で森羅プロジェクトの
-    <a href="https://drive.google.com/file/d/1fHXpMsTc1AMu19aDGzIHz6GLKJbRJMae/view?usp=sharing">
+    <ExternalLink href="https://drive.google.com/file/d/1fHXpMsTc1AMu19aDGzIHz6GLKJbRJMae/view?usp=sharing">
       発表
-    </a>
+    </ExternalLink>
     を行い、委員特別賞を
-    <a href="http://shinra-project.info/wp-content/uploads/sites/8/2022/03/委員特別賞.png">
+    <ExternalLink href="http://shinra-project.info/wp-content/uploads/sites/8/2022/03/委員特別賞.png">
       受賞
-    </a>
+    </ExternalLink>
     しました。(2022/3/18)
   </>,
   <>
-    <span>
-      森羅プロジェクトが英国の雑誌Impactの
-      <a href="http://shinra-project.info/wp-content/uploads/sites/8/2022/02/Impact-publication.pdf">
-        記事
-      </a>
-      として取り上げられました。どうぞご覧ください。(2022/2/24)
-    </span>
+    森羅プロジェクトが英国の雑誌Impactの
+    <ExternalLink href="http://shinra-project.info/wp-content/uploads/sites/8/2022/02/Impact-publication.pdf">
+      記事
+    </ExternalLink>
+    として取り上げられました。どうぞご覧ください。(2022/2/24)
   </>,
   <>
     森羅2021の最終報告会(12月20日)にご参加いただき、ありがとうございました。資料を
-    <a href="http://shinra-project.info/shinra2021-final-report-meeting/">
+    <ExternalLink href="http://shinra-project.info/shinra2021-final-report-meeting/">
       最終報告会ページ
-    </a>
+    </ExternalLink>
     に掲載していますので、どうぞご覧ください。(2021/12/24)
   </>,
   <>
     LinkJPタスクの
-    <a href="https://drive.google.com/file/d/1Lqy480YwG8SbTWz56I_w6IKEw421n5IM/view?usp=sharing">
+    <ExternalLink href="https://drive.google.com/file/d/1Lqy480YwG8SbTWz56I_w6IKEw421n5IM/view?usp=sharing">
       テストデータ正解
-    </a>
+    </ExternalLink>
     を公開しました。(2021/11/15)
   </>,
   <>
@@ -66,19 +62,24 @@ const newsItems = [
   </>,
   <>
     LinkJPタスクの
-    <a href="https://drive.google.com/file/d/1iEciat50vSaGJ9d9FQz20k8eRt2mMGN7/view?usp=sharing">
+    <ExternalLink href="https://drive.google.com/file/d/1iEciat50vSaGJ9d9FQz20k8eRt2mMGN7/view?usp=sharing">
       テストデータ
-    </a>
+    </ExternalLink>
     を公開しました。
-    <a href="http://shinra-project.info/shinra2021linkjp/result_submission/">
+    <ExternalLink href="http://shinra-project.info/shinra2021linkjp/result_submission/">
       実行結果提出
-    </a>
+    </ExternalLink>
     の締切は9月30日です。(2021/9/10)
   </>,
   <>
-    森羅プロジェクトの紹介ビデオを公開しました（[
-    <a href="https://www.youtube.com/watch?v=lCYj3x6pu1w">日本語版</a>][
-    <a href="https://www.youtube.com/watch?v=yQ2xeq7rbeU">英語版</a>
+    森羅プロジェクトの紹介ビデオを公開しました([
+    <ExternalLink href="https://www.youtube.com/watch?v=lCYj3x6pu1w">
+      日本語版
+    </ExternalLink>
+    ][
+    <ExternalLink href="https://www.youtube.com/watch?v=yQ2xeq7rbeU">
+      英語版
+    </ExternalLink>
     ])。（2021/6/30）
   </>,
 ];
@@ -89,13 +90,13 @@ const mainRelatedResearch = [
     <br />
     拡張固有表現に分類された31言語のWikipedia知識ベース,
     言語処理学会第28回年次大会発表論文集, 2022. [
-    <a href="https://www.anlp.jp/proceedings/annual_meeting/2022/pdf_dir/E1-1.pdf">
+    <ExternalLink href="https://www.anlp.jp/proceedings/annual_meeting/2022/pdf_dir/E1-1.pdf">
       paper
-    </a>
+    </ExternalLink>
     ] [
-    <a href="https://drive.google.com/file/d/1fHXpMsTc1AMu19aDGzIHz6GLKJbRJMae/view?usp=sharing">
+    <ExternalLink href="https://drive.google.com/file/d/1fHXpMsTc1AMu19aDGzIHz6GLKJbRJMae/view?usp=sharing">
       slide
-    </a>
+    </ExternalLink>
     ]
   </>,
   <>
@@ -104,23 +105,23 @@ const mainRelatedResearch = [
     <br />
     森羅2021-LinkJP結果の分析:BERTとルールベースの比較,
     言語処理学会第28回年次大会発表論文集, 2022. [
-    <a href="https://www.anlp.jp/proceedings/annual_meeting/2022/pdf_dir/E2-4.pdf">
+    <ExternalLink href="https://www.anlp.jp/proceedings/annual_meeting/2022/pdf_dir/E2-4.pdf">
       paper
-    </a>
+    </ExternalLink>
     ] [
-    <a href="https://drive.google.com/file/d/1cVonFj5PZ8H-1C2aX2WX3C4BWYzYiMH8/view?usp=sharing">
+    <ExternalLink href="https://drive.google.com/file/d/1cVonFj5PZ8H-1C2aX2WX3C4BWYzYiMH8/view?usp=sharing">
       slide
-    </a>
+    </ExternalLink>
     ]
   </>,
   <>
     [<span id="sekine2021b">Sekine2021b</span>] Satoshi Sekine, Kouta Nakayama,
     Maya Ando, Yu Usami, Masako Nomoto and Koji Matsuda,
     <br />
-    <a href="https://www.akbc.ws/2021/assets/pdfs/6xhX4nnBhbJ.pdf">
+    <ExternalLink href="https://www.akbc.ws/2021/assets/pdfs/6xhX4nnBhbJ.pdf">
       SHINRA2020-ML: Categorizing 30-language Wikipedia into fine-grained NE
       based on “Resource by Collaborative Contribution” scheme
-    </a>
+    </ExternalLink>
     , In Proceedings of the 3rd conference on the Automated Knowledge Base
     Construction (AKBC 2021), 2021.
   </>,
@@ -129,13 +130,13 @@ const mainRelatedResearch = [
     馬場雪乃, 関根聡, <br />
     能動的サンプリングを用いたリソース構築共有タスクにおける予測対象データ削減,
     言語処理学会第27回年次大会発表論文集, pp.1187-1192, 2021. [
-    <a href="https://www.anlp.jp/proceedings/annual_meeting/2021/pdf_dir/P6-15.pdf">
+    <ExternalLink href="https://www.anlp.jp/proceedings/annual_meeting/2021/pdf_dir/P6-15.pdf">
       paper
-    </a>
+    </ExternalLink>
     ] [
-    <a href="https://drive.google.com/file/d/1uUlWjDIM-q_3OL9ZIiYb-3fes0eScRTJ/view?usp=sharing">
+    <ExternalLink href="https://drive.google.com/file/d/1uUlWjDIM-q_3OL9ZIiYb-3fes0eScRTJ/view?usp=sharing">
       poster
-    </a>
+    </ExternalLink>
     ]
   </>,
   <>
@@ -144,157 +145,157 @@ const mainRelatedResearch = [
     <br />
     SHINRA2020-ML:30 言語の Wikipedia ページの分類,
     言語処理学会第27回年次大会発表論文集, pp.563-568, 2021. [
-    <a href="https://www.anlp.jp/proceedings/annual_meeting/2021/pdf_dir/P3-11.pdf">
+    <ExternalLink href="https://www.anlp.jp/proceedings/annual_meeting/2021/pdf_dir/P3-11.pdf">
       paper
-    </a>
+    </ExternalLink>
     ][
-    <a href="https://drive.google.com/file/d/1jz3uX0et7fkt7QDLt2bNR6J7dqyC_aea/view?usp=sharing">
+    <ExternalLink href="https://drive.google.com/file/d/1jz3uX0et7fkt7QDLt2bNR6J7dqyC_aea/view?usp=sharing">
       poster
-    </a>
+    </ExternalLink>
     ]
   </>,
   <>
     [<span id="sekine2020b">Sekine2020b</span>] Satoshi Sekine, Masako Nomoto,
     Kouta Nakayama, Asuka Sumida, Koji Matsuda, and Maya Ando,
     <br />
-    <a href="http://research.nii.ac.jp/ntcir/workshop/OnlineProceedings15/pdf/ntcir/01-NTCIR15-OV-SHINRA-SekineS.pdf">
+    <ExternalLink href="http://research.nii.ac.jp/ntcir/workshop/OnlineProceedings15/pdf/ntcir/01-NTCIR15-OV-SHINRA-SekineS.pdf">
       Overview of SHINRA2020-ML Task
-    </a>
+    </ExternalLink>
     , In Proceedings of the NTCIR-15 Conference.[
-    <a href="https://drive.google.com/file/d/1VAHieaVKUOsHsuNEebk7zKD3DuYhck8z/view?usp=sharing">
+    <ExternalLink href="https://drive.google.com/file/d/1VAHieaVKUOsHsuNEebk7zKD3DuYhck8z/view?usp=sharing">
       slide
-    </a>
+    </ExternalLink>
     ], [
-    <a href="https://drive.google.com/file/d/1VVuCV-hfnxzM3NE2NAT0JwHT0RYj2gnp/view?usp=sharing">
+    <ExternalLink href="https://drive.google.com/file/d/1VVuCV-hfnxzM3NE2NAT0JwHT0RYj2gnp/view?usp=sharing">
       poster
-    </a>
+    </ExternalLink>
     ]
   </>,
   <>
     [<span id="bui2020">Bui2020</span>] The Viet Bui and Phuong Le-Hong, <br />
-    <a href="http://research.nii.ac.jp/ntcir/workshop/OnlineProceedings15/pdf/ntcir/02-NTCIR15-SHINRA-BuiT.pdf">
+    <ExternalLink href="http://research.nii.ac.jp/ntcir/workshop/OnlineProceedings15/pdf/ntcir/02-NTCIR15-SHINRA-BuiT.pdf">
       Cross-lingual Extended Named Entity Classification of Wikipedia Articles
-    </a>
+    </ExternalLink>
     , In Proceedings of the NTCIR-15 Conference.
   </>,
   <>
     [<span id="cardoso2020">Cardoso2020</span>] Rúben Cardoso, Afonso Mendes and
     Andre Lamurias, <br />
-    <a href="http://research.nii.ac.jp/ntcir/workshop/OnlineProceedings15/pdf/ntcir/03-NTCIR15-SHINRA-CardosoR.pdf">
+    <ExternalLink href="http://research.nii.ac.jp/ntcir/workshop/OnlineProceedings15/pdf/ntcir/03-NTCIR15-SHINRA-CardosoR.pdf">
       Priberam Labs at the NTCIR-15 SHINRA2020-ML: Classification Task
-    </a>
+    </ExternalLink>
     , In Proceedings of the NTCIR-15 Conference.
   </>,
   <>
     [<span id="abhishek2020">Abhishek2020</span>] Tushar Abhishek, Ayush
     Agarwal, Anubhav Sharma, Vasudeva Varma and Manish Gupta, <br />
-    <a href="http://research.nii.ac.jp/ntcir/workshop/OnlineProceedings15/pdf/ntcir/04-NTCIR15-SHINRA-AbhishekT.pdf">
+    <ExternalLink href="http://research.nii.ac.jp/ntcir/workshop/OnlineProceedings15/pdf/ntcir/04-NTCIR15-SHINRA-AbhishekT.pdf">
       Rehoboam at the NTCIR-15 SHINRA2020-ML Task
-    </a>
+    </ExternalLink>
     , In Proceedings of the NTCIR-15 Conference.
   </>,
   <>
     [<span id="yoshikawa2020">Yoshikawa2020</span>] Hiyori Yoshikawa, Chunpeng
     Ma, Aili Shen, Qian Sun, Chenbang Huang, Guillaume Pelat, Akiva Miura,
     Daniel Beck, Timothy Baldwin and Tomoya Iwakura, <br />
-    <a href="http://research.nii.ac.jp/ntcir/workshop/OnlineProceedings15/pdf/ntcir/05-NTCIR15-SHINRA-YoshikawaH.pdf">
+    <ExternalLink href="http://research.nii.ac.jp/ntcir/workshop/OnlineProceedings15/pdf/ntcir/05-NTCIR15-SHINRA-YoshikawaH.pdf">
       UOM-FJ at the NTCIR-15 SHINRA2020-ML Task
-    </a>
+    </ExternalLink>
     , In Proceedings of the NTCIR-15 Conference.
   </>,
   <>
     [<span id="nakayama2020b">Nakayama2020b</span>] Kouta Nakayama and Satoshi
     Sekine, <br />
-    <a href="http://research.nii.ac.jp/ntcir/workshop/OnlineProceedings15/pdf/ntcir/06-NTCIR15-SHINRA-NakayamaK.pdf">
+    <ExternalLink href="http://research.nii.ac.jp/ntcir/workshop/OnlineProceedings15/pdf/ntcir/06-NTCIR15-SHINRA-NakayamaK.pdf">
       LIAT Team’s Wikipedia Classifier at NTCIR-15 SHINRA2020-ML: Classification
       Task
-    </a>
+    </ExternalLink>
     , In Proceedings of the NTCIR-15 Conference.
   </>,
   <>
     [<span id="yoshioka2020">Yoshioka2020</span>] Masaharu Yoshioka and Yoshiaki
     Koitabashi, <br />
-    <a href="http://research.nii.ac.jp/ntcir/workshop/OnlineProceedings15/pdf/ntcir/07-NTCIR15-SHINRA-YoshiokaM.pdf">
+    <ExternalLink href="http://research.nii.ac.jp/ntcir/workshop/OnlineProceedings15/pdf/ntcir/07-NTCIR15-SHINRA-YoshiokaM.pdf">
       HUKB at SHINRA2020-ML task
-    </a>
+    </ExternalLink>
     , In Proceedings of the NTCIR-15 Conference.
   </>,
   <>
     [<span id="nishikawa2020">Nishikawa2020</span>] Sosuke Nishikawa and Ikuya
     Yamada, <br />
-    <a href="http://research.nii.ac.jp/ntcir/workshop/OnlineProceedings15/pdf/ntcir/08-NTCIR15-SHINRA-NishikawaS.pdf">
+    <ExternalLink href="http://research.nii.ac.jp/ntcir/workshop/OnlineProceedings15/pdf/ntcir/08-NTCIR15-SHINRA-NishikawaS.pdf">
       Studio Ousia at the NTCIR-15 SHINRA2020-ML Task
-    </a>
+    </ExternalLink>
     , In Proceedings of the NTCIR-15 Conference.
   </>,
   <>
     [<span id="nakayama2020a">Nakayama2020a</span>] 中山功太, 栗田修平,
     小林暁雄, 関根聡,
     <br />
-    <a href="https://www.anlp.jp/proceedings/annual_meeting/2020/pdf_dir/F1-4.pdf">
+    <ExternalLink href="https://www.anlp.jp/proceedings/annual_meeting/2020/pdf_dir/F1-4.pdf">
       Pre-Distillation Ensemble:リソース構築タスクのためのアンサンブル手法
-    </a>
+    </ExternalLink>
     , 言語処理学会第26回年次大会発表論文集, pp.375-378, 2020.
   </>,
   <>
     [<span id="kobayashi2020">Kobayashi2020</span>] 小林暁雄, 中山功太,
     安藤まや, 関根聡,
     <br />
-    <a href="https://www.anlp.jp/proceedings/annual_meeting/2020/pdf_dir/F4-2.pdf">
+    <ExternalLink href="https://www.anlp.jp/proceedings/annual_meeting/2020/pdf_dir/F4-2.pdf">
       Wikipedia構造化プロジェクト「森羅2019-JP」
-    </a>
+    </ExternalLink>
     , 言語処理学会第26回年次大会発表論文集, pp.1029-1032, 2020.
   </>,
   <>
     [<span id="sekine2020a">Sekine2020a</span>] 関根聡, 安藤まや, 小林暁雄,
     隅田飛鳥,
     <br />
-    <a href="https://www.anlp.jp/proceedings/annual_meeting/2020/pdf_dir/P5-13.pdf">
+    <ExternalLink href="https://www.anlp.jp/proceedings/annual_meeting/2020/pdf_dir/P5-13.pdf">
       拡張固有表現定義の更新と日本語Wikipedia分類データ2019
-    </a>
+    </ExternalLink>
     , 言語処理学会第26回年次大会発表論文集, pp.1221-1224, 2020.
   </>,
   <>
     [<span id="sekine2019b">Sekine2019b</span>] Satoshi Sekine, Akio Kobayashi,
     Kouta Nakayama,
     <br />
-    <a href="https://openreview.net/pdf?id=HygfXWqTpm">
+    <ExternalLink href="https://openreview.net/pdf?id=HygfXWqTpm">
       SHINRA: Structuring Wikipedia by Collaborative Contribution
-    </a>
+    </ExternalLink>
     , In Proceedings of the 1st conference on the Automated Knowledge Base
     Construction (AKBC 2019), 2019.
   </>,
   <>
     [<span id="sekine2019a">Sekine2019a</span>] 関根聡, 小林暁雄, 安藤まや,
     <br />
-    <a href="https://www.anlp.jp/proceedings/annual_meeting/2019/pdf_dir/E1-2.pdf">
+    <ExternalLink href="https://www.anlp.jp/proceedings/annual_meeting/2019/pdf_dir/E1-2.pdf">
       Wikipedia構造化プロジェクト「森羅2018」
-    </a>
+    </ExternalLink>
     ,言語処理学会第25回年次大会発表論文集, pp.69-72, 2019.
   </>,
   <>
     [<span id="kobayashi2019">Kobayashi2019</span>] 小林暁雄, 中山功太, 関根聡,
     <br />
-    <a href="https://www.anlp.jp/proceedings/annual_meeting/2019/pdf_dir/P3-7.pdf">
+    <ExternalLink href="https://www.anlp.jp/proceedings/annual_meeting/2019/pdf_dir/P3-7.pdf">
       森羅:Wikipedia構造化プロジェクト2018結果の分析と考察
-    </a>
+    </ExternalLink>
     , 言語処理学会第25回年次大会発表論文集, pp.538-541, 2019.
   </>,
   <>
     [<span id="hentona2019">Hentona2019</span>] 邊土名朝飛, 野中尋史, 小林暁雄,
     関根聡,
     <br />
-    <a href="https://www.anlp.jp/proceedings/annual_meeting/2019/pdf_dir/B4-8.pdf">
+    <ExternalLink href="https://www.anlp.jp/proceedings/annual_meeting/2019/pdf_dir/B4-8.pdf">
       外部知識源を使用したWikipediaからの化合物情報抽出
-    </a>
+    </ExternalLink>
     , 言語処理学会第25回年次大会発表論文集, pp.791-794, 2019.
   </>,
   <>
     [<span id="nakayama2019">Nakayama2019</span>] 中山功太, 小林暁雄, 関根聡,
     <br />
-    <a href="https://www.anlp.jp/proceedings/annual_meeting/2019/pdf_dir/E6-5.pdf">
+    <ExternalLink href="https://www.anlp.jp/proceedings/annual_meeting/2019/pdf_dir/E6-5.pdf">
       共有タスクにおけるGA重み付け加重投票を用いた属性値アンサンブル
-    </a>
+    </ExternalLink>
     , 言語処理学会第25回年次大会発表論文集, pp.1547-1550, 2019.
   </>,
 ];
@@ -302,29 +303,29 @@ const otherRelatedResearch = [
   <>
     [<span id="suzuki2018">Suzuki2018</span>] Masatoshi SUZUKI, Koji MATSUDA,
     Satoshi SEKINE, Naoaki OKAZAKI and Kentaro INUI, <br />
-    <a href="https://www.jstage.jst.go.jp/article/transinf/E101.D/1/E101.D_2017SWP0005/_article">
+    <ExternalLink href="https://www.jstage.jst.go.jp/article/transinf/E101.D/1/E101.D_2017SWP0005/_article">
       A Joint Neural Model for Fine-Grained Named Entity Classification of
       Wikipedia Articles
-    </a>
+    </ExternalLink>
     ‘, IEICE Transactions on Information and Systems, E101.D-1, pp.73-81, 2018.
   </>,
   <>
     [<span id="sekine2018">Sekine2018</span>] 関根聡, 安藤まや, 小林暁雄,
     松田耕史, 鈴木正敏, Duc Nguyen, 乾健太郎,
     <br />
-    <a href="https://anlp.jp/proceedings/annual_meeting/2018/pdf_dir/P4-5.pdf">
+    <ExternalLink href="https://anlp.jp/proceedings/annual_meeting/2018/pdf_dir/P4-5.pdf">
       「拡張固有表現＋Wikipedia」データ（2015 年 11 月版
       Wikipedia分類作業完成版）
-    </a>
+    </ExternalLink>
     , 言語処理学会第24回年次大会発表論文集, pp.504-507, 2018.
   </>,
   <>
     [<span id="sekine2002">Sekine2002</span>] Satoshi Sekine, Kiyoshi Sudo, and
     Chikashi Nobata,
     <br />
-    <a href="http://www.lrec-conf.org/proceedings/lrec2002/pdf/120.pdf">
+    <ExternalLink href="http://www.lrec-conf.org/proceedings/lrec2002/pdf/120.pdf">
       Extended Named Entity Hierarchy
-    </a>
+    </ExternalLink>
     . In Proceedings of the Third International Conference on Language Resources
     and Evaluation (LREC’02), 2002.
   </>,
@@ -332,9 +333,9 @@ const otherRelatedResearch = [
     [<span id="sekine2000">Sekine2000</span>] Satoshi Sekine and Yoshio
     Eriguchi,
     <br />
-    <a href="https://www.aclweb.org/anthology/C00-2167.pdf">
+    <ExternalLink href="https://www.aclweb.org/anthology/C00-2167.pdf">
       Japanese Named Entity Extraction Evaluation – Analysis of Results –
-    </a>
+    </ExternalLink>
     , In Proceedings of the 18th International Conference on Computational
     Linguistics (COLING’00), vol.2, pp.1106-110,
     <br />
@@ -344,9 +345,9 @@ const otherRelatedResearch = [
     [<span id="grishman1996">Grishman1996</span>] Ralph Grishman and Beth
     Sundheim,
     <br />
-    <a href="https://www.aclweb.org/anthology/C96-1079.pdf">
+    <ExternalLink href="https://www.aclweb.org/anthology/C96-1079.pdf">
       Message Understanding Conference – 6: A Brief History
-    </a>
+    </ExternalLink>
     , In Proceedings of the 16th conference on Computational linguistics
     (COLING’96), vol.1, pp.466-471, 1996.
   </>,
@@ -412,7 +413,7 @@ const Home: NextPage = () => {
             2022年度の森羅プロジェクト（森羅2022）では、協働による知識の構造化を目指し、Wikipediaの分類、属性値抽出、リンキングタスクを実施します。
           </p>
           <h1 style={{ textAlign: "center" }}>
-            タスク参加は<a href="join">こちら</a>&#xFF01;
+            タスク参加は<InternalLink href="/join">こちら</InternalLink>&#xFF01;
           </h1>
         </ContentBox>
         <MediaBox
@@ -484,11 +485,7 @@ const Home: NextPage = () => {
             }}
           >
             <h3>インタビュー</h3>
-            <a
-              target="_blank"
-              href="https://www.youtube.com/playlist?list=PLtIaKdagvnZBkflzf048KoYGydIy6yhMd"
-              rel="noopener noreferrer"
-            >
+            <ExternalLink href="https://www.youtube.com/playlist?list=PLtIaKdagvnZBkflzf048KoYGydIy6yhMd">
               <MediaBox width={1300} height={731}>
                 <img
                   loading="lazy"
@@ -499,7 +496,7 @@ const Home: NextPage = () => {
                   }}
                 />
               </MediaBox>
-            </a>
+            </ExternalLink>
           </div>
           {/* <div
             style={{
@@ -571,7 +568,9 @@ const Home: NextPage = () => {
           <p>
             森羅プロジェクトは、
             Wikipediaに書かれている世界知識を計算機が扱えるような形に変換することを目的として、Wikipediaを構造化するプロジェクトです。私達は、名前のオントロジーである「
-            <a href="http://ene-project.info/">拡張固有表現（ENE）</a>
+            <ExternalLink href="http://ene-project.info/">
+              拡張固有表現（ENE）
+            </ExternalLink>
             」にWikipediaの記事を分類し、拡張固有表現に定義されている属性情報をWikipedia記事にアノテーションし、対象Wikipediaページにリンクすることで、計算機利用可能な知識の構造化を目指しています。
           </p>
           <p>構造化は３段階のステップにわけられます。</p>
@@ -623,11 +622,11 @@ const Home: NextPage = () => {
             />
           </MediaBox>
           <p>
-            <a href="http://shinra-project.info/?lang=ja">森羅プロジェクト</a>
-            は2017年にスタートしたリソース構築プロジェクトで、人が読むことを想定して書かれたWikipediaの知識を計算機が扱える形に
-            <a href="#structuring_wikipedia">構造化</a>
-            することを目指し、「協働によるリソース構築（Resource by
-            Collaborative
+            <ExternalLink href="http://shinra-project.info/?lang=ja">
+              森羅プロジェクト
+            </ExternalLink>
+            は2017年にスタートしたリソース構築プロジェクトで、人が読むことを想定して書かれたWikipediaの知識を計算機が扱える形に構造化することを目指し、「協働によるリソース構築（Resource
+            by Collaborative
             Contribution（RbCC））」という枠組みで、評価型タスクとリソース構築を同時に進めています。
           </p>
           <MediaBox width={846} height={429}>
@@ -912,26 +911,34 @@ const Home: NextPage = () => {
         theme="gray"
       >
         <h2 id="faq">FAQ</h2>
-        <h3 id="faq_community">コミュニティ(slack, メーリングリスト)について：</h3>
+        <h3 id="faq_community">
+          コミュニティ(slack, メーリングリスト)について：
+        </h3>
         <p>
           Q. プロジェクトのslackはタスク参加者限定ですか？
           <br />
-          A. 森羅のslackはタスク参加の有無に関わらず、どなたでもご参加いただけます。
+          A.
+          森羅のslackはタスク参加の有無に関わらず、どなたでもご参加いただけます。
           データセット、タスク等に関するアナウンスや議論を行い、ご質問も受け付けております。
           プロジェクトにご興味のある方は、ぜひご参加ください。
         </p>
         <h3 id="faq_join">プロジェクト/タスクへの参加について：</h3>
         <p>
-          Q. タスクに参加するかどうか迷っています。いつまでに申し込めば良いですか？
+          Q.
+          タスクに参加するかどうか迷っています。いつまでに申し込めば良いですか？
           <br />
-          A. タスク参加について事前の申し込みは不要です。タスクの〆切までに実行結果を提出していただければ、参加とみなします。
+          A.
+          タスク参加について事前の申し込みは不要です。タスクの〆切までに実行結果を提出していただければ、参加とみなします。
           プロジェクトのタスク関連のアナウンスはslackとメーリングリストで行いますので、タスク参加が未定の場合もご参加ください。
-          タスク参加の流れについては<a href="http://2022.shinra-project.info/join">こちら</a>をご覧ください。
+          タスク参加の流れについては
+          <InternalLink href="/join">こちら</InternalLink>
+          をご覧ください。
         </p>
         <p>
           Q. プロジェクト参加には契約が必要ですか？（副業に該当しますか？）
           <br />
-          A. 基本的にはプロジェクトへの参加による報酬はありません（学生の方のアルバイト等を除く）。
+          A.
+          基本的にはプロジェクトへの参加による報酬はありません（学生の方のアルバイト等を除く）。
           副業等には該当せず、特に契約は必要ありません。
         </p>
         <p>
@@ -942,35 +949,31 @@ const Home: NextPage = () => {
         <p>
           Q. 個人でタスクに参加することは可能ですか？
           <br />
-          A. 企業にお勤めの方が個人として参加を希望される場合、当プロジェクトとしては特に問題ありません。勤務先でご確認ください。
+          A.
+          企業にお勤めの方が個人として参加を希望される場合、当プロジェクトとしては特に問題ありません。勤務先でご確認ください。
         </p>
         <p>
           Q. タスクに参加した場合、参加システムは公開する必要がありますか？
           <br />
-          A. 公開は必須ではありませんが、もし可能でしたらご検討いただけるとありがたいです。
+          A.
+          公開は必須ではありませんが、もし可能でしたらご検討いただけるとありがたいです。
         </p>
         <h3 id="faq_data">公開データについて：</h3>
         <p>
           Q. 公開データを利用するには契約が必要ですか？
           <br />
-          A. プロジェクトとの契約は特に必要ありません。ただし、公開データはWikipediaの二次的著作物であり、クリエイティブ・コモンズ 表示・継承ライセンス(
-          <a
-            href="https://creativecommons.org/licenses/by-sa/3.0/legalcode"
-            target="_blank"
-            rel="noreferrer"
-          >
+          A.
+          プロジェクトとの契約は特に必要ありません。ただし、公開データはWikipediaの二次的著作物であり、クリエイティブ・コモンズ
+          表示・継承ライセンス(
+          <ExternalLink href="https://creativecommons.org/licenses/by-sa/3.0/legalcode">
             CC BY-SA 3.0
-          </a>
+          </ExternalLink>
           )を継承することにご注意ください。
           <br />
           参考：
-          <a
-            href="https://ja.wikipedia.org/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%82%92%E4%BA%8C%E6%AC%A1%E5%88%A9%E7%94%A8%E3%81%99%E3%82%8B#%E8%A1%A8%E7%A4%BA%E4%BE%8B"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <ExternalLink href="https://ja.wikipedia.org/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%82%92%E4%BA%8C%E6%AC%A1%E5%88%A9%E7%94%A8%E3%81%99%E3%82%8B#%E8%A1%A8%E7%A4%BA%E4%BE%8B">
             Wikipedia:Wikipediaを二次利用する
-          </a>
+          </ExternalLink>
           データ利用による研究成果については森羅2022実行委員までお知らせいただけますよう、お願いいたします。
           <br />
           実行委員宛メール：shinra2022-info@googlegroups.com
@@ -978,14 +981,13 @@ const Home: NextPage = () => {
         <p>
           Q. 公開データを利用するにはタスク参加が必要ですか？
           <br />
-          A. タスクに参加されない場合も公開データの利用は可能です。タスク以外の研究等への利用もぜひご検討ください。
+          A.
+          タスクに参加されない場合も公開データの利用は可能です。タスク以外の研究等への利用もぜひご検討ください。
           <br />
           データの利用については「公開データを利用するには契約が必要ですか？」のQAもご確認ください。
           <br />
           データセット、タスク等に関するアナウンスや議論は森羅のslackで行います。ご質問も受け付けておりますので、ぜひご参加ください。
         </p>
-
-        
         <p>
           Q. 企業からの参加ですが、必ず発表しなければならないでしょうか？
           <br />
@@ -996,9 +998,9 @@ const Home: NextPage = () => {
           Wikipedia全件を対象にするとのことですが、計算機リソースに不安があります。
           <br />
           A. 計算機リソースなどについては相談に乗ります。Slack(
-          <a href="https://join.slack.com/t/shinra2022/shared_invite/zt-14qkpf21i-lQNKlT0aIOU5We7xlZBqfQ">
+          <ExternalLink href="https://join.slack.com/t/shinra2022/shared_invite/zt-14qkpf21i-lQNKlT0aIOU5We7xlZBqfQ">
             招待リンク
-          </a>
+          </ExternalLink>
           )などでお気軽にご相談ください。
         </p>
         <p>
@@ -1006,9 +1008,9 @@ const Home: NextPage = () => {
           <br />
           A. 義務ではありませんが、ぜひご参加ください。
         </p>
-          Q. リーダーボードへの参加は義務ですか？
-          <br />
-          A. 義務ではありませんが、ぜひご参加ください。
+        Q. リーダーボードへの参加は義務ですか？
+        <br />
+        A. 義務ではありませんが、ぜひご参加ください。
       </ContentBox>
       <ContentBox
         style={{
@@ -1020,9 +1022,9 @@ const Home: NextPage = () => {
         <ul>
           <li>
             <strong>
-              <a href="http://shinra-project.info/shinra2021ml/?lang=en">
+              <ExternalLink href="http://shinra-project.info/shinra2021ml/?lang=en">
                 SHINRA2021-MLタスク
-              </a>
+              </ExternalLink>
             </strong>
             <ul>
               <li>
@@ -1032,9 +1034,9 @@ const Home: NextPage = () => {
           </li>
           <li>
             <strong>
-              <a href="http://shinra-project.info/shinra2021linkjp/?lang=ja">
+              <ExternalLink href="http://shinra-project.info/shinra2021linkjp/?lang=ja">
                 SHINRA2021-LinkJPタスク
-              </a>
+              </ExternalLink>
             </strong>
             <ul>
               <li>
@@ -1044,9 +1046,9 @@ const Home: NextPage = () => {
           </li>
           <li>
             <strong>
-              <a href="http://shinra-project.info/shinra2020ml/?lang=ja">
+              <ExternalLink href="http://shinra-project.info/shinra2020ml/?lang=ja">
                 SHINRA2020-MLタスク
-              </a>
+              </ExternalLink>
             </strong>
             <ul>
               <li>
@@ -1056,9 +1058,9 @@ const Home: NextPage = () => {
           </li>
           <li>
             <strong>
-              <a href="http://shinra-project.info/shinra2020jp/?lang=ja">
+              <ExternalLink href="http://shinra-project.info/shinra2020jp/?lang=ja">
                 森羅2020-JPタスク
-              </a>
+              </ExternalLink>
             </strong>
             <ul>
               <li>
@@ -1068,9 +1070,9 @@ const Home: NextPage = () => {
           </li>
           <li>
             <strong>
-              <a href="http://shinra-project.info/shinra2019/?lang=ja">
+              <ExternalLink href="http://shinra-project.info/shinra2019/?lang=ja">
                 森羅2019-JPタスク
-              </a>
+              </ExternalLink>
             </strong>
             <ul>
               <li>
@@ -1080,9 +1082,9 @@ const Home: NextPage = () => {
           </li>
           <li>
             <strong>
-              <a href="http://shinra-project.info/shinra2018/?lang=ja">
+              <ExternalLink href="http://shinra-project.info/shinra2018/?lang=ja">
                 森羅2018-JPタスク
-              </a>
+              </ExternalLink>
             </strong>
             <ul>
               <li>

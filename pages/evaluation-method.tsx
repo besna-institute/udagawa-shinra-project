@@ -1,8 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import type { NextPage } from "next";
 import { Paper } from "@mui/material";
-import { BasicTabs, ContentBox, MediaBox, TabItem } from "../components";
-import Link from "next/link";
+import { BasicTabs, ContentBox, InternalLink, MediaBox, TabItem } from "../components";
 
 const evaluationMethodItems: TabItem[] = [
   {
@@ -22,7 +21,7 @@ const evaluationMethodItems: TabItem[] = [
         </MediaBox>
         <p>
           結果は
-          <Link href="/result-submission">こちら</Link>
+          <InternalLink href="/result-submission">こちら</InternalLink>
           からご提出ください。
         </p>
       </>
@@ -45,7 +44,7 @@ const evaluationMethodItems: TabItem[] = [
         </MediaBox>
         <p>
           結果は
-          <Link href="/result-submission">こちら</Link>
+          <InternalLink href="/result-submission">こちら</InternalLink>
           からご提出ください。
         </p>
       </>

@@ -7,6 +7,7 @@ import {
   ContentBox,
   DataFormatTable,
   DataFormatTableRow,
+  ExternalLink,
   TabItem,
 } from "../components";
 
@@ -83,14 +84,11 @@ const classificationRows: DataFormatTableRow[] = [
         推測対象
         <br />
         参考：
-        <a
-          key="ENEv9"
+        <ExternalLink
           href="https://liat-aip.sakura.ne.jp/ene/ene9/definition_jp/index.html"
-          target="_blank"
-          rel="noreferrer"
         >
           拡張固有表現ver9.0
-        </a>
+        </ExternalLink>
       </>
     ),
     slot: "推測対象",
@@ -115,14 +113,11 @@ const attributeExtractionRows: DataFormatTableRow[] = [
         ENEから推測
         <br />
         参考：
-        <a
-          key="ENEv9"
+        <ExternalLink
           href="https://liat-aip.sakura.ne.jp/ene/ene9/definition_jp/index.html"
-          target="_blank"
-          rel="noreferrer"
         >
           拡張固有表現ver9.0の属性定義
-        </a>
+        </ExternalLink>
       </>
     ),
     slot: "演繹推論",

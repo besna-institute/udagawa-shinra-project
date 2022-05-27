@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
 import { Paper } from "@mui/material";
-import { ContentBox, LeaderBoard, Step, TextStepper } from "../components";
-import Link from "next/link";
+import { ContentBox, InternalLink, LeaderBoard, Step, TextStepper } from "../components";
 
 const steps: Step[] = [
   {
@@ -68,7 +67,7 @@ const ResultSubmission: NextPage = () => {
         <h2 id="result-submission-flow">結果提出の流れ</h2>
         <p>
           以下の手順に従ってリーダーボードから結果を提出してください。リーダーボードへのログイン情報が未入手の方は
-          <Link href="/join">こちらの手順</Link>
+          <InternalLink href="/join">こちらの手順</InternalLink>
           をご参照ください。
         </p>
       </ContentBox>
