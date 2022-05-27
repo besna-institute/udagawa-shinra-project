@@ -4,13 +4,13 @@ import { useRouter } from "next/router";
 import { Alert, Paper } from "@mui/material";
 import {
   ContentBox,
+  InternalLink,
   JoinButton,
   LeaderBoard,
   MediaBox,
   Step,
   TextStepper,
 } from "../components";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const getSteps = (regist: boolean): Step[] => [
@@ -96,11 +96,11 @@ const getSteps = (regist: boolean): Step[] => [
           登録後に表示されるアクセストークンを必ず記録してください。ログインに必要となります。
           <br />
           データは
-          <Link href="/data-download">こちら</Link>
+          <InternalLink href="/data-download">こちら</InternalLink>
           から入手できます。
           <br />
           結果の提出の流れは
-          <Link href="/result-submission">こちら</Link>
+          <InternalLink href="/result-submission">こちら</InternalLink>
           のページをご参照ください。
         </p>
       </>
