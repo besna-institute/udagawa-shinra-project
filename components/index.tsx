@@ -1,3 +1,4 @@
+export { Answer } from "./Answer";
 export { BasicTabs } from "./BasicTabs";
 export type { TabItem } from "./BasicTabs";
 export { CodeBlock } from "./CodeBlock";
@@ -17,3 +18,4 @@ export { SingleLineList } from "./SingleLineList";
 export { NavigationLink } from "./NavigationLink";
 export { TextStepper } from "./TextStepper";
 export type { Step } from "./TextStepper";
+export { Question } from "./Question";
