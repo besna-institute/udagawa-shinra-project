@@ -22,7 +22,7 @@ const newsItems = [
     5月12日のキックオフミーティングを録画した動画と当日の資料を
     <ExternalLink href="https://drive.google.com/drive/folders/1Vs453PQm-ElP_phDuooKpM40kr3hDOWZ?usp=sharing">
       こちら
-    </>
+    </ExternalLink>
     で公開しました。(2022/05/28)
   </>,
   <>
