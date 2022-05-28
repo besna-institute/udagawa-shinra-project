@@ -963,6 +963,22 @@ const Home: NextPage = () => {
                 <Answer>
                   公開は必須ではありませんが、もし可能でしたらご検討いただけるとありがたいです。
                 </Answer>
+                <Question>
+                  企業からの参加ですが、必ず発表しなければならないでしょうか？
+                </Question>
+                <Answer>発表の義務はありません。</Answer>
+                <Question>
+                  Wikipedia全件を対象にするとのことですが、計算機リソースに不安があります。
+                </Question>
+                <Answer>
+                  計算機リソースなどについては相談に乗ります。Slack(
+                  <ExternalLink href="https://join.slack.com/t/shinra2022/shared_invite/zt-14qkpf21i-lQNKlT0aIOU5We7xlZBqfQ">
+                    招待リンク
+                  </ExternalLink>
+                  )などでお気軽にご相談ください。
+                </Answer>
+                <Question>リーダーボードへの参加は義務ですか？</Question>
+                <Answer>義務ではありませんが、ぜひご参加ください。</Answer>
               </dl>
             </>,
             <>
@@ -995,22 +1011,6 @@ const Home: NextPage = () => {
                   <br />
                   データセット、タスク等に関するアナウンスや議論は森羅のslackで行います。ご質問も受け付けておりますので、ぜひご参加ください。
                 </Answer>
-                <Question>
-                  企業からの参加ですが、必ず発表しなければならないでしょうか？
-                </Question>
-                <Answer>発表の義務はありません。</Answer>
-                <Question>
-                  Wikipedia全件を対象にするとのことですが、計算機リソースに不安があります。
-                </Question>
-                <Answer>
-                  計算機リソースなどについては相談に乗ります。Slack(
-                  <ExternalLink href="https://join.slack.com/t/shinra2022/shared_invite/zt-14qkpf21i-lQNKlT0aIOU5We7xlZBqfQ">
-                    招待リンク
-                  </ExternalLink>
-                  )などでお気軽にご相談ください。
-                </Answer>
-                <Question>リーダーボードへの参加は義務ですか？</Question>
-                <Answer>義務ではありませんが、ぜひご参加ください。</Answer>
               </dl>
             </>,
           ]}
