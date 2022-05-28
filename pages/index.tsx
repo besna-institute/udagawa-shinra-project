@@ -23,11 +23,11 @@ const newsItems = [
     <ExternalLink href="https://www.youtube.com/watch?v=ZteU4T-iLz4">
       動画
     </ExternalLink>
-    と当日の資料を
+    と当日の    
     <ExternalLink href="https://drive.google.com/drive/folders/1Vs453PQm-ElP_phDuooKpM40kr3hDOWZ?usp=sharing">
-      こちら
+      資料
     </ExternalLink>
-    で公開しました。(2022/05/28)
+    を公開しました。(2022/05/28)
   </>,
   <>
     森羅2022
