@@ -1008,6 +1008,7 @@ const Home: NextPage = () => {
                   <ExternalLink href="https://ja.wikipedia.org/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%82%92%E4%BA%8C%E6%AC%A1%E5%88%A9%E7%94%A8%E3%81%99%E3%82%8B#%E8%A1%A8%E7%A4%BA%E4%BE%8B">
                     Wikipedia:Wikipediaを二次利用する
                   </ExternalLink>
+                  <br />
                   データ利用による研究成果については森羅2022実行委員までお知らせいただけますよう、お願いいたします。
                   <br />
                   実行委員宛メール：shinra2022-info@googlegroups.com
