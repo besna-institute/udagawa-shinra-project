@@ -19,6 +19,17 @@ import { Paper, Divider } from "@mui/material";
 
 const newsItems = [
   <>
+    5月12日のキックオフミーティングを録画した
+    <ExternalLink href="https://www.youtube.com/watch?v=ZteU4T-iLz4">
+      動画
+    </ExternalLink>
+    を公開しました。当日の資料は
+    <ExternalLink href="https://drive.google.com/drive/folders/1Vs453PQm-ElP_phDuooKpM40kr3hDOWZ?usp=sharing">
+      こちら
+    </>
+    にあります。
+  </>,
+  <>
     森羅2022
     <ExternalLink href="http://shinra-project.info/shinra2022-kickoff-meeting/">
       キックオフミーティング
