@@ -53,7 +53,7 @@ const subtaskCommonItems = [
           （主に分類実行用）
         </>,
         <>
-          <ExternalLink href="https://drive.google.com/file/d/1PdyibeXeYTa93Blj_px9Z-QLzEaWoKQi/view?usp=sharing">
+          <ExternalLink href="https://drive.google.com/file/d/1isbdgJl-pkvSci5KGmxHWIREwPI1Ns_3/view?usp=sharing">
             HTML
           </ExternalLink>
           （主に属性値抽出、リンキング実行用）
@@ -119,7 +119,7 @@ const subtaskUniqueItems: TabItem[] = [
               />
             </>,
             <>
-              <ExternalLink href="https://drive.google.com/file/d/11-SPdxDOr-d6Ci9R9X-VBgP95t6M9aKT/view?usp=sharing">
+              <ExternalLink href="https://drive.google.com/file/d/1KKaZp9_H19o21WSPqCdGU8Wqo1qt4ymr/view?usp=sharing">
                 リーダボード入力データ（JSONL）
               </ExternalLink>
               <SingleLineList
@@ -199,7 +199,7 @@ const subtaskUniqueItems: TabItem[] = [
             />
           </>,
           <>
-            <ExternalLink href="https://drive.google.com/file/d/1MXtT_5g46h7n12DQgWrVfUniMXfzEcjV/view?usp=sharing">
+            <ExternalLink href="https://drive.google.com/file/d/1FxarCRNnjf6PeA_aY7zQ0n-hJ4eZKZ0P/view?usp=sharing">
               リーダーボードの入力データ（JSONL）
             </ExternalLink>
             <SingleLineList
