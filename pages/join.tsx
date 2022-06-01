@@ -99,7 +99,17 @@ const getSteps = (regist: boolean): Step[] => [
           <InternalLink href="/data-download">こちら</InternalLink>
           から入手できます。
           <br />
-          結果の提出の流れは
+          提出する結果は以下の2種類があります。
+          <ul>
+            <li>Wikipedia全件</li>
+            <li>リーダーボード（任意）</li>
+          </ul>
+          <br />
+          Wikipedia全件の結果の提出の流れは
+          こちら（TBA）
+          のページをご参照ください。
+          <br />
+          リーダーボードへの結果の提出の流れは
           <InternalLink href="/result-submission">こちら</InternalLink>
           のページをご参照ください。
         </p>
