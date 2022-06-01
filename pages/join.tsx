@@ -104,7 +104,6 @@ const getSteps = (regist: boolean): Step[] => [
             <li>Wikipedia全件</li>
             <li>リーダーボード（任意）</li>
           </ul>
-          <br />
           Wikipedia全件の結果の提出の流れは
           こちら（TBA）
           のページをご参照ください。
