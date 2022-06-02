@@ -725,6 +725,7 @@ const Home: NextPage = () => {
             "related-research" auto
             "committee" max-content
           `,
+          height: `${maxHeight}px`,
           maxHeight: `${maxHeight}px`,
         }}
       >
