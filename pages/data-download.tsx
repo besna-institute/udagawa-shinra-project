@@ -67,6 +67,19 @@ const subtaskCommonItems = [
       ]}
     />
   </>,
+    <h3>拡張固有表現ver9.0</h3>
+    <SingleLineList
+      disablePadding
+      items={[
+        <>
+          <ExternalLink href="https://drive.google.com/file/d/1sGUEfncCezzBUk-3DBFE4FbMTvC9VADE/view?usp=sharing">
+            Definition
+          </ExternalLink>
+        </>,
+      ]}
+    />
+  <>
+  </>,
 ];
 const subtaskUniqueItems: TabItem[] = [
   {
