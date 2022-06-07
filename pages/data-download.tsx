@@ -67,7 +67,8 @@ const subtaskCommonItems = [
       ]}
     />
   </>,
-    <h3>拡張固有表現ver9</h3>
+  <>
+    <h3>拡張固有表現ver9.0</h3>
     <SingleLineList
       disablePadding
       items={[
@@ -78,7 +79,6 @@ const subtaskCommonItems = [
         </>,
       ]}
     />
-  <>
   </>,
 ];
 const subtaskUniqueItems: TabItem[] = [
