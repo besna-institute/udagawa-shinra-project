@@ -67,7 +67,7 @@ const subtaskCommonItems = [
       ]}
     />
   </>,
-    <h3>拡張固有表現ver9.0</h3>
+    <h3>拡張固有表現ver9</h3>
     <SingleLineList
       disablePadding
       items={[
@@ -213,7 +213,7 @@ const subtaskUniqueItems: TabItem[] = [
           </>,
           <>
             <ExternalLink href="https://drive.google.com/file/d/1FxarCRNnjf6PeA_aY7zQ0n-hJ4eZKZ0P/view?usp=sharing">
-              リーダーボードの入力データ（JSONL）
+              リーダーボード入力データ（JSONL）
             </ExternalLink>
             <SingleLineList
               disablePadding
@@ -293,7 +293,7 @@ const subtaskUniqueItems: TabItem[] = [
               />
             </>,
             <>
-              リーダーボードの入力データ（JSONL）（TBA）
+              リーダーボード入力データ（JSONL）（TBA）
               <SingleLineList
                 disablePadding
                 items={[
