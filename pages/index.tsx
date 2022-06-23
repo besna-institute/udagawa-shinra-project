@@ -8,6 +8,7 @@ import {
   InternalLink,
   LeaderBoard,
   MediaBox,
+  MediaCarousel,
   JoinButton,
   NavigationLink,
   SingleLineList,
@@ -23,7 +24,7 @@ const newsItems = [
     <ExternalLink href="https://www.youtube.com/watch?v=ZteU4T-iLz4">
       動画
     </ExternalLink>
-    と当日の    
+    と当日の
     <ExternalLink href="https://drive.google.com/drive/folders/1Vs453PQm-ElP_phDuooKpM40kr3hDOWZ?usp=sharing">
       資料
     </ExternalLink>
@@ -410,7 +411,7 @@ const Home: NextPage = () => {
           gridGap: "1rem",
           gridTemplate: `
             "about" max-content
-            "shinra-video" max-content
+            "media-carousel" max-content
             "." auto
           `,
         }}
@@ -429,24 +430,24 @@ const Home: NextPage = () => {
             タスク参加は<InternalLink href="/join">こちら</InternalLink>&#xFF01;
           </h1>
         </ContentBox>
-        <MediaBox
+        <MediaCarousel
+          items={[
+            {
+              type: "youtube",
+              url: "https://www.youtube.com/embed/lCYj3x6pu1w",
+            },
+            // {
+            //   type: "image",
+            //   url: "/thumbnail-interview.png",
+            //   alt: "thumbnail-interview",
+            // },
+          ]}
           width={16}
           height={9}
           style={{
-            gridArea: "shinra-video",
-            margin: "1.5rem 0 0.75rem 0",
+            gridArea: "media-carousel",
           }}
-          isYouTube
-        >
-          <iframe
-            width={649}
-            height={365}
-            loading="lazy"
-            src="https://www.youtube.com/embed/lCYj3x6pu1w"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
-        </MediaBox>
+        />
       </div>
       <div
         style={{
