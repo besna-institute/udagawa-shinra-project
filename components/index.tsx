@@ -10,6 +10,7 @@ export { ExternalLink } from "./ExternalLink";
 export { InternalLink } from "./InternalLink";
 export { LeaderBoard } from "./LeaderBoard";
 export { MediaBox } from "./MediaBox";
+export { MediaCarousel } from "./MediaCarousel";
 export { JoinButton } from "./JoinButton";
 export { ScheduleList } from "./ScheduleList";
 export { InlineList } from "./InlineList";
