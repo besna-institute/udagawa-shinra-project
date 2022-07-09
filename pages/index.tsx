@@ -859,7 +859,7 @@ const Home: NextPage = () => {
         <img
           alt="AttributeExtraction1"
           loading="lazy"
-          src="/AttributeExtraction1.png"
+          src="/AttributeExtraction1-2.png"
           style={{
             margin: 0,
           }}
