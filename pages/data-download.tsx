@@ -79,7 +79,7 @@ const subtaskCommonItems = [
         </>,
         <>
           <ExternalLink href="https://drive.google.com/file/d/1lK0GCdS644YF96n_qV4_Z4ZxAatPxdyi/view?usp=sharing">
-            Attribute_Definitions
+            AttributeDefinitions
           </ExternalLink>
           （主に属性値抽出、リンキング実行用）         
         </>,         
