@@ -73,16 +73,10 @@ const subtaskCommonItems = [
       disablePadding
       items={[
         <>
-          <ExternalLink href="https://drive.google.com/file/d/1sGUEfncCezzBUk-3DBFE4FbMTvC9VADE/view?usp=sharing">
-            Definition_v9.0.0
+          <ExternalLink href="https://drive.google.com/file/d/1kOvhBGTxoN2DeLFOh_hYlfMo7SMmYyFV/view?usp=sharing">
+            Definition_v9.0.0(森羅用。属性情報付き)
           </ExternalLink>
         </>,
-        <>
-          <ExternalLink href="https://drive.google.com/file/d/1lK0GCdS644YF96n_qV4_Z4ZxAatPxdyi/view?usp=sharing">
-            AttributeDefinitions
-          </ExternalLink>
-          （主に属性値抽出、リンキング実行用）         
-        </>,         
       ]}
     />
   </>,
