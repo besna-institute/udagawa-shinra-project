@@ -74,9 +74,15 @@ const subtaskCommonItems = [
       items={[
         <>
           <ExternalLink href="https://drive.google.com/file/d/1sGUEfncCezzBUk-3DBFE4FbMTvC9VADE/view?usp=sharing">
-            Definition
+            Definition_v9.0.0
           </ExternalLink>
         </>,
+        <>
+          <ExternalLink href="https://drive.google.com/file/d/1lK0GCdS644YF96n_qV4_Z4ZxAatPxdyi/view?usp=sharing">
+            Attribute_Definitions
+          </ExternalLink>
+          （主に属性値抽出、リンキング実行用）         
+        </>,         
       ]}
     />
   </>,
@@ -164,7 +170,7 @@ const subtaskUniqueItems: TabItem[] = [
         divider
         items={[
           <>
-            <ExternalLink href="https://drive.google.com/file/d/18fNDCfFvtIhvxhRnU9S5dSYUIZk1Fo71/view?usp=sharing">
+            <ExternalLink href="https://drive.google.com/file/d/1Vq3T2q26AoBgSyPVEvlv5WjkSZG2agj4/view?usp=sharing">
               教師データ
             </ExternalLink>
             <SingleLineList
@@ -244,7 +250,7 @@ const subtaskUniqueItems: TabItem[] = [
           divider
           items={[
             <>
-              <ExternalLink href="https://drive.google.com/file/d/10bYalk3mZEqbyV-c0qsY9G0yO8y-fHiM/view?usp=sharing">
+              <ExternalLink href="https://drive.google.com/file/d/12aR95_a0oSTeEBG6fgBvxjDq-trEruWc/view?usp=sharing">
                 サンプルデータ
               </ExternalLink>
               <SingleLineList
