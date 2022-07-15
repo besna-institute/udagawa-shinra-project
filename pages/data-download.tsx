@@ -245,7 +245,7 @@ const subtaskUniqueItems: TabItem[] = [
           items={[
             <>
               <ExternalLink href="https://drive.google.com/file/d/12aR95_a0oSTeEBG6fgBvxjDq-trEruWc/view?usp=sharing">
-                サンプルデータ
+                教師データ
               </ExternalLink>
               <SingleLineList
                 disablePadding
