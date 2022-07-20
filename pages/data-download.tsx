@@ -74,7 +74,7 @@ const subtaskCommonItems = [
       items={[
         <>
           <ExternalLink href="https://drive.google.com/file/d/1kOvhBGTxoN2DeLFOh_hYlfMo7SMmYyFV/view?usp=sharing">
-            Definition_v9.0.0(森羅用。属性情報付き)
+            Definition_v9.0.0(森羅タスク用。属性値抽出タスク及びリンキングタスクの対象属性の情報あり)
           </ExternalLink>
         </>,
       ]}
