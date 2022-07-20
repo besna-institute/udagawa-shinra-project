@@ -907,12 +907,12 @@ const Home: NextPage = () => {
           style={{
             margin: 0,
           }}
+        />
         リンキングの対象属性であるかは、
         <ExternalLink href="https://drive.google.com/file/d/1kOvhBGTxoN2DeLFOh_hYlfMo7SMmYyFV/view?usp=sharing">
           拡張固有表現ver9.0(森羅タスク用。属性値抽出タスク及びリンキングタスクの対象属性の情報あり)
         </ExternalLink>
         のlinking_taskの値を参照して確認します。
-        />
       </ContentBox>
       {/* <ContentBox
         style={{
