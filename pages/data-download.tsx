@@ -27,7 +27,7 @@ const subtaskCommonItems = [
           （主に分類学習用）
         </>,
         <>
-          <ExternalLink href="https://drive.google.com/file/d/1Dn5R_GKgM9g7Yl0LqgBsWtXLHRzeSbCs/view?usp=sharing">
+          <ExternalLink href="https://storage.googleapis.com/shinra_data/wikipedia/wikipedia-ja-20190120-html.zip">
             HTML
           </ExternalLink>
           （主に属性値、リンキング学習用）
@@ -41,7 +41,7 @@ const subtaskCommonItems = [
       disablePadding
       items={[
         <>
-          <ExternalLink href="https://drive.google.com/file/d/1cJ55I8O9B6RW6J-3FDLsmjeNtEDGQuma/view?usp=sharing">
+          <ExternalLink href="https://storage.googleapis.com/shinra_data/wikipedia/wikipedia-ja-20210823-json.gz">
             CirrusSearchDump
           </ExternalLink>
           （主に分類実行用）
@@ -53,13 +53,13 @@ const subtaskCommonItems = [
           （主に分類実行用）
         </>,
         <>
-          <ExternalLink href="https://drive.google.com/file/d/1isbdgJl-pkvSci5KGmxHWIREwPI1Ns_3/view?usp=sharing">
+          <ExternalLink href="https://storage.googleapis.com/shinra_data/wikipedia/wikipedia-ja-20210820-html-v2.zip">
             HTML
           </ExternalLink>
           （主に属性値抽出、リンキング実行用）
         </>,
         <>
-          <ExternalLink href="https://drive.google.com/file/d/1qiWxkCXMCmMvLZa12LhXWE9_dJR8M9Xx/view?usp=sharing">
+          <ExternalLink href="https://storage.googleapis.com/shinra_data/wikipedia/wikipedia-ja-20210820-plain.zip">
             PlainText
           </ExternalLink>
           （主に属性値抽出、リンキング実行用）
