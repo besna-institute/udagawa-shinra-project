@@ -747,6 +747,7 @@ const Home: NextPage = () => {
           rowGap: "1rem",
           gridTemplate: `
             "schedule" max-content
+            "data" max-content
             "contact" max-content
             "related-research" auto
             "committee" max-content
