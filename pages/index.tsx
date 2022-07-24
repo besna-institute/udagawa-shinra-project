@@ -461,6 +461,10 @@ const Home: NextPage = () => {
               type: "youtube",
               url: "https://www.youtube.com/embed/lCYj3x6pu1w",
             },
+            {
+              type: "youtube",
+              url: "https://www.youtube.com/embed/ZteU4T-iLz4",
+            },
             // {
             //   type: "image",
             //   url: "/thumbnail-interview.png",
