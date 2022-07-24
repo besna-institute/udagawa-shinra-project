@@ -440,6 +440,20 @@ const Home: NextPage = () => {
           <h1 style={{ textAlign: "center" }}>
             タスク参加は<InternalLink href="/join">こちら</InternalLink>&#xFF01;
           </h1>
+          <h2 id="about">学生・若手研究者のためのBERTワークショップ開催！</h2>
+          <p>
+            8月4日、10日に
+            <ExternalLink href="http://shinra-project.info/bert_workshop_shinra2022/">
+              学生・若手研究者のためのBERTワークショップ
+            </ExternalLink>
+            を開催します。           
+          </p>
+          <h1 style={{ textAlign: "center" }}>
+            参加申し込みは
+            <ExternalLink href="https://c5dc59ed978213830355fc8978.doorkeeper.jp/events/140149">
+              こちら
+            </ExternalLink>&#xFF01;
+          </h1>
         </ContentBox>
         <MediaCarousel
           items={[
