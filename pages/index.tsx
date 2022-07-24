@@ -781,6 +781,29 @@ const Home: NextPage = () => {
             <NavigationLink href="/join">タスク参加の流れ</NavigationLink>
           </div>
         </ContentBox>
+                <ContentBox
+          style={{
+            gridArea: "schedule",
+          }}
+          theme="green"
+        >
+          <h2 id="schedule">データ</h2>
+          <p>
+            <NavigationLink href="/data-format">
+              データ形式について
+            </NavigationLink>
+          </p>
+          <p>            
+            <NavigationLink href="/evaluation-method">
+              評価方法について
+            </NavigationLink>
+          </p>
+          <p>
+            <NavigationLink href="/data-download">
+              データダウンロードについて
+            </NavigationLink>          
+          </p>
+        </ContentBox>       
         <ContentBox
           style={{
             gridArea: "contact",
