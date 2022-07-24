@@ -796,7 +796,7 @@ const Home: NextPage = () => {
             <NavigationLink href="/join">タスク参加の流れ</NavigationLink>
           </div>
         </ContentBox>
-                <ContentBox
+        <ContentBox
           style={{
             gridArea: "data",
           }}
@@ -805,17 +805,17 @@ const Home: NextPage = () => {
           <h2 id="schedule">データ</h2>
           <p>
             <NavigationLink href="/data-format">
-              データ形式について
+              データ形式のページへ
             </NavigationLink>
           </p>
           <p>            
             <NavigationLink href="/evaluation-method">
-              評価方法について
+              評価方法のページへ
             </NavigationLink>
           </p>
           <p>
             <NavigationLink href="/data-download">
-              データダウンロードについて
+              ダウンロードのページへ
             </NavigationLink>          
           </p>
         </ContentBox>       
