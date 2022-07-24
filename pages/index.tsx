@@ -797,7 +797,7 @@ const Home: NextPage = () => {
         </ContentBox>
                 <ContentBox
           style={{
-            gridArea: "schedule",
+            gridArea: "data",
           }}
           theme="green"
         >
