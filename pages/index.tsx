@@ -483,7 +483,7 @@ const Home: NextPage = () => {
           display: "grid",
           gridArea: "top-right",
           gridTemplate: `
-            "whatsnew" auto
+            "whatsnew" max-content
             "ch" max-content
           `,
           gridGap: "1rem",
