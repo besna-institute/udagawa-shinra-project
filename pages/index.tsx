@@ -806,7 +806,7 @@ const Home: NextPage = () => {
           }}
           theme="green"
         >
-          <h2 id="schedule">データ</h2>
+          <h2 id="data">データ</h2>
           <p>
             <NavigationLink href="/data-format">
               データ形式のページへ
