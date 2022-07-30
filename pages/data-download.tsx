@@ -15,13 +15,13 @@ const subtaskCommonItems = [
       disablePadding
       items={[
         <>
-          <ExternalLink href="https://drive.google.com/drive/folders/1hQ898ZBLXuluP73-5GzL-HouMki9X631?usp=sharing">
+          <ExternalLink href="https://storage.googleapis.com/shinra_data/wikipedia/wikipedia-ja-20190121-json.zip">
             CirrusSearchDump
           </ExternalLink>
           （主に分類学習用）
         </>,
         <>
-          <ExternalLink href="https://drive.google.com/drive/folders/1XKUi9jLysbxHKitJH4u_l4NMOwJ_Xn-T?usp=sharing">
+          <ExternalLink href="https://storage.googleapis.com/shinra_data/wikipedia/wikipedia-ja-20190120-dump.zip">
             WikiDump
           </ExternalLink>
           （主に分類学習用）
