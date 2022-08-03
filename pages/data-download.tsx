@@ -47,7 +47,7 @@ const subtaskCommonItems = [
           （主に分類実行用）
         </>,
         <>
-          <ExternalLink href="https://drive.google.com/file/d/1q1atU7xzjr-ZMTA53z6PKOzS5kfHm6g2/view?usp=sharing">
+          <ExternalLink href="https://storage.googleapis.com/shinra_data/wikipedia/wikipedia-ja-20210820-xml.bz2">
             WikiDump
           </ExternalLink>
           （主に分類実行用）
