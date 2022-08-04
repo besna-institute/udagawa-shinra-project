@@ -840,7 +840,7 @@ const Home: NextPage = () => {
           <h3>Slack</h3>
           <p>
             森羅2022：Wikipedia構造化プロジェクト(shinra2022.slack.com)
-            <JoinButton href="https://join.slack.com/t/shinra2022/shared_invite/zt-14qkpf21i-lQNKlT0aIOU5We7xlZBqfQ">
+            <JoinButton href="https://join.slack.com/t/shinra2022/shared_invite/zt-1dlrhtpty-eCBovUEWpJj1k4Uhugh4Fw">
               参加リンク
             </JoinButton>
           </p>
@@ -1052,7 +1052,7 @@ const Home: NextPage = () => {
                 </Question>
                 <Answer>
                   計算機リソースなどについては相談に乗ります。Slack(
-                  <ExternalLink href="https://join.slack.com/t/shinra2022/shared_invite/zt-14qkpf21i-lQNKlT0aIOU5We7xlZBqfQ">
+                  <ExternalLink href="https://join.slack.com/t/shinra2022/shared_invite/zt-1dlrhtpty-eCBovUEWpJj1k4Uhugh4Fw">
                     招待リンク
                   </ExternalLink>
                   )などでお気軽にご相談ください。
