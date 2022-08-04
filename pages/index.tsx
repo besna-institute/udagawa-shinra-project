@@ -20,6 +20,12 @@ import { Paper, Divider } from "@mui/material";
 
 const newsItems = [
   <>
+    <ExternalLink href="http://shinra-project.info/bert_workshop_shinra2022/">
+      学生・若手研究者のためのBERTワークショップ
+    </ExternalLink>
+    のページで1回目の資料（スライド、動画）を公開しました。(2022/8/5)
+  </>,
+  <>
     8月4日、10日に
     <ExternalLink href="http://shinra-project.info/bert_workshop_shinra2022/">
       学生・若手研究者のためのBERTワークショップ
