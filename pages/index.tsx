@@ -453,10 +453,11 @@ const Home: NextPage = () => {
               学生・若手研究者のためのBERTワークショップ
             </ExternalLink>
             への参加申し込みは
-            <ExternalLink href="https://c5dc59ed978213830355fc8978.doorkeeper.jp/events/140149">
+            <ExternalLink href="https://c5dc59ed978213830355fc8978.doorkeeper.jp/events/141143">
               こちら
             </ExternalLink>&#xFF01;
             になります。１回目に参加したか、ビデオを見て、プログラムを動かして頂いていることが、今回の参加の前提となります。
+            （1日目：8月4日とは別ページのため、お手数ですが改めて申し込みをお願いいたします）
           </p>
         </ContentBox>
         <MediaCarousel
