@@ -33,7 +33,7 @@ const getSteps = (regist: boolean): Step[] => [
       <>
         <p>
           Slackにてイベントなどの随時アナウンスします。
-          <JoinButton href="https://join.slack.com/t/shinra2022/shared_invite/zt-14qkpf21i-lQNKlT0aIOU5We7xlZBqfQ">
+          <JoinButton href="https://join.slack.com/t/shinra2022/shared_invite/zt-1dlrhtpty-eCBovUEWpJj1k4Uhugh4Fw">
             参加リンク
           </JoinButton>
         </p>
