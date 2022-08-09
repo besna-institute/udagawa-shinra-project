@@ -111,6 +111,11 @@ const subtaskUniqueItems: TabItem[] = [
               />
             </>,
             <>
+              <ExternalLink href="https://storage.googleapis.com/shinra_data/%E9%85%8D%E5%B8%83%E8%B3%87%E6%96%99/DevData_20220714.tsv">
+                開発データ（tsv）
+              </ExternalLink>
+            </>,
+            <>
               <ExternalLink href="https://drive.google.com/file/d/1b-ge9hTzNIQgR1zerdje5deUEVXe7JJk/view?usp=sharing">
                 本評価の入力データ（JSONL）
               </ExternalLink>
