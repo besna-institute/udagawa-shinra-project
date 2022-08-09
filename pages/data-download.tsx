@@ -114,11 +114,18 @@ const subtaskUniqueItems: TabItem[] = [
               <ExternalLink href="https://storage.googleapis.com/shinra_data/%E9%85%8D%E5%B8%83%E8%B3%87%E6%96%99/DevData_20220714.tsv">
                 開発データ（tsv）
               </ExternalLink>
-              「page_id」と「ENEラベル（日本語）」のタブ区切りのファイルで、複数のENEラベルがあるときの区切り文字は「:」です。「ENEラベル」と「ENE_id」との対応関係は
-              <ExternalLink href="https://drive.google.com/file/d/1kOvhBGTxoN2DeLFOh_hYlfMo7SMmYyFV/view?usp=sharing">
-                Definition_v9.0.0(森羅タスク用。属性値抽出タスク及びリンキングタスクの対象属性の情報あり)
-              </ExternalLink>
-              を参照してください。
+              <SingleLineList
+                disablePadding
+                items={[
+                  <>
+                    「page_id」と「ENEラベル（日本語）」のタブ区切りのファイルで、複数のENEラベルがあるときの区切り文字は「:」です。「ENEラベル」と「ENE_id」との対応関係は
+                    <ExternalLink href="https://drive.google.com/file/d/1kOvhBGTxoN2DeLFOh_hYlfMo7SMmYyFV/view?usp=sharing">
+                      Definition_v9.0.0(森羅タスク用。属性値抽出タスク及びリンキングタスクの対象属性の情報あり)
+                    </ExternalLink>
+                    を参照してください。
+                  </>,
+                ]}
+              />
             </>,
             <>
               <ExternalLink href="https://drive.google.com/file/d/1b-ge9hTzNIQgR1zerdje5deUEVXe7JJk/view?usp=sharing">
