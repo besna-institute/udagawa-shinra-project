@@ -23,6 +23,12 @@ const newsItems = [
     <ExternalLink href="http://shinra-project.info/bert_workshop_shinra2022/">
       学生・若手研究者のためのBERTワークショップ
     </ExternalLink>
+    のページで2回目の資料（スライド、動画）を公開しました。(2022/8/11)
+  </>,
+  <>
+    <ExternalLink href="http://shinra-project.info/bert_workshop_shinra2022/">
+      学生・若手研究者のためのBERTワークショップ
+    </ExternalLink>
     のページで1回目の資料（スライド、動画）を公開しました。(2022/8/5)
   </>,
   <>
@@ -446,19 +452,6 @@ const Home: NextPage = () => {
           <h1 style={{ textAlign: "center" }}>
             タスク参加は<InternalLink href="/join">こちら</InternalLink>&#xFF01;
           </h1>
-          <h2 id="about">学生・若手研究者のためのBERTワークショップ開催！</h2>
-          <p>
-            2回目（8月10日）の
-            <ExternalLink href="http://shinra-project.info/bert_workshop_shinra2022/">
-              学生・若手研究者のためのBERTワークショップ
-            </ExternalLink>
-            への参加申し込みは
-            <ExternalLink href="https://c5dc59ed978213830355fc8978.doorkeeper.jp/events/141143">
-              こちら
-            </ExternalLink>
-            になります。１回目に参加したか、ビデオを見て、プログラムを動かして頂いていることが、今回の参加の前提となります。
-            （1日目：8月4日とは別ページのため、お手数ですが改めて申し込みをお願いいたします）
-          </p>
         </ContentBox>
         <MediaCarousel
           items={[
