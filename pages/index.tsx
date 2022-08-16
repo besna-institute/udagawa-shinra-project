@@ -911,6 +911,11 @@ const Home: NextPage = () => {
             margin: 0,
           }}
         />
+        分類の対象カテゴリであるかは、
+        <ExternalLink href="https://drive.google.com/file/d/1kOvhBGTxoN2DeLFOh_hYlfMo7SMmYyFV/view?usp=sharing">
+          拡張固有表現Ver.9.0(森羅タスク用)
+        </ExternalLink>
+        のchildren_categoryのリストを参照して確認します(リストが空なら末端カテゴリで分類対象となります)。
         <img
           alt="AttributeExtraction1"
           loading="lazy"
@@ -929,7 +934,7 @@ const Home: NextPage = () => {
         />
         属性値抽出の対象属性であるかは、
         <ExternalLink href="https://drive.google.com/file/d/1kOvhBGTxoN2DeLFOh_hYlfMo7SMmYyFV/view?usp=sharing">
-          拡張固有表現ver9.0(森羅タスク用。属性値抽出タスク及びリンキングタスクの対象属性の情報あり)
+          拡張固有表現Ver.9.0(森羅タスク用)
         </ExternalLink>
         のextraction_taskの値を参照して確認します。
         <img
@@ -950,7 +955,7 @@ const Home: NextPage = () => {
         />
         リンキングの対象属性であるかは、
         <ExternalLink href="https://drive.google.com/file/d/1kOvhBGTxoN2DeLFOh_hYlfMo7SMmYyFV/view?usp=sharing">
-          拡張固有表現ver9.0(森羅タスク用。属性値抽出タスク及びリンキングタスクの対象属性の情報あり)
+          拡張固有表現Ver.9.0(森羅タスク用)
         </ExternalLink>
         のlinking_taskの値を参照して確認します。
       </ContentBox>
