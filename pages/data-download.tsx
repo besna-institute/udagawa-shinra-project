@@ -98,11 +98,11 @@ const subtaskUniqueItems: TabItem[] = [
                 items={[
                   <>
                     別途、
-                    <ExternalLink href="https://drive.google.com/drive/folders/1hQ898ZBLXuluP73-5GzL-HouMki9X631?usp=sharing">
+                    <ExternalLink href="https://storage.googleapis.com/shinra_data/wikipedia/wikipedia-ja-20190121-json.zip">
                       Wikipedia2019 (CirrusSearchDump)
                     </ExternalLink>
                     か
-                    <ExternalLink href="https://drive.google.com/drive/folders/1XKUi9jLysbxHKitJH4u_l4NMOwJ_Xn-T?usp=sharing">
+                    <ExternalLink href="https://storage.googleapis.com/shinra_data/wikipedia/wikipedia-ja-20190120-dump.zip">
                       Wikipedia2019 (WikiDump)
                     </ExternalLink>
                     が必要です。
@@ -136,11 +136,11 @@ const subtaskUniqueItems: TabItem[] = [
                 items={[
                   <>
                     別途、
-                    <ExternalLink href="https://drive.google.com/file/d/1cJ55I8O9B6RW6J-3FDLsmjeNtEDGQuma/view?usp=sharing">
+                    <ExternalLink href="https://storage.googleapis.com/shinra_data/wikipedia/wikipedia-ja-20210823-json.gz">
                       Wikipedia2021 (CirrusSearchDump)
                     </ExternalLink>
                     か
-                    <ExternalLink href="https://drive.google.com/file/d/1q1atU7xzjr-ZMTA53z6PKOzS5kfHm6g2/view?usp=sharing">
+                    <ExternalLink href="https://storage.googleapis.com/shinra_data/wikipedia/wikipedia-ja-20210820-xml.bz2">
                       Wikipedia2021 (WikiDump)
                     </ExternalLink>
                     が必要です。
@@ -157,11 +157,11 @@ const subtaskUniqueItems: TabItem[] = [
                 items={[
                   <>
                     別途、
-                    <ExternalLink href="https://drive.google.com/file/d/1cJ55I8O9B6RW6J-3FDLsmjeNtEDGQuma/view?usp=sharing">
+                    <ExternalLink href="https://storage.googleapis.com/shinra_data/wikipedia/wikipedia-ja-20210823-json.gz">
                       Wikipedia2021 (CirrusSearchDump)
                     </ExternalLink>
                     か
-                    <ExternalLink href="https://drive.google.com/file/d/1q1atU7xzjr-ZMTA53z6PKOzS5kfHm6g2/view?usp=sharing">
+                    <ExternalLink href="https://storage.googleapis.com/shinra_data/wikipedia/wikipedia-ja-20210820-xml.bz2">
                       Wikipedia2021 (WikiDump)
                     </ExternalLink>
                     が必要です。
@@ -216,11 +216,11 @@ const subtaskUniqueItems: TabItem[] = [
               items={[
                 <>
                   別途、
-                  <ExternalLink href="https://drive.google.com/file/d/1PdyibeXeYTa93Blj_px9Z-QLzEaWoKQi/view?usp=sharing">
+                  <ExternalLink href="https://storage.googleapis.com/shinra_data/wikipedia/wikipedia-ja-20210820-html-v2.zip">
                     Wikipedia2021 (HTML)
                   </ExternalLink>
                   か
-                  <ExternalLink href="https://drive.google.com/file/d/1qiWxkCXMCmMvLZa12LhXWE9_dJR8M9Xx/view?usp=sharing">
+                  <ExternalLink href="https://storage.googleapis.com/shinra_data/wikipedia/wikipedia-ja-20210820-plain.zip">
                     Wikipedia2021 (PlainText)
                   </ExternalLink>
                   が必要です
@@ -237,11 +237,11 @@ const subtaskUniqueItems: TabItem[] = [
               items={[
                 <>
                   別途、
-                  <ExternalLink href="https://drive.google.com/file/d/1PdyibeXeYTa93Blj_px9Z-QLzEaWoKQi/view?usp=sharing">
+                  <ExternalLink href="https://storage.googleapis.com/shinra_data/wikipedia/wikipedia-ja-20210820-html-v2.zip">
                     Wikipedia2021 (HTML)
                   </ExternalLink>
                   か
-                  <ExternalLink href="https://drive.google.com/file/d/1qiWxkCXMCmMvLZa12LhXWE9_dJR8M9Xx/view?usp=sharing">
+                  <ExternalLink href="https://storage.googleapis.com/shinra_data/wikipedia/wikipedia-ja-20210820-plain.zip">
                     Wikipedia2021 (PlainText)
                   </ExternalLink>
                   が必要です
@@ -297,11 +297,11 @@ const subtaskUniqueItems: TabItem[] = [
                 items={[
                   <>
                     別途、
-                    <ExternalLink href="https://drive.google.com/file/d/1PdyibeXeYTa93Blj_px9Z-QLzEaWoKQi/view?usp=sharing">
+                    <ExternalLink href="https://storage.googleapis.com/shinra_data/wikipedia/wikipedia-ja-20210820-html-v2.zip">
                       Wikipedia2021 (HTML)
                     </ExternalLink>
                     か
-                    <ExternalLink href="https://drive.google.com/file/d/1qiWxkCXMCmMvLZa12LhXWE9_dJR8M9Xx/view?usp=sharing">
+                    <ExternalLink href="https://storage.googleapis.com/shinra_data/wikipedia/wikipedia-ja-20210820-plain.zip">
                       Wikipedia2021 (PlainText)
                     </ExternalLink>
                     が必要です
@@ -316,11 +316,11 @@ const subtaskUniqueItems: TabItem[] = [
                 items={[
                   <>
                     別途、
-                    <ExternalLink href="https://drive.google.com/file/d/1PdyibeXeYTa93Blj_px9Z-QLzEaWoKQi/view?usp=sharing">
+                    <ExternalLink href="https://storage.googleapis.com/shinra_data/wikipedia/wikipedia-ja-20210820-html-v2.zip">
                       Wikipedia2021 (HTML)
                     </ExternalLink>
                     か
-                    <ExternalLink href="https://drive.google.com/file/d/1qiWxkCXMCmMvLZa12LhXWE9_dJR8M9Xx/view?usp=sharing">
+                    <ExternalLink href="https://storage.googleapis.com/shinra_data/wikipedia/wikipedia-ja-20210820-plain.zip">
                       Wikipedia2021 (PlainText)
                     </ExternalLink>
                     が必要です
