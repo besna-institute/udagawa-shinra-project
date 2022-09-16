@@ -20,6 +20,17 @@ import { Paper, Divider } from "@mui/material";
 
 const newsItems = [
   <>
+    9月30日と10月末に
+    <ExternalLink href="http://shinra-project.info/shinra2022/bert_workshop2_shinra2022/">
+      学生・若手研究者のためのBERTワークショップ
+    </ExternalLink>
+    を開催します。参加申し込みは
+    <ExternalLink href="https://c5dc59ed978213830355fc8978.doorkeeper.jp/events/143590">
+      こちら
+    </ExternalLink>
+    からどうぞ。(2022/9/16)
+  </>,
+  <>
     <ExternalLink href="http://shinra-project.info/bert_workshop_shinra2022/">
       学生・若手研究者のためのBERTワークショップ
     </ExternalLink>
