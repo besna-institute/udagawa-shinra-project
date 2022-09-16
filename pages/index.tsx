@@ -458,7 +458,11 @@ const Home: NextPage = () => {
         >
            <h2 id="about">学生・若手研究者のためのBERTワークショップ２（固有表現抽出タスク）開催</h2>
           <p>
-            2022年度の森羅プロジェクト（森羅2022）では、協働による知識の構造化を目指し、Wikipediaの分類、属性値抽出、リンキングタスクを実施します。
+            9月30日と10月末に
+            <ExternalLink href="http://shinra-project.info/shinra2022/bert_workshop2_shinra2022/">
+              学生・若手研究者のためのBERTワークショップ２（固有表現抽出タスク）
+            </ExternalLink>
+            を開催します。
           </p>
           <h1 style={{ textAlign: "center" }}>
             参加申し込みは
