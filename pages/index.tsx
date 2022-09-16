@@ -22,7 +22,7 @@ const newsItems = [
   <>
     9月30日と10月末に
     <ExternalLink href="http://shinra-project.info/shinra2022/bert_workshop2_shinra2022/">
-      学生・若手研究者のためのBERTワークショップ
+      学生・若手研究者のためのBERTワークショップ２（固有表現抽出タスク）
     </ExternalLink>
     を開催します。参加申し込みは
     <ExternalLink href="https://c5dc59ed978213830355fc8978.doorkeeper.jp/events/143590">
