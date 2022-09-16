@@ -456,6 +456,17 @@ const Home: NextPage = () => {
           }}
           theme="white"
         >
+           <h2 id="about">学生・若手研究者のためのBERTワークショップ２（固有表現抽出タスク）開催</h2>
+          <p>
+            2022年度の森羅プロジェクト（森羅2022）では、協働による知識の構造化を目指し、Wikipediaの分類、属性値抽出、リンキングタスクを実施します。
+          </p>
+          <h1 style={{ textAlign: "center" }}>
+            参加申し込みは
+            <ExternalLink href="https://c5dc59ed978213830355fc8978.doorkeeper.jp/events/143590">
+              こちら
+            </ExternalLink>
+            から&#xFF01;
+          </h1>
           <h2 id="about">2022年度の森羅プロジェクトは？</h2>
           <p>
             2022年度の森羅プロジェクト（森羅2022）では、協働による知識の構造化を目指し、Wikipediaの分類、属性値抽出、リンキングタスクを実施します。
