@@ -10,7 +10,7 @@ import {
 
 const subtaskCommonItems = [
   <>
-    <h3>Wikipedia2019</h3>
+    <h3>Wikipedia2019（訓練データ）</h3>
     <SingleLineList
       disablePadding
       items={[
@@ -36,7 +36,7 @@ const subtaskCommonItems = [
     />
   </>,
   <>
-    <h3>Wikipedia2021</h3>
+    <h3>Wikipedia2021（評価データ）</h3>
     <SingleLineList
       disablePadding
       items={[
