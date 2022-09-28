@@ -90,6 +90,12 @@ const subtaskUniqueItems: TabItem[] = [
           divider
           items={[
             <>
+              <ul>
+                <li>開発データ
+                <li>拡張固有表現ver9.0
+              </ul>
+            </>,
+            <>
               <ExternalLink href="https://drive.google.com/file/d/1w83JrR24rN-GsywkfpvOCfRXBgRKOtl_/view?usp=sharing">
                 教師データ（JSONL）
               </ExternalLink>
@@ -351,15 +357,6 @@ const DataDownload: NextPage = () => {
     >
       <ContentBox
         style={{
-          gridArea: "subtask-common",
-        }}
-        theme="green"
-      >
-        <h2 id="subtask-common">サブタスク共通データ</h2>
-        <SingleLineList items={subtaskCommonItems} divider />
-      </ContentBox>
-      <ContentBox
-        style={{
           gridArea: "subtask-unique",
         }}
         theme="gray"
@@ -369,6 +366,15 @@ const DataDownload: NextPage = () => {
           ariaLabel="subtask unique data tabs"
           tabs={subtaskUniqueItems}
         />
+      </ContentBox>
+      <ContentBox
+        style={{
+          gridArea: "subtask-common",
+        }}
+        theme="green"
+      >
+        <h2 id="subtask-common">サブタスク共通データ</h2>
+        <SingleLineList items={subtaskCommonItems} divider />
       </ContentBox>
     </Paper>
   );
