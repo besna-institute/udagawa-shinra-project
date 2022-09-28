@@ -90,12 +90,6 @@ const subtaskUniqueItems: TabItem[] = [
           divider
           items={[
             <>
-              <ul>
-                <li>開発データ
-                <li>拡張固有表現ver9.0
-              </ul>
-            </>,
-            <>
               <ExternalLink href="https://drive.google.com/file/d/1w83JrR24rN-GsywkfpvOCfRXBgRKOtl_/view?usp=sharing">
                 教師データ（JSONL）
               </ExternalLink>
