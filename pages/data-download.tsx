@@ -310,7 +310,9 @@ const subtaskUniqueItems: TabItem[] = [
               />
             </>,
             <>
-              リーダーボード入力データ（JSONL）（TBA）
+              <ExternalLink href="https://storage.googleapis.com/shinra_data/data/attribute-extraction-prediction-leaderboard-20220629.jsonl">
+                リーダーボード入力データ（JSONL）（TBA）
+              </ExternalLink>
               <SingleLineList
                 disablePadding
                 items={[
