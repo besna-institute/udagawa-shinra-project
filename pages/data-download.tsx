@@ -229,7 +229,7 @@ const subtaskUniqueItems: TabItem[] = [
             />
           </>,
           <>
-            <ExternalLink href="https://drive.google.com/file/d/1FxarCRNnjf6PeA_aY7zQ0n-hJ4eZKZ0P/view?usp=sharing">
+            <ExternalLink href="https://storage.googleapis.com/shinra_data/data/attribute_extraction.zip">
               リーダーボード入力データ（JSONL+Wikipedia2021_subset(該当ページのみ、HTML+PlainText)+拡張固有表現ver9.0）
             </ExternalLink>
             <SingleLineList
