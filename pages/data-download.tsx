@@ -317,7 +317,7 @@ const subtaskUniqueItems: TabItem[] = [
               />
             </>,
             <>
-              <ExternalLink href="https://storage.googleapis.com/shinra_data/data/attribute-extraction-prediction-leaderboard-20220629.jsonl">
+              <ExternalLink href="https://storage.googleapis.com/shinra_data/data/linking.zip">
                 リーダーボード入力データ（JSONL+wikipedia2021(PlainText)+拡張固有表現ver9.0）
               </ExternalLink>
               <SingleLineList
