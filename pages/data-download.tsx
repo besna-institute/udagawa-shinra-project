@@ -230,21 +230,28 @@ const subtaskUniqueItems: TabItem[] = [
           </>,
           <>
             <ExternalLink href="https://drive.google.com/file/d/1FxarCRNnjf6PeA_aY7zQ0n-hJ4eZKZ0P/view?usp=sharing">
-              リーダーボード入力データ（JSONL）
+              リーダーボード入力データ（JSONL+Wikipedia2021_subset(該当ページのみ、HTML+PlainText)+拡張固有表現ver9.0）
             </ExternalLink>
             <SingleLineList
               disablePadding
               items={[
                 <>
-                  別途、
+                  JSONLデータのみ欲しい方は、
+                  <ExternalLink href="https://drive.google.com/file/d/1FxarCRNnjf6PeA_aY7zQ0n-hJ4eZKZ0P/view?usp=sharing">
+                    こちら
+                  </ExternalLink>
+                  からどうぞ
+                </>,
+                <>
+                  全体のWikipediaデータが欲しい方は、
                   <ExternalLink href="https://storage.googleapis.com/shinra_data/wikipedia/wikipedia-ja-20210820-html-v2.zip">
                     Wikipedia2021 (HTML)
                   </ExternalLink>
-                  か
+                  または
                   <ExternalLink href="https://storage.googleapis.com/shinra_data/wikipedia/wikipedia-ja-20210820-plain.zip">
                     Wikipedia2021 (PlainText)
                   </ExternalLink>
-                  が必要です
+                  からどうぞ
                 </>,
               ]}
             />
@@ -320,14 +327,15 @@ const subtaskUniqueItems: TabItem[] = [
                     JSONLデータのみ欲しい方は、
                     <ExternalLink href="https://storage.googleapis.com/shinra_data/data/attribute-extraction-prediction-leaderboard-20220629.jsonl">
                       こちら
-                    </ExternalLink>からどうぞ                    
+                    </ExternalLink>
+                    からどうぞ                    
                   </>,
                   <>
                     HTML版のWikipedia2021データが欲しい方は、
                     <ExternalLink href="https://storage.googleapis.com/shinra_data/wikipedia/wikipedia-ja-20210820-html-v2.zip">
                       こちら
                     </ExternalLink>
-                    どうぞ
+                    からどうぞ
                   </>,
                 ]}
               />
