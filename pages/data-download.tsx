@@ -291,7 +291,7 @@ const subtaskUniqueItems: TabItem[] = [
               />
             </>,
             <>
-              ベースラインデータ（属性値抽出タスクのみの参加者用）（JSONL）（TBA）
+              ベースラインデータ（リンキングタスクのみの参加者用）（JSONL）（TBA）
               <SingleLineList
                 disablePadding
                 items={[
@@ -311,21 +311,23 @@ const subtaskUniqueItems: TabItem[] = [
             </>,
             <>
               <ExternalLink href="https://storage.googleapis.com/shinra_data/data/attribute-extraction-prediction-leaderboard-20220629.jsonl">
-                リーダーボード入力データ（JSONL）（TBA）
+                リーダーボード入力データ（JSONL+wikipedia2021(PlainText)+拡張固有表現ver9.0）
               </ExternalLink>
               <SingleLineList
                 disablePadding
                 items={[
                   <>
-                    別途、
+                    JSONLデータのみ欲しい方は、
+                    <ExternalLink href="https://storage.googleapis.com/shinra_data/data/attribute-extraction-prediction-leaderboard-20220629.jsonl">
+                      こちら
+                    </ExternalLink>からどうぞ                    
+                  </>,
+                  <>
+                    HTML版のWikipedia2021データが欲しい方は、
                     <ExternalLink href="https://storage.googleapis.com/shinra_data/wikipedia/wikipedia-ja-20210820-html-v2.zip">
-                      Wikipedia2021 (HTML)
+                      こちら
                     </ExternalLink>
-                    か
-                    <ExternalLink href="https://storage.googleapis.com/shinra_data/wikipedia/wikipedia-ja-20210820-plain.zip">
-                      Wikipedia2021 (PlainText)
-                    </ExternalLink>
-                    が必要です
+                    どうぞ
                   </>,
                 ]}
               />
