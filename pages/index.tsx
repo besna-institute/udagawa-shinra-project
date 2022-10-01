@@ -472,13 +472,6 @@ const Home: NextPage = () => {
           </p>
           <h1 style={{ textAlign: "center" }}>
             現在、体験期間中です&#xFF01;
-            <!--
-            参加申し込みは
-            <ExternalLink href="https://c5dc59ed978213830355fc8978.doorkeeper.jp/events/143590">
-              こちら
-            </ExternalLink>
-            から&#xFF01; 
-            -->
           </h1>
           <h2 id="about">2022年度の森羅プロジェクトは？</h2>
           <p>
