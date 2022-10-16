@@ -965,6 +965,7 @@ const Home: NextPage = () => {
           拡張固有表現Ver.9.0(森羅タスク用)
         </ExternalLink>
         のextraction_taskの値を参照して確認します。
+        2022年度の属性値抽出の評価について、本評価を行わず、リーダーボード評価のみとしました。
         <img
           alt="Linking1"
           loading="lazy"
@@ -986,6 +987,7 @@ const Home: NextPage = () => {
           拡張固有表現Ver.9.0(森羅タスク用)
         </ExternalLink>
         のlinking_taskの値を参照して確認します。
+        2022年度のリンキングの評価について、本評価を行わず、リーダーボード評価のみとしました。
       </ContentBox>
       {/* <ContentBox
         style={{
