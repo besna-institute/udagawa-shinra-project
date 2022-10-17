@@ -20,6 +20,17 @@ import { Paper, Divider } from "@mui/material";
 
 const newsItems = [
   <>
+    10月27日に
+    <ExternalLink href="http://shinra-project.info/shinra2022/bert_workshop2_shinra2022/">
+      学生・若手研究者のためのBERTワークショップ２（固有表現抽出タスク、2日目）
+    </ExternalLink>
+    を開催します。参加申し込みは
+    <ExternalLink href="https://c5dc59ed978213830355fc8978.doorkeeper.jp/events/145315">
+      こちら
+    </ExternalLink>
+    からどうぞ。(2022/10/17)
+  </>,
+  <>
     <ExternalLink href="http://shinra-project.info/shinra2022/bert_workshop2_shinra2022/">
       学生・若手研究者のためのBERTワークショップ２（固有表現抽出タスク）
     </ExternalLink>
@@ -464,14 +475,18 @@ const Home: NextPage = () => {
         >
            <h2 id="about">学生・若手研究者のためのBERTワークショップ２（固有表現抽出タスク）開催</h2>
           <p>
-            9月30日と10月末に
+            10月27日に
             <ExternalLink href="http://shinra-project.info/shinra2022/bert_workshop2_shinra2022/">
               学生・若手研究者のためのBERTワークショップ２（固有表現抽出タスク）
             </ExternalLink>
-            を開催します。
+            を開催します。現在、体験期間中です。
           </p>
           <h1 style={{ textAlign: "center" }}>
-            現在、体験期間中です&#xFF01;
+            申し込みは
+            <ExternalLink href="https://c5dc59ed978213830355fc8978.doorkeeper.jp/events/145315">
+              こちら
+            </ExternalLink>
+            &#xFF01;
           </h1>
           <h2 id="about">2022年度の森羅プロジェクトは？</h2>
           <p>
