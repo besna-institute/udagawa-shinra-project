@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import { Paper } from "@mui/material";
-import { ContentBox, InternalLink, LeaderBoard, Step, TextStepper } from "../components";
+import { ContentBox, InternalLink, ExternalLink, LeaderBoard, Step, TextStepper } from "../components";
 
 const steps: Step[] = [
   {
