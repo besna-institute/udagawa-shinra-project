@@ -20,6 +20,17 @@ import { Paper, Divider } from "@mui/material";
 
 const newsItems = [
   <>
+    本評価（分類タスク）の提出締切が11月14日になりました。
+    <ExternalLink href="https://drive.google.com/file/d/1b-ge9hTzNIQgR1zerdje5deUEVXe7JJk/view?usp=sharing">
+      本評価の入力データ（JSONL）
+    </ExternalLink>
+    をダウンロードして、システムの予測結果を
+    <ExternalLink href="https://forms.gle/rob8e8MruyXUX8NF8">
+      こちら
+    </ExternalLink>
+    からご提出ください。なお、属性値抽出とリンキングの2022年度の本評価は行いません。(2022/10/26)
+  </>,
+  <>
     10月27日に
     <ExternalLink href="http://shinra-project.info/shinra2022/bert_workshop2_shinra2022/">
       学生・若手研究者のためのBERTワークショップ２（固有表現抽出タスク、2日目）
@@ -823,11 +834,23 @@ const Home: NextPage = () => {
                 time: "2022年8月4日,10日",
               },
               {
-                title: "実行結果の提出締切",
-                time: "2022年10月末日（予定）",
+                title: "学生・若手研究者のためのBERTワークショップ2",
+                time: "2022年9月30日,10月27日",
               },
-              { title: "評価結果の返却", time: "2022年11月中旬" },
-              { title: "最終報告会", time: "2022年12月" },
+              {
+                title: "第1回定期交流会",
+                time: "2022年10月27日",
+              },
+              {
+                title: "実行結果の提出締切",
+                time: "2022年11月14日",
+              },
+              { title: "評価結果の返却", time: "2022年11月30日" },
+              { title: "最終報告会", time: "2022年12月中旬" },
+              {
+                title: "第2回定期交流会",
+                time: "2022年12月中旬",
+              },
             ]}
           />
           <div
