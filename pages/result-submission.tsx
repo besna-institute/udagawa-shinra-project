@@ -68,7 +68,9 @@ const ResultSubmission: NextPage = () => {
         <p>
           以下の手順に従ってリーダーボードから結果を提出してください。リーダーボードへのログイン情報が未入手の方は
           <InternalLink href="/join">こちらの手順</InternalLink>
-          をご参照ください。<br/>
+          をご参照ください。
+        </p>
+        <p>
           本評価（分類タスク）の結果はこちらの
           <ExternalLink href="https://forms.gle/rob8e8MruyXUX8NF8">
             フォーム
