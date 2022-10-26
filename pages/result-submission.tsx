@@ -70,6 +70,13 @@ const ResultSubmission: NextPage = () => {
           <InternalLink href="/join">こちらの手順</InternalLink>
           をご参照ください。
         </p>
+        <p>
+          本評価（分類タスク）の結果はこちらの
+          <ExternalLink href="https://forms.gle/rob8e8MruyXUX8NF8">
+            フォーム
+          </ExternalLink>
+          からご提出ください。なお、属性値抽出とリンキングの2022年度の本評価については行いません。
+        </p>
       </ContentBox>
       <div
         style={{
