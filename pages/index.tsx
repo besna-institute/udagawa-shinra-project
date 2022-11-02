@@ -19,6 +19,12 @@ import { useRef, useEffect, useState } from "react";
 import { Paper, Divider } from "@mui/material";
 
 const newsItems = [
+    <>
+    <ExternalLink href="http://shinra-project.info/shinra2022/bert_workshop2_shinra2022/">
+      学生・若手研究者のためのBERTワークショップ２（固有表現抽出タスク）
+    </ExternalLink>
+    のページで2回目の資料（スライド、動画）を公開しました。(2022/11/3)
+  </>,
   <>
     本評価（分類タスク）の提出締切が11月14日になりました。
     <ExternalLink href="https://drive.google.com/file/d/1b-ge9hTzNIQgR1zerdje5deUEVXe7JJk/view?usp=sharing">
