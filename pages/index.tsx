@@ -490,17 +490,17 @@ const Home: NextPage = () => {
           }}
           theme="white"
         >
-           <h2 id="about">学生・若手研究者のためのBERTワークショップ２（固有表現抽出タスク）開催</h2>
+           <h2 id="about">本評価（分類タスク）提出受付中</h2>
           <p>
-            10月27日に
-            <ExternalLink href="http://shinra-project.info/shinra2022/bert_workshop2_shinra2022/">
-              学生・若手研究者のためのBERTワークショップ２（固有表現抽出タスク）
+            分類タスクの本評価締切は11月14日です。本評価の提出方法は
+            <ExternalLink href="http://shinra-project.info/shinra2022/how_to_submit/">
+              こちら
             </ExternalLink>
-            を開催します。現在、体験期間中です。
+            をご覧ください。リーダーボードに投稿された方もそうでない方もどうぞご提出ください。
           </p>
           <h1 style={{ textAlign: "center" }}>
-            申し込みは
-            <ExternalLink href="https://c5dc59ed978213830355fc8978.doorkeeper.jp/events/145315">
+            本評価提出フォームは
+            <ExternalLink href="https://forms.gle/rob8e8MruyXUX8NF8">
               こちら
             </ExternalLink>
             &#xFF01;
