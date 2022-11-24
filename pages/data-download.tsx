@@ -181,7 +181,7 @@ const subtaskUniqueItems: TabItem[] = [
         divider
         items={[
           <>
-            <ExternalLink href="https://drive.google.com/file/d/1Vq3T2q26AoBgSyPVEvlv5WjkSZG2agj4/view?usp=sharing">
+            <ExternalLink href="https://storage.googleapis.com/shinra_data/data/attribute_extraction-20221116.zip">
               教師データ
             </ExternalLink>
             <SingleLineList
@@ -268,7 +268,7 @@ const subtaskUniqueItems: TabItem[] = [
           divider
           items={[
             <>
-              <ExternalLink href="https://storage.googleapis.com/shinra_data/data/link-20221004.zip">
+              <ExternalLink href="https://storage.googleapis.com/shinra_data/data/linking-20221116.zip">
                 教師データ
               </ExternalLink>
               <SingleLineList
