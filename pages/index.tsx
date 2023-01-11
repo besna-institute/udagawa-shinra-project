@@ -19,7 +19,18 @@ import { useRef, useEffect, useState } from "react";
 import { Paper, Divider } from "@mui/material";
 
 const newsItems = [
-    <>
+  <>
+    1月18日に
+    <ExternalLink href="http://shinra-project.info/shinra2022-final-report-workshop/">
+      「構造化知識を使った言語処理応用」ワークショップ ～森羅2022最終報告会～
+    </ExternalLink>
+    を開催します。参加申し込みは
+    <ExternalLink href="https://c5dc59ed978213830355fc8978.doorkeeper.jp/events/149118">
+      こちら
+    </ExternalLink>
+    からどうぞ。(2022/12/23)
+  </>,
+  <>
     <ExternalLink href="http://shinra-project.info/shinra2022/bert_workshop2_shinra2022/">
       学生・若手研究者のためのBERTワークショップ２（固有表現抽出タスク）
     </ExternalLink>
@@ -490,17 +501,21 @@ const Home: NextPage = () => {
           }}
           theme="white"
         >
-           <h2 id="about">本評価（分類タスク）提出受付中</h2>
+          <h2 id="about">本評価（分類タスク）提出受付中</h2>
           <p>
-            分類タスクの本評価締切は11月14日です。本評価の提出方法は
-            <ExternalLink href="http://shinra-project.info/shinra2022/how_to_submit/">
+            1月18日に
+            <ExternalLink href="http://shinra-project.info/shinra2022-final-report-workshop/">
+              「構造化知識を使った言語処理応用」ワークショップ ～森羅2022最終報告会～
+            </ExternalLink>
+            を開催します。参加申し込みは
+            <ExternalLink href="https://c5dc59ed978213830355fc8978.doorkeeper.jp/events/149118">
               こちら
             </ExternalLink>
-            をご覧ください。リーダーボードに投稿された方もそうでない方もどうぞご提出ください。
+            からどうぞ。
           </p>
           <h1 style={{ textAlign: "center" }}>
-            本評価提出フォームは
-            <ExternalLink href="https://forms.gle/rob8e8MruyXUX8NF8">
+            参加申し込みは
+            <ExternalLink href="https://c5dc59ed978213830355fc8978.doorkeeper.jp/events/149118">
               こちら
             </ExternalLink>
             &#xFF01;
