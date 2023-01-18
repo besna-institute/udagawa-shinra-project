@@ -501,7 +501,7 @@ const Home: NextPage = () => {
           }}
           theme="white"
         >
-          <h2 id="about">本評価（分類タスク）提出受付中</h2>
+          <h2 id="about">「構造化知識を使った言語処理応用」ワークショップ ～森羅2022最終報告会～</h2>
           <p>
             1月18日に
             <ExternalLink href="http://shinra-project.info/shinra2022-final-report-workshop/">
@@ -1144,7 +1144,7 @@ const Home: NextPage = () => {
                 </Question>
                 <Answer>
                   計算機リソースなどについては相談に乗ります。Slack(
-                  <ExternalLink href="https://join.slack.com/t/shinra2022/shared_invite/zt-1gps0bblz-l~QyM3JWaJa_iG0C6Lh8zw">
+                  <ExternalLink href="http://shinra-project.info/shinra2022/shinra2022_slack_invite">
                     招待リンク
                   </ExternalLink>
                   )などでお気軽にご相談ください。
