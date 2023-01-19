@@ -20,11 +20,21 @@ import { Paper, Divider } from "@mui/material";
 
 const newsItems = [
   <>
+    <ExternalLink href="http://shinra-project.info/shinra2022-final-report-workshop/">
+      「構造化知識を使った言語処理応用」ワークショップ ～森羅2022最終報告会～
+    </ExternalLink>
+    のページで資料（スライド、動画）を公開しました。(2023/1/20)
+  </>,
+  <>
     1月18日に
     <ExternalLink href="http://shinra-project.info/shinra2022-final-report-workshop/">
       「構造化知識を使った言語処理応用」ワークショップ ～森羅2022最終報告会～
     </ExternalLink>
-    を開催しました。当日の資料（動画、スライド）を公開しています。(2023/1/20)
+    を開催します。参加申し込みは
+    <ExternalLink href="https://c5dc59ed978213830355fc8978.doorkeeper.jp/events/149118">
+      こちら
+    </ExternalLink>
+    からどうぞ。(2023/12/23)
   </>,
   <>
     <ExternalLink href="http://shinra-project.info/shinra2022/bert_workshop2_shinra2022/">
